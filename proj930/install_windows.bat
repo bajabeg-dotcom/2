@@ -38,6 +38,12 @@ if not exist "src\dna_midi_studio\ai_learning\trainer.py" (
     set "RC=2"
     goto finish
 )
+if not exist "src\dna_midi_studio\ai_learning\relationship_sequence_trainer.py" (
+    echo BLOCKED: relationship sequence learning runtime nedostaje.
+    echo Instalacija paketa sama ne stvara nedostajuci source kod.
+    set "RC=2"
+    goto finish
+)
 
 echo Neural learning runtime je pronadjen.
 set "RC=0"
