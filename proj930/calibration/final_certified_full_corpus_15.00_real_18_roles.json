@@ -1,0 +1,14 @@
+{
+  "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+  "total_files": 37,
+  "total_notes_before": 9008,
+  "total_notes_after": 8274,
+  "total_trills": 40,
+  "total_cc": 8274,
+  "passed": 37,
+  "pass_rate": "37/37 (100.0%)",
+  "factory_real_roles": 13,
+  "gold_real_roles": 18,
+  "output_dir": "artifacts/calibrated_15.00",
+  "output_files": 37
+}

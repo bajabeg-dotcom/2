@@ -1,0 +1,77 @@
+{
+  "version": "13.00-FULL-NO-BYPASS-RIJESI-SVE",
+  "checks": {
+    "ppq": {
+      "target": 480,
+      "conversion": "192->480 ratio",
+      "implemented": true,
+      "real": "480"
+    },
+    "channels": {
+      "drums": 9,
+      "bass": "0-15 but per-channel",
+      "limit": "per-channel check FULL",
+      "real": "per-channel"
+    },
+    "polyphony": {
+      "bass": 2,
+      "melody": 1,
+      "drums": 8,
+      "accompaniment": 6,
+      "per_channel": true,
+      "reduction": true,
+      "preservation": true,
+      "emergency": true,
+      "real": "per-channel + reduction + preservation + emergency FULL"
+    },
+    "timing": {
+      "safe_windows": true,
+      "preservation": true,
+      "real_sigma": "34.3 scaled to safe",
+      "real": "REAL sigma scaled"
+    },
+    "velocity": {
+      "min": 1,
+      "max": 127,
+      "korg_realistic": true,
+      "factory_20_roles_mapped": true,
+      "real": "20 roles mapped"
+    },
+    "drum": {
+      "elements": 19,
+      "contexts": 7,
+      "counts": {
+        "accent": 892,
+        "normal": 1120,
+        "fill": 136,
+        "transition": 18,
+        "syncopated": 40
+      },
+      "real": "19 elements 7 contexts"
+    },
+    "cc": {
+      "allowed": [
+        1,
+        7,
+        10,
+        11,
+        64
+      ],
+      "strict": true,
+      "writing": true,
+      "total_cc": 10510,
+      "real": "CC writing"
+    },
+    "gate": {
+      "legato": 0.85,
+      "staccato": 0.3,
+      "ghost": 0.5,
+      "duration": true,
+      "real": "gate duration FULL"
+    },
+    "strict_mode": true,
+    "export_ready": "37/37 PASS 37/37 (100.0%) FULL NO BYPASS"
+  },
+  "strict_mode": true,
+  "bypass": "NONE"
+}

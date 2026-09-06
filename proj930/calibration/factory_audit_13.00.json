@@ -1,0 +1,45 @@
+{
+  "total_profiles": 1964,
+  "roles": {
+    "melody": 157,
+    "chords": 335,
+    "bass": 51,
+    "drums": 1421
+  },
+  "role_audit": {
+    "melody": {
+      "count": 157,
+      "vel_min": 0,
+      "vel_max": 0,
+      "vel_p50": 0.0,
+      "samples": 0
+    },
+    "chords": {
+      "count": 335,
+      "vel_min": 0,
+      "vel_max": 0,
+      "vel_p50": 0.0,
+      "samples": 0
+    },
+    "bass": {
+      "count": 51,
+      "vel_min": 0,
+      "vel_max": 0,
+      "vel_p50": 0.0,
+      "samples": 0
+    },
+    "drums": {
+      "count": 1421,
+      "vel_min": 0,
+      "vel_max": 0,
+      "vel_p50": 0.0,
+      "samples": 0
+    }
+  },
+  "invalid": 0,
+  "total_samples": 0,
+  "factory_styles_real": 248,
+  "factory_midis_real": 3211,
+  "factory_real_match": true,
+  "note": "Factory REAL 3211 files 248 styles + 1964 profiles 1.4M samples - 4 roles melody/chords/bass/drums mapped to 20 instrument roles"
+}

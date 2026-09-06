@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-09-06T17:28:26.423987",
+  "factory": {
+    "profile_count": 1964,
+    "velocity_samples": 1432867,
+    "input_files": 3211,
+    "roles": {
+      "melody": 157,
+      "chords": 335,
+      "bass": 51,
+      "drums": 1421
+    },
+    "invalid_profiles": 0,
+    "velocity_min_range": [
+      1,
+      127
+    ],
+    "velocity_max_range": [
+      29,
+      127
+    ],
+    "catalog_version": "9.30.0",
+    "catalog_profiles": 1713
+  },
+  "gold": {
+    "catalog_size": 31140,
+    "source": "gold-performance-patterns.json"
+  },
+  "general": {
+    "total_json": 203,
+    "corrupted_sample": [],
+    "corruption_rate": 0.0
+  },
+  "issues": []
+}

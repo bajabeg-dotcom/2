@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-09-06T17:28:26.924465",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "ab_variants": [
+    "ORIGINAL",
+    "OPTIMIZED",
+    "GOLD-ASSISTED",
+    "FACTORY-CALIBRATED",
+    "FINAL"
+  ],
+  "evaluation": [
+    "groove",
+    "naturalness",
+    "dynamics",
+    "articulation",
+    "phrase quality",
+    "instrument realism",
+    "drum realism",
+    "bass realism",
+    "musicality",
+    "Korg playback"
+  ],
+  "human_layer": "Human listening mora biti zaseban validation layer, ne samo automatski score",
+  "requirement": "2 independent evaluators, Overall median 4/5 and 70% Premium preference",
+  "status": "HUMAN_LISTENING_PENDING - requires external evaluators",
+  "software_proxy": {
+    "note": "Software metrics su proxy, ne zamjena za ljudsko slušanje",
+    "metrics": "Automated scores 4.5/5 for reference preview",
+    "gate": "BLOCKED until human listening PASS"
+  }
+}

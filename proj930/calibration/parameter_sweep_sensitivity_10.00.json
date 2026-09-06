@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-09-06T17:28:26.907075",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "parameter_sweep": {
+    "velocity_intensity": {
+      "safe_min": 0,
+      "optimal": 50,
+      "safe_max": 100,
+      "failure_zone": [
+        -10,
+        110
+      ],
+      "unit": "abstract",
+      "calibration_table": "0 -> 50 -> 100",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "timing_shift": {
+      "safe_min": -20,
+      "optimal": 0,
+      "safe_max": 20,
+      "failure_zone": [
+        -50,
+        50
+      ],
+      "unit": "ticks",
+      "calibration_table": "-20 -> 0 -> 20",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "humanization": {
+      "safe_min": 0,
+      "optimal": 5,
+      "safe_max": 15,
+      "failure_zone": [
+        -10,
+        30
+      ],
+      "unit": "abstract",
+      "calibration_table": "0 -> 5 -> 15",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "expression_depth": {
+      "safe_min": 0,
+      "optimal": 60,
+      "safe_max": 100,
+      "failure_zone": [
+        -10,
+        120
+      ],
+      "unit": "abstract",
+      "calibration_table": "0 -> 60 -> 100",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "trill_rate": {
+      "safe_min": 16,
+      "optimal": 32,
+      "safe_max": 64,
+      "failure_zone": [
+        6,
+        74
+      ],
+      "unit": "notes per beat",
+      "calibration_table": "16 -> 32 -> 64",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "articulation_probability": {
+      "safe_min": 0.0,
+      "optimal": 0.3,
+      "safe_max": 0.8,
+      "failure_zone": [
+        -10.0,
+        1.0
+      ],
+      "unit": "abstract",
+      "calibration_table": "0.0 -> 0.3 -> 0.8",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "groove_amount": {
+      "safe_min": 0.0,
+      "optimal": 0.5,
+      "safe_max": 1.0,
+      "failure_zone": [
+        -10.0,
+        11.0
+      ],
+      "unit": "abstract",
+      "calibration_table": "0.0 -> 0.5 -> 1.0",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "accent_strength": {
+      "safe_min": 0,
+      "optimal": 20,
+      "safe_max": 40,
+      "failure_zone": [
+        -10,
+        60
+      ],
+      "unit": "abstract",
+      "calibration_table": "0 -> 20 -> 40",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "variation_amount": {
+      "safe_min": 0.0,
+      "optimal": 0.3,
+      "safe_max": 0.7,
+      "failure_zone": [
+        -10.0,
+        1.0
+      ],
+      "unit": "abstract",
+      "calibration_table": "0.0 -> 0.3 -> 0.7",
+      "source": "FACTORY+GOLD+ENGINE"
+    }
+  },
+  "sensitivity": {
+    "one_variable": {
+      "velocity_intensity": "Impact: HIGH",
+      "timing_shift": "Impact: HIGH",
+      "humanization": "Impact: MEDIUM",
+      "expression_depth": "Impact: MEDIUM",
+      "trill_rate": "Impact: LOW",
+      "articulation_probability": "Impact: LOW",
+      "groove_amount": "Impact: HIGH",
+      "accent_strength": "Impact: MEDIUM",
+      "variation_amount": "Impact: LOW"
+    },
+    "pair_interactions": {
+      "velocity + timing": "HIGH interaction - groove depends on both",
+      "groove + humanization": "MEDIUM interaction",
+      "articulation + expression": "MEDIUM interaction"
+    },
+    "classification": {
+      "high_impact": [
+        "velocity_intensity",
+        "timing_shift",
+        "groove_amount"
+      ],
+      "medium_impact": [
+        "humanization",
+        "accent_strength",
+        "expression_depth"
+      ],
+      "low_impact": [
+        "variation_amount",
+        "trill_rate"
+      ],
+      "dangerous": [
+        "timing_shift beyond ±50",
+        "velocity beyond 1-127",
+        "polyphony beyond 54"
+      ]
+    },
+    "hard_constraints": {
+      "velocity": "1-127 enforced",
+      "timing": "±50 ticks max",
+      "polyphony": "54 max total",
+      "note_range": "Per-instrument from general-rules",
+      "cc": "Valid CC numbers only"
+    }
+  }
+}

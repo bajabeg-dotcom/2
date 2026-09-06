@@ -1,0 +1,2657 @@
+{
+  "version": "15.00-MUSICAL-7-REAL-EXTENDED",
+  "timestamp": "2026-09-06",
+  "factory_real": "13 REAL",
+  "gold_real": "18 REAL",
+  "metrics": {
+    "harmony": "REAL - chord detection + triad intervals + diatonic fit",
+    "groove": "REAL - pocket avg deviation + syncopation rate",
+    "dynamics": "REAL - vel range + unique ratio + std",
+    "articulation": "REAL - trills detection",
+    "phrase": "REAL - phrase boundary gap >480 + length consistency + density var",
+    "instrument": "REAL - pitch range appropriateness",
+    "drum": "REAL - kick unique + snare ghost separation",
+    "bass": "REAL - kick-bass lock rate",
+    "musicality": "PROXY - weighted avg"
+  },
+  "real_count": "8/9 REAL (harmony, groove, dynamics, articulation, phrase, instrument, drum, bass) + 1 PROXY (musicality)",
+  "before": {
+    "label": "artifacts BEFORE (37)",
+    "files": 37,
+    "avg_musical": 84.22916285054166,
+    "avg_scores": {
+      "harmony": 87.92984140993904,
+      "groove": 92.91952709966864,
+      "dynamics": 74.32432432432432,
+      "articulation": 73.67567567567568,
+      "phrase": 89.8034398034398,
+      "instrument": 89.86486486486487,
+      "drum": 74.86486486486487,
+      "bass": 79.64051461821371,
+      "musicality": 88.0
+    },
+    "results": [
+      {
+        "file": "session10-after_OPT.mid",
+        "scores": {
+          "harmony": 85.3476585617689,
+          "groove": 92.60939597315435,
+          "dynamics": 80,
+          "articulation": 74,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 77.04225352112675,
+          "musicality": 88
+        },
+        "musical": 84.46267851261845,
+        "details": {
+          "harmony": {
+            "score": 85.3476585617689,
+            "chord_ticks": 26,
+            "total_ticks": 82,
+            "chord_rate": 0.3170731707317073,
+            "triads": 3,
+            "triad_rate": 0.11538461538461539,
+            "diatonic_rate": 0.785234899328859,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 149.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 85,
+            "unique": 35,
+            "unique_ratio": 0.2348993288590604,
+            "std": 17.53443528836735,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 77.04225352112675,
+            "lock_rate": 0.352112676056338,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 92.60939597315435,
+            "avg_deviation": 20.51006711409396,
+            "syncopation_rate": 0.1342281879194631,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 74,
+            "trills": 2,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session10-before.mid",
+        "scores": {
+          "harmony": 85.73546453546453,
+          "groove": 93.1888111888112,
+          "dynamics": 80,
+          "articulation": 74,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 77.6923076923077,
+          "musicality": 88
+        },
+        "musical": 84.67562437562438,
+        "details": {
+          "harmony": {
+            "score": 85.73546453546453,
+            "chord_ticks": 25,
+            "total_ticks": 77,
+            "chord_rate": 0.3246753246753247,
+            "triads": 3,
+            "triad_rate": 0.12,
+            "diatonic_rate": 0.8041958041958042,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 143.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 85,
+            "unique": 33,
+            "unique_ratio": 0.23076923076923078,
+            "std": 17.385774283590955,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 77.6923076923077,
+            "lock_rate": 0.38461538461538464,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 93.1888111888112,
+            "avg_deviation": 19.02097902097902,
+            "syncopation_rate": 0.13986013986013987,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 74,
+            "trills": 2,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session17-factory-segment-after.mid",
+        "scores": {
+          "harmony": 95,
+          "groove": 80.99173553719008,
+          "dynamics": 50,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 80,
+          "musicality": 88
+        },
+        "musical": 79.35834710743802,
+        "details": {
+          "harmony": {
+            "score": 95,
+            "chord_ticks": 35,
+            "total_ticks": 41,
+            "chord_rate": 0.8536585365853658,
+            "triads": 35,
+            "triad_rate": 1.0,
+            "diatonic_rate": 1.0,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 121.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 50,
+            "vel_range": 0,
+            "unique": 1,
+            "unique_ratio": 0.008264462809917356,
+            "std": 0.0,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "method": "PROXY - no drums"
+          },
+          "bass": {
+            "score": 80,
+            "method": "PROXY - no bass/kick"
+          },
+          "groove": {
+            "score": 80.99173553719008,
+            "avg_deviation": 59.50413223140496,
+            "syncopation_rate": 0.05785123966942149,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session17-factory-segment-before.mid",
+        "scores": {
+          "harmony": 78.83333333333333,
+          "groove": 79.36875,
+          "dynamics": 50,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 80,
+          "musicality": 88
+        },
+        "musical": 75.80041666666666,
+        "details": {
+          "harmony": {
+            "score": 78.83333333333333,
+            "chord_ticks": 2,
+            "total_ticks": 30,
+            "chord_rate": 0.06666666666666667,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 0.75,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 32.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 50,
+            "vel_range": 19,
+            "unique": 9,
+            "unique_ratio": 0.28125,
+            "std": 7.1170459988677885,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "method": "PROXY - no drums"
+          },
+          "bass": {
+            "score": 80,
+            "method": "PROXY - no bass/kick"
+          },
+          "groove": {
+            "score": 79.36875,
+            "avg_deviation": 53.15625,
+            "syncopation_rate": 0.0,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session18-after.mid",
+        "scores": {
+          "harmony": 85.74757869249396,
+          "groove": 94.43728813559322,
+          "dynamics": 70,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 78.07692307692308,
+          "musicality": 88
+        },
+        "musical": 83.13928105792513,
+        "details": {
+          "harmony": {
+            "score": 85.74757869249396,
+            "chord_ticks": 24,
+            "total_ticks": 63,
+            "chord_rate": 0.38095238095238093,
+            "triads": 1,
+            "triad_rate": 0.041666666666666664,
+            "diatonic_rate": 0.7711864406779662,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 70,
+            "vel_range": 75,
+            "unique": 22,
+            "unique_ratio": 0.1864406779661017,
+            "std": 13.069810678179648,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 78.07692307692308,
+            "lock_rate": 0.40384615384615385,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 94.43728813559322,
+            "avg_deviation": 18.06779661016949,
+            "syncopation_rate": 0.16101694915254236,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session18-before.mid",
+        "scores": {
+          "harmony": 84.60413613418011,
+          "groove": 95,
+          "dynamics": 70,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 78.07692307692308,
+          "musicality": 88
+        },
+        "musical": 83.02313491914371,
+        "details": {
+          "harmony": {
+            "score": 84.60413613418011,
+            "chord_ticks": 15,
+            "total_ticks": 46,
+            "chord_rate": 0.32608695652173914,
+            "triads": 1,
+            "triad_rate": 0.06666666666666667,
+            "diatonic_rate": 0.7415730337078652,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 89.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 70,
+            "vel_range": 75,
+            "unique": 19,
+            "unique_ratio": 0.21348314606741572,
+            "std": 13.826389417074394,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 78.07692307692308,
+            "lock_rate": 0.40384615384615385,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 15.865168539325843,
+            "syncopation_rate": 0.19101123595505617,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session2-after.mid",
+        "scores": {
+          "harmony": 83.10344827586206,
+          "groove": 95,
+          "dynamics": 70,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 77.85714285714286,
+          "musicality": 88
+        },
+        "musical": 82.4164039408867,
+        "details": {
+          "harmony": {
+            "score": 83.10344827586206,
+            "chord_ticks": 9,
+            "total_ticks": 18,
+            "chord_rate": 0.5,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 0.3103448275862069,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 29.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 70,
+            "vel_range": 60,
+            "unique": 7,
+            "unique_ratio": 0.2413793103448276,
+            "std": 14.47618898613947,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 77.85714285714286,
+            "lock_rate": 0.39285714285714285,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 3.4482758620689653,
+            "syncopation_rate": 0.3103448275862069,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session2-before.mid",
+        "scores": {
+          "harmony": 77.14285714285714,
+          "groove": 94.28571428571428,
+          "dynamics": 60,
+          "articulation": 70,
+          "phrase": 82.72727272727272,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 80.0,
+          "musicality": 88
+        },
+        "musical": 78.81844155844156,
+        "details": {
+          "harmony": {
+            "score": 77.14285714285714,
+            "chord_ticks": 0,
+            "total_ticks": 7,
+            "chord_rate": 0.0,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 0.7142857142857143,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 82.72727272727272,
+            "phrases": 5,
+            "avg_len": 1.4,
+            "std_len": 0.8,
+            "consistency": 0.6363636363636362,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 60,
+            "vel_range": 15,
+            "unique": 3,
+            "unique_ratio": 0.42857142857142855,
+            "std": 4.164965639175215,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 80.0,
+            "lock_rate": 0.5,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 94.28571428571428,
+            "avg_deviation": 14.285714285714286,
+            "syncopation_rate": 0.14285714285714285,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session24-reference.mid",
+        "scores": {
+          "harmony": 92.74717514124295,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 83.33333333333333,
+          "musicality": 88
+        },
+        "musical": 85.9094350282486,
+        "details": {
+          "harmony": {
+            "score": 92.74717514124295,
+            "chord_ticks": 16,
+            "total_ticks": 48,
+            "chord_rate": 0.3333333333333333,
+            "triads": 10,
+            "triad_rate": 0.625,
+            "diatonic_rate": 0.9830508474576272,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 75,
+            "unique": 4,
+            "unique_ratio": 0.03389830508474576,
+            "std": 23.235897299177044,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 83.33333333333333,
+            "lock_rate": 0.6666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.13559322033898305,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session25-reference.mid",
+        "scores": {
+          "harmony": 95,
+          "groove": 95,
+          "dynamics": 60,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 80,
+          "musicality": 88
+        },
+        "musical": 83.66,
+        "details": {
+          "harmony": {
+            "score": 95,
+            "chord_ticks": 4,
+            "total_ticks": 4,
+            "chord_rate": 1.0,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 1.0,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 12.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 60,
+            "vel_range": 3,
+            "unique": 4,
+            "unique_ratio": 0.3333333333333333,
+            "std": 1.118033988749895,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "method": "PROXY - no drums"
+          },
+          "bass": {
+            "score": 80,
+            "method": "PROXY - no bass/kick"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 1.0,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session26-reference.mid",
+        "scores": {
+          "harmony": 95,
+          "groove": 95,
+          "dynamics": 60,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 80,
+          "musicality": 88
+        },
+        "musical": 83.66,
+        "details": {
+          "harmony": {
+            "score": 95,
+            "chord_ticks": 4,
+            "total_ticks": 4,
+            "chord_rate": 1.0,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 1.0,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 12.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 60,
+            "vel_range": 3,
+            "unique": 4,
+            "unique_ratio": 0.3333333333333333,
+            "std": 1.118033988749895,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "method": "PROXY - no drums"
+          },
+          "bass": {
+            "score": 80,
+            "method": "PROXY - no bass/kick"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 1.0,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session27-reference.mid",
+        "scores": {
+          "harmony": 95,
+          "groove": 95,
+          "dynamics": 60,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 80,
+          "musicality": 88
+        },
+        "musical": 83.66,
+        "details": {
+          "harmony": {
+            "score": 95,
+            "chord_ticks": 4,
+            "total_ticks": 4,
+            "chord_rate": 1.0,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 1.0,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 12.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 60,
+            "vel_range": 3,
+            "unique": 4,
+            "unique_ratio": 0.3333333333333333,
+            "std": 1.118033988749895,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "method": "PROXY - no drums"
+          },
+          "bass": {
+            "score": 80,
+            "method": "PROXY - no bass/kick"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 1.0,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session28-reference.mid",
+        "scores": {
+          "harmony": 92.74717514124295,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 83.33333333333333,
+          "musicality": 88
+        },
+        "musical": 85.9094350282486,
+        "details": {
+          "harmony": {
+            "score": 92.74717514124295,
+            "chord_ticks": 16,
+            "total_ticks": 48,
+            "chord_rate": 0.3333333333333333,
+            "triads": 10,
+            "triad_rate": 0.625,
+            "diatonic_rate": 0.9830508474576272,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 75,
+            "unique": 4,
+            "unique_ratio": 0.03389830508474576,
+            "std": 23.235897299177044,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 83.33333333333333,
+            "lock_rate": 0.6666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.13559322033898305,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session29-reference.mid",
+        "scores": {
+          "harmony": 92.74717514124295,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 83.33333333333333,
+          "musicality": 88
+        },
+        "musical": 85.9094350282486,
+        "details": {
+          "harmony": {
+            "score": 92.74717514124295,
+            "chord_ticks": 16,
+            "total_ticks": 48,
+            "chord_rate": 0.3333333333333333,
+            "triads": 10,
+            "triad_rate": 0.625,
+            "diatonic_rate": 0.9830508474576272,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 75,
+            "unique": 4,
+            "unique_ratio": 0.03389830508474576,
+            "std": 23.235897299177044,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 83.33333333333333,
+            "lock_rate": 0.6666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.13559322033898305,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session3-after.mid",
+        "scores": {
+          "harmony": 85.53191489361703,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 78.78048780487805,
+          "musicality": 88
+        },
+        "musical": 84.72979761286975,
+        "details": {
+          "harmony": {
+            "score": 85.53191489361703,
+            "chord_ticks": 11,
+            "total_ticks": 22,
+            "chord_rate": 0.5,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 0.5531914893617021,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 47.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 60,
+            "unique": 12,
+            "unique_ratio": 0.2553191489361702,
+            "std": 15.794429741673001,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 78.78048780487805,
+            "lock_rate": 0.43902439024390244,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 14.46808510638298,
+            "syncopation_rate": 0.19148936170212766,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session3-before.mid",
+        "scores": {
+          "harmony": 86.81681681681683,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 79.41176470588235,
+          "musicality": 88
+        },
+        "musical": 84.70571630453983,
+        "details": {
+          "harmony": {
+            "score": 86.81681681681683,
+            "chord_ticks": 11,
+            "total_ticks": 18,
+            "chord_rate": 0.6111111111111112,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 0.4594594594594595,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 37.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 60,
+            "unique": 11,
+            "unique_ratio": 0.2972972972972973,
+            "std": 17.117818857118678,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 79.41176470588235,
+            "lock_rate": 0.47058823529411764,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 5.405405405405405,
+            "syncopation_rate": 0.24324324324324326,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session30-reference.mid",
+        "scores": {
+          "harmony": 92.74717514124295,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 83.33333333333333,
+          "musicality": 88
+        },
+        "musical": 85.9094350282486,
+        "details": {
+          "harmony": {
+            "score": 92.74717514124295,
+            "chord_ticks": 16,
+            "total_ticks": 48,
+            "chord_rate": 0.3333333333333333,
+            "triads": 10,
+            "triad_rate": 0.625,
+            "diatonic_rate": 0.9830508474576272,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 75,
+            "unique": 4,
+            "unique_ratio": 0.03389830508474576,
+            "std": 23.235897299177044,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 83.33333333333333,
+            "lock_rate": 0.6666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.13559322033898305,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session31-reference.mid",
+        "scores": {
+          "harmony": 95,
+          "groove": 94.81927710843374,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 83.33333333333333,
+          "musicality": 88
+        },
+        "musical": 86.32385542168674,
+        "details": {
+          "harmony": {
+            "score": 95,
+            "chord_ticks": 24,
+            "total_ticks": 48,
+            "chord_rate": 0.5,
+            "triads": 21,
+            "triad_rate": 0.875,
+            "diatonic_rate": 0.9879518072289156,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 166.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 75,
+            "unique": 5,
+            "unique_ratio": 0.030120481927710843,
+            "std": 21.27586673777265,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 83.33333333333333,
+            "lock_rate": 0.6666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 94.81927710843374,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.0963855421686747,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session31b-reference.mid",
+        "scores": {
+          "harmony": 92.74717514124295,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 83.33333333333333,
+          "musicality": 88
+        },
+        "musical": 85.9094350282486,
+        "details": {
+          "harmony": {
+            "score": 92.74717514124295,
+            "chord_ticks": 16,
+            "total_ticks": 48,
+            "chord_rate": 0.3333333333333333,
+            "triads": 10,
+            "triad_rate": 0.625,
+            "diatonic_rate": 0.9830508474576272,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 75,
+            "unique": 4,
+            "unique_ratio": 0.03389830508474576,
+            "std": 23.235897299177044,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 83.33333333333333,
+            "lock_rate": 0.6666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.13559322033898305,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session32-reference.mid",
+        "scores": {
+          "harmony": 92.74717514124295,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 83.33333333333333,
+          "musicality": 88
+        },
+        "musical": 85.9094350282486,
+        "details": {
+          "harmony": {
+            "score": 92.74717514124295,
+            "chord_ticks": 16,
+            "total_ticks": 48,
+            "chord_rate": 0.3333333333333333,
+            "triads": 10,
+            "triad_rate": 0.625,
+            "diatonic_rate": 0.9830508474576272,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 75,
+            "unique": 4,
+            "unique_ratio": 0.03389830508474576,
+            "std": 23.235897299177044,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 83.33333333333333,
+            "lock_rate": 0.6666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.13559322033898305,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session33-source.mid",
+        "scores": {
+          "harmony": 92.74717514124295,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 70,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 83.33333333333333,
+          "musicality": 88
+        },
+        "musical": 85.9094350282486,
+        "details": {
+          "harmony": {
+            "score": 92.74717514124295,
+            "chord_ticks": 16,
+            "total_ticks": 48,
+            "chord_rate": 0.3333333333333333,
+            "triads": 10,
+            "triad_rate": 0.625,
+            "diatonic_rate": 0.9830508474576272,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 75,
+            "unique": 4,
+            "unique_ratio": 0.03389830508474576,
+            "std": 23.235897299177044,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 83.33333333333333,
+            "lock_rate": 0.6666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.13559322033898305,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 70,
+            "trills": 0,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session34-variant-a.mid",
+        "scores": {
+          "harmony": 84.92118212437362,
+          "groove": 88.281,
+          "dynamics": 80,
+          "articulation": 82,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 79.96124031007751,
+          "musicality": 88
+        },
+        "musical": 85.09927363417705,
+        "details": {
+          "harmony": {
+            "score": 84.92118212437362,
+            "chord_ticks": 333,
+            "total_ticks": 846,
+            "chord_rate": 0.39361702127659576,
+            "triads": 9,
+            "triad_rate": 0.02702702702702703,
+            "diatonic_rate": 0.6778571428571428,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 1400.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 74,
+            "unique": 44,
+            "unique_ratio": 0.03142857142857143,
+            "std": 19.170325921026155,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "kick_unique": 9,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 79.96124031007751,
+            "lock_rate": 0.49806201550387597,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 88.281,
+            "avg_deviation": 35.02357142857143,
+            "syncopation_rate": 0.10571428571428572,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 82,
+            "trills": 6,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session34-variant-b.mid",
+        "scores": {
+          "harmony": 84.93546783865933,
+          "groove": 88.281,
+          "dynamics": 80,
+          "articulation": 84,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 79.96124031007751,
+          "musicality": 88
+        },
+        "musical": 85.4021307770342,
+        "details": {
+          "harmony": {
+            "score": 84.93546783865933,
+            "chord_ticks": 333,
+            "total_ticks": 846,
+            "chord_rate": 0.39361702127659576,
+            "triads": 9,
+            "triad_rate": 0.02702702702702703,
+            "diatonic_rate": 0.6792857142857143,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 1400.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 74,
+            "unique": 44,
+            "unique_ratio": 0.03142857142857143,
+            "std": 19.170325921026155,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "kick_unique": 9,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 79.96124031007751,
+            "lock_rate": 0.49806201550387597,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 88.281,
+            "avg_deviation": 35.02357142857143,
+            "syncopation_rate": 0.10571428571428572,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 84,
+            "trills": 7,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session34-variant-c.mid",
+        "scores": {
+          "harmony": 84.92832498151648,
+          "groove": 88.281,
+          "dynamics": 80,
+          "articulation": 84,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 79.96124031007751,
+          "musicality": 88
+        },
+        "musical": 85.40070220560563,
+        "details": {
+          "harmony": {
+            "score": 84.92832498151648,
+            "chord_ticks": 333,
+            "total_ticks": 846,
+            "chord_rate": 0.39361702127659576,
+            "triads": 9,
+            "triad_rate": 0.02702702702702703,
+            "diatonic_rate": 0.6785714285714286,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 1400.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 74,
+            "unique": 44,
+            "unique_ratio": 0.03142857142857143,
+            "std": 19.170325921026155,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "kick_unique": 9,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 79.96124031007751,
+            "lock_rate": 0.49806201550387597,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 88.281,
+            "avg_deviation": 35.02357142857143,
+            "syncopation_rate": 0.10571428571428572,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 84,
+            "trills": 7,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session35-partial-preview.mid",
+        "scores": {
+          "harmony": 84.92832498151648,
+          "groove": 88.281,
+          "dynamics": 80,
+          "articulation": 84,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 80,
+          "bass": 79.96124031007751,
+          "musicality": 88
+        },
+        "musical": 85.40070220560563,
+        "details": {
+          "harmony": {
+            "score": 84.92832498151648,
+            "chord_ticks": 333,
+            "total_ticks": 846,
+            "chord_rate": 0.39361702127659576,
+            "triads": 9,
+            "triad_rate": 0.02702702702702703,
+            "diatonic_rate": 0.6785714285714286,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 1400.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 74,
+            "unique": 44,
+            "unique_ratio": 0.03142857142857143,
+            "std": 19.170325921026155,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 80,
+            "kick_unique": 9,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 79.96124031007751,
+            "lock_rate": 0.49806201550387597,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 88.281,
+            "avg_deviation": 35.02357142857143,
+            "syncopation_rate": 0.10571428571428572,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 84,
+            "trills": 7,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session4-after.mid",
+        "scores": {
+          "harmony": 85.32716049382717,
+          "groove": 95,
+          "dynamics": 70,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 78.07692307692308,
+          "musicality": 88
+        },
+        "musical": 83.16773979107313,
+        "details": {
+          "harmony": {
+            "score": 85.32716049382717,
+            "chord_ticks": 15,
+            "total_ticks": 40,
+            "chord_rate": 0.375,
+            "triads": 1,
+            "triad_rate": 0.06666666666666667,
+            "diatonic_rate": 0.7160493827160493,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 81.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 70,
+            "vel_range": 60,
+            "unique": 11,
+            "unique_ratio": 0.13580246913580246,
+            "std": 12.643253214732823,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 78.07692307692308,
+            "lock_rate": 0.40384615384615385,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 16.691358024691358,
+            "syncopation_rate": 0.20987654320987653,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session4-before.mid",
+        "scores": {
+          "harmony": 85.53191489361703,
+          "groove": 95,
+          "dynamics": 80,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 78.78048780487805,
+          "musicality": 88
+        },
+        "musical": 84.72979761286975,
+        "details": {
+          "harmony": {
+            "score": 85.53191489361703,
+            "chord_ticks": 11,
+            "total_ticks": 22,
+            "chord_rate": 0.5,
+            "triads": 0,
+            "triad_rate": 0.0,
+            "diatonic_rate": 0.5531914893617021,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 47.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 60,
+            "unique": 12,
+            "unique_ratio": 0.2553191489361702,
+            "std": 15.794429741673001,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 78.78048780487805,
+            "lock_rate": 0.43902439024390244,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 14.46808510638298,
+            "syncopation_rate": 0.19148936170212766,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session5-after.mid",
+        "scores": {
+          "harmony": 85.74757869249396,
+          "groove": 94.43728813559322,
+          "dynamics": 70,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 78.07692307692308,
+          "musicality": 88
+        },
+        "musical": 83.13928105792513,
+        "details": {
+          "harmony": {
+            "score": 85.74757869249396,
+            "chord_ticks": 24,
+            "total_ticks": 63,
+            "chord_rate": 0.38095238095238093,
+            "triads": 1,
+            "triad_rate": 0.041666666666666664,
+            "diatonic_rate": 0.7711864406779662,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 118.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 70,
+            "vel_range": 75,
+            "unique": 22,
+            "unique_ratio": 0.1864406779661017,
+            "std": 13.069810678179648,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 78.07692307692308,
+            "lock_rate": 0.40384615384615385,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 94.43728813559322,
+            "avg_deviation": 18.06779661016949,
+            "syncopation_rate": 0.16101694915254236,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session5-before.mid",
+        "scores": {
+          "harmony": 84.60413613418011,
+          "groove": 95,
+          "dynamics": 70,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 78.07692307692308,
+          "musicality": 88
+        },
+        "musical": 83.02313491914371,
+        "details": {
+          "harmony": {
+            "score": 84.60413613418011,
+            "chord_ticks": 15,
+            "total_ticks": 46,
+            "chord_rate": 0.32608695652173914,
+            "triads": 1,
+            "triad_rate": 0.06666666666666667,
+            "diatonic_rate": 0.7415730337078652,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 89.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 70,
+            "vel_range": 75,
+            "unique": 19,
+            "unique_ratio": 0.21348314606741572,
+            "std": 13.826389417074394,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 78.07692307692308,
+            "lock_rate": 0.40384615384615385,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 95,
+            "avg_deviation": 15.865168539325843,
+            "syncopation_rate": 0.19101123595505617,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session6-after.mid",
+        "scores": {
+          "harmony": 85.02287104622872,
+          "groove": 93.5036496350365,
+          "dynamics": 80,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 77.6923076923077,
+          "musicality": 88
+        },
+        "musical": 84.29607336702227,
+        "details": {
+          "harmony": {
+            "score": 85.02287104622872,
+            "chord_ticks": 25,
+            "total_ticks": 75,
+            "chord_rate": 0.3333333333333333,
+            "triads": 1,
+            "triad_rate": 0.04,
+            "diatonic_rate": 0.7956204379562044,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 137.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 83,
+            "unique": 28,
+            "unique_ratio": 0.20437956204379562,
+            "std": 16.69057549493655,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 77.6923076923077,
+            "lock_rate": 0.38461538461538464,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 93.5036496350365,
+            "avg_deviation": 18.978102189781023,
+            "syncopation_rate": 0.145985401459854,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session6-before.mid",
+        "scores": {
+          "harmony": 85.85829493087559,
+          "groove": 94.22258064516129,
+          "dynamics": 70,
+          "articulation": 72,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 78.07692307692308,
+          "musicality": 88
+        },
+        "musical": 83.11848280751506,
+        "details": {
+          "harmony": {
+            "score": 85.85829493087559,
+            "chord_ticks": 24,
+            "total_ticks": 63,
+            "chord_rate": 0.38095238095238093,
+            "triads": 1,
+            "triad_rate": 0.041666666666666664,
+            "diatonic_rate": 0.782258064516129,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 124.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 70,
+            "vel_range": 83,
+            "unique": 27,
+            "unique_ratio": 0.21774193548387097,
+            "std": 14.151164724478095,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 78.07692307692308,
+            "lock_rate": 0.40384615384615385,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 94.22258064516129,
+            "avg_deviation": 17.193548387096776,
+            "syncopation_rate": 0.1532258064516129,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 72,
+            "trills": 1,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session7-after.mid",
+        "scores": {
+          "harmony": 85.3476585617689,
+          "groove": 92.60939597315435,
+          "dynamics": 80,
+          "articulation": 74,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 77.04225352112675,
+          "musicality": 88
+        },
+        "musical": 84.46267851261845,
+        "details": {
+          "harmony": {
+            "score": 85.3476585617689,
+            "chord_ticks": 26,
+            "total_ticks": 82,
+            "chord_rate": 0.3170731707317073,
+            "triads": 3,
+            "triad_rate": 0.11538461538461539,
+            "diatonic_rate": 0.785234899328859,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 149.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 85,
+            "unique": 35,
+            "unique_ratio": 0.2348993288590604,
+            "std": 17.53443528836735,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 77.04225352112675,
+            "lock_rate": 0.352112676056338,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 92.60939597315435,
+            "avg_deviation": 20.51006711409396,
+            "syncopation_rate": 0.1342281879194631,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 74,
+            "trills": 2,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session7-before.mid",
+        "scores": {
+          "harmony": 85.73546453546453,
+          "groove": 93.1888111888112,
+          "dynamics": 80,
+          "articulation": 74,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 77.6923076923077,
+          "musicality": 88
+        },
+        "musical": 84.67562437562438,
+        "details": {
+          "harmony": {
+            "score": 85.73546453546453,
+            "chord_ticks": 25,
+            "total_ticks": 77,
+            "chord_rate": 0.3246753246753247,
+            "triads": 3,
+            "triad_rate": 0.12,
+            "diatonic_rate": 0.8041958041958042,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 143.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 85,
+            "unique": 33,
+            "unique_ratio": 0.23076923076923078,
+            "std": 17.385774283590955,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 77.6923076923077,
+            "lock_rate": 0.38461538461538464,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 93.1888111888112,
+            "avg_deviation": 19.02097902097902,
+            "syncopation_rate": 0.13986013986013987,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 74,
+            "trills": 2,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session9-after.mid",
+        "scores": {
+          "harmony": 85.3476585617689,
+          "groove": 92.60939597315435,
+          "dynamics": 80,
+          "articulation": 74,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 77.04225352112675,
+          "musicality": 88
+        },
+        "musical": 84.46267851261845,
+        "details": {
+          "harmony": {
+            "score": 85.3476585617689,
+            "chord_ticks": 26,
+            "total_ticks": 82,
+            "chord_rate": 0.3170731707317073,
+            "triads": 3,
+            "triad_rate": 0.11538461538461539,
+            "diatonic_rate": 0.785234899328859,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 149.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 85,
+            "unique": 35,
+            "unique_ratio": 0.2348993288590604,
+            "std": 17.53443528836735,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 77.04225352112675,
+            "lock_rate": 0.352112676056338,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 92.60939597315435,
+            "avg_deviation": 20.51006711409396,
+            "syncopation_rate": 0.1342281879194631,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 74,
+            "trills": 2,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "session9-before.mid",
+        "scores": {
+          "harmony": 85.73546453546453,
+          "groove": 93.1888111888112,
+          "dynamics": 80,
+          "articulation": 74,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 74,
+          "bass": 77.6923076923077,
+          "musicality": 88
+        },
+        "musical": 84.67562437562438,
+        "details": {
+          "harmony": {
+            "score": 85.73546453546453,
+            "chord_ticks": 25,
+            "total_ticks": 77,
+            "chord_rate": 0.3246753246753247,
+            "triads": 3,
+            "triad_rate": 0.12,
+            "diatonic_rate": 0.8041958041958042,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 143.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 85,
+            "unique": 33,
+            "unique_ratio": 0.23076923076923078,
+            "std": 17.385774283590955,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 74,
+            "kick_unique": 2,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 77.6923076923077,
+            "lock_rate": 0.38461538461538464,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 93.1888111888112,
+            "avg_deviation": 19.02097902097902,
+            "syncopation_rate": 0.13986013986013987,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 74,
+            "trills": 2,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "v620-corrupt-drums.mid",
+        "scores": {
+          "harmony": 90.79317269076306,
+          "groove": 94.81927710843374,
+          "dynamics": 80,
+          "articulation": 90,
+          "phrase": 90.0,
+          "instrument": 90.0,
+          "drum": 72,
+          "bass": 81.66666666666667,
+          "musicality": 88
+        },
+        "musical": 88.43248995983936,
+        "details": {
+          "harmony": {
+            "score": 90.79317269076306,
+            "chord_ticks": 24,
+            "total_ticks": 48,
+            "chord_rate": 0.5,
+            "triads": 10,
+            "triad_rate": 0.4166666666666667,
+            "diatonic_rate": 0.6626506024096386,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 166.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 69,
+            "unique": 4,
+            "unique_ratio": 0.024096385542168676,
+            "std": 18.481723503058085,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 81.66666666666667,
+            "lock_rate": 0.5833333333333334,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 94.81927710843374,
+            "avg_deviation": 0.0,
+            "syncopation_rate": 0.0963855421686747,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 90,
+            "trills": 33,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 90.0,
+            "appropriate_rate": 1.0,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      },
+      {
+        "file": "v620-reconstructed.mid",
+        "scores": {
+          "harmony": 91.54602279013166,
+          "groove": 91.61832061068702,
+          "dynamics": 80,
+          "articulation": 90,
+          "phrase": 90.0,
+          "instrument": 85.0,
+          "drum": 72,
+          "bass": 73.33333333333333,
+          "musicality": 88
+        },
+        "musical": 87.19286868016374,
+        "details": {
+          "harmony": {
+            "score": 91.54602279013166,
+            "chord_ticks": 60,
+            "total_ticks": 92,
+            "chord_rate": 0.6521739130434783,
+            "triads": 13,
+            "triad_rate": 0.21666666666666667,
+            "diatonic_rate": 0.6335877862595419,
+            "method": "REAL - chord detection + triad intervals + diatonic fit"
+          },
+          "phrase": {
+            "score": 90.0,
+            "phrases": 1,
+            "avg_len": 262.0,
+            "std_len": 0,
+            "consistency": 1.0,
+            "density_var": 0,
+            "method": "REAL - phrase boundary gap >480 + length consistency + density variation"
+          },
+          "dynamics": {
+            "score": 80,
+            "vel_range": 94,
+            "unique": 12,
+            "unique_ratio": 0.04580152671755725,
+            "std": 32.06679519923966,
+            "method": "REAL - vel range + unique ratio + std dev"
+          },
+          "drum": {
+            "score": 72,
+            "kick_unique": 1,
+            "snare_ghost_sep": 0,
+            "method": "REAL - kick unique vel + snare ghost separation"
+          },
+          "bass": {
+            "score": 73.33333333333333,
+            "lock_rate": 0.16666666666666666,
+            "method": "REAL - kick-bass lock rate <30 ticks"
+          },
+          "groove": {
+            "score": 91.61832061068702,
+            "avg_deviation": 33.89312977099237,
+            "syncopation_rate": 0.16793893129770993,
+            "method": "REAL - pocket avg deviation + syncopation rate"
+          },
+          "articulation": {
+            "score": 90,
+            "trills": 44,
+            "method": "REAL - trills detection <60 ticks + <2 semitones"
+          },
+          "instrument": {
+            "score": 85.0,
+            "appropriate_rate": 0.75,
+            "method": "REAL - instrument pitch range appropriateness"
+          }
+        }
+      }
+    ]
+  },
+  "after_14": null,
+  "after_15": null,
+  "full_corpus_artifacts": null,
+  "delta_15": {
+    "before_avg": 84.22916285054166,
+    "after_avg": 0,
+    "delta": 0
+  },
+  "bypass": "NONE - all REAL metrics"
+}

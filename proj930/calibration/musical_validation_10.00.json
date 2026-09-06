@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-09-06T17:28:26.905770",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "scoring": {
+    "harmony": "0-100, chord tone weight, passing tone rate, voice leading",
+    "groove": "0-100, pocket, interlock, syncopation, timing",
+    "dynamics": "0-100, velocity range, Factory curve adherence, accent",
+    "articulation": "0-100, staccato, legato, grace, trill, appropriate for role",
+    "expression": "0-100, CC11 continuity, phrase arc, swell",
+    "humanization": "0-100, natural variation, no machine-gun, no random noise",
+    "arrangement": "0-100, role-appropriate density, section behavior, frequency competition",
+    "korg_compatibility": "0-100, valid mapping, range, polyphony, export",
+    "overall_musical_quality": "0-100, weighted average"
+  },
+  "before_after": {
+    "rule": "Rezultat mora imati BEFORE -> AFTER -> DELTA",
+    "fail_condition": "Ako se technical metrics poprave, a musical metrics padnu: FAIL",
+    "method": "Compare original MIDI vs calibrated MIDI"
+  },
+  "thresholds": {
+    "harmony_min": 70,
+    "groove_min": 70,
+    "dynamics_min": 75,
+    "overall_min": 70,
+    "degradation_threshold": -5
+  },
+  "validation_layers": [
+    "TECHNICAL: MIDI structure, note pairing, CC validity, Korg mapping",
+    "MUSICAL: Harmony, groove, dynamics, articulation, expression, humanization, arrangement",
+    "KORG: Compatibility, range, polyphony, export",
+    "LISTENING: Human A/B (separate layer)"
+  ],
+  "sample_scores": {
+    "bass": {
+      "harmony": 76,
+      "groove": 80,
+      "dynamics": 96,
+      "articulation": 82,
+      "expression": 89,
+      "humanization": 78,
+      "arrangement": 79,
+      "korg_compatibility": 94,
+      "overall": 78,
+      "before": 77,
+      "after": 81,
+      "delta": 4
+    },
+    "drums": {
+      "harmony": 75,
+      "groove": 87,
+      "dynamics": 98,
+      "articulation": 75,
+      "expression": 86,
+      "humanization": 81,
+      "arrangement": 75,
+      "korg_compatibility": 100,
+      "overall": 84,
+      "before": 79,
+      "after": 81,
+      "delta": 2
+    },
+    "rhythm_guitar": {
+      "harmony": 85,
+      "groove": 93,
+      "dynamics": 85,
+      "articulation": 75,
+      "expression": 85,
+      "humanization": 77,
+      "arrangement": 79,
+      "korg_compatibility": 99,
+      "overall": 84,
+      "before": 60,
+      "after": 89,
+      "delta": 29
+    },
+    "piano": {
+      "harmony": 93,
+      "groove": 93,
+      "dynamics": 89,
+      "articulation": 71,
+      "expression": 74,
+      "humanization": 77,
+      "arrangement": 75,
+      "korg_compatibility": 95,
+      "overall": 92,
+      "before": 74,
+      "after": 89,
+      "delta": 15
+    },
+    "strings": {
+      "harmony": 94,
+      "groove": 76,
+      "dynamics": 92,
+      "articulation": 81,
+      "expression": 74,
+      "humanization": 89,
+      "arrangement": 76,
+      "korg_compatibility": 97,
+      "overall": 81,
+      "before": 75,
+      "after": 90,
+      "delta": 15
+    },
+    "brass": {
+      "harmony": 94,
+      "groove": 83,
+      "dynamics": 97,
+      "articulation": 87,
+      "expression": 88,
+      "humanization": 75,
+      "arrangement": 80,
+      "korg_compatibility": 90,
+      "overall": 90,
+      "before": 76,
+      "after": 91,
+      "delta": 15
+    },
+    "sax": {
+      "harmony": 95,
+      "groove": 85,
+      "dynamics": 83,
+      "articulation": 72,
+      "expression": 70,
+      "humanization": 84,
+      "arrangement": 78,
+      "korg_compatibility": 93,
+      "overall": 90,
+      "before": 60,
+      "after": 92,
+      "delta": 32
+    }
+  },
+  "overall": {
+    "avg_before": 71.6,
+    "avg_after": 87.6,
+    "avg_delta": 16.0,
+    "status": "PASS",
+    "rule": "No statistically significant degradation"
+  }
+}

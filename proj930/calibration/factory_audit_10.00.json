@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-09-06T17:28:26.603035",
+  "instrument_distribution": {
+    "PERC CV1": {
+      "count": 45,
+      "velocity_min_avg": 25.488888888888887,
+      "velocity_max_avg": 124.37777777777778,
+      "velocity_optimal_avg": 89.4888888888889,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "ACC1 CV1": {
+      "count": 86,
+      "velocity_min_avg": 36.46511627906977,
+      "velocity_max_avg": 117.47674418604652,
+      "velocity_optimal_avg": 88.03488372093024,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "ACC2 CV1": {
+      "count": 79,
+      "velocity_min_avg": 31.72151898734177,
+      "velocity_max_avg": 121.11392405063292,
+      "velocity_optimal_avg": 88.13924050632912,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "ACC3 CV1": {
+      "count": 98,
+      "velocity_min_avg": 36.244897959183675,
+      "velocity_max_avg": 117.94897959183673,
+      "velocity_optimal_avg": 88.70408163265306,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "BASS CV1": {
+      "count": 48,
+      "velocity_min_avg": 40.666666666666664,
+      "velocity_max_avg": 124.9375,
+      "velocity_optimal_avg": 105.35416666666667,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "DRUMS CV1": {
+      "count": 844,
+      "velocity_min_avg": 59.56516587677725,
+      "velocity_max_avg": 111.49644549763033,
+      "velocity_optimal_avg": 94.42890995260663,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "ACC2 CV2": {
+      "count": 10,
+      "velocity_min_avg": 29.8,
+      "velocity_max_avg": 110.7,
+      "velocity_optimal_avg": 81.8,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "ACC5 CV1": {
+      "count": 58,
+      "velocity_min_avg": 49.39655172413793,
+      "velocity_max_avg": 115.65517241379311,
+      "velocity_optimal_avg": 93.51724137931035,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "ACC4 CV1": {
+      "count": 79,
+      "velocity_min_avg": 44.34177215189873,
+      "velocity_max_avg": 117.55696202531645,
+      "velocity_optimal_avg": 90.0506329113924,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "ACC4 CV2": {
+      "count": 5,
+      "velocity_min_avg": 49.8,
+      "velocity_max_avg": 120.6,
+      "velocity_optimal_avg": 85.8,
+      "velocity_range": [
+        9,
+        127
+      ]
+    },
+    "ACC3 CV3": {
+      "count": 1,
+      "velocity_min_avg": 9.0,
+      "velocity_max_avg": 127.0,
+      "velocity_optimal_avg": 127.0,
+      "velocity_range": [
+        9,
+        127
+      ]
+    },
+    "ACC1 CV2": {
+      "count": 9,
+      "velocity_min_avg": 46.666666666666664,
+      "velocity_max_avg": 108.33333333333333,
+      "velocity_optimal_avg": 86.44444444444444,
+      "velocity_range": [
+        1,
+        127
+      ]
+    },
+    "ACC5 CV2": {
+      "count": 10,
+      "velocity_min_avg": 52.6,
+      "velocity_max_avg": 111.2,
+      "velocity_optimal_avg": 87.1,
+      "velocity_range": [
+        17,
+        127
+      ]
+    },
+    "ACC3 CV2": {
+      "count": 4,
+      "velocity_min_avg": 43.5,
+      "velocity_max_avg": 126.75,
+      "velocity_optimal_avg": 108.5,
+      "velocity_range": [
+        32,
+        127
+      ]
+    },
+    "SN: Talkin' Jazz": {
+      "count": 10,
+      "velocity_min_avg": 75.6,
+      "velocity_max_avg": 113.8,
+      "velocity_optimal_avg": 94.0,
+      "velocity_range": [
+        20,
+        127
+      ]
+    },
+    "SN: Oberkr. Polka 2": {
+      "count": 13,
+      "velocity_min_avg": 75.6923076923077,
+      "velocity_max_avg": 113.23076923076923,
+      "velocity_optimal_avg": 98.15384615384616,
+      "velocity_range": [
+        13,
+        127
+      ]
+    },
+    "SN: UnpluggedBallad1": {
+      "count": 3,
+      "velocity_min_avg": 51.333333333333336,
+      "velocity_max_avg": 91.33333333333333,
+      "velocity_optimal_avg": 64.33333333333333,
+      "velocity_range": [
+        16,
+        105
+      ]
+    },
+    "SN: Funky R&B": {
+      "count": 6,
+      "velocity_min_avg": 59.666666666666664,
+      "velocity_max_avg": 108.16666666666667,
+      "velocity_optimal_avg": 97.33333333333333,
+      "velocity_range": [
+        15,
+        127
+      ]
+    },
+    "SN: Funky Sisters": {
+      "count": 2,
+      "velocity_min_avg": 36.0,
+      "velocity_max_avg": 97.5,
+      "velocity_optimal_avg": 70.0,
+      "velocity_range": [
+        19,
+        98
+      ]
+    },
+    "SN: Smooth Jazz": {
+      "count": 6,
+      "velocity_min_avg": 66.83333333333333,
+      "velocity_max_avg": 93.5,
+      "velocity_optimal_avg": 83.0,
+      "velocity_range": [
+        22,
+        113
+      ]
+    }
+  },
+  "velocity_analysis": {
+    "mean": 92.46741344195519,
+    "median": 97,
+    "min": 4,
+    "max": 127,
+    "p10": 56,
+    "p90": 126,
+    "samples": 1964
+  },
+  "range_analysis": {},
+  "confidence": {}
+}

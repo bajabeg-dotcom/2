@@ -1,0 +1,153 @@
+{
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "timestamp": "2026-09-06T17:28:26.396240",
+  "seed": 9302026,
+  "artifacts": {
+    "data/factory-velocity-profiles.json": {
+      "path": "/workspaces/2/proj930/data/factory-velocity-profiles.json",
+      "sha256": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60",
+      "size": 15145620,
+      "exists": true
+    },
+    "data/factory-velocity-catalog-9.30.json": {
+      "path": "/workspaces/2/proj930/data/factory-velocity-catalog-9.30.json",
+      "sha256": "64f1d61169cbd6fb546802c889d72543c12b33f0d263b1475c3969f6478d0329",
+      "size": 1794766,
+      "exists": true
+    },
+    "data/general-rules-9.30.json": {
+      "path": "/workspaces/2/proj930/data/general-rules-9.30.json",
+      "sha256": "9042f79f7d2be0b25ed053ff830d7a5f87f0ce9ac6bb739e48da65ab85d18079",
+      "size": 31928,
+      "exists": true
+    },
+    "data/instrument-catalog-9.30.json": {
+      "path": "/workspaces/2/proj930/data/instrument-catalog-9.30.json",
+      "sha256": "60c263b4d7129cdef605c6940af50237cef8d9ba44937eb55c9d13b985a85d06",
+      "size": 3358807,
+      "exists": true
+    },
+    "data/instrument-playing-profiles-9.30.json": {
+      "path": "/workspaces/2/proj930/data/instrument-playing-profiles-9.30.json",
+      "sha256": "eb9e7af07ee8f12853af05983c0ccaeaca30c3c7db6e0de5b8827fcf03084a96",
+      "size": 193090,
+      "exists": true
+    },
+    "data/drum-element-profiles-9.30.json": {
+      "path": "/workspaces/2/proj930/data/drum-element-profiles-9.30.json",
+      "sha256": "07350af549aa34bae3c7af9108d32d5f543af92b93b0a88cdf2d02b2d16cc746",
+      "size": 36243,
+      "exists": true
+    },
+    "data/deterministic-humanization-9.30.json": {
+      "path": "/workspaces/2/proj930/data/deterministic-humanization-9.30.json",
+      "sha256": "216f05977f6224936e1650efb6616de3c8f533b95eeeb55413c8a666e8e7d195",
+      "size": 46805,
+      "exists": true
+    },
+    "data/balkan-folk-profiles-9.30.json": {
+      "path": "/workspaces/2/proj930/data/balkan-folk-profiles-9.30.json",
+      "sha256": "6211ba0faf9b3bb287ad2f08347820d22131d7faa90970275e84279cac8a376f",
+      "size": 2423043,
+      "exists": true
+    },
+    "factory_velocity.py": {
+      "path": "/workspaces/2/proj930/factory_velocity.py",
+      "sha256": "b225a01859bc181c1d447900dd79686b7e6854502e57c442b71de4202ca2b6c4",
+      "size": 6491,
+      "exists": true
+    },
+    "instrument_profile_engine.py": {
+      "path": "/workspaces/2/proj930/instrument_profile_engine.py",
+      "sha256": "ba5bfeda8fbb84b14469238c5bed6c714d807bd67a2105707fd005b55d6673cb",
+      "size": 72497,
+      "exists": true
+    },
+    "gold_performance_registry.py": {
+      "path": "/workspaces/2/proj930/gold_performance_registry.py",
+      "sha256": "fd7f7ca9e4679fcb715ae1a751a5bea659d463da331e7d7bbddfb26a6d472eec",
+      "size": 17110,
+      "exists": true
+    },
+    "performance_gesture_engine.py": {
+      "path": "/workspaces/2/proj930/performance_gesture_engine.py",
+      "sha256": "1f66eb1c92717eb15d3b3d89bd3fc2680d2ae2125a70d309ecbef379f7cb3c6e",
+      "size": 5719,
+      "exists": true
+    },
+    "midi_optimizer.py": {
+      "path": "/workspaces/2/proj930/midi_optimizer.py",
+      "sha256": "a8ea9ef85ee0aa47249d47a87c30d749b8ec47ede64b5f29517a3d83278b05d7",
+      "size": 58565,
+      "exists": true
+    },
+    "pa800_validator.py": {
+      "path": "/workspaces/2/proj930/pa800_validator.py",
+      "sha256": "a249372d981ee5b3a8c836ec47c462451cd59cc95c44e80560f8276a47992477",
+      "size": 547,
+      "exists": true
+    },
+    "deterministic_humanizer.py": {
+      "path": "/workspaces/2/proj930/deterministic_humanizer.py",
+      "sha256": "0aa6b9a4cace877c80e3df54b9e3eeb38b56a37a938095324946f7e194644fa2",
+      "size": 30864,
+      "exists": true
+    },
+    "data/deterministic-humanization-9.30.db": {
+      "sha256": "7cf12d36fa5d3e2cca1e1d2ed84dee519493a878ba23a63b66c07aa3509e19d8",
+      "size": 20480,
+      "exists": true
+    },
+    "data/balkan-folk-profiles-9.30.db": {
+      "sha256": "20f001e488d0829515037ae970a880f53621bd3e10346244f8e6269087ad4c19",
+      "size": 28672,
+      "exists": true
+    },
+    "data/drum-element-profiles-9.30.db": {
+      "sha256": "382e86ac9d5b45bcf9d9f60ff6327eded7c5ec60353514d1efc036a7a2fc741d",
+      "size": 28672,
+      "exists": true
+    },
+    "data/instrument-profiles-9.30.db": {
+      "sha256": "4e158f8e17d82a70001698992f9cbe934d63ff4ac27cea02c68236d3c699ebef",
+      "size": 151552,
+      "exists": true
+    },
+    "data/instrument-profiles-9.30-alias.db": {
+      "sha256": "4b1a78b703295bac1e460114c495ab8d9dc0a2874913b5884b4a4ae757ae5004",
+      "size": 200704,
+      "exists": true
+    }
+  },
+  "corpus": {
+    "json_files": 203,
+    "db_files": 5,
+    "total_data_files": 208,
+    "data_dir_size_bytes": 53770094
+  },
+  "hashes": {
+    "data/factory-velocity-profiles.json": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60",
+    "data/factory-velocity-catalog-9.30.json": "64f1d61169cbd6fb546802c889d72543c12b33f0d263b1475c3969f6478d0329",
+    "data/general-rules-9.30.json": "9042f79f7d2be0b25ed053ff830d7a5f87f0ce9ac6bb739e48da65ab85d18079",
+    "data/instrument-catalog-9.30.json": "60c263b4d7129cdef605c6940af50237cef8d9ba44937eb55c9d13b985a85d06",
+    "data/instrument-playing-profiles-9.30.json": "eb9e7af07ee8f12853af05983c0ccaeaca30c3c7db6e0de5b8827fcf03084a96",
+    "data/drum-element-profiles-9.30.json": "07350af549aa34bae3c7af9108d32d5f543af92b93b0a88cdf2d02b2d16cc746",
+    "data/deterministic-humanization-9.30.json": "216f05977f6224936e1650efb6616de3c8f533b95eeeb55413c8a666e8e7d195",
+    "data/balkan-folk-profiles-9.30.json": "6211ba0faf9b3bb287ad2f08347820d22131d7faa90970275e84279cac8a376f",
+    "factory_velocity.py": "b225a01859bc181c1d447900dd79686b7e6854502e57c442b71de4202ca2b6c4",
+    "instrument_profile_engine.py": "ba5bfeda8fbb84b14469238c5bed6c714d807bd67a2105707fd005b55d6673cb",
+    "gold_performance_registry.py": "fd7f7ca9e4679fcb715ae1a751a5bea659d463da331e7d7bbddfb26a6d472eec",
+    "performance_gesture_engine.py": "1f66eb1c92717eb15d3b3d89bd3fc2680d2ae2125a70d309ecbef379f7cb3c6e",
+    "midi_optimizer.py": "a8ea9ef85ee0aa47249d47a87c30d749b8ec47ede64b5f29517a3d83278b05d7",
+    "pa800_validator.py": "a249372d981ee5b3a8c836ec47c462451cd59cc95c44e80560f8276a47992477",
+    "deterministic_humanizer.py": "0aa6b9a4cace877c80e3df54b9e3eeb38b56a37a938095324946f7e194644fa2"
+  },
+  "determinism_check": {
+    "input": "determinism_test_input_v930",
+    "seed": 9302026,
+    "hash1": "bb58beed3b330a6162be119dc7ce5ec238b2b896a95033e5ad2c0d805b4273ad",
+    "hash2": "bb58beed3b330a6162be119dc7ce5ec238b2b896a95033e5ad2c0d805b4273ad",
+    "deterministic": true,
+    "status": "PASS"
+  }
+}

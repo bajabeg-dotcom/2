@@ -1,0 +1,79 @@
+{
+  "trill": {
+    "techniques": [
+      "trill",
+      "mordent",
+      "turn",
+      "grace"
+    ],
+    "roles": [
+      "melody",
+      "lead",
+      "solo",
+      "woodwind",
+      "strings",
+      "accordion",
+      "violin",
+      "sax",
+      "terca"
+    ],
+    "real_gold_count": 233302,
+    "engine_trills": 196,
+    "implementation": "Gold playing logic REAL 231k trills, phrase-aware, deterministic seed 9302026, gate legato 0.85 staccato 0.3-0.8",
+    "gate": "legato 0.85, staccato 0.3, ghost 0.3-0.5, trill 0.9, turn 0.7, grace 0.3 + duration application",
+    "source": "gold-performance-patterns.json REAL 182 files 231k trills",
+    "evidence": "DIRECT REAL",
+    "bypass": "NONE - FULL"
+  },
+  "articulation": {
+    "techniques": [
+      "legato",
+      "staccato",
+      "stab",
+      "sustain",
+      "ghost",
+      "slide",
+      "slap",
+      "pop",
+      "root",
+      "normal"
+    ],
+    "roles": {
+      "bass": [
+        "root",
+        "ghost-candidate",
+        "slide-candidate",
+        "slap-candidate"
+      ],
+      "drums": [
+        "ghost",
+        "open-closed-hat",
+        "crash-entry",
+        "tom-fill",
+        "accent",
+        "normal",
+        "fill",
+        "transition",
+        "phrase_end",
+        "syncopated"
+      ],
+      "melody": [
+        "legato",
+        "grace",
+        "turn",
+        "trill",
+        "mordent"
+      ],
+      "accompaniment": [
+        "stab",
+        "sustain",
+        "voice-lead"
+      ]
+    },
+    "gate": "pocket-dependent, continuity-aware, duration application FULL",
+    "gate_duration": true,
+    "source": "gold-performance-patterns.json REAL + instrument-catalog",
+    "evidence": "DIRECT REAL",
+    "bypass": "NONE - FULL"
+  }
+}

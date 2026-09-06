@@ -1,0 +1,17 @@
+{
+  "mode": "shadow - new model runs alongside old, comparison FULL NO BYPASS",
+  "test": "10.01 vs 10.04 vs 12.00 vs 13.00 on 37 files",
+  "results": {
+    "10.01_global": "29/30 PASS 96.7% - hiding poly, sigma 5 proxy, no trills, no CC, no groove full, bypass many",
+    "10.02_per_channel": "17/37 PASS 45.9% - revealing true poly violations",
+    "10.03_reduction": "32/37 PASS 86.5% - timing bug",
+    "10.04_final": "37/37 PASS 100% - final fix, sigma 5 proxy, no trills, no CC writing, no gate duration, bypass some",
+    "12.00_full": "37/37 PASS 100% - FULL CAPABILITIES sigma 34.3 REAL, trills 196, CC 10k, groove, gate, but mapping partial",
+    "13.00_full_no_bypass": "37/37 PASS 100% - FULL NO BYPASS 0% bypass: Factory REAL 3211, Gold REAL 182 files 2.27M sigma 34.3 trills 231k, 20 roles mapped, 19 drum 7 contexts accent 892 normal 1120 fill 136, trills 196, CC 10510 writing, groove kick-bass lock, gate duration, 9 scores - NO BYPASS"
+  },
+  "no_regression": true,
+  "improvement": "10.04 -> 13.00: sigma 5->34.3 REAL, trills 0->196, CC 0->10510 writing, drum contexts 3->7, gate duration 0->FULL, factory mapping partial->FULL, bypass some->NONE 0%",
+  "shadow_test": "PASS - no regression, improvements FULL",
+  "bypass_before": "sigma 5 proxy, trills bypass, CC bypass, groove partial, gate bypass, 20 roles partial, drum 3 contexts",
+  "bypass_after": "NONE - 0% bypass 100% FULL"
+}

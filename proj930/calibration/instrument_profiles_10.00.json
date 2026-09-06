@@ -1,0 +1,3135 @@
+{
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "timestamp": "2026-09-06T17:28:26.877792",
+  "total_profiles": 20,
+  "authority": "FACTORY=VELOCITY, GOLD=PLAYING LOGIC",
+  "profiles": {
+    "bass": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "bass",
+      "family": "bass",
+      "subtype": "electric_bass",
+      "gm_programs": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "identity": {
+        "instrument_name": "bass",
+        "family": "bass",
+        "subtype": "electric_bass",
+        "gm_programs": [
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 32
+        },
+        "sound_type": "BASS",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 28,
+        "high": 55,
+        "pref_low": 28,
+        "pref_high": 48,
+        "danger_low": 0,
+        "danger_high": 67,
+        "observed_low": 23,
+        "observed_high": 126,
+        "source": "FACTORY_OBSERVED"
+      },
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "median": 105,
+        "mean": 103.05882352941177,
+        "p10": 84,
+        "p25": 90,
+        "p50": 105,
+        "p75": 114,
+        "p90": 127,
+        "p95": 127,
+        "p99": 127,
+        "soft_zone": [
+          84,
+          100
+        ],
+        "normal_zone": [
+          100,
+          122
+        ],
+        "accent_zone": [
+          122,
+          127
+        ],
+        "max_accent": 127,
+        "sample_count": 51,
+        "source": "FACTORY",
+        "confidence": 0.6754645538442294
+      },
+      "timing": {
+        "attack_offset": -5,
+        "release_offset": 10,
+        "anticipation": 0.05,
+        "delay": 0.02,
+        "humanization_sigma": 5,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          60,
+          127
+        ],
+        "baseline": 100,
+        "swell": "RARE",
+        "fade": "CONTROLLED",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.5,
+        "accent": 0.3,
+        "slide": 0.08,
+        "ghost": 0.1,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.8,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 5,
+        "timing_random": 5,
+        "duration_random": 8,
+        "repetition_avoid": 0.6,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "BASS",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 2,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 51,
+        "gold_proxy": true,
+        "overall": 0.825,
+        "level": "HIGH"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "BASS_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Low-frequency harmonic and rhythmic foundation",
+        "explanation": "Factory daje velocity 1-127, Gold daje playing logic za bass"
+      }
+    },
+    "drums": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "drums",
+      "family": "drums",
+      "subtype": "drum_kit",
+      "gm_programs": [],
+      "identity": {
+        "instrument_name": "drums",
+        "family": "drums",
+        "subtype": "drum_kit",
+        "gm_programs": [],
+        "korg_programs": {
+          "cc0": 120,
+          "cc32": 0,
+          "pc": 0,
+          "channel": 10
+        },
+        "sound_type": "DRUM",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 35,
+        "high": 81,
+        "pref_low": 36,
+        "pref_high": 59,
+        "danger_low": 27,
+        "danger_high": 87,
+        "observed_low": 1,
+        "observed_high": 127,
+        "source": "FACTORY_OBSERVED"
+      },
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "median": 98,
+        "mean": 93.14707952146375,
+        "p10": 55,
+        "p25": 76,
+        "p50": 98,
+        "p75": 114,
+        "p90": 127,
+        "p95": 127,
+        "p99": 127,
+        "soft_zone": [
+          55,
+          90
+        ],
+        "normal_zone": [
+          90,
+          122
+        ],
+        "accent_zone": [
+          122,
+          127
+        ],
+        "max_accent": 127,
+        "sample_count": 1421,
+        "source": "FACTORY",
+        "confidence": 0.99
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 0,
+        "anticipation": 0.02,
+        "delay": 0.01,
+        "humanization_sigma": 3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.9,
+        "legato": 0.0,
+        "accent": 0.5,
+        "flam": 0.05,
+        "roll": 0.03,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.9,
+        "syncopation": 0.2,
+        "displacement": 0.02,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 8,
+        "timing_random": 3,
+        "duration_random": 0,
+        "repetition_avoid": 0.7,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "DRUM",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": 10,
+        "polyphony_max": 8,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 1421,
+        "gold_proxy": true,
+        "overall": 0.99,
+        "level": "HIGH"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "DRUMS_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Primary rhythmic driver and groove keeper",
+        "explanation": "Factory daje velocity 1-127, Gold daje playing logic za drums"
+      }
+    },
+    "piano": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "piano",
+      "family": "keyboard",
+      "subtype": "piano",
+      "gm_programs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "identity": {
+        "instrument_name": "piano",
+        "family": "keyboard",
+        "subtype": "piano",
+        "gm_programs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 21,
+        "high": 108,
+        "pref_low": 36,
+        "pref_high": 96,
+        "danger_low": 21,
+        "danger_high": 108,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": -2,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 8,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.03,
+        "straightness": 0.7,
+        "syncopation": 0.25,
+        "displacement": 0.08,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "RHYTHMIC_CHORD",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "PIANO_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Chordal comping and harmonic support",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za piano"
+      }
+    },
+    "organ": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "organ",
+      "family": "keyboard",
+      "subtype": "organ",
+      "gm_programs": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "identity": {
+        "instrument_name": "organ",
+        "family": "keyboard",
+        "subtype": "organ",
+        "gm_programs": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 16
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 36,
+        "high": 96,
+        "pref_low": 48,
+        "pref_high": 84,
+        "danger_low": 36,
+        "danger_high": 96,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "RHYTHMIC_CHORD",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "ORGAN_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "organ musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za organ"
+      }
+    },
+    "rhythm_guitar": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "rhythm_guitar",
+      "family": "guitar",
+      "subtype": "rhythm",
+      "gm_programs": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "identity": {
+        "instrument_name": "rhythm_guitar",
+        "family": "guitar",
+        "subtype": "rhythm",
+        "gm_programs": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 24
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": true
+      },
+      "range": {
+        "low": 40,
+        "high": 84,
+        "pref_low": 40,
+        "pref_high": 72,
+        "danger_low": 28,
+        "danger_high": 91,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": -8,
+        "release_offset": 15,
+        "anticipation": 0.08,
+        "delay": 0.05,
+        "humanization_sigma": 12,
+        "source": "GOLD",
+        "confidence": 0.4
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.3,
+        "legato": 0.2,
+        "accent": 0.5,
+        "mute": 0.2,
+        "slide": 0.05,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.05,
+        "straightness": 0.6,
+        "syncopation": 0.3,
+        "displacement": 0.1,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 10,
+        "timing_random": 12,
+        "duration_random": 15,
+        "repetition_avoid": 0.8,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "RHYTHMIC_CHORD",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": false,
+        "overall": 0.1,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "RHYTHM_GUITAR_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Harmonic rhythm with strumming physicality",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za rhythm_guitar"
+      }
+    },
+    "solo_guitar": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "solo_guitar",
+      "family": "guitar",
+      "subtype": "solo",
+      "gm_programs": [
+        26,
+        27,
+        29,
+        30
+      ],
+      "identity": {
+        "instrument_name": "solo_guitar",
+        "family": "guitar",
+        "subtype": "solo",
+        "gm_programs": [
+          26,
+          27,
+          29,
+          30
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 26
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": true
+      },
+      "range": {
+        "low": 40,
+        "high": 91,
+        "pref_low": 48,
+        "pref_high": 84,
+        "danger_low": 40,
+        "danger_high": 91,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": -3,
+        "release_offset": 8,
+        "anticipation": 0.05,
+        "delay": 0.03,
+        "humanization_sigma": 10,
+        "source": "GOLD",
+        "confidence": 0.4
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.1,
+        "legato": 0.6,
+        "bend": 0.25,
+        "slide": 0.15,
+        "hammerOn": 0.12,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 7,
+        "timing_random": 10,
+        "duration_random": 12,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "SOLO",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 1,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": false,
+        "overall": 0.1,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "SOLO_GUITAR_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Expressive solo phrase with bends",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za solo_guitar"
+      }
+    },
+    "accordion": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "accordion",
+      "family": "free_reed",
+      "subtype": "accordion",
+      "gm_programs": [
+        21,
+        23
+      ],
+      "identity": {
+        "instrument_name": "accordion",
+        "family": "free_reed",
+        "subtype": "accordion",
+        "gm_programs": [
+          21,
+          23
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 21
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 36,
+        "high": 96,
+        "pref_low": 48,
+        "pref_high": 84,
+        "danger_low": 36,
+        "danger_high": 96,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "TEXTURE",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "ACCORDION_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "accordion musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za accordion"
+      }
+    },
+    "strings": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "strings",
+      "family": "bowed_strings",
+      "subtype": "ensemble",
+      "gm_programs": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        48,
+        49,
+        50,
+        51
+      ],
+      "identity": {
+        "instrument_name": "strings",
+        "family": "bowed_strings",
+        "subtype": "ensemble",
+        "gm_programs": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          48,
+          49,
+          50,
+          51
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 48
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": true
+      },
+      "range": {
+        "low": 36,
+        "high": 96,
+        "pref_low": 48,
+        "pref_high": 84,
+        "danger_low": 28,
+        "danger_high": 96,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          20,
+          127
+        ],
+        "baseline": 80,
+        "swell": "COMMON",
+        "fade": "SLOW",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "HARMONIC_PAD",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "STRINGS_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Sustained harmonic and emotional support",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za strings"
+      }
+    },
+    "brass": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "brass",
+      "family": "brass",
+      "subtype": "section",
+      "gm_programs": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "identity": {
+        "instrument_name": "brass",
+        "family": "brass",
+        "subtype": "section",
+        "gm_programs": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 56
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": true
+      },
+      "range": {
+        "low": 40,
+        "high": 82,
+        "pref_low": 52,
+        "pref_high": 77,
+        "danger_low": 28,
+        "danger_high": 82,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "ACCENT",
+        "fade": "BREATH",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "FILL",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "BRASS_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Stab accents and section transition marks",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za brass"
+      }
+    },
+    "sax": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "sax",
+      "family": "wind",
+      "subtype": "saxophone",
+      "gm_programs": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "identity": {
+        "instrument_name": "sax",
+        "family": "wind",
+        "subtype": "saxophone",
+        "gm_programs": [
+          64,
+          65,
+          66,
+          67
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 64
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": true
+      },
+      "range": {
+        "low": 49,
+        "high": 79,
+        "pref_low": 54,
+        "pref_high": 74,
+        "danger_low": 42,
+        "danger_high": 91,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          30,
+          127
+        ],
+        "baseline": 85,
+        "swell": "PHRASE",
+        "fade": "BREATH",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.5,
+        "grace": 0.1,
+        "slide": 0.08,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 8,
+        "duration_random": 10,
+        "repetition_avoid": 0.4,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "COUNTER_MELODY",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 1,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "SAX_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Phrase-based melodic counterpoint",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za sax"
+      }
+    },
+    "woodwind": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "woodwind",
+      "family": "wind",
+      "subtype": "folk_woodwind",
+      "gm_programs": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "identity": {
+        "instrument_name": "woodwind",
+        "family": "wind",
+        "subtype": "folk_woodwind",
+        "gm_programs": [
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 55,
+        "high": 91,
+        "pref_low": 60,
+        "pref_high": 84,
+        "danger_low": 48,
+        "danger_high": 96,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "COUNTER_MELODY",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "WOODWIND_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "woodwind musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za woodwind"
+      }
+    },
+    "clarinet": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "clarinet",
+      "family": "wind",
+      "subtype": "clarinet_folk",
+      "gm_programs": [
+        71
+      ],
+      "identity": {
+        "instrument_name": "clarinet",
+        "family": "wind",
+        "subtype": "clarinet_folk",
+        "gm_programs": [
+          71
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 50,
+        "high": 91,
+        "pref_low": 55,
+        "pref_high": 79,
+        "danger_low": 50,
+        "danger_high": 91,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.4
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.5,
+        "grace": 0.15,
+        "trill": 0.12,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "COUNTER_MELODY",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": false,
+        "overall": 0.1,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "CLARINET_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "clarinet musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za clarinet"
+      }
+    },
+    "violin": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "violin",
+      "family": "bowed_strings",
+      "subtype": "violin_fiddle",
+      "gm_programs": [
+        40
+      ],
+      "identity": {
+        "instrument_name": "violin",
+        "family": "bowed_strings",
+        "subtype": "violin_fiddle",
+        "gm_programs": [
+          40
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 55,
+        "high": 96,
+        "pref_low": 55,
+        "pref_high": 84,
+        "danger_low": 55,
+        "danger_high": 98,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.4
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.15,
+        "legato": 0.7,
+        "grace": 0.1,
+        "slide": 0.12,
+        "trill": 0.08,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "MELODY",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 1,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": false,
+        "overall": 0.1,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "VIOLIN_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "Legato melodic voice with ornaments",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za violin"
+      }
+    },
+    "synth_lead": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "synth_lead",
+      "family": "synth",
+      "subtype": "lead",
+      "gm_programs": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "identity": {
+        "instrument_name": "synth_lead",
+        "family": "synth",
+        "subtype": "lead",
+        "gm_programs": [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 36,
+        "high": 96,
+        "pref_low": 48,
+        "pref_high": 84,
+        "danger_low": 24,
+        "danger_high": 96,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.4
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "MELODY",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": false,
+        "overall": 0.1,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "SYNTH_LEAD_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "synth_lead musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za synth_lead"
+      }
+    },
+    "pad": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "pad",
+      "family": "synth",
+      "subtype": "pad",
+      "gm_programs": [
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ],
+      "identity": {
+        "instrument_name": "pad",
+        "family": "synth",
+        "subtype": "pad",
+        "gm_programs": [
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 24,
+        "high": 96,
+        "pref_low": 36,
+        "pref_high": 84,
+        "danger_low": 24,
+        "danger_high": 96,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          30,
+          100
+        ],
+        "baseline": 70,
+        "swell": "SLOW",
+        "fade": "SLOW",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "HARMONIC_PAD",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "PAD_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "pad musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za pad"
+      }
+    },
+    "mallet": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "mallet",
+      "family": "percussion",
+      "subtype": "mallet",
+      "gm_programs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "identity": {
+        "instrument_name": "mallet",
+        "family": "percussion",
+        "subtype": "mallet",
+        "gm_programs": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 48,
+        "high": 96,
+        "pref_low": 55,
+        "pref_high": 84,
+        "danger_low": 36,
+        "danger_high": 108,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.4
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "FILL",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": false,
+        "overall": 0.1,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "MALLET_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "mallet musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za mallet"
+      }
+    },
+    "choir": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "choir",
+      "family": "vocal",
+      "subtype": "choir",
+      "gm_programs": [
+        52,
+        53,
+        54
+      ],
+      "identity": {
+        "instrument_name": "choir",
+        "family": "vocal",
+        "subtype": "choir",
+        "gm_programs": [
+          52,
+          53,
+          54
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 48,
+        "high": 72,
+        "pref_low": 48,
+        "pref_high": 72,
+        "danger_low": 36,
+        "danger_high": 84,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "HARMONIC_PAD",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "CHOIR_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "choir musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za choir"
+      }
+    },
+    "percussion": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "percussion",
+      "family": "percussion",
+      "subtype": "hand_perc",
+      "gm_programs": [],
+      "identity": {
+        "instrument_name": "percussion",
+        "family": "percussion",
+        "subtype": "hand_perc",
+        "gm_programs": [],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "PERC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 36,
+        "high": 81,
+        "pref_low": 42,
+        "pref_high": 72,
+        "danger_low": 27,
+        "danger_high": 87,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "PERCUSSION",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": 10,
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "PERCUSSION_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "percussion musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za percussion"
+      }
+    },
+    "fx": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "fx",
+      "family": "fx",
+      "subtype": "special",
+      "gm_programs": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "identity": {
+        "instrument_name": "fx",
+        "family": "fx",
+        "subtype": "special",
+        "gm_programs": [
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 0,
+        "high": 127,
+        "pref_low": 0,
+        "pref_high": 127,
+        "danger_low": 0,
+        "danger_high": 127,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.4
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "FX",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": false,
+        "overall": 0.1,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "FX_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "fx musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za fx"
+      }
+    },
+    "accompaniment": {
+      "schema": "instrument-profile-10.00",
+      "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+      "role": "accompaniment",
+      "family": "keyboard",
+      "subtype": "generic_comp",
+      "gm_programs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "identity": {
+        "instrument_name": "accompaniment",
+        "family": "keyboard",
+        "subtype": "generic_comp",
+        "gm_programs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "korg_programs": {
+          "cc0": 0,
+          "cc32": 0,
+          "pc": 0
+        },
+        "sound_type": "ACC",
+        "rx_dnc_status": false
+      },
+      "range": {
+        "low": 36,
+        "high": 96,
+        "pref_low": 48,
+        "pref_high": 84,
+        "danger_low": 21,
+        "danger_high": 108,
+        "source": "DEFAULT_SPEC"
+      },
+      "velocity": {
+        "min": 20,
+        "max": 127,
+        "median": 80,
+        "mean": 80,
+        "p10": 40,
+        "p25": 60,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 120,
+        "p99": 127,
+        "soft_zone": [
+          1,
+          50
+        ],
+        "normal_zone": [
+          50,
+          100
+        ],
+        "accent_zone": [
+          100,
+          127
+        ],
+        "max_accent": 127,
+        "source": "DEFAULT",
+        "confidence": 0.3
+      },
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "anticipation": 0.03,
+        "delay": 0.02,
+        "humanization_sigma": 7,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "expression": {
+        "cc11_range": [
+          40,
+          127
+        ],
+        "baseline": 90,
+        "swell": "MODERATE",
+        "fade": "NATURAL",
+        "source": "GOLD",
+        "confidence": 0.6
+      },
+      "articulation": {
+        "staccato": 0.2,
+        "legato": 0.4,
+        "accent": 0.3,
+        "source": "GOLD",
+        "confidence": 0.7
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "velocity_random": 6,
+        "timing_random": 7,
+        "duration_random": 10,
+        "repetition_avoid": 0.5,
+        "source": "GOLD"
+      },
+      "arrangement_role": {
+        "primary": "RHYTHMIC_CHORD",
+        "secondary": "SUPPORT",
+        "section_behavior": {
+          "intro": "ESTABLISH_OR_REST",
+          "verse": "FOLLOW_CHORD",
+          "chorus": "INCREASE_ENERGY",
+          "fill": "ANSWER_OR_REST",
+          "ending": "RELEASE"
+        }
+      },
+      "korg_constraints": {
+        "channel": "9-16",
+        "polyphony_max": 6,
+        "pa800_total_max": 54,
+        "cc7_default": 110,
+        "velocity_limits": "1-127",
+        "note_range_enforced": true,
+        "export_strict_mode": true,
+        "source": "KORG_SPEC + GENERAL_RULES"
+      },
+      "source_authority": {
+        "velocity": "FACTORY PRIMARY",
+        "range": "FACTORY PRIMARY + GENERAL RULES",
+        "timing": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY"
+      },
+      "confidence": {
+        "factory_samples": 0,
+        "gold_proxy": true,
+        "overall": 0.25,
+        "level": "UNKNOWN"
+      },
+      "metrics": {
+        "before": "ORIGINAL_MIDI",
+        "after": "CALIBRATED",
+        "transformation_rule": "ACCOMPANIMENT_FACTORY_VELOCITY_GOLD_PLAYING_LOGIC",
+        "musical_purpose": "accompaniment musical role",
+        "explanation": "Factory daje velocity 20-127, Gold daje playing logic za accompaniment"
+      }
+    }
+  }
+}

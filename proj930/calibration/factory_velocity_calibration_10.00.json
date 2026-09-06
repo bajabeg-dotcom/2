@@ -1,0 +1,1549 @@
+{
+  "timestamp": "2026-09-06T17:28:26.901649",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "authority": "FACTORY_ONLY",
+  "calibrations": {
+    "bass": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 84
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 90
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 105
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 114
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 84,
+          "lowMid": 90,
+          "optimal": 105,
+          "highMid": 114,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 51
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true,
+          "bass_audible": false
+        },
+        "korg_realistic": false,
+        "pass_rate": 0.8333333333333334
+      },
+      "source": "FACTORY",
+      "input_samples": 51,
+      "confidence": 0.6754645538442294,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 1-127",
+        "musical_purpose": "Prirodni velocity raspon za bass",
+        "pass_fail": "FAIL"
+      }
+    },
+    "drums": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 55
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 76
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 98
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 114
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 55,
+          "lowMid": 76,
+          "optimal": 98,
+          "highMid": 114,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1421
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 1421,
+      "confidence": 0.99,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 1-127",
+        "musical_purpose": "Prirodni velocity raspon za drums",
+        "pass_fail": "PASS"
+      }
+    },
+    "piano": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za piano",
+        "pass_fail": "PASS"
+      }
+    },
+    "organ": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za organ",
+        "pass_fail": "PASS"
+      }
+    },
+    "rhythm_guitar": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za rhythm_guitar",
+        "pass_fail": "PASS"
+      }
+    },
+    "solo_guitar": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za solo_guitar",
+        "pass_fail": "PASS"
+      }
+    },
+    "accordion": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za accordion",
+        "pass_fail": "PASS"
+      }
+    },
+    "strings": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za strings",
+        "pass_fail": "PASS"
+      }
+    },
+    "brass": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za brass",
+        "pass_fail": "PASS"
+      }
+    },
+    "sax": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za sax",
+        "pass_fail": "PASS"
+      }
+    },
+    "woodwind": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za woodwind",
+        "pass_fail": "PASS"
+      }
+    },
+    "clarinet": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za clarinet",
+        "pass_fail": "PASS"
+      }
+    },
+    "violin": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za violin",
+        "pass_fail": "PASS"
+      }
+    },
+    "synth_lead": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za synth_lead",
+        "pass_fail": "PASS"
+      }
+    },
+    "pad": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za pad",
+        "pass_fail": "PASS"
+      }
+    },
+    "mallet": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za mallet",
+        "pass_fail": "PASS"
+      }
+    },
+    "choir": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za choir",
+        "pass_fail": "PASS"
+      }
+    },
+    "percussion": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za percussion",
+        "pass_fail": "PASS"
+      }
+    },
+    "fx": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za fx",
+        "pass_fail": "PASS"
+      }
+    },
+    "accompaniment": {
+      "curve": {
+        "method": "factory-quantiles-plus-mode-monotone-v1",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 60
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 80
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 100
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 115
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 40,
+          "lowMid": 60,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 0
+      },
+      "validation": {
+        "checks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "korg_realistic": true,
+        "pass_rate": 1.0
+      },
+      "source": "FACTORY",
+      "input_samples": 0,
+      "confidence": 0.3,
+      "transformation": {
+        "before": "ORIGINAL_VELOCITY",
+        "after": "FACTORY_CURVE_factory-quantiles-plus-mode-monotone-v1",
+        "rule": "Intensity 0-100 -> Velocity 20-127",
+        "musical_purpose": "Prirodni velocity raspon za accompaniment",
+        "pass_fail": "PASS"
+      }
+    }
+  },
+  "summary": {}
+}

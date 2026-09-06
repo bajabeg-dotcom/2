@@ -1,0 +1,55 @@
+{
+  "10.01_failures": [
+    {
+      "file": "session4-after.mid",
+      "reason": "Global poly 7 > bass limit 2, 81 notes 6 channels",
+      "type": "multi-channel arrangement misclassified as single role",
+      "fix": "Per-channel classification in 10.02"
+    }
+  ],
+  "10.02_failures": [
+    {
+      "files": 20,
+      "reason": "Per-channel poly violations: bass poly 4>2, melody poly 2>1, drums poly 13>8",
+      "type": "Real polyphony violations, not Korg-ready",
+      "fix": "Polyphony reduction transform in 10.03"
+    },
+    {
+      "example": "session4-after.mid ch11 bass poly 4>2 on tick 3120,5040",
+      "fix": "Reduce to 2 lowest pitch (root)"
+    }
+  ],
+  "10.03_failures": [
+    {
+      "files": 5,
+      "reason": "Timing humanization shift creates new poly overlaps",
+      "example": "session34-variant-a.mid melody poly 3>1 after timing",
+      "type": "Timing shift ±5-15 creates new same-tick overlaps",
+      "fix": "Timing preservation + emergency reduction in 10.04"
+    }
+  ],
+  "10.04_final": {
+    "failures": 0,
+    "pass": "37/37 100%",
+    "reductions": "9008->8579 notes reduced 429",
+    "method": "Per-channel + poly reduction before timing + timing preservation + emergency"
+  },
+  "edge_cases": [
+    {
+      "case": "session4-after.mid multi-channel 6 channels",
+      "status": "FIXED in 10.04",
+      "method": "Per-channel role + poly reduction"
+    },
+    {
+      "case": "v620-reconstructed.mid drums poly 13>8",
+      "status": "FIXED in 10.04",
+      "method": "Drums priority kick>snare>HH, 262->242 reduced 20"
+    },
+    {
+      "case": "session34-variant-a.mid 1400 notes 7 channels melody poly 3>1",
+      "status": "FIXED in 10.04",
+      "method": "Melody keeps highest velocity, timing preservation, 1400->1351 reduced 49"
+    }
+  ],
+  "remaining": "No failures in 10.04, all edge cases fixed via transformation"
+}

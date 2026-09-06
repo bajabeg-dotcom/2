@@ -1,0 +1,1419 @@
+{
+  "schema": "factory-velocity-profiles-20-roles-REAL",
+  "version": "14.00-FACTORY-20-ROLES-REAL-3211",
+  "generatedFrom": "prism-uploads/Workspace_Styles 3211 MIDI files per-channel 20 roles analysis",
+  "timestamp": "2026-09-06T14:35:17.376341",
+  "total_files": 3211,
+  "total_channel_instances": 18588,
+  "total_notes": 1432867,
+  "authority": "FACTORY=VELOCITY/DYNAMICS/RANGE - REAL from 3211 files",
+  "roles": {
+    "drums": {
+      "channel_instances": 3153,
+      "notes": 332902,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 88.69778192981718,
+        "p05": 38,
+        "p10": 49,
+        "p25": 69,
+        "p50": 93,
+        "p75": 110,
+        "p90": 122,
+        "p95": 127
+      },
+      "pitch_avg": 40.90076358808298,
+      "evidence": "DIRECT REAL from 3153 instances 332902 notes"
+    },
+    "terca": {
+      "channel_instances": 363,
+      "notes": 6413,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 77.47029471386247,
+        "p05": 29,
+        "p10": 40,
+        "p25": 57,
+        "p50": 80,
+        "p75": 100,
+        "p90": 114,
+        "p95": 120
+      },
+      "pitch_avg": 71.57336659909559,
+      "evidence": "DIRECT REAL from 363 instances 6413 notes"
+    },
+    "bass": {
+      "channel_instances": 3102,
+      "notes": 99390,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 92.94228795653487,
+        "p05": 50,
+        "p10": 62,
+        "p25": 80,
+        "p50": 96,
+        "p75": 110,
+        "p90": 120,
+        "p95": 125
+      },
+      "pitch_avg": 35.42545527719086,
+      "evidence": "DIRECT REAL from 3102 instances 99390 notes"
+    },
+    "rhythm-guitar": {
+      "channel_instances": 3211,
+      "notes": 320474,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 83.36852287549068,
+        "p05": 41,
+        "p10": 53,
+        "p25": 69,
+        "p50": 85,
+        "p75": 100,
+        "p90": 112,
+        "p95": 120
+      },
+      "pitch_avg": 62.785901508390694,
+      "evidence": "DIRECT REAL from 3211 instances 320474 notes"
+    },
+    "melody": {
+      "channel_instances": 624,
+      "notes": 6034,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 80.04507789194564,
+        "p05": 34,
+        "p10": 46,
+        "p25": 62,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 124
+      },
+      "pitch_avg": 62.83410672853828,
+      "evidence": "DIRECT REAL from 624 instances 6034 notes"
+    },
+    "accompaniment": {
+      "channel_instances": 3081,
+      "notes": 279010,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 82.5256764990502,
+        "p05": 40,
+        "p10": 50,
+        "p25": 66,
+        "p50": 84,
+        "p75": 100,
+        "p90": 114,
+        "p95": 121
+      },
+      "pitch_avg": 65.55665746747428,
+      "evidence": "DIRECT REAL from 3081 instances 279010 notes"
+    },
+    "guitar": {
+      "channel_instances": 1566,
+      "notes": 103027,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 85.46159744532987,
+        "p05": 43,
+        "p10": 53,
+        "p25": 68,
+        "p50": 87,
+        "p75": 105,
+        "p90": 116,
+        "p95": 126
+      },
+      "pitch_avg": 65.11806613800266,
+      "evidence": "DIRECT REAL from 1566 instances 103027 notes"
+    },
+    "power-riff": {
+      "channel_instances": 976,
+      "notes": 178890,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 89.50168259824473,
+        "p05": 45,
+        "p10": 57,
+        "p25": 74,
+        "p50": 92,
+        "p75": 108,
+        "p90": 119,
+        "p95": 124
+      },
+      "pitch_avg": 52.593308737212816,
+      "evidence": "DIRECT REAL from 976 instances 178890 notes"
+    },
+    "riff": {
+      "channel_instances": 1254,
+      "notes": 55401,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 83.08649663363477,
+        "p05": 39,
+        "p10": 48,
+        "p25": 66,
+        "p50": 85,
+        "p75": 102,
+        "p90": 114,
+        "p95": 121
+      },
+      "pitch_avg": 61.5348639916247,
+      "evidence": "DIRECT REAL from 1254 instances 55401 notes"
+    },
+    "lead": {
+      "channel_instances": 203,
+      "notes": 5157,
+      "velocity": {
+        "min": 1,
+        "max": 110,
+        "avg": 69.50126042272639,
+        "p05": 32,
+        "p10": 39,
+        "p25": 53,
+        "p50": 72,
+        "p75": 89,
+        "p90": 100,
+        "p95": 104
+      },
+      "pitch_avg": 60.937366686057786,
+      "evidence": "DIRECT REAL from 203 instances 5157 notes"
+    },
+    "piano": {
+      "channel_instances": 851,
+      "notes": 42947,
+      "velocity": {
+        "min": 3,
+        "max": 127,
+        "avg": 83.57240319463524,
+        "p05": 40,
+        "p10": 51,
+        "p25": 67,
+        "p50": 85,
+        "p75": 102,
+        "p90": 114,
+        "p95": 122
+      },
+      "pitch_avg": 79.10810999604163,
+      "evidence": "DIRECT REAL from 851 instances 42947 notes"
+    },
+    "solo": {
+      "channel_instances": 180,
+      "notes": 3172,
+      "velocity": {
+        "min": 17,
+        "max": 127,
+        "avg": 95.37610340479193,
+        "p05": 47,
+        "p10": 59,
+        "p25": 78,
+        "p50": 100,
+        "p75": 114,
+        "p90": 126,
+        "p95": 127
+      },
+      "pitch_avg": 57.35088272383354,
+      "evidence": "DIRECT REAL from 180 instances 3172 notes"
+    },
+    "strings": {
+      "channel_instances": 24,
+      "notes": 50,
+      "velocity": {
+        "min": 32,
+        "max": 127,
+        "avg": 74.26,
+        "p05": 41,
+        "p10": 48,
+        "p25": 50,
+        "p50": 70,
+        "p75": 95,
+        "p90": 114,
+        "p95": 127
+      },
+      "pitch_avg": 89.1,
+      "evidence": "DIRECT REAL from 24 instances 50 notes"
+    }
+  },
+  "calibrations": {
+    "drums": {
+      "role": "drums",
+      "factory_source_role": "drums",
+      "factory_profiles": 3153,
+      "sample_count": 332902,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 332902,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 33,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 49,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 69,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 93,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 110,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 122,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 127,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 38,
+          "p10": 49,
+          "p25": 69,
+          "p50": 93,
+          "p75": 110,
+          "p90": 122,
+          "p95": 127
+        },
+        "values": {
+          "floor": 33,
+          "soft": 49,
+          "lowMid": 69,
+          "optimal": 93,
+          "highMid": 110,
+          "strong": 122,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          33,
+          127
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 33,
+        "optimal": 93,
+        "ceiling": 127,
+        "reason": "REAL from 3153 instances 332902 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role drums 3153 instances 332902 notes, vel 1-127 p50 93",
+        "musical_purpose": "Natural drums velocity from REAL Factory 3211",
+        "target_profile": "drums floor 33 optimal 93 ceiling 127",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL drums intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 33-127 optimal 93",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory drums from 3211 files",
+        "evidence": "DIRECT REAL 3153 instances 332902 notes"
+      }
+    },
+    "terca": {
+      "role": "terca",
+      "factory_source_role": "terca",
+      "factory_profiles": 363,
+      "sample_count": 6413,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 6413,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 24,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 40,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 57,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 80,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 100,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 114,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 125,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 29,
+          "p10": 40,
+          "p25": 57,
+          "p50": 80,
+          "p75": 100,
+          "p90": 114,
+          "p95": 120
+        },
+        "values": {
+          "floor": 24,
+          "soft": 40,
+          "lowMid": 57,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 114,
+          "ceiling": 125
+        },
+        "allowedRange": [
+          24,
+          125
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 24,
+        "optimal": 80,
+        "ceiling": 125,
+        "reason": "REAL from 363 instances 6413 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role terca 363 instances 6413 notes, vel 1-127 p50 80",
+        "musical_purpose": "Natural terca velocity from REAL Factory 3211",
+        "target_profile": "terca floor 24 optimal 80 ceiling 125",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL terca intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 24-125 optimal 80",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory terca from 3211 files",
+        "evidence": "DIRECT REAL 363 instances 6413 notes"
+      }
+    },
+    "bass": {
+      "role": "bass",
+      "factory_source_role": "bass",
+      "factory_profiles": 3102,
+      "sample_count": 99390,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 99390,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 45,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 62,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 80,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 96,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 110,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 120,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 127,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 50,
+          "p10": 62,
+          "p25": 80,
+          "p50": 96,
+          "p75": 110,
+          "p90": 120,
+          "p95": 125
+        },
+        "values": {
+          "floor": 45,
+          "soft": 62,
+          "lowMid": 80,
+          "optimal": 96,
+          "highMid": 110,
+          "strong": 120,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          45,
+          127
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 45,
+        "optimal": 96,
+        "ceiling": 127,
+        "reason": "REAL from 3102 instances 99390 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role bass 3102 instances 99390 notes, vel 1-127 p50 96",
+        "musical_purpose": "Natural bass velocity from REAL Factory 3211",
+        "target_profile": "bass floor 45 optimal 96 ceiling 127",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL bass intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 45-127 optimal 96",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory bass from 3211 files",
+        "evidence": "DIRECT REAL 3102 instances 99390 notes"
+      }
+    },
+    "rhythm-guitar": {
+      "role": "rhythm-guitar",
+      "factory_source_role": "rhythm-guitar",
+      "factory_profiles": 3211,
+      "sample_count": 320474,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 320474,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 36,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 53,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 69,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 85,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 100,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 112,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 125,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 41,
+          "p10": 53,
+          "p25": 69,
+          "p50": 85,
+          "p75": 100,
+          "p90": 112,
+          "p95": 120
+        },
+        "values": {
+          "floor": 36,
+          "soft": 53,
+          "lowMid": 69,
+          "optimal": 85,
+          "highMid": 100,
+          "strong": 112,
+          "ceiling": 125
+        },
+        "allowedRange": [
+          36,
+          125
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 36,
+        "optimal": 85,
+        "ceiling": 125,
+        "reason": "REAL from 3211 instances 320474 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role rhythm-guitar 3211 instances 320474 notes, vel 1-127 p50 85",
+        "musical_purpose": "Natural rhythm-guitar velocity from REAL Factory 3211",
+        "target_profile": "rhythm-guitar floor 36 optimal 85 ceiling 125",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL rhythm-guitar intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 36-125 optimal 85",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory rhythm-guitar from 3211 files",
+        "evidence": "DIRECT REAL 3211 instances 320474 notes"
+      }
+    },
+    "melody": {
+      "role": "melody",
+      "factory_source_role": "melody",
+      "factory_profiles": 624,
+      "sample_count": 6034,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 6034,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 29,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 46,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 62,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 80,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 100,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 115,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 127,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 34,
+          "p10": 46,
+          "p25": 62,
+          "p50": 80,
+          "p75": 100,
+          "p90": 115,
+          "p95": 124
+        },
+        "values": {
+          "floor": 29,
+          "soft": 46,
+          "lowMid": 62,
+          "optimal": 80,
+          "highMid": 100,
+          "strong": 115,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          29,
+          127
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 29,
+        "optimal": 80,
+        "ceiling": 127,
+        "reason": "REAL from 624 instances 6034 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role melody 624 instances 6034 notes, vel 1-127 p50 80",
+        "musical_purpose": "Natural melody velocity from REAL Factory 3211",
+        "target_profile": "melody floor 29 optimal 80 ceiling 127",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL melody intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 29-127 optimal 80",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory melody from 3211 files",
+        "evidence": "DIRECT REAL 624 instances 6034 notes"
+      }
+    },
+    "accompaniment": {
+      "role": "accompaniment",
+      "factory_source_role": "accompaniment",
+      "factory_profiles": 3081,
+      "sample_count": 279010,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 279010,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 35,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 50,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 66,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 84,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 100,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 114,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 126,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 40,
+          "p10": 50,
+          "p25": 66,
+          "p50": 84,
+          "p75": 100,
+          "p90": 114,
+          "p95": 121
+        },
+        "values": {
+          "floor": 35,
+          "soft": 50,
+          "lowMid": 66,
+          "optimal": 84,
+          "highMid": 100,
+          "strong": 114,
+          "ceiling": 126
+        },
+        "allowedRange": [
+          35,
+          126
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 35,
+        "optimal": 84,
+        "ceiling": 126,
+        "reason": "REAL from 3081 instances 279010 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role accompaniment 3081 instances 279010 notes, vel 1-127 p50 84",
+        "musical_purpose": "Natural accompaniment velocity from REAL Factory 3211",
+        "target_profile": "accompaniment floor 35 optimal 84 ceiling 126",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL accompaniment intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 35-126 optimal 84",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory accompaniment from 3211 files",
+        "evidence": "DIRECT REAL 3081 instances 279010 notes"
+      }
+    },
+    "guitar": {
+      "role": "guitar",
+      "factory_source_role": "guitar",
+      "factory_profiles": 1566,
+      "sample_count": 103027,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 103027,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 38,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 53,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 68,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 87,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 105,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 116,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 127,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 43,
+          "p10": 53,
+          "p25": 68,
+          "p50": 87,
+          "p75": 105,
+          "p90": 116,
+          "p95": 126
+        },
+        "values": {
+          "floor": 38,
+          "soft": 53,
+          "lowMid": 68,
+          "optimal": 87,
+          "highMid": 105,
+          "strong": 116,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          38,
+          127
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 38,
+        "optimal": 87,
+        "ceiling": 127,
+        "reason": "REAL from 1566 instances 103027 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role guitar 1566 instances 103027 notes, vel 1-127 p50 87",
+        "musical_purpose": "Natural guitar velocity from REAL Factory 3211",
+        "target_profile": "guitar floor 38 optimal 87 ceiling 127",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL guitar intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 38-127 optimal 87",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory guitar from 3211 files",
+        "evidence": "DIRECT REAL 1566 instances 103027 notes"
+      }
+    },
+    "power-riff": {
+      "role": "power-riff",
+      "factory_source_role": "power-riff",
+      "factory_profiles": 976,
+      "sample_count": 178890,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 178890,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 40,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 57,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 74,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 92,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 108,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 119,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 127,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 45,
+          "p10": 57,
+          "p25": 74,
+          "p50": 92,
+          "p75": 108,
+          "p90": 119,
+          "p95": 124
+        },
+        "values": {
+          "floor": 40,
+          "soft": 57,
+          "lowMid": 74,
+          "optimal": 92,
+          "highMid": 108,
+          "strong": 119,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          40,
+          127
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 40,
+        "optimal": 92,
+        "ceiling": 127,
+        "reason": "REAL from 976 instances 178890 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role power-riff 976 instances 178890 notes, vel 1-127 p50 92",
+        "musical_purpose": "Natural power-riff velocity from REAL Factory 3211",
+        "target_profile": "power-riff floor 40 optimal 92 ceiling 127",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL power-riff intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 40-127 optimal 92",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory power-riff from 3211 files",
+        "evidence": "DIRECT REAL 976 instances 178890 notes"
+      }
+    },
+    "riff": {
+      "role": "riff",
+      "factory_source_role": "riff",
+      "factory_profiles": 1254,
+      "sample_count": 55401,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 55401,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 34,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 48,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 66,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 85,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 102,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 114,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 126,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 39,
+          "p10": 48,
+          "p25": 66,
+          "p50": 85,
+          "p75": 102,
+          "p90": 114,
+          "p95": 121
+        },
+        "values": {
+          "floor": 34,
+          "soft": 48,
+          "lowMid": 66,
+          "optimal": 85,
+          "highMid": 102,
+          "strong": 114,
+          "ceiling": 126
+        },
+        "allowedRange": [
+          34,
+          126
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 34,
+        "optimal": 85,
+        "ceiling": 126,
+        "reason": "REAL from 1254 instances 55401 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role riff 1254 instances 55401 notes, vel 1-127 p50 85",
+        "musical_purpose": "Natural riff velocity from REAL Factory 3211",
+        "target_profile": "riff floor 34 optimal 85 ceiling 126",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL riff intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 34-126 optimal 85",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory riff from 3211 files",
+        "evidence": "DIRECT REAL 1254 instances 55401 notes"
+      }
+    },
+    "lead": {
+      "role": "lead",
+      "factory_source_role": "lead",
+      "factory_profiles": 203,
+      "sample_count": 5157,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 5157,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 27,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 39,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 53,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 72,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 89,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 100,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 109,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 32,
+          "p10": 39,
+          "p25": 53,
+          "p50": 72,
+          "p75": 89,
+          "p90": 100,
+          "p95": 104
+        },
+        "values": {
+          "floor": 27,
+          "soft": 39,
+          "lowMid": 53,
+          "optimal": 72,
+          "highMid": 89,
+          "strong": 100,
+          "ceiling": 109
+        },
+        "allowedRange": [
+          27,
+          109
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 27,
+        "optimal": 72,
+        "ceiling": 109,
+        "reason": "REAL from 203 instances 5157 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role lead 203 instances 5157 notes, vel 1-110 p50 72",
+        "musical_purpose": "Natural lead velocity from REAL Factory 3211",
+        "target_profile": "lead floor 27 optimal 72 ceiling 109",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL lead intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 27-109 optimal 72",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory lead from 3211 files",
+        "evidence": "DIRECT REAL 203 instances 5157 notes"
+      }
+    },
+    "piano": {
+      "role": "piano",
+      "factory_source_role": "piano",
+      "factory_profiles": 851,
+      "sample_count": 42947,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 42947,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 35,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 51,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 67,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 85,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 102,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 114,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 127,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 40,
+          "p10": 51,
+          "p25": 67,
+          "p50": 85,
+          "p75": 102,
+          "p90": 114,
+          "p95": 122
+        },
+        "values": {
+          "floor": 35,
+          "soft": 51,
+          "lowMid": 67,
+          "optimal": 85,
+          "highMid": 102,
+          "strong": 114,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          35,
+          127
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 35,
+        "optimal": 85,
+        "ceiling": 127,
+        "reason": "REAL from 851 instances 42947 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role piano 851 instances 42947 notes, vel 3-127 p50 85",
+        "musical_purpose": "Natural piano velocity from REAL Factory 3211",
+        "target_profile": "piano floor 35 optimal 85 ceiling 127",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL piano intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 35-127 optimal 85",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory piano from 3211 files",
+        "evidence": "DIRECT REAL 851 instances 42947 notes"
+      }
+    },
+    "solo": {
+      "role": "solo",
+      "factory_source_role": "solo",
+      "factory_profiles": 180,
+      "sample_count": 3172,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 3172,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 42,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 59,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 78,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 100,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 114,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 126,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 127,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 47,
+          "p10": 59,
+          "p25": 78,
+          "p50": 100,
+          "p75": 114,
+          "p90": 126,
+          "p95": 127
+        },
+        "values": {
+          "floor": 42,
+          "soft": 59,
+          "lowMid": 78,
+          "optimal": 100,
+          "highMid": 114,
+          "strong": 126,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          42,
+          127
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 42,
+        "optimal": 100,
+        "ceiling": 127,
+        "reason": "REAL from 180 instances 3172 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role solo 180 instances 3172 notes, vel 17-127 p50 100",
+        "musical_purpose": "Natural solo velocity from REAL Factory 3211",
+        "target_profile": "solo floor 42 optimal 100 ceiling 127",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL solo intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 42-127 optimal 100",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory solo from 3211 files",
+        "evidence": "DIRECT REAL 180 instances 3172 notes"
+      }
+    },
+    "strings": {
+      "role": "strings",
+      "factory_source_role": "strings",
+      "factory_profiles": 24,
+      "sample_count": 50,
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "curve": {
+        "method": "factory-7point-REAL-3211",
+        "sampleCount": 50,
+        "points": [
+          {
+            "intensity": 0,
+            "velocity": 36,
+            "label": "floor"
+          },
+          {
+            "intensity": 17,
+            "velocity": 48,
+            "label": "soft"
+          },
+          {
+            "intensity": 33,
+            "velocity": 50,
+            "label": "lowMid"
+          },
+          {
+            "intensity": 50,
+            "velocity": 70,
+            "label": "optimal"
+          },
+          {
+            "intensity": 67,
+            "velocity": 95,
+            "label": "highMid"
+          },
+          {
+            "intensity": 83,
+            "velocity": 114,
+            "label": "strong"
+          },
+          {
+            "intensity": 100,
+            "velocity": 127,
+            "label": "ceiling"
+          }
+        ],
+        "quantiles": {
+          "p05": 41,
+          "p10": 48,
+          "p25": 50,
+          "p50": 70,
+          "p75": 95,
+          "p90": 114,
+          "p95": 127
+        },
+        "values": {
+          "floor": 36,
+          "soft": 48,
+          "lowMid": 50,
+          "optimal": 70,
+          "highMid": 95,
+          "strong": 114,
+          "ceiling": 127
+        },
+        "allowedRange": [
+          36,
+          127
+        ],
+        "korgRealistic": true
+      },
+      "velocity_rule": {
+        "floor": 36,
+        "optimal": 70,
+        "ceiling": 127,
+        "reason": "REAL from 24 instances 50 notes Factory 3211"
+      },
+      "transformation": {
+        "source_evidence": "Factory REAL 3211 files, role strings 24 instances 50 notes, vel 32-127 p50 70",
+        "musical_purpose": "Natural strings velocity from REAL Factory 3211",
+        "target_profile": "strings floor 36 optimal 70 ceiling 127",
+        "constraints": "Korg Pa800 1-127",
+        "transformation_rule": "Factory REAL strings intensity -> velocity via 7-point curve REAL",
+        "before_metric": "Original uncontrolled",
+        "after_metric": "Factory REAL 36-127 optimal 70",
+        "pass_fail": "PASS REAL",
+        "explanation": "REAL Factory strings from 3211 files",
+        "evidence": "DIRECT REAL 24 instances 50 notes"
+      }
+    }
+  },
+  "evidence": "DIRECT REAL from 3211 Factory MIDI files per-channel 20 roles"
+}

@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-09-06T17:28:26.907398",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "shadow_mode": {
+    "rule": "Novi intelligence modeli prvo rade u SHADOW MODE",
+    "engine": {
+      "analyzes": true,
+      "proposes_transformation": true,
+      "does_not_change_output": true,
+      "calculates": [
+        "predicted improvement",
+        "confidence",
+        "conflicts",
+        "possible regressions"
+      ]
+    },
+    "authorization": {
+      "condition": "Tek nakon PASS: TRANSFORM AUTHORIZED",
+      "checks": [
+        "technical PASS",
+        "musical no degradation",
+        "korg compatibility",
+        "determinism",
+        "confidence HIGH or MEDIUM"
+      ]
+    }
+  },
+  "transform_authorization": {
+    "required": [
+      "SOURCE EVIDENCE",
+      "MUSICAL PURPOSE",
+      "TARGET PROFILE",
+      "CONSTRAINTS",
+      "TRANSFORMATION RULE",
+      "BEFORE METRIC",
+      "AFTER METRIC",
+      "PASS/FAIL CRITERIA",
+      "REGRESSION CHECK",
+      "EXPLANATION ZAŠTO JE PROMJENA IZVRŠENA"
+    ],
+    "policy": "Ako transformacija ne može biti opravdana, NE PRIMJENJIVATI JE",
+    "confidence_policy": {
+      "HIGH": "Corpus evidence > strong -> APPLY",
+      "MEDIUM": "Limited evidence -> APPLY WITH LIMITS",
+      "LOW": "Heuristic -> OPTIONAL / SHADOW",
+      "UNKNOWN": "No evidence -> DO NOT APPLY AUTOMATICALLY"
+    }
+  },
+  "example": {
+    "transformation": "BASS_VELOCITY_CALIBRATION",
+    "source_evidence": "Factory 173 bass profiles, 91882 notes",
+    "musical_purpose": "Bass mora biti čujan, ispod 20 gubi definiciju",
+    "target_profile": "Bass profile: min 28, max 55, velocity 40-127",
+    "constraints": "Korg: channel 9, polyphony max 2, range E1-G3",
+    "transformation_rule": "Intensity 0-100 -> Velocity 40-127 via 7-point Factory curve",
+    "before_metric": "Original velocity random, sometimes <20",
+    "after_metric": "Factory calibrated 40-127, mean 80, p10 55, p90 115",
+    "pass_fail": "PASS if velocity in 40-127 and korg realistic",
+    "regression_check": "Full corpus 164 files, bass change rate 50.88% -> 5.29% after fix",
+    "explanation": "Factory daje prirodni raspon, Gold daje pocket timing"
+  }
+}

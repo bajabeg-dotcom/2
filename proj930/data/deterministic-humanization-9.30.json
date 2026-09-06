@@ -1,0 +1,2013 @@
+{
+  "schema": "dna-deterministic-humanization",
+  "version": "9.30.0",
+  "hardLimits": {
+    "velocityScale": {
+      "min": 0.5,
+      "max": 1.2,
+      "mode": "CLAMP"
+    },
+    "timingOffsetPPQ": {
+      "min": -8,
+      "max": 8,
+      "mode": "CLAMP"
+    },
+    "gateScale": {
+      "min": 0.3,
+      "max": 2.0,
+      "mode": "CLAMP"
+    },
+    "velocityOverride": {
+      "mode": "BLOCK",
+      "rule": "FACTORY_is_sole_authority"
+    },
+    "randomGeneration": {
+      "mode": "BLOCK",
+      "rule": "deterministic_only"
+    },
+    "chordTracking": {
+      "mode": "BLOCK",
+      "rule": "mandatory_for_all_instruments"
+    },
+    "maxOrnamentPPQ": {
+      "min": -6,
+      "max": 6,
+      "mode": "CLAMP"
+    }
+  },
+  "humanizationTypes": {
+    "PHRASE_DRIVEN": {
+      "description": "Frazna humanizacija — prirodni kraj i početak fraze",
+      "applicable": [
+        "sax",
+        "melody",
+        "riff"
+      ],
+      "timingProfile": "phrase_end_late",
+      "velocityProfile": "phrase_arc"
+    },
+    "BREATH_PHRASE": {
+      "description": "Dah-fraza — timing kod promjene daha",
+      "applicable": [
+        "clarinet",
+        "frula",
+        "sax",
+        "wind"
+      ],
+      "timingProfile": "breath_point_late",
+      "velocityProfile": "breath_cresc_dim"
+    },
+    "BOW_PHRASE": {
+      "description": "Gudalo-fraza — timing kod promjene gudala",
+      "applicable": [
+        "violin",
+        "violina",
+        "cello",
+        "strings"
+      ],
+      "timingProfile": "bow_change_micro",
+      "velocityProfile": "bow_pressure_arc"
+    },
+    "BOW_FREE": {
+      "description": "Slobodno gudalo — rubato sa širokim vibratom",
+      "applicable": [
+        "gusle",
+        "folk_fiddle"
+      ],
+      "timingProfile": "rubato_free",
+      "velocityProfile": "rubato_swell"
+    },
+    "BELLOW_PHRASE": {
+      "description": "Meh-fraza — dinamika mijeha harmonike",
+      "applicable": [
+        "harmonika",
+        "accordion"
+      ],
+      "timingProfile": "bellow_change",
+      "velocityProfile": "bellow_cresc_dim"
+    },
+    "PLECTRUM_PHRASE": {
+      "description": "Trzalka-fraza — timing kod promjene trzalka",
+      "applicable": [
+        "tambura",
+        "guitar",
+        "mandolin"
+      ],
+      "timingProfile": "pick_alternating",
+      "velocityProfile": "pick_accent"
+    },
+    "STANDARD": {
+      "description": "Standardna humanizacija — blagi micro-timing",
+      "applicable": [
+        "piano",
+        "bass",
+        "chords"
+      ],
+      "timingProfile": "standard_micro",
+      "velocityProfile": "standard_arc"
+    },
+    "DRUM_GROOVE": {
+      "description": "Bubanj-groove — element-specific timing",
+      "applicable": [
+        "drums",
+        "percussion"
+      ],
+      "timingProfile": "element_groove",
+      "velocityProfile": "element_accent"
+    }
+  },
+  "timingProfiles": {
+    "phrase_end_late": {
+      "phraseStart": -1,
+      "phraseMiddle": 0,
+      "phraseEnd": 3,
+      "breathGap": 6
+    },
+    "breath_point_late": {
+      "breathBefore": -2,
+      "breathAfter": 2,
+      "sustainedNote": 0,
+      "staccatoNote": -1
+    },
+    "bow_change_micro": {
+      "bowDownStart": -2,
+      "bowUpStart": 1,
+      "bowChangeMid": 0,
+      "sustainedNote": 0
+    },
+    "rubato_free": {
+      "rubatoRange": 0.15,
+      "accentPush": -3,
+      "cadencePull": 4,
+      "phraseBreath": 6
+    },
+    "bellow_change": {
+      "bellowOpen": -1,
+      "bellowClose": 2,
+      "sustainedChord": 0,
+      "rhythmicChord": -1
+    },
+    "pick_alternating": {
+      "downPick": -1,
+      "upPick": 1,
+      "strum": 0,
+      "arpeggio": 2
+    },
+    "standard_micro": {
+      "strongBeat": -1,
+      "weakBeat": 1,
+      "syncopation": 2,
+      "offbeat": 1
+    },
+    "element_groove": {
+      "kick": {
+        "strongBeat": -2,
+        "weakBeat": 0,
+        "fill": 1
+      },
+      "snare": {
+        "strongBeat": 0,
+        "ghost": 1,
+        "fill": 2
+      },
+      "closed_hat": {
+        "timekeeper": 0,
+        "open": 1
+      },
+      "open_hat": {
+        "offbeat": -1,
+        "accent": 0
+      },
+      "ride": {
+        "timekeeper": 0,
+        "accent": -1
+      },
+      "crash": {
+        "accent": -2,
+        "fill": 0
+      },
+      "toms": {
+        "fill": 1,
+        "accent": -1
+      }
+    }
+  },
+  "velocityProfiles": {
+    "phrase_arc": {
+      "phraseStart": 0.85,
+      "phraseBuild": 0.95,
+      "phrasePeak": 1.1,
+      "phraseEnd": 0.8,
+      "breathRecovery": 0.9
+    },
+    "breath_cresc_dim": {
+      "inBreath": 0.75,
+      "afterBreath": 1.05,
+      "sustained": 0.95,
+      "endOfBreath": 0.7
+    },
+    "bow_pressure_arc": {
+      "bowDown": 1.05,
+      "bowUp": 0.92,
+      "sulPonte": 0.6,
+      "sulTasto": 1.1
+    },
+    "rubato_swell": {
+      "phraseRise": 1.15,
+      "phraseCalm": 0.75,
+      "accentBite": 1.2,
+      "resolution": 0.8
+    },
+    "bellow_cresc_dim": {
+      "bellowOpen": 1.05,
+      "bellowClose": 0.9,
+      "sustainedChord": 0.98,
+      "rhythmicChord": 1.08
+    },
+    "pick_accent": {
+      "downPick": 1.1,
+      "upPick": 0.85,
+      "strum": 1.05,
+      "arpeggio": 0.9
+    },
+    "standard_arc": {
+      "strongBeat": 1.05,
+      "weakBeat": 0.9,
+      "syncopation": 0.95,
+      "offbeat": 0.88
+    },
+    "element_accent": {
+      "kick": {
+        "strongBeat": 1.1,
+        "weakBeat": 0.85,
+        "fill": 1.05
+      },
+      "snare": {
+        "strongBeat": 1.08,
+        "ghost": 0.7,
+        "fill": 1.0
+      },
+      "closed_hat": {
+        "timekeeper": 0.92,
+        "open": 1.05
+      },
+      "ride": {
+        "timekeeper": 0.95,
+        "accent": 1.1
+      },
+      "crash": {
+        "accent": 1.15,
+        "fill": 1.0
+      }
+    }
+  },
+  "gateProfiles": {
+    "PHRASE_DRIVEN": {
+      "shortNote": 0.6,
+      "longNote": 0.95,
+      "phraseEnd": 0.5
+    },
+    "BREATH_PHRASE": {
+      "breathNote": 0.5,
+      "sustainedNote": 0.95,
+      "staccatoNote": 0.3
+    },
+    "BOW_PHRASE": {
+      "detache": 0.85,
+      "legato": 0.95,
+      "staccato": 0.35,
+      "spiccato": 0.4
+    },
+    "BOW_FREE": {
+      "rubatoLong": 0.98,
+      "rubatoShort": 0.5,
+      "graceNote": 0.2
+    },
+    "BELLOW_PHRASE": {
+      "sustainedChord": 0.98,
+      "rhythmicChord": 0.75,
+      "bellowsShake": 0.5
+    },
+    "PLECTRUM_PHRASE": {
+      "downPick": 0.5,
+      "upPick": 0.35,
+      "strum": 0.85,
+      "arpeggio": 0.7
+    },
+    "STANDARD": {
+      "strongBeat": 0.85,
+      "weakBeat": 0.8,
+      "syncopation": 0.7
+    },
+    "DRUM_GROOVE": {
+      "kick": 1.0,
+      "snare": 1.0,
+      "closed_hat": 1.0,
+      "open_hat": 0.7,
+      "ride": 0.95,
+      "crash": 0.4,
+      "toms": 0.8
+    }
+  },
+  "instrumentProfiles": {
+    "bass": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "drums": {
+      "humanizationType": "DRUM_GROOVE",
+      "grooveProfile": "element_groove",
+      "timingProfile": {
+        "kick": {
+          "strongBeat": -2,
+          "weakBeat": 0,
+          "fill": 1
+        },
+        "snare": {
+          "strongBeat": 0,
+          "ghost": 1,
+          "fill": 2
+        },
+        "closed_hat": {
+          "timekeeper": 0,
+          "open": 1
+        },
+        "open_hat": {
+          "offbeat": -1,
+          "accent": 0
+        },
+        "ride": {
+          "timekeeper": 0,
+          "accent": -1
+        },
+        "crash": {
+          "accent": -2,
+          "fill": 0
+        },
+        "toms": {
+          "fill": 1,
+          "accent": -1
+        }
+      },
+      "velocityProfile": {
+        "kick": {
+          "strongBeat": 1.1,
+          "weakBeat": 0.85,
+          "fill": 1.05
+        },
+        "snare": {
+          "strongBeat": 1.08,
+          "ghost": 0.7,
+          "fill": 1.0
+        },
+        "closed_hat": {
+          "timekeeper": 0.92,
+          "open": 1.05
+        },
+        "ride": {
+          "timekeeper": 0.95,
+          "accent": 1.1
+        },
+        "crash": {
+          "accent": 1.15,
+          "fill": 1.0
+        }
+      },
+      "gateProfile": {
+        "kick": 1.0,
+        "snare": 1.0,
+        "closed_hat": 1.0,
+        "open_hat": 0.7,
+        "ride": 0.95,
+        "crash": 0.4,
+        "toms": 0.8
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "piano": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "organ": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "rhythm_guitar": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "solo_guitar": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "accordion": {
+      "humanizationType": "BELLOW_PHRASE",
+      "grooveProfile": "bellow_change",
+      "timingProfile": {
+        "bellowOpen": -1,
+        "bellowClose": 2,
+        "sustainedChord": 0,
+        "rhythmicChord": -1
+      },
+      "velocityProfile": {
+        "bellowOpen": 1.05,
+        "bellowClose": 0.9,
+        "sustainedChord": 0.98,
+        "rhythmicChord": 1.08
+      },
+      "gateProfile": {
+        "sustainedChord": 0.98,
+        "rhythmicChord": 0.75,
+        "bellowsShake": 0.5
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "strings": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "brass": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "sax": {
+      "humanizationType": "PHRASE_DRIVEN",
+      "grooveProfile": "phrase_end_late",
+      "timingProfile": {
+        "phraseStart": -1,
+        "phraseMiddle": 0,
+        "phraseEnd": 3,
+        "breathGap": 6
+      },
+      "velocityProfile": {
+        "phraseStart": 0.85,
+        "phraseBuild": 0.95,
+        "phrasePeak": 1.1,
+        "phraseEnd": 0.8,
+        "breathRecovery": 0.9
+      },
+      "gateProfile": {
+        "shortNote": 0.6,
+        "longNote": 0.95,
+        "phraseEnd": 0.5
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "woodwind": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "clarinet": {
+      "humanizationType": "BREATH_PHRASE",
+      "grooveProfile": "breath_point_late",
+      "timingProfile": {
+        "breathBefore": -2,
+        "breathAfter": 2,
+        "sustainedNote": 0,
+        "staccatoNote": -1
+      },
+      "velocityProfile": {
+        "inBreath": 0.75,
+        "afterBreath": 1.05,
+        "sustained": 0.95,
+        "endOfBreath": 0.7
+      },
+      "gateProfile": {
+        "breathNote": 0.5,
+        "sustainedNote": 0.95,
+        "staccatoNote": 0.3
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "violin": {
+      "humanizationType": "BOW_PHRASE",
+      "grooveProfile": "bow_change_micro",
+      "timingProfile": {
+        "bowDownStart": -2,
+        "bowUpStart": 1,
+        "bowChangeMid": 0,
+        "sustainedNote": 0
+      },
+      "velocityProfile": {
+        "bowDown": 1.05,
+        "bowUp": 0.92,
+        "sulPonte": 0.6,
+        "sulTasto": 1.1
+      },
+      "gateProfile": {
+        "detache": 0.85,
+        "legato": 0.95,
+        "staccato": 0.35,
+        "spiccato": 0.4
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "synth_lead": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "pad": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "mallet": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "choir": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "percussion": {
+      "humanizationType": "DRUM_GROOVE",
+      "grooveProfile": "element_groove",
+      "timingProfile": {
+        "kick": {
+          "strongBeat": -2,
+          "weakBeat": 0,
+          "fill": 1
+        },
+        "snare": {
+          "strongBeat": 0,
+          "ghost": 1,
+          "fill": 2
+        },
+        "closed_hat": {
+          "timekeeper": 0,
+          "open": 1
+        },
+        "open_hat": {
+          "offbeat": -1,
+          "accent": 0
+        },
+        "ride": {
+          "timekeeper": 0,
+          "accent": -1
+        },
+        "crash": {
+          "accent": -2,
+          "fill": 0
+        },
+        "toms": {
+          "fill": 1,
+          "accent": -1
+        }
+      },
+      "velocityProfile": {
+        "kick": {
+          "strongBeat": 1.1,
+          "weakBeat": 0.85,
+          "fill": 1.05
+        },
+        "snare": {
+          "strongBeat": 1.08,
+          "ghost": 0.7,
+          "fill": 1.0
+        },
+        "closed_hat": {
+          "timekeeper": 0.92,
+          "open": 1.05
+        },
+        "ride": {
+          "timekeeper": 0.95,
+          "accent": 1.1
+        },
+        "crash": {
+          "accent": 1.15,
+          "fill": 1.0
+        }
+      },
+      "gateProfile": {
+        "kick": 1.0,
+        "snare": 1.0,
+        "closed_hat": 1.0,
+        "open_hat": 0.7,
+        "ride": 0.95,
+        "crash": 0.4,
+        "toms": 0.8
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "fx": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "accompaniment": {
+      "humanizationType": "STANDARD",
+      "grooveProfile": "standard_micro",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "strongBeat": 1.05,
+        "weakBeat": 0.9,
+        "syncopation": 0.95,
+        "offbeat": 0.88
+      },
+      "gateProfile": {
+        "strongBeat": 0.85,
+        "weakBeat": 0.8,
+        "syncopation": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      }
+    },
+    "harmonika": {
+      "humanizationType": "BELLOW_PHRASE",
+      "grooveProfile": "BELLOW_SUSTAIN",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "bellowOpen": 1.05,
+        "bellowClose": 0.9,
+        "sustainedChord": 0.98,
+        "rhythmicChord": 1.08
+      },
+      "gateProfile": {
+        "sustainedChord": 0.98,
+        "rhythmicChord": 0.75,
+        "bellowsShake": 0.5
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      },
+      "folkSpecific": true
+    },
+    "klarinet": {
+      "humanizationType": "BREATH_PHRASE",
+      "grooveProfile": "BREATH_PHRASE",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "inBreath": 0.75,
+        "afterBreath": 1.05,
+        "sustained": 0.95,
+        "endOfBreath": 0.7
+      },
+      "gateProfile": {
+        "breathNote": 0.5,
+        "sustainedNote": 0.95,
+        "staccatoNote": 0.3
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      },
+      "folkSpecific": true
+    },
+    "violina": {
+      "humanizationType": "BOW_PHRASE",
+      "grooveProfile": "BOW_PHRASE",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "bowDown": 1.05,
+        "bowUp": 0.92,
+        "sulPonte": 0.6,
+        "sulTasto": 1.1
+      },
+      "gateProfile": {
+        "detache": 0.85,
+        "legato": 0.95,
+        "staccato": 0.35,
+        "spiccato": 0.4
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      },
+      "folkSpecific": true
+    },
+    "frula": {
+      "humanizationType": "BREATH_PHRASE",
+      "grooveProfile": "BREATH_PHRASE",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "inBreath": 0.75,
+        "afterBreath": 1.05,
+        "sustained": 0.95,
+        "endOfBreath": 0.7
+      },
+      "gateProfile": {
+        "breathNote": 0.5,
+        "sustainedNote": 0.95,
+        "staccatoNote": 0.3
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      },
+      "folkSpecific": true
+    },
+    "tambura": {
+      "humanizationType": "PLECTRUM_PHRASE",
+      "grooveProfile": "PLECTRUM_PHRASE",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "downPick": 1.1,
+        "upPick": 0.85,
+        "strum": 1.05,
+        "arpeggio": 0.9
+      },
+      "gateProfile": {
+        "downPick": 0.5,
+        "upPick": 0.35,
+        "strum": 0.85,
+        "arpeggio": 0.7
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      },
+      "folkSpecific": true
+    },
+    "gusle": {
+      "humanizationType": "BOW_FREE",
+      "grooveProfile": "BOW_FREE_RUBATO",
+      "timingProfile": {
+        "strongBeat": -1,
+        "weakBeat": 1,
+        "syncopation": 2,
+        "offbeat": 1
+      },
+      "velocityProfile": {
+        "phraseRise": 1.15,
+        "phraseCalm": 0.75,
+        "accentBite": 1.2,
+        "resolution": 0.8
+      },
+      "gateProfile": {
+        "rubatoLong": 0.98,
+        "rubatoShort": 0.5,
+        "graceNote": 0.2
+      },
+      "hardLimits": {
+        "velocityScale": {
+          "min": 0.5,
+          "max": 1.2,
+          "mode": "CLAMP"
+        },
+        "timingOffsetPPQ": {
+          "min": -8,
+          "max": 8,
+          "mode": "CLAMP"
+        },
+        "gateScale": {
+          "min": 0.3,
+          "max": 2.0,
+          "mode": "CLAMP"
+        },
+        "velocityOverride": {
+          "mode": "BLOCK",
+          "rule": "FACTORY_is_sole_authority"
+        },
+        "randomGeneration": {
+          "mode": "BLOCK",
+          "rule": "deterministic_only"
+        },
+        "chordTracking": {
+          "mode": "BLOCK",
+          "rule": "mandatory_for_all_instruments"
+        },
+        "maxOrnamentPPQ": {
+          "min": -6,
+          "max": 6,
+          "mode": "CLAMP"
+        }
+      },
+      "authority": {
+        "velocity": "FACTORY_SCALED",
+        "timing": "GOLD_PROFILE",
+        "gate": "HUMANIZATION_PROFILE",
+        "chord": "MANDATORY"
+      },
+      "folkSpecific": true
+    }
+  },
+  "authority": {
+    "velocity": "FACTORY_SCALED",
+    "timing": "GOLD_PROFILE",
+    "gate": "HUMANIZATION_PROFILE",
+    "chord": "MANDATORY",
+    "determinism": "SHA256_POSITION_SEED"
+  }
+}

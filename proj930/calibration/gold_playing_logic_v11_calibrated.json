@@ -1,0 +1,1077 @@
+{
+  "version": "11.00-RIJESI-SVE-FINAL",
+  "total_roles": 19,
+  "calibrations": {
+    "accompaniment": {
+      "role": "accompaniment",
+      "playerModel": "arranger",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "stab",
+          "sustain",
+          "voice-lead",
+          "answer",
+          "rest"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "stab-or-sustain-by-role",
+          "common-tone-continuity"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "lead-space",
+          "section"
+        ],
+        "phrase_rules": [
+          "support not dominate",
+          "common tones preferred",
+          "leave room for solo"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-expression-curves"
+        ],
+        "optimization": [
+          "voice-leading",
+          "register separation",
+          "density",
+          "section energy"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "accordion": {
+      "role": "accordion",
+      "playerModel": "accordionist",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "grace",
+          "turn",
+          "trill",
+          "repeat-note",
+          "bellows-expression-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "legato-bellows-flow",
+          "repeat-notes-articulated-not-chopped"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "melody",
+          "chords",
+          "phrase",
+          "section"
+        ],
+        "phrase_rules": [
+          "phrase in breaths",
+          "ornaments lead into important notes",
+          "avoid machine-gun gate"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-expression-bellows-like-contour"
+        ],
+        "optimization": [
+          "phrase contour",
+          "legato",
+          "ornament placement",
+          "expression continuity"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "bass": {
+      "role": "bass",
+      "playerModel": "bassist",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 15
+      },
+      "articulation": {
+        "techniques": [
+          "root",
+          "fifth",
+          "octave",
+          "third",
+          "passing",
+          "chromatic-approach",
+          "pickup",
+          "ghost-candidate",
+          "slap-candidate",
+          "pop-candidate",
+          "slide-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "pocket-dependent",
+          "short-for-ghost-slap-candidate",
+          "longer-for-legato-slide-candidate",
+          "continuity-aware"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "kick",
+          "chord-root",
+          "next-chord",
+          "phrase",
+          "section"
+        ],
+        "phrase_rules": [
+          "land chord changes clearly",
+          "use approaches into targets",
+          "octaves increase energy",
+          "avoid random register jumps",
+          "keep pocket with kick"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-pitch-bend",
+          "preserve-expression-if-musically-coherent"
+        ],
+        "optimization": [
+          "functional-note labeling",
+          "kick-pocket score",
+          "voice-leading",
+          "gate/continuity",
+          "phrase-development"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "brass": {
+      "role": "brass",
+      "playerModel": "brass arranger",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "stab",
+          "unison-hit",
+          "octave-hit",
+          "answer",
+          "sustain",
+          "fall-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "short-stab-or-breathed-sustain",
+          "space-between-phrases"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "section",
+          "lead",
+          "transition"
+        ],
+        "phrase_rules": [
+          "breathing space",
+          "strong accents at phrase points",
+          "avoid continuous block chords"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-expression",
+          "preserve-bend-if-present"
+        ],
+        "optimization": [
+          "attack placement",
+          "register separation",
+          "answer-phrase logic",
+          "gate"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "choir": {
+      "role": "choir",
+      "playerModel": "choir arranger",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "sustain",
+          "common-tone",
+          "swell-candidate",
+          "release-fade-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "long-sustain",
+          "smooth-release",
+          "minimal-reattack"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "section",
+          "lead-space",
+          "phrase"
+        ],
+        "phrase_rules": [
+          "smooth voice leading",
+          "avoid excessive reattack",
+          "keep below lead prominence"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-expression-swell"
+        ],
+        "optimization": [
+          "continuity",
+          "register separation",
+          "expression contour"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "drums": {
+      "role": "drums",
+      "playerModel": "drummer",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 8
+      },
+      "articulation": {
+        "techniques": [
+          "kick-pocket",
+          "backbeat",
+          "ghost",
+          "hat-subdivision",
+          "fill",
+          "crash-entry",
+          "tom-transition"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "short-hit-default",
+          "preserve-open-hat-cymbal-tail",
+          "avoid-zero-duration"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "meter",
+          "section",
+          "bass",
+          "phrase-boundary"
+        ],
+        "phrase_rules": [
+          "foundation before decoration",
+          "fills grow from groove",
+          "preserve clear kick/snare hierarchy"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-kit-sensitive-controllers"
+        ],
+        "optimization": [
+          "element-specific balance",
+          "drum-bass coupling",
+          "transition logic",
+          "remove implausible clutter"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "echo": {
+      "role": "echo",
+      "playerModel": "delay/answer player",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "nonrecursive-delay",
+          "answer",
+          "tail"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "shorter-or-tail-like-than-source",
+          "stop-before-next-lead-phrase"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "main-solo",
+          "phrase-space",
+          "section"
+        ],
+        "phrase_rules": [
+          "never recursively echo itself",
+          "use available phrase space",
+          "remain below main solo"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "do-not-recursively-copy-controller-stream"
+        ],
+        "optimization": [
+          "delay timing",
+          "density restraint",
+          "level hierarchy",
+          "gate/continuity"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "organ": {
+      "role": "organ",
+      "playerModel": "organist",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "sustain",
+          "manual-change-candidate",
+          "staccato-accent",
+          "gliss-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "sustain-is-normal",
+          "staccato-accent-contextual",
+          "no-piano-decay-assumption"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "section",
+          "lead-space"
+        ],
+        "phrase_rules": [
+          "sustain is normal",
+          "avoid piano-like pedal assumptions",
+          "leave bass register clear when bass is present"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-expression-modulation"
+        ],
+        "optimization": [
+          "gate continuity",
+          "voicing",
+          "register separation"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "pad": {
+      "role": "pad",
+      "playerModel": "pad/strings player",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "sustain",
+          "common-tone",
+          "inversion",
+          "slow-move",
+          "swell-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "long-sustain",
+          "minimal-reattack",
+          "slow-release"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "section",
+          "lead-space"
+        ],
+        "phrase_rules": [
+          "minimal reattack",
+          "smooth common-tone voice-leading",
+          "avoid bass register"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-expression-swell"
+        ],
+        "optimization": [
+          "continuity",
+          "register separation",
+          "voice-leading",
+          "sparse reattack"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "percussion": {
+      "role": "percussion",
+      "playerModel": "percussionist",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "interlock",
+          "offbeat-color",
+          "pickup",
+          "sparse-fill"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "short-to-medium-hit",
+          "preserve-natural-ring-where-evidenced"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "drums",
+          "meter",
+          "section",
+          "space"
+        ],
+        "phrase_rules": [
+          "never compete with kick/snare",
+          "leave space for lead"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-existing-controller-intent"
+        ],
+        "optimization": [
+          "density balance",
+          "interlock with drum grid",
+          "reduce redundant conga/shaker clutter"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "piano": {
+      "role": "piano",
+      "playerModel": "pianist",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "staccato",
+          "pedal",
+          "arpeggio",
+          "grace"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "pedal-aware",
+          "avoid-artificial-overlap",
+          "staccato-is-contextual"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "harmony",
+          "phrase",
+          "damper",
+          "lead-space"
+        ],
+        "phrase_rules": [
+          "preserve damper semantics",
+          "avoid artificial overlap under pedal",
+          "voice-lead inner voices"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "PRESERVE_CC64_DAMPER",
+          "preserve-expression-if-present"
+        ],
+        "optimization": [
+          "pedal preservation",
+          "gate",
+          "voicing",
+          "register separation"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "power-riff": {
+      "role": "power-riff",
+      "playerModel": "power-chord guitarist",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "root-fifth",
+          "root-fifth-octave",
+          "octave",
+          "mute-hit",
+          "sustain-hit",
+          "pickup",
+          "register-lift"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "mute-hit-vs-sustain-hit",
+          "transition-clean-stop-or-target-sustain"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "kick",
+          "section",
+          "transition"
+        ],
+        "phrase_rules": [
+          "chord-relative voicing",
+          "repeat with controlled variation",
+          "buildup before transition",
+          "strong voice-leading"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-existing-bend"
+        ],
+        "optimization": [
+          "attack-pattern",
+          "voicing",
+          "gate",
+          "register motion",
+          "phrase development",
+          "transition pickup"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "rhythm-guitar": {
+      "role": "rhythm-guitar",
+      "playerModel": "rhythm guitarist",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "down",
+          "up",
+          "block",
+          "mute-candidate",
+          "palm-mute-candidate",
+          "stop",
+          "pickup",
+          "open-strum",
+          "single-string-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "short-gate-can-be-intentional",
+          "mute-stop-vs-open-sustain-contrast",
+          "never-global-legato"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "meter",
+          "drums",
+          "section",
+          "phrase"
+        ],
+        "phrase_rules": [
+          "stroke direction must form playable strum flow",
+          "short gate may be intentional",
+          "open voicing in higher energy",
+          "do not piano-quantize strums"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-pitch-bend-and-dnc-sensitive-controllers"
+        ],
+        "optimization": [
+          "Factory strumming evidence",
+          "stroke spacing",
+          "mute/open contrast",
+          "chord change cleanliness"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "riff": {
+      "role": "riff",
+      "playerModel": "riff player",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "motif",
+          "repeat",
+          "variation",
+          "pickup",
+          "answer"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "motif-specific",
+          "preserve-recognizable-articulation"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "groove",
+          "phrase"
+        ],
+        "phrase_rules": [
+          "preserve recognizable motif",
+          "vary endings more than anchors"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-motif-expression-and-bend"
+        ],
+        "optimization": [
+          "motif continuity",
+          "register",
+          "syncopation",
+          "cadence"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "sax": {
+      "role": "sax",
+      "playerModel": "saxophonist",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "tongue-candidate",
+          "bend",
+          "fall-candidate",
+          "growl-candidate",
+          "breath-noise-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "breath-length-phrases",
+          "legato-and-tongue-contrast"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "melody",
+          "chords",
+          "phrase",
+          "section"
+        ],
+        "phrase_rules": [
+          "shape breath-length phrases",
+          "bend/fall only near musically plausible phrase points",
+          "preserve main melody"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-pitch-bend",
+          "preserve-expression",
+          "preserve-aftertouch-if-articulation-sensitive"
+        ],
+        "optimization": [
+          "phrase contour",
+          "legato",
+          "bend/fall evidence",
+          "breath spacing",
+          "expression"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "solo": {
+      "role": "solo",
+      "playerModel": "lead musician",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "chord-tone",
+          "passing",
+          "neighbor",
+          "approach",
+          "grace",
+          "trill",
+          "slide-candidate",
+          "turnaround",
+          "repeat-variation",
+          "cadence"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "continuity-first",
+          "legato-default-with-articulation-exceptions",
+          "cadential-long-tone-allowed"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "phrase",
+          "section",
+          "cadence",
+          "available-space"
+        ],
+        "phrase_rules": [
+          "shape complete phrases, not isolated notes",
+          "ornament only where phrase supports it",
+          "legato by default unless articulation evidence says otherwise",
+          "cadence resolves phrase",
+          "preserve main melodic identity"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-pitch-bend",
+          "preserve-expression",
+          "preserve-aftertouch-and-modulation-if-musical"
+        ],
+        "optimization": [
+          "phrase segmentation",
+          "continuity",
+          "ornament evidence",
+          "pitch-bend preservation",
+          "expression contour",
+          "cadence",
+          "relationship layers"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "strings": {
+      "role": "strings",
+      "playerModel": "string-section arranger",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "sustain",
+          "common-tone",
+          "bow-change-candidate",
+          "pizzicato-candidate",
+          "swell-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "legato-sustain-default",
+          "bow-change-is-contextual",
+          "pizzicato-only-if-evidenced"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "chords",
+          "lead-space",
+          "section",
+          "phrase"
+        ],
+        "phrase_rules": [
+          "voice-lead common tones",
+          "avoid unnecessary reattack",
+          "open register around lead",
+          "build/release by section"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-expression-swell",
+          "preserve-modulation-if-role-relevant"
+        ],
+        "optimization": [
+          "voice-leading",
+          "continuity",
+          "register separation",
+          "expression contour"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "terca": {
+      "role": "terca",
+      "playerModel": "harmony singer/player",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "diatonic-third",
+          "contextual-third",
+          "unison-avoidance",
+          "phrase-follow"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "follow-solo-phrase-selectively",
+          "release-with-or-before-lead"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "main-solo",
+          "chords",
+          "phrase"
+        ],
+        "phrase_rules": [
+          "follow solo rhythm selectively",
+          "never overpower main solo",
+          "harmonic validity before density"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "do-not-copy-controllers-blindly"
+        ],
+        "optimization": [
+          "relationship correctness",
+          "level hierarchy",
+          "phrase alignment",
+          "continuity"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    },
+    "woodwind": {
+      "role": "woodwind",
+      "playerModel": "wind player",
+      "timing": {
+        "humanization_sigma": 5,
+        "pocket": 10,
+        "safe_window": 10
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "tongue-candidate",
+          "grace",
+          "slide-candidate",
+          "breath-noise-candidate"
+        ],
+        "gate": 0.8,
+        "policies": [
+          "breath-phrase-legato",
+          "tongue-articulation-contextual",
+          "avoid-endless-sustain"
+        ]
+      },
+      "groove": {
+        "follows": [
+          "melody",
+          "chords",
+          "phrase",
+          "breath-space"
+        ],
+        "phrase_rules": [
+          "phrase in breaths",
+          "avoid endless sustain",
+          "ornament phrase entries/exits",
+          "preserve expressive controller curves"
+        ]
+      },
+      "expression": {
+        "controllers": [
+          "preserve-expression",
+          "preserve-pitch-bend",
+          "preserve-breath-related-controls-if-evidenced"
+        ],
+        "optimization": [
+          "phrase segmentation",
+          "gate",
+          "breath placement",
+          "pitch-bend/controller preservation"
+        ]
+      },
+      "humanization": {
+        "deterministic": true,
+        "seed": 9302026,
+        "sigma": 5
+      },
+      "source": "instrument-catalog-9.30.json + gold-performance-patterns.json",
+      "confidence": 0.95
+    }
+  }
+}

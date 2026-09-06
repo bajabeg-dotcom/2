@@ -1,0 +1,1495 @@
+{
+  "schema": "dna-relationship-grammar",
+  "version": "8.00",
+  "authority": "GOLD_SOURCE_MIDI_RELATIONSHIP_GRAMMAR",
+  "source": {
+    "archive": "prism-uploads/DNA.zip -> Gold DNA.zip",
+    "midiCount": 182,
+    "parsedMidiCount": 182,
+    "relationshipFiles": 61,
+    "ignoredInvalidNotePairs": 7332,
+    "failures": []
+  },
+  "terca": {
+    "kind": "terca",
+    "pairCount": 73,
+    "sourceNotes": 94938,
+    "targetNotes": 63995,
+    "actionCounts": {
+      "SKIP": 32677,
+      "PLAY": 41143,
+      "HOLD": 21118
+    },
+    "actionProbabilities": {
+      "PLAY": 0.4334,
+      "SKIP": 0.3442,
+      "HOLD": 0.2224
+    },
+    "phraseActionProbabilities": {
+      "body": {
+        "PLAY": 0.4336,
+        "SKIP": 0.3435,
+        "HOLD": 0.2229
+      },
+      "cadence": {
+        "PLAY": 0.405,
+        "SKIP": 0.3835,
+        "HOLD": 0.2115
+      },
+      "start": {
+        "PLAY": 0.4609,
+        "SKIP": 0.3079,
+        "HOLD": 0.2312
+      }
+    },
+    "intervalCounts": {
+      "4": 5305,
+      "3": 9191,
+      "-3": 9384,
+      "8": 3493,
+      "-8": 3716,
+      "9": 5301,
+      "-4": 2401,
+      "-9": 2352
+    },
+    "intervalProbabilities": {
+      "-3": 0.2281,
+      "3": 0.2234,
+      "4": 0.1289,
+      "9": 0.1288,
+      "-8": 0.0903,
+      "8": 0.0849,
+      "-4": 0.0584,
+      "-9": 0.0572
+    },
+    "medianDelayQn": 0.0,
+    "medianDurationRatio": 1.0,
+    "velocityUsed": false
+  },
+  "echo": {
+    "kind": "echo",
+    "pairCount": 4,
+    "sourceNotes": 2258,
+    "targetNotes": 1825,
+    "actionCounts": {
+      "SKIP": 930,
+      "HOLD": 767,
+      "PLAY": 561
+    },
+    "actionProbabilities": {
+      "PLAY": 0.2484,
+      "SKIP": 0.4119,
+      "HOLD": 0.3397
+    },
+    "phraseActionProbabilities": {
+      "body": {
+        "PLAY": 0.2624,
+        "SKIP": 0.384,
+        "HOLD": 0.3536
+      },
+      "cadence": {
+        "PLAY": 0.2794,
+        "SKIP": 0.3882,
+        "HOLD": 0.3324
+      },
+      "start": {
+        "PLAY": 0.1529,
+        "SKIP": 0.5647,
+        "HOLD": 0.2824
+      }
+    },
+    "intervalCounts": {},
+    "intervalProbabilities": {},
+    "medianDelayQn": 0.4505,
+    "medianDurationRatio": 1.0,
+    "velocityUsed": false
+  },
+  "relationshipEvidence": [
+    {
+      "kind": "terca",
+      "file": "AMELA , CERKU AKO DOBIJES - AMELA UZIVO.MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        13
+      ],
+      "confidence": 0.95
+    },
+    {
+      "kind": "terca",
+      "file": "BARABA-ZARE I GOCI UZIVO (2).MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8165
+    },
+    {
+      "kind": "terca",
+      "file": "BARABA-ZARE I GOCI UZIVO (2).MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.8165
+    },
+    {
+      "kind": "terca",
+      "file": "BECAR DAMA-NOVI MARATONCI UZIVO (2).MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8169
+    },
+    {
+      "kind": "terca",
+      "file": "BIJELA KUGA-DRVAR UZIVO (2).MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8172
+    },
+    {
+      "kind": "terca",
+      "file": "BIJELU BLUZU-VERA MATOVIC UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8136
+    },
+    {
+      "kind": "terca",
+      "file": "BMW MECKA AUDI-FAZLIJA UZIVO T.MID",
+      "source": [
+        0,
+        10
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.773
+    },
+    {
+      "kind": "terca",
+      "file": "BOJANA-SIN MANJACE UZIVO (2).MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8181
+    },
+    {
+      "kind": "terca",
+      "file": "BOLUJ BOLE GARA-GOCI BEND UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8189
+    },
+    {
+      "kind": "terca",
+      "file": "BRATUNACKE DIMIJE-MERAKLIJE UZIVO.mid",
+      "source": [
+        0,
+        15
+      ],
+      "target": [
+        0,
+        10
+      ],
+      "confidence": 0.7279
+    },
+    {
+      "kind": "terca",
+      "file": "BUZUKO-SAMIR RADETINAC UZIVO.MID",
+      "source": [
+        0,
+        2
+      ],
+      "target": [
+        0,
+        4
+      ],
+      "confidence": 0.7408
+    },
+    {
+      "kind": "terca",
+      "file": "CUJ MORI ALJO - MUKI UZIVO.MID",
+      "source": [
+        0,
+        10
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.7721
+    },
+    {
+      "kind": "terca",
+      "file": "DAJ DA NESTO POPIJ-SEKI UZIVO.MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.796
+    },
+    {
+      "kind": "terca",
+      "file": "DAN ZA DANOM PROCICE GODINE-MITAR MIRI UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.816
+    },
+    {
+      "kind": "terca",
+      "file": "DANIJELA RAZVOD-KNINDZA UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8171
+    },
+    {
+      "kind": "terca",
+      "file": "DJIDO-LJILJA UZIVO.MID",
+      "source": [
+        0,
+        3
+      ],
+      "target": [
+        0,
+        13
+      ],
+      "confidence": 0.7129
+    },
+    {
+      "kind": "terca",
+      "file": "DODJI POD KISOBRAN-GOCI B UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8156
+    },
+    {
+      "kind": "terca",
+      "file": "EVO VOZIM IZ B-KR, DRINE UZIVO (2).MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8169
+    },
+    {
+      "kind": "terca",
+      "file": "GORDANA-MILE DELIJA UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8167
+    },
+    {
+      "kind": "terca",
+      "file": "GRANICE-JASMIN M UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8152
+    },
+    {
+      "kind": "terca",
+      "file": "GRMEC I UNA-GR,DRVAR UZIVO.MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.8175
+    },
+    {
+      "kind": "terca",
+      "file": "GRMEC I UNA-GR,DRVAR UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8169
+    },
+    {
+      "kind": "terca",
+      "file": "HEJ NADO NADO-BORO DRLJ UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8165
+    },
+    {
+      "kind": "terca",
+      "file": "HOCU MALO RODNOG-SEKI UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8162
+    },
+    {
+      "kind": "terca",
+      "file": "JA KROZ SELO-GOCI BEND UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8182
+    },
+    {
+      "kind": "terca",
+      "file": "JA SAM ODSVIRAO-BAJA KINI UZIVO (2).MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8159
+    },
+    {
+      "kind": "terca",
+      "file": "JASTREB I KOKA-JELE UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8163
+    },
+    {
+      "kind": "terca",
+      "file": "JAVI MI SE DANIJE-J,JATO UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8164
+    },
+    {
+      "kind": "terca",
+      "file": "JEDNA SUZA-MILOS BOJANIC UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8183
+    },
+    {
+      "kind": "terca",
+      "file": "JERINA-SAVO RADUSINOVIC UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8159
+    },
+    {
+      "kind": "terca",
+      "file": "JOVANOVIC RADA-MILOS B UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8154
+    },
+    {
+      "kind": "terca",
+      "file": "JOZA TUZNI-KNINDZA UZIVO (2).MID",
+      "source": [
+        0,
+        3
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.755
+    },
+    {
+      "kind": "terca",
+      "file": "JOZA TUZNI-KNINDZA UZIVO (2).MID",
+      "source": [
+        0,
+        2
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "confidence": 0.7541
+    },
+    {
+      "kind": "terca",
+      "file": "JOZA TUZNI-KNINDZA UZIVO.MID",
+      "source": [
+        0,
+        3
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.755
+    },
+    {
+      "kind": "terca",
+      "file": "JOZA TUZNI-KNINDZA UZIVO.MID",
+      "source": [
+        0,
+        2
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "confidence": 0.7541
+    },
+    {
+      "kind": "terca",
+      "file": "KAD BOLE OJKACU-MIROSLV K UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8168
+    },
+    {
+      "kind": "terca",
+      "file": "KAD BOLE OJKACU-MIROSLV K UZIVO.MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.8165
+    },
+    {
+      "kind": "terca",
+      "file": "KAD PROSATAM KR KOTARE-MI UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8163
+    },
+    {
+      "kind": "terca",
+      "file": "KAD SE DRUGARI RAST-MITAR UZIVO.MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.817
+    },
+    {
+      "kind": "terca",
+      "file": "KAD SE DRUGARI RAST-MITAR UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8147
+    },
+    {
+      "kind": "terca",
+      "file": "KAMENJAR-MILE DELIJA UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8145
+    },
+    {
+      "kind": "terca",
+      "file": "LANE_MALO_DOZIVALO_MAJKU UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.816
+    },
+    {
+      "kind": "terca",
+      "file": "LANE_MALO_DOZIVALO_MAJKU UZIVO.MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.816
+    },
+    {
+      "kind": "terca",
+      "file": "LOVACKA PJESMA-N, MARAONC UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8165
+    },
+    {
+      "kind": "terca",
+      "file": "MAN I GOCA-KRAJISNICI UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8175
+    },
+    {
+      "kind": "terca",
+      "file": "MAN-KRAJ, SA DRINE UZIVO (2).MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        10
+      ],
+      "confidence": 0.95
+    },
+    {
+      "kind": "terca",
+      "file": "MAN-KRAJ, SA DRINE UZIVO (2).MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8167
+    },
+    {
+      "kind": "terca",
+      "file": "MIRIS ZAVICAJA-SEKI T UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.816
+    },
+    {
+      "kind": "terca",
+      "file": "MOJ ZIVOTE DRUG-SABAN S UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8162
+    },
+    {
+      "kind": "terca",
+      "file": "MOMAK SA KORDUNA-BRANE P UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8171
+    },
+    {
+      "kind": "terca",
+      "file": "MOMAK SA KORDUNA-BRANE P UZIVO.MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.8165
+    },
+    {
+      "kind": "terca",
+      "file": "MUSKO-MONY UZIVO.MID",
+      "source": [
+        0,
+        15
+      ],
+      "target": [
+        0,
+        10
+      ],
+      "confidence": 0.8272
+    },
+    {
+      "kind": "terca",
+      "file": "MUSKO-MONY UZIVO.MID",
+      "source": [
+        0,
+        10
+      ],
+      "target": [
+        0,
+        15
+      ],
+      "confidence": 0.8272
+    },
+    {
+      "kind": "terca",
+      "file": "MUSKO-MONY UZIVO.MID",
+      "source": [
+        0,
+        10
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.7716
+    },
+    {
+      "kind": "terca",
+      "file": "MUSKO-MONY UZIVO.MID",
+      "source": [
+        0,
+        15
+      ],
+      "target": [
+        0,
+        4
+      ],
+      "confidence": 0.7069
+    },
+    {
+      "kind": "terca",
+      "file": "NA KRAJU SVETA-SEKA UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.817
+    },
+    {
+      "kind": "terca",
+      "file": "NEVJERNICE-KOKE UZIVO.MID",
+      "source": [
+        0,
+        15
+      ],
+      "target": [
+        0,
+        14
+      ],
+      "confidence": 0.7032
+    },
+    {
+      "kind": "terca",
+      "file": "NIGDJE ZORE-SABAN SULIC UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8162
+    },
+    {
+      "kind": "terca",
+      "file": "NUSRETA - MURIZ K UZIVO.MID",
+      "source": [
+        0,
+        2
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "confidence": 0.7744
+    },
+    {
+      "kind": "terca",
+      "file": "NUSRETA - MURIZ K UZIVO.MID",
+      "source": [
+        0,
+        2
+      ],
+      "target": [
+        0,
+        1
+      ],
+      "confidence": 0.7378
+    },
+    {
+      "kind": "terca",
+      "file": "ORASI I MED-J,JATO UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.817
+    },
+    {
+      "kind": "terca",
+      "file": "PUKNI ZORO-TOPALKO UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8056
+    },
+    {
+      "kind": "terca",
+      "file": "SIPAJ CARE-FAZLIJA UZIVO.MID",
+      "source": [
+        0,
+        3
+      ],
+      "target": [
+        0,
+        13
+      ],
+      "confidence": 0.7401
+    },
+    {
+      "kind": "terca",
+      "file": "STARI VUK-ZV,TROMEDJE UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.818
+    },
+    {
+      "kind": "terca",
+      "file": "STIGLO PISMO-SEKI TURKOVI UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8156
+    },
+    {
+      "kind": "terca",
+      "file": "STOPER-DELIJE SA MANJACE UZIVO.MID",
+      "source": [
+        0,
+        2
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "confidence": 0.8503
+    },
+    {
+      "kind": "terca",
+      "file": "STOPER-DELIJE SA MANJACE UZIVO.MID",
+      "source": [
+        0,
+        11
+      ],
+      "target": [
+        0,
+        12
+      ],
+      "confidence": 0.8176
+    },
+    {
+      "kind": "terca",
+      "file": "SVE JE PUSTO-MILE DELIJA UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8156
+    },
+    {
+      "kind": "terca",
+      "file": "USTAJ MALA-LASTE VRBANJE UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8164
+    },
+    {
+      "kind": "terca",
+      "file": "VJENCANICA - SERIF K UZIVO.mid",
+      "source": [
+        1,
+        0
+      ],
+      "target": [
+        2,
+        1
+      ],
+      "confidence": 0.8916
+    },
+    {
+      "kind": "terca",
+      "file": "VRATI OCE MAJKU-LJUBA AL UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8186
+    },
+    {
+      "kind": "terca",
+      "file": "ZIVELI SMO SRETNO-JASAR UZIVO.MID",
+      "source": [
+        0,
+        3
+      ],
+      "target": [
+        0,
+        13
+      ],
+      "confidence": 0.7579
+    },
+    {
+      "kind": "terca",
+      "file": "ZUTA SLIKA-PRELDZIJE UZIVO.MID",
+      "source": [
+        0,
+        12
+      ],
+      "target": [
+        0,
+        11
+      ],
+      "confidence": 0.8162
+    },
+    {
+      "kind": "echo",
+      "file": "CERI MOJA ZASTO TUGUJES - ZEHRA UZIVO.MID",
+      "source": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        1
+      ],
+      "confidence": 0.6235
+    },
+    {
+      "kind": "echo",
+      "file": "CERI MOJA ZASTO TUGUJES - ZEHRA UZIVO.MID",
+      "source": [
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "confidence": 0.6235
+    },
+    {
+      "kind": "echo",
+      "file": "PREBOLJET CU OVE-ESAD PLAVI UZIVO.MID",
+      "source": [
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "confidence": 0.6204
+    },
+    {
+      "kind": "echo",
+      "file": "VJENCANICA - SERIF K UZIVO.mid",
+      "source": [
+        6,
+        5
+      ],
+      "target": [
+        9,
+        10
+      ],
+      "confidence": 0.6478
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "AMELA , CERKU AKO DOBIJES - AMELA UZIVO.MID",
+      "sha256": "2c941f4aaec05e17f7ada50fad82dcf3aebd7001986dac9906c4ad0120e576c8",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 1
+    },
+    {
+      "file": "BARABA-ZARE I GOCI UZIVO (2).MID",
+      "sha256": "a64c34c12082ee9ccc9eb781d10b5b89f79e1eeac7eec87e849621d18c5c34a1",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 2
+    },
+    {
+      "file": "BECAR DAMA-NOVI MARATONCI UZIVO (2).MID",
+      "sha256": "e43723f9e4598f1b396c3f76116d32211c8764374fc2828c1069e90251cde16b",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 13
+    },
+    {
+      "file": "BIJELA KUGA-DRVAR UZIVO (2).MID",
+      "sha256": "5f970e21fb81d61f33a1359263e3849c6007babe1f2465f03dbd6f63ada35adc",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 8
+    },
+    {
+      "file": "BIJELU BLUZU-VERA MATOVIC UZIVO.MID",
+      "sha256": "dfabbb840a34dc6a373e71e73bc2cdf6827f37dcb218bd96a4240fb0bde4c881",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 9
+    },
+    {
+      "file": "BMW MECKA AUDI-FAZLIJA UZIVO T.MID",
+      "sha256": "027196c3e68526b55247474c49a17b7bfce2208c8dc0414ee467ede2df256383",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 15
+    },
+    {
+      "file": "BOJANA-SIN MANJACE UZIVO (2).MID",
+      "sha256": "08308b498a5f44e5995ae3b7e5f5d03c02b0aa5e344ae648d9f5ed2202b07324",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 4
+    },
+    {
+      "file": "BOLUJ BOLE GARA-GOCI BEND UZIVO.MID",
+      "sha256": "1fe5afdfdffbe0009a58b4524790d373ded7bf0b74d9a50140055c21e7b1db82",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 16
+    },
+    {
+      "file": "BRATUNACKE DIMIJE-MERAKLIJE UZIVO.mid",
+      "sha256": "d6a46c6098c30611f9e746e8895f8709a98db4e1b15ec7370eb3b7b1aecc6418",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 9
+    },
+    {
+      "file": "BUZUKO-SAMIR RADETINAC UZIVO.MID",
+      "sha256": "1691712ddfdf4f2e936571c16227a2864508760268a2d20dfb078c97045ba580",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 7
+    },
+    {
+      "file": "CERI MOJA ZASTO TUGUJES - ZEHRA UZIVO.MID",
+      "sha256": "eca2a2b876605b360006527636f0ba4d682eb10ab77128f41b51dc573d31ffed",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 6
+    },
+    {
+      "file": "CUJ MORI ALJO - MUKI UZIVO.MID",
+      "sha256": "231a23f51aa107f5bb885a662520574444909afede7b49b65b1e0563e27ecadd",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 27
+    },
+    {
+      "file": "DAJ DA NESTO POPIJ-SEKI UZIVO.MID",
+      "sha256": "06c903c1f14cf8e5936356d84f7e7b9f02b59f7cc6bab1b298dbbeb5f3ba824a",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 40
+    },
+    {
+      "file": "DAN ZA DANOM PROCICE GODINE-MITAR MIRI UZIVO.MID",
+      "sha256": "e32303a517052a941fe2ff20d5074c3c3d25a3d1df6eef0a8bf898d24d2ed202",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 4
+    },
+    {
+      "file": "DANIJELA RAZVOD-KNINDZA UZIVO.MID",
+      "sha256": "b9550f5e38f57df316a7a6c0c3643e99de6b7402c08ef1fb3aa65ad6b2550fbd",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 9
+    },
+    {
+      "file": "DJIDO-LJILJA UZIVO.MID",
+      "sha256": "21e17f29a27ef9c6b62a391490bdf69b50dae316e5f61b72d37c5cb3715c99c2",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 170
+    },
+    {
+      "file": "DODJI POD KISOBRAN-GOCI B UZIVO.MID",
+      "sha256": "1a94b2e29a092b7cb63db5fc391988e4f342e959a535e61f982762f7323407d4",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 14
+    },
+    {
+      "file": "EVO VOZIM IZ B-KR, DRINE UZIVO (2).MID",
+      "sha256": "7eed5b5efcd1825022ab38895c99f5f38a8ae66c1ac036927a33dd647a2c1338",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 2
+    },
+    {
+      "file": "GORDANA-MILE DELIJA UZIVO.MID",
+      "sha256": "b765c32132ad00ba35e301df094e6f9962d4e65ec242f14d64dbaa87fa84341a",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 16
+    },
+    {
+      "file": "GRANICE-JASMIN M UZIVO.MID",
+      "sha256": "88df3d654a205fb511600d61b6ec710c425ec1737231550601cf637f7ed4d18c",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 9
+    },
+    {
+      "file": "GRMEC I UNA-GR,DRVAR UZIVO.MID",
+      "sha256": "18b8a42e17cbf2e8614c6f3e83d183aa6808460a245bdb6f83709207b01e07f2",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 0
+    },
+    {
+      "file": "HEJ NADO NADO-BORO DRLJ UZIVO.MID",
+      "sha256": "01f1fc2f3303a048f5feafca532d4fe50b32f5fadb5b08fa3223805d6cabd0eb",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 7
+    },
+    {
+      "file": "HOCU MALO RODNOG-SEKI UZIVO.MID",
+      "sha256": "09c330342ecf73c14dff79dd0e7c4c2321c7c6105573588a248f61fa38974563",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 5
+    },
+    {
+      "file": "JA KROZ SELO-GOCI BEND UZIVO.MID",
+      "sha256": "31294632dfdb93a20af1383906f42b495e565b40ce97d022615f38fa110401c1",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 20
+    },
+    {
+      "file": "JA SAM ODSVIRAO-BAJA KINI UZIVO (2).MID",
+      "sha256": "c9b9c8363de2b1e8c5f6fd2736e335f98aaab5e83be7a8e4eb0e134979862330",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 6
+    },
+    {
+      "file": "JASTREB I KOKA-JELE UZIVO.MID",
+      "sha256": "d58f37a2f902ae686199f22365c5f075a5a2003c1fd4a4553010e14e514b402a",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 8
+    },
+    {
+      "file": "JAVI MI SE DANIJE-J,JATO UZIVO.MID",
+      "sha256": "b11b87e5bf24c1a94f0306e6d044fa5135a6ce69cd7f136eb6d523ee1a785c54",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 15
+    },
+    {
+      "file": "JEDNA SUZA-MILOS BOJANIC UZIVO.MID",
+      "sha256": "3be8db042b18d56f80e4339c469f76281a30a6c758605e1f5d356a40b9d9b8b7",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 7
+    },
+    {
+      "file": "JERINA-SAVO RADUSINOVIC UZIVO.MID",
+      "sha256": "acdf41dabeb17b6cd38a39ba0068968cf5b1cc35ffb44a4cfb2f958c9145cb68",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 14
+    },
+    {
+      "file": "JOVANOVIC RADA-MILOS B UZIVO.MID",
+      "sha256": "ff7d752ecc3945c1b29afb8d1581994b8cfe90960105e1e4421eae4a4e296be3",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 11
+    },
+    {
+      "file": "JOZA TUZNI-KNINDZA UZIVO (2).MID",
+      "sha256": "460503b54f70b22e4fb205fd6822c9782f24fcc9c69f4b9970e7f9cae9bbc864",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 59
+    },
+    {
+      "file": "JOZA TUZNI-KNINDZA UZIVO.MID",
+      "sha256": "460503b54f70b22e4fb205fd6822c9782f24fcc9c69f4b9970e7f9cae9bbc864",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 59
+    },
+    {
+      "file": "KAD BOLE OJKACU-MIROSLV K UZIVO.MID",
+      "sha256": "51d2d882c6a9eaae82f0244f712c8a7e84d89c9bf9f110350152c7fa8b182be7",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 2
+    },
+    {
+      "file": "KAD PROSATAM KR KOTARE-MI UZIVO.MID",
+      "sha256": "33ba7daf8aeaf72f82d5bc9979f03d375f2b0a9a07fbf200ef0d6afc013f2511",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 2
+    },
+    {
+      "file": "KAD SE DRUGARI RAST-MITAR UZIVO.MID",
+      "sha256": "426af71b19cd684d23dd9ad8bb450098264f2e3d896a77dd04c62e840df42d55",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 8
+    },
+    {
+      "file": "KAMENJAR-MILE DELIJA UZIVO.MID",
+      "sha256": "947848a436d1a13c965743de00bcc0d90f5d3a4390a5c6d4a9db555fb08e349a",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 4
+    },
+    {
+      "file": "LANE_MALO_DOZIVALO_MAJKU UZIVO.MID",
+      "sha256": "b317318314858876cad94cd1c722798b5ca4a672b0bd3d31df6701db56910041",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 9
+    },
+    {
+      "file": "LOVACKA PJESMA-N, MARAONC UZIVO.MID",
+      "sha256": "5e13bebd15b07acf14b4eeab9f782fd614631c6b31f9bac902341ea17e322252",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 2
+    },
+    {
+      "file": "MAN I GOCA-KRAJISNICI UZIVO.MID",
+      "sha256": "1898461cd225d277092e6973a1c10a924356c5b651d1ca169f45186658b39a81",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 3
+    },
+    {
+      "file": "MAN-KRAJ, SA DRINE UZIVO (2).MID",
+      "sha256": "4bb88232bbcf8e798d2e3a8f85a8d1e8d382cc153aa238dd2647e16323def621",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 4
+    },
+    {
+      "file": "MIRIS ZAVICAJA-SEKI T UZIVO.MID",
+      "sha256": "d57b8916c3960c8bd4f311755636a30edf2a8256cf9af0f679cd997f205dca5e",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 16
+    },
+    {
+      "file": "MOJ ZIVOTE DRUG-SABAN S UZIVO.MID",
+      "sha256": "5414db1e3a8d9a47ba1fd78e24cdc64d0b4267c105af269c3de026238a4041bc",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 6
+    },
+    {
+      "file": "MOMAK SA KORDUNA-BRANE P UZIVO.MID",
+      "sha256": "34568abd8a379c04657f4ff525774dbb276d2f1f8c1d6d0a384eee54cca2bd5a",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 7
+    },
+    {
+      "file": "MUSKO-MONY UZIVO.MID",
+      "sha256": "cf9cacb3ea650c8308402085d757ce02fd204475d0d16687a31351d106d88c3e",
+      "relationships": 4,
+      "ignoredInvalidNotePairs": 25
+    },
+    {
+      "file": "NA KRAJU SVETA-SEKA UZIVO.MID",
+      "sha256": "0d22f98eb83ae67296eeb79e5139d0d6634156c4363f420c0d2147853060e3f9",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 11
+    },
+    {
+      "file": "NEVJERNICE-KOKE UZIVO.MID",
+      "sha256": "9252fd3dec55c8742c804900c169bbfeefe7b4504149584b3d3b6ca540d5901c",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 26
+    },
+    {
+      "file": "NIGDJE ZORE-SABAN SULIC UZIVO.MID",
+      "sha256": "dac5ff45cd98e181d61c50ce66e3af79a2e9f8475211ab8867863a5dcd9752b1",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 9
+    },
+    {
+      "file": "NUSRETA - MURIZ K UZIVO.MID",
+      "sha256": "c57c55fc242941313eeae9c4941e6f50b9325078d7990f889e60c31cea8765b8",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 34
+    },
+    {
+      "file": "ORASI I MED-J,JATO UZIVO.MID",
+      "sha256": "094596403bd3af7fa41e43739113d6f432f36ac66c0bb6366f3c0a90e4b409b5",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 11
+    },
+    {
+      "file": "PREBOLJET CU OVE-ESAD PLAVI UZIVO.MID",
+      "sha256": "35d63eace6740487a2d2d65b5e3b827d3879ecd57746c08b5a89dce3c55028a4",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 4
+    },
+    {
+      "file": "PUKNI ZORO-TOPALKO UZIVO.MID",
+      "sha256": "0939cfed50c52a26c0935917c4a84e2505008899c745e73f7e856abf2b77082a",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 2
+    },
+    {
+      "file": "SIPAJ CARE-FAZLIJA UZIVO.MID",
+      "sha256": "ff4423e61d032350c484047ea98d515579559b5d34056f663d4c4aa1d938af63",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 34
+    },
+    {
+      "file": "STARI VUK-ZV,TROMEDJE UZIVO.MID",
+      "sha256": "044d4908f90b20f1b290d00dd89d9063eabe876ac9739dec8c6e725da2e3beee",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 10
+    },
+    {
+      "file": "STIGLO PISMO-SEKI TURKOVI UZIVO.MID",
+      "sha256": "fc7dff3ee833b0e3524b01cba83c4558fbf2d3b9b2097b48619835d8068ed517",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 5
+    },
+    {
+      "file": "STOPER-DELIJE SA MANJACE UZIVO.MID",
+      "sha256": "02de5c1388307b3aceb3cb27986e4d0f2e38443e32ed34fabe5edf90487a6041",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 1
+    },
+    {
+      "file": "SVE JE PUSTO-MILE DELIJA UZIVO.MID",
+      "sha256": "d4706a8b6d4f24988ba145f441b236e8195b78faf7282d520af7f27ea0365001",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 15
+    },
+    {
+      "file": "USTAJ MALA-LASTE VRBANJE UZIVO.MID",
+      "sha256": "f0ee6b098313c74236d7b3b0965691cf7602708798bc44b17c5da44351a78043",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 10
+    },
+    {
+      "file": "VJENCANICA - SERIF K UZIVO.mid",
+      "sha256": "c1ceab977b6dd9de200e6c2c49f4e8fe6f5a12f8bdb4cc6b3d6482242ce81afb",
+      "relationships": 2,
+      "ignoredInvalidNotePairs": 2
+    },
+    {
+      "file": "VRATI OCE MAJKU-LJUBA AL UZIVO.MID",
+      "sha256": "9ea00f07f10f66f1da3fdff594d5b43d129c192e7ddbee4b8db7da07b01cc8fe",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 5
+    },
+    {
+      "file": "ZIVELI SMO SRETNO-JASAR UZIVO.MID",
+      "sha256": "bbaa3fdb3bce961e46aecb880d7152dad07d07f66a7799772bb936ebc5be44bc",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 195
+    },
+    {
+      "file": "ZUTA SLIKA-PRELDZIJE UZIVO.MID",
+      "sha256": "d5a35b33f09b5c27d6a22cd381470b199cab01e846b8d61ab1a4aacdcd6a92a8",
+      "relationships": 1,
+      "ignoredInvalidNotePairs": 7
+    }
+  ],
+  "policy": {
+    "velocityAuthority": "FACTORY_ONLY",
+    "goldVelocityUsed": false,
+    "relationshipOnly": true,
+    "allowedTercaIntervalsSemitones": [
+      3,
+      4,
+      8,
+      9,
+      -3,
+      -4,
+      -8,
+      -9
+    ],
+    "originalMidiMutated": false,
+    "invalidNotePairsIgnoredForCalibrationOnly": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-09-06T17:28:26.904629",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "trill_engine": {
+    "rule": "Trill engine NE smije biti obični note duplicator",
+    "must_understand": [
+      "start note",
+      "upper note",
+      "interval",
+      "speed",
+      "subdivision",
+      "phrase position",
+      "instrument family",
+      "register",
+      "intensity",
+      "duration",
+      "ending behaviour"
+    ],
+    "profile": {
+      "min_duration": "1 beat",
+      "max_duration": "2 bars",
+      "rate": "32nd or 64th notes, tempo-dependent",
+      "velocity_envelope": "FACTORY_CONSTRAINED, crescendo or decrescendo",
+      "acceleration_deceleration": "Slight acceleration at start, slight rit at end",
+      "final_resolution": "Must resolve to target note",
+      "ornament_probability": "Gold-driven, not every opportunity"
+    },
+    "authority": {
+      "playing_behaviour": "GOLD",
+      "velocity_constraints": "FACTORY"
+    }
+  },
+  "articulation_engine": {
+    "supported": [
+      "staccato",
+      "legato",
+      "accent",
+      "slide",
+      "trill",
+      "grace",
+      "roll",
+      "repeated-note"
+    ],
+    "repeated_note_logic": "Must avoid machine-gun effect, use round-robin or velocity variation",
+    "source": "GOLD for logic, FACTORY for velocity"
+  },
+  "instruments": {
+    "violin": {
+      "trill_eligible": true,
+      "trill_types": [
+        "whole_step",
+        "half_step",
+        "third"
+      ],
+      "grace_eligible": true,
+      "ornament_density": "GOLD_EVIDENCE_DRIVEN",
+      "factory_velocity": "CONSTRAINED"
+    },
+    "clarinet": {
+      "trill_eligible": true,
+      "trill_types": [
+        "whole_step",
+        "half_step",
+        "third"
+      ],
+      "grace_eligible": true,
+      "ornament_density": "GOLD_EVIDENCE_DRIVEN",
+      "factory_velocity": "CONSTRAINED"
+    },
+    "sax": {
+      "trill_eligible": true,
+      "trill_types": [
+        "whole_step",
+        "half_step",
+        "third"
+      ],
+      "grace_eligible": true,
+      "ornament_density": "GOLD_EVIDENCE_DRIVEN",
+      "factory_velocity": "CONSTRAINED"
+    },
+    "accordion": {
+      "trill_eligible": true,
+      "trill_types": [
+        "whole_step",
+        "half_step",
+        "third"
+      ],
+      "grace_eligible": true,
+      "ornament_density": "GOLD_EVIDENCE_DRIVEN",
+      "factory_velocity": "CONSTRAINED"
+    },
+    "solo_guitar": {
+      "trill_eligible": true,
+      "trill_types": [
+        "whole_step",
+        "half_step",
+        "third"
+      ],
+      "grace_eligible": true,
+      "ornament_density": "GOLD_EVIDENCE_DRIVEN",
+      "factory_velocity": "CONSTRAINED"
+    }
+  }
+}

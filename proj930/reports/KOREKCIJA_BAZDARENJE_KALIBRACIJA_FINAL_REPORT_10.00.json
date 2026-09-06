@@ -1,0 +1,12 @@
+{
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "timestamp": "2026-09-06T17:28:26.946280",
+  "elapsed_seconds": 0.6,
+  "seed": 9302026,
+  "phases_executed": 25,
+  "reports_generated": 25,
+  "final_status": "PREVIEW_READY",
+  "pass_rate": "17/18 (94.4%)",
+  "golden_freeze": "/workspaces/2/proj930/calibration/golden_freeze_10.00.json",
+  "final_certification": "/workspaces/2/proj930/reports/FINAL_CERTIFICATION_10.00.md"
+}

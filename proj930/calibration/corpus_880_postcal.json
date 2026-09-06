@@ -1,0 +1,126 @@
+{
+  "filesProcessed": 164,
+  "errors": [],
+  "roles": {
+    "accompaniment": {
+      "targets": 49,
+      "repaired": 0,
+      "notes": 55067,
+      "changed": 0,
+      "overallChangeRate": 0.0,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0,
+      "maxTargetChangeRate": 0.0
+    },
+    "bass": {
+      "targets": 173,
+      "repaired": 100,
+      "notes": 91882,
+      "changed": 4860,
+      "overallChangeRate": 0.0529,
+      "medianTargetChangeRate": 0.0037,
+      "p90TargetChangeRate": 0.1359,
+      "maxTargetChangeRate": 1.0
+    },
+    "brass": {
+      "targets": 48,
+      "repaired": 0,
+      "notes": 19770,
+      "changed": 0,
+      "overallChangeRate": 0.0,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0,
+      "maxTargetChangeRate": 0.0
+    },
+    "drums": {
+      "targets": 164,
+      "repaired": 0,
+      "notes": 466749,
+      "changed": 0,
+      "overallChangeRate": 0.0,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0,
+      "maxTargetChangeRate": 0.0
+    },
+    "echo": {
+      "targets": 47,
+      "repaired": 0,
+      "notes": 12371,
+      "changed": 0,
+      "overallChangeRate": 0.0,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0,
+      "maxTargetChangeRate": 0.0
+    },
+    "pad": {
+      "targets": 7,
+      "repaired": 0,
+      "notes": 752,
+      "changed": 0,
+      "overallChangeRate": 0.0,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0,
+      "maxTargetChangeRate": 0.0
+    },
+    "power-riff": {
+      "targets": 17,
+      "repaired": 4,
+      "notes": 11545,
+      "changed": 2645,
+      "overallChangeRate": 0.2291,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.2854,
+      "maxTargetChangeRate": 0.5926
+    },
+    "rhythm-guitar": {
+      "targets": 138,
+      "repaired": 31,
+      "notes": 317853,
+      "changed": 20264,
+      "overallChangeRate": 0.0638,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.1413,
+      "maxTargetChangeRate": 0.994
+    },
+    "solo": {
+      "targets": 982,
+      "repaired": 143,
+      "notes": 396325,
+      "changed": 4415,
+      "overallChangeRate": 0.0111,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0442,
+      "maxTargetChangeRate": 0.5433
+    },
+    "strings": {
+      "targets": 270,
+      "repaired": 0,
+      "notes": 107472,
+      "changed": 0,
+      "overallChangeRate": 0.0,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0,
+      "maxTargetChangeRate": 0.0
+    },
+    "unknown": {
+      "targets": 68,
+      "repaired": 0,
+      "notes": 60621,
+      "changed": 0,
+      "overallChangeRate": 0.0,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0,
+      "maxTargetChangeRate": 0.0
+    },
+    "woodwind": {
+      "targets": 5,
+      "repaired": 0,
+      "notes": 3468,
+      "changed": 0,
+      "overallChangeRate": 0.0,
+      "medianTargetChangeRate": 0.0,
+      "p90TargetChangeRate": 0.0,
+      "maxTargetChangeRate": 0.0
+    }
+  }
+}

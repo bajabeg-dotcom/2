@@ -1,0 +1,20 @@
+DNA STYLE ARRANGER ZA KORG PA800
+
+WINDOWS POKRETANJE
+
+1. Otvori ovu mapu u File Exploreru.
+2. Prvi put dvaput klikni install.bat.
+3. Nakon poruke Release check: PASS pokreni run.bat.
+4. Aplikacija se otvara na:
+
+   http://127.0.0.1:8765/
+
+install.bat automatski provjerava Python, DNA bazu i cijelo izdanje.
+
+Ako Windows ne pronalazi Python, instaliraj Python 3 i ukljuci
+opciju "Add Python to PATH".
+
+Za zaustavljanje servera zatvori crni prozor ili pritisni Ctrl+C.
+
+VAZNO: nemoj kopirati batch kod kroz Word ili drugi rich-text editor.
+Koristi gotove install.bat i run.bat datoteke iz ove mape.

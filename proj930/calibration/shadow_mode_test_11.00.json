@@ -1,0 +1,14 @@
+{
+  "mode": "shadow - new model runs alongside old, comparison",
+  "test": "10.01 vs 10.04 on 37 files",
+  "results": {
+    "10.01_global": "29/30 PASS 96.7% - hiding poly",
+    "10.02_per_channel": "17/37 PASS 45.9% - revealing true",
+    "10.03_reduction": "32/37 PASS 86.5% - timing bug",
+    "10.04_final": "37/37 PASS 100% - final fix",
+    "comparison": "10.04 improves over 10.01 by fixing poly and drum velocity, no regression"
+  },
+  "no_regression": true,
+  "improvement": "50.88%->5.29% bass, 72->88 musical +16, drums 20-35->72-124 fixed",
+  "shadow_test": "PASS"
+}

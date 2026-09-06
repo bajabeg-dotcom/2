@@ -1,0 +1,21 @@
+{
+  "test": "37 files artifacts/ processed through 10.01->10.04",
+  "results": {
+    "10.01": "29/30 PASS 96.7% - hiding poly, drum bug 1-22",
+    "10.02": "17/37 PASS 45.9% - revealing true poly violations",
+    "10.03": "32/37 PASS 86.5% - poly reduction but timing bug",
+    "10.04": "37/37 PASS 100% - final fix, no regression"
+  },
+  "improvements": {
+    "bass": "50.88% -> 5.29% only pathological (old audit) + 67.1->88.0 +20.9 musical (37 files)",
+    "guitar": "7.17% -> 0.57%",
+    "power_riff": "22.91% -> 0%",
+    "drums": "20-35 -> 72-124 fixed, 60-126 fixed, 71.4->88.0 +16.6",
+    "musical": "70.4->88.0 +17.6 (10.01 30 files), 72.0->88.0 +16.0 (10.04 37 files)",
+    "korg": "37/37 PASS 100% after transform"
+  },
+  "no_regression": true,
+  "healthy_preserved": "Only pathological repaired, healthy gates preserved",
+  "determinism": true,
+  "seed": 9302026
+}

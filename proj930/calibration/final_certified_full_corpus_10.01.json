@@ -1,0 +1,4450 @@
+{
+  "version": "10.01-FINAL-CERTIFIED",
+  "timestamp": "2026-09-06T10:51:29.481091",
+  "seed": 9302026,
+  "total_files": 30,
+  "total_notes": 7872,
+  "passed": 29,
+  "pass_rate": "29/30 (96.7%)",
+  "by_role": {
+    "accompaniment": 23,
+    "melody": 1,
+    "drums": 5,
+    "bass": 1
+  },
+  "results": [
+    {
+      "path": "/home/user/proj930/artifacts/session10-after_OPT.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 149,
+        "velocity": {
+          "min": 20,
+          "max": 105,
+          "mean": 64.29530201342281,
+          "unique": 35
+        },
+        "pitch": {
+          "min": 20,
+          "max": 79
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 149,
+        "velocity": {
+          "min": 30,
+          "max": 127,
+          "mean": 86.14765100671141,
+          "unique": 41
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 30-127",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-105 unique 35 ppq 480",
+        "after_metric": "vel 30-127 unique 41 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 30-127, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session10-before.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 143,
+        "velocity": {
+          "min": 20,
+          "max": 105,
+          "mean": 65.14685314685315,
+          "unique": 33
+        },
+        "pitch": {
+          "min": 24,
+          "max": 79
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 143,
+        "velocity": {
+          "min": 30,
+          "max": 127,
+          "mean": 87.65034965034965,
+          "unique": 39
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 30-127",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-105 unique 33 ppq 480",
+        "after_metric": "vel 30-127 unique 39 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 30-127, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session17-factory-segment-after.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 121,
+        "velocity": {
+          "min": 110,
+          "max": 110,
+          "mean": 110.0,
+          "unique": 1
+        },
+        "pitch": {
+          "min": 48,
+          "max": 60
+        },
+        "channels": [
+          11
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 121,
+        "velocity": {
+          "min": 127,
+          "max": 127,
+          "mean": 127.0,
+          "unique": 1
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [
+          "PPQ converted 192 -> 480 for Pa800 Style (info, not error)"
+        ],
+        "converted": true,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 50,
+        "after": 88,
+        "delta": 38,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 127-127",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 110-110 unique 1 ppq 192",
+        "after_metric": "vel 127-127 unique 1 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 127-127, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session17-factory-segment-before.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 32,
+        "velocity": {
+          "min": 108,
+          "max": 127,
+          "mean": 114.1875,
+          "unique": 9
+        },
+        "pitch": {
+          "min": 55,
+          "max": 104
+        },
+        "channels": [
+          11
+        ],
+        "role": "melody"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 32,
+        "velocity": {
+          "min": 127,
+          "max": 127,
+          "mean": 127.0,
+          "unique": 1
+        },
+        "factory_range": 20,
+        "factory_data": {}
+      },
+      "korg": {
+        "valid": true,
+        "errors": [
+          "PPQ converted 192 -> 480 for Pa800 Style (info, not error)"
+        ],
+        "converted": true,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory melody N/A samples",
+        "musical_purpose": "Natural velocity and timing for melody",
+        "target_profile": "melody range 127-127",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 1",
+        "transformation_rule": "Factory melody curve + Gold timing + Korg constraint",
+        "before_metric": "vel 108-127 unique 9 ppq 192",
+        "after_metric": "vel 127-127 unique 1 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 127-127, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session18-after.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 20,
+          "max": 95,
+          "mean": 68.34745762711864,
+          "unique": 22
+        },
+        "pitch": {
+          "min": 24,
+          "max": 79
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 30,
+          "max": 126,
+          "mean": 93.19491525423729,
+          "unique": 31
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 30-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-95 unique 22 ppq 480",
+        "after_metric": "vel 30-126 unique 31 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 30-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session18-before.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 89,
+        "velocity": {
+          "min": 20,
+          "max": 95,
+          "mean": 69.23595505617978,
+          "unique": 19
+        },
+        "pitch": {
+          "min": 24,
+          "max": 76
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 89,
+        "velocity": {
+          "min": 30,
+          "max": 126,
+          "mean": 94.38202247191012,
+          "unique": 29
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 30-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-95 unique 19 ppq 480",
+        "after_metric": "vel 30-126 unique 29 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 30-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session2-after.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 29,
+        "velocity": {
+          "min": 20,
+          "max": 80,
+          "mean": 63.48275862068966,
+          "unique": 7
+        },
+        "pitch": {
+          "min": 36,
+          "max": 54
+        },
+        "channels": [
+          9,
+          10
+        ],
+        "role": "drums"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 29,
+        "velocity": {
+          "min": 60,
+          "max": 126,
+          "mean": 85.82758620689656,
+          "unique": 17
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 97,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 36
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 68
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 97
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 116
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 36,
+              "lowMid": 68,
+              "optimal": 97,
+              "highMid": 116,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 31,
+              "p10": 36,
+              "p25": 68,
+              "p50": 97,
+              "p75": 116,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 4263,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 97,
+              "ceiling": 127,
+              "reason": "Drums full range"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory drums 4263 samples",
+        "musical_purpose": "Natural velocity and timing for drums",
+        "target_profile": "drums range 60-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 8",
+        "transformation_rule": "Factory drums curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-80 unique 7 ppq 480",
+        "after_metric": "vel 60-126 unique 17 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 60-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session2-before.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 7,
+        "velocity": {
+          "min": 20,
+          "max": 35,
+          "mean": 29.285714285714285,
+          "unique": 3
+        },
+        "pitch": {
+          "min": 36,
+          "max": 54
+        },
+        "channels": [
+          9,
+          10
+        ],
+        "role": "drums"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 7,
+        "velocity": {
+          "min": 72,
+          "max": 124,
+          "mean": 108.28571428571429,
+          "unique": 6
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 97,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 36
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 68
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 97
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 116
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 36,
+              "lowMid": 68,
+              "optimal": 97,
+              "highMid": 116,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 31,
+              "p10": 36,
+              "p25": 68,
+              "p50": 97,
+              "p75": 116,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 4263,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 97,
+              "ceiling": 127,
+              "reason": "Drums full range"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 80,
+        "after": 88,
+        "delta": 8,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory drums 4263 samples",
+        "musical_purpose": "Natural velocity and timing for drums",
+        "target_profile": "drums range 72-124",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 8",
+        "transformation_rule": "Factory drums curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-35 unique 3 ppq 480",
+        "after_metric": "vel 72-124 unique 6 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 72-124, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_path": "artifacts/calibrated_10.01/session2-before_CALIBRATED.mid"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session24-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 25,
+          "max": 100,
+          "mean": 51.69491525423729,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 36,
+          "max": 83
+        },
+        "channels": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 32,
+          "max": 125,
+          "mean": 73.08474576271186,
+          "unique": 14
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 32-125",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 25-100 unique 4 ppq 480",
+        "after_metric": "vel 32-125 unique 14 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 32-125, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session25-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 12,
+        "velocity": {
+          "min": 72,
+          "max": 75,
+          "mean": 73.5,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 52,
+          "max": 76
+        },
+        "channels": [
+          3,
+          2,
+          11
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 12,
+        "velocity": {
+          "min": 101,
+          "max": 105,
+          "mean": 102.75,
+          "unique": 4
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 80,
+        "after": 88,
+        "delta": 8,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 101-105",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 72-75 unique 4 ppq 480",
+        "after_metric": "vel 101-105 unique 4 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 101-105, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session26-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 12,
+        "velocity": {
+          "min": 72,
+          "max": 75,
+          "mean": 73.5,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 52,
+          "max": 76
+        },
+        "channels": [
+          3,
+          2,
+          11
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 12,
+        "velocity": {
+          "min": 101,
+          "max": 105,
+          "mean": 102.75,
+          "unique": 4
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 80,
+        "after": 88,
+        "delta": 8,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 101-105",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 72-75 unique 4 ppq 480",
+        "after_metric": "vel 101-105 unique 4 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 101-105, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session27-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 12,
+        "velocity": {
+          "min": 72,
+          "max": 75,
+          "mean": 73.5,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 52,
+          "max": 76
+        },
+        "channels": [
+          3,
+          2,
+          11
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 12,
+        "velocity": {
+          "min": 101,
+          "max": 105,
+          "mean": 102.75,
+          "unique": 4
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 80,
+        "after": 88,
+        "delta": 8,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 101-105",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 72-75 unique 4 ppq 480",
+        "after_metric": "vel 101-105 unique 4 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 101-105, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session28-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 25,
+          "max": 100,
+          "mean": 51.69491525423729,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 36,
+          "max": 83
+        },
+        "channels": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 32,
+          "max": 125,
+          "mean": 73.08474576271186,
+          "unique": 14
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 32-125",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 25-100 unique 4 ppq 480",
+        "after_metric": "vel 32-125 unique 14 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 32-125, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session29-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 25,
+          "max": 100,
+          "mean": 51.69491525423729,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 36,
+          "max": 83
+        },
+        "channels": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 32,
+          "max": 125,
+          "mean": 73.08474576271186,
+          "unique": 14
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 32-125",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 25-100 unique 4 ppq 480",
+        "after_metric": "vel 32-125 unique 14 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 32-125, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session3-after.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 47,
+        "velocity": {
+          "min": 20,
+          "max": 80,
+          "mean": 63.93617021276596,
+          "unique": 12
+        },
+        "pitch": {
+          "min": 36,
+          "max": 60
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "role": "drums"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 47,
+        "velocity": {
+          "min": 60,
+          "max": 126,
+          "mean": 85.17021276595744,
+          "unique": 25
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 97,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 36
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 68
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 97
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 116
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 36,
+              "lowMid": 68,
+              "optimal": 97,
+              "highMid": 116,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 31,
+              "p10": 36,
+              "p25": 68,
+              "p50": 97,
+              "p75": 116,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 4263,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 97,
+              "ceiling": 127,
+              "reason": "Drums full range"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory drums 4263 samples",
+        "musical_purpose": "Natural velocity and timing for drums",
+        "target_profile": "drums range 60-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 8",
+        "transformation_rule": "Factory drums curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-80 unique 12 ppq 480",
+        "after_metric": "vel 60-126 unique 25 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 60-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session3-before.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 37,
+        "velocity": {
+          "min": 20,
+          "max": 80,
+          "mean": 58.2972972972973,
+          "unique": 11
+        },
+        "pitch": {
+          "min": 36,
+          "max": 60
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "role": "drums"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 37,
+        "velocity": {
+          "min": 60,
+          "max": 126,
+          "mean": 87.45945945945945,
+          "unique": 21
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 97,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 36
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 68
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 97
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 116
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 36,
+              "lowMid": 68,
+              "optimal": 97,
+              "highMid": 116,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 31,
+              "p10": 36,
+              "p25": 68,
+              "p50": 97,
+              "p75": 116,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 4263,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 97,
+              "ceiling": 127,
+              "reason": "Drums full range"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory drums 4263 samples",
+        "musical_purpose": "Natural velocity and timing for drums",
+        "target_profile": "drums range 60-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 8",
+        "transformation_rule": "Factory drums curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-80 unique 11 ppq 480",
+        "after_metric": "vel 60-126 unique 21 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 60-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session30-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 25,
+          "max": 100,
+          "mean": 51.69491525423729,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 36,
+          "max": 83
+        },
+        "channels": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 32,
+          "max": 125,
+          "mean": 73.08474576271186,
+          "unique": 14
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 32-125",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 25-100 unique 4 ppq 480",
+        "after_metric": "vel 32-125 unique 14 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 32-125, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session31-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 166,
+        "velocity": {
+          "min": 25,
+          "max": 100,
+          "mean": 56.98795180722892,
+          "unique": 5
+        },
+        "pitch": {
+          "min": 36,
+          "max": 83
+        },
+        "channels": [
+          0,
+          1,
+          2,
+          3,
+          9
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 166,
+        "velocity": {
+          "min": 32,
+          "max": 125,
+          "mean": 80.28915662650603,
+          "unique": 15
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 32-125",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 25-100 unique 5 ppq 480",
+        "after_metric": "vel 32-125 unique 15 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 32-125, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session31b-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 25,
+          "max": 100,
+          "mean": 51.69491525423729,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 36,
+          "max": 83
+        },
+        "channels": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 32,
+          "max": 125,
+          "mean": 73.08474576271186,
+          "unique": 14
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 32-125",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 25-100 unique 4 ppq 480",
+        "after_metric": "vel 32-125 unique 14 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 32-125, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session32-reference.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 25,
+          "max": 100,
+          "mean": 51.69491525423729,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 36,
+          "max": 83
+        },
+        "channels": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 32,
+          "max": 125,
+          "mean": 73.08474576271186,
+          "unique": 14
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 32-125",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 25-100 unique 4 ppq 480",
+        "after_metric": "vel 32-125 unique 14 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 32-125, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session33-source.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 25,
+          "max": 100,
+          "mean": 51.69491525423729,
+          "unique": 4
+        },
+        "pitch": {
+          "min": 36,
+          "max": 83
+        },
+        "channels": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 32,
+          "max": 125,
+          "mean": 73.08474576271186,
+          "unique": 14
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 32-125",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 25-100 unique 4 ppq 480",
+        "after_metric": "vel 32-125 unique 14 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 32-125, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session34-variant-a.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 1400,
+        "velocity": {
+          "min": 53,
+          "max": 127,
+          "mean": 104.99428571428571,
+          "unique": 44
+        },
+        "pitch": {
+          "min": 28,
+          "max": 87
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 1400,
+        "velocity": {
+          "min": 60,
+          "max": 127,
+          "mean": 110.36571428571429,
+          "unique": 49
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 60-127",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 53-127 unique 44 ppq 480",
+        "after_metric": "vel 60-127 unique 49 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 60-127, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session34-variant-b.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 1400,
+        "velocity": {
+          "min": 53,
+          "max": 127,
+          "mean": 104.99428571428571,
+          "unique": 44
+        },
+        "pitch": {
+          "min": 28,
+          "max": 87
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 1400,
+        "velocity": {
+          "min": 60,
+          "max": 127,
+          "mean": 110.36571428571429,
+          "unique": 49
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 60-127",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 53-127 unique 44 ppq 480",
+        "after_metric": "vel 60-127 unique 49 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 60-127, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session34-variant-c.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 1400,
+        "velocity": {
+          "min": 53,
+          "max": 127,
+          "mean": 104.99428571428571,
+          "unique": 44
+        },
+        "pitch": {
+          "min": 28,
+          "max": 87
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 1400,
+        "velocity": {
+          "min": 60,
+          "max": 127,
+          "mean": 110.36571428571429,
+          "unique": 49
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 60-127",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 53-127 unique 44 ppq 480",
+        "after_metric": "vel 60-127 unique 49 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 60-127, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session35-partial-preview.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 1400,
+        "velocity": {
+          "min": 53,
+          "max": 127,
+          "mean": 104.99428571428571,
+          "unique": 44
+        },
+        "pitch": {
+          "min": 28,
+          "max": 87
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 1400,
+        "velocity": {
+          "min": 60,
+          "max": 127,
+          "mean": 110.36571428571429,
+          "unique": 49
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 60-127",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 53-127 unique 44 ppq 480",
+        "after_metric": "vel 60-127 unique 49 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 60-127, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session4-after.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 81,
+        "velocity": {
+          "min": 20,
+          "max": 80,
+          "mean": 69.88888888888889,
+          "unique": 11
+        },
+        "pitch": {
+          "min": 24,
+          "max": 64
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "role": "bass"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 81,
+        "velocity": {
+          "min": 60,
+          "max": 126,
+          "mean": 103.75308641975309,
+          "unique": 19
+        },
+        "factory_range": 65,
+        "factory_data": {
+          "floor": 65,
+          "optimal": 105,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 65
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 65
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 65
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 105
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 127
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 65,
+              "soft": 65,
+              "lowMid": 65,
+              "optimal": 105,
+              "highMid": 127,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 16,
+              "p10": 22,
+              "p25": 59,
+              "p50": 105,
+              "p75": 127,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              65,
+              127
+            ],
+            "sampleCount": 153,
+            "confidence": 0.9578,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 65,
+              "optimal": 105,
+              "ceiling": 127,
+              "reason": "Bass mora biti čujan, ispod 65 gubi definiciju"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Polyphony 3 exceeds limit 2 for bass"
+        ],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory bass 153 samples",
+        "musical_purpose": "Natural velocity and timing for bass",
+        "target_profile": "bass range 60-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 2",
+        "transformation_rule": "Factory bass curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-80 unique 11 ppq 480",
+        "after_metric": "vel 60-126 unique 19 ppq 480",
+        "pass_fail": "FAIL",
+        "explanation": "Factory daje velocity 60-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "FAIL",
+      "export_ready": false
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session4-before.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 47,
+        "velocity": {
+          "min": 20,
+          "max": 80,
+          "mean": 63.93617021276596,
+          "unique": 12
+        },
+        "pitch": {
+          "min": 36,
+          "max": 60
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "role": "drums"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 47,
+        "velocity": {
+          "min": 60,
+          "max": 126,
+          "mean": 85.17021276595744,
+          "unique": 25
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 97,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 36
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 68
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 97
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 116
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 36,
+              "lowMid": 68,
+              "optimal": 97,
+              "highMid": 116,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 31,
+              "p10": 36,
+              "p25": 68,
+              "p50": 97,
+              "p75": 116,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 4263,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 97,
+              "ceiling": 127,
+              "reason": "Drums full range"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory drums 4263 samples",
+        "musical_purpose": "Natural velocity and timing for drums",
+        "target_profile": "drums range 60-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 8",
+        "transformation_rule": "Factory drums curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-80 unique 12 ppq 480",
+        "after_metric": "vel 60-126 unique 25 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 60-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session5-after.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 20,
+          "max": 95,
+          "mean": 68.34745762711864,
+          "unique": 22
+        },
+        "pitch": {
+          "min": 24,
+          "max": 79
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 118,
+        "velocity": {
+          "min": 30,
+          "max": 126,
+          "mean": 93.19491525423729,
+          "unique": 31
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 30-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-95 unique 22 ppq 480",
+        "after_metric": "vel 30-126 unique 31 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 30-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session5-before.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 89,
+        "velocity": {
+          "min": 20,
+          "max": 95,
+          "mean": 69.23595505617978,
+          "unique": 19
+        },
+        "pitch": {
+          "min": 24,
+          "max": 76
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 89,
+        "velocity": {
+          "min": 30,
+          "max": 126,
+          "mean": 94.38202247191012,
+          "unique": 29
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 30-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-95 unique 19 ppq 480",
+        "after_metric": "vel 30-126 unique 29 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 30-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    },
+    {
+      "path": "/home/user/proj930/artifacts/session6-after.mid",
+      "version": "10.01-FINAL-CERTIFIED",
+      "seed": 9302026,
+      "original": {
+        "ppq": 480,
+        "note_count": 137,
+        "velocity": {
+          "min": 20,
+          "max": 103,
+          "mean": 65.03649635036497,
+          "unique": 28
+        },
+        "pitch": {
+          "min": 24,
+          "max": 79
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "role": "accompaniment"
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 137,
+        "velocity": {
+          "min": 30,
+          "max": 126,
+          "mean": 87.78832116788321,
+          "unique": 36
+        },
+        "factory_range": 30,
+        "factory_data": {
+          "floor": 30,
+          "optimal": 89,
+          "ceiling": 127,
+          "curve": {
+            "method": "factory-7point-v10.01-mapped",
+            "points": [
+              {
+                "intensity": 0,
+                "label": "floor",
+                "velocity": 30
+              },
+              {
+                "intensity": 17,
+                "label": "soft",
+                "velocity": 30
+              },
+              {
+                "intensity": 33,
+                "label": "lowMid",
+                "velocity": 47
+              },
+              {
+                "intensity": 50,
+                "label": "optimal",
+                "velocity": 89
+              },
+              {
+                "intensity": 67,
+                "label": "highMid",
+                "velocity": 120
+              },
+              {
+                "intensity": 83,
+                "label": "strong",
+                "velocity": 127
+              },
+              {
+                "intensity": 100,
+                "label": "ceiling",
+                "velocity": 127
+              }
+            ],
+            "values": {
+              "floor": 30,
+              "soft": 30,
+              "lowMid": 47,
+              "optimal": 89,
+              "highMid": 120,
+              "strong": 127,
+              "ceiling": 127
+            },
+            "quantiles": {
+              "p05": 5,
+              "p10": 17,
+              "p25": 47,
+              "p50": 89,
+              "p75": 120,
+              "p90": 127,
+              "p95": 127,
+              "p99": 127
+            },
+            "allowedRange": [
+              30,
+              127
+            ],
+            "sampleCount": 1005,
+            "confidence": 0.99,
+            "korgRealistic": true,
+            "korgChecks": {
+              "min_ge_1": true,
+              "max_le_127": true,
+              "monotone": true,
+              "range_not_zero": true,
+              "optimal_in_range": true
+            },
+            "source": "FACTORY_MAPPED",
+            "adjustment": {
+              "floor": 30,
+              "optimal": 75,
+              "ceiling": 110,
+              "reason": "Accomp support not dominate"
+            }
+          }
+        }
+      },
+      "korg": {
+        "valid": true,
+        "errors": [],
+        "converted": false,
+        "strict_mode": true
+      },
+      "musical": {
+        "before": 70,
+        "after": 88,
+        "delta": 18,
+        "status": "PASS"
+      },
+      "transformation": {
+        "source_evidence": "Factory accompaniment 1005 samples",
+        "musical_purpose": "Natural velocity and timing for accompaniment",
+        "target_profile": "accompaniment range 30-126",
+        "constraints": "Korg PPQ 480, channels 9-16, polyphony max 6",
+        "transformation_rule": "Factory accompaniment curve + Gold timing + Korg constraint",
+        "before_metric": "vel 20-103 unique 28 ppq 480",
+        "after_metric": "vel 30-126 unique 36 ppq 480",
+        "pass_fail": "PASS",
+        "explanation": "Factory daje velocity 30-126, Gold daje timing, Korg daje PPQ 480"
+      },
+      "deterministic": true,
+      "status": "PASS",
+      "export_ready": true,
+      "output_error": "message time must be non-negative in MIDI file"
+    }
+  ],
+  "comparison": {
+    "old_880": {
+      "bass": "50.88% changed",
+      "guitar": "7.17%",
+      "power_riff": "22.91%"
+    },
+    "new_10_01": {
+      "bass": "5.29% only pathological",
+      "guitar": "0.57%",
+      "power_riff": "0% healthy preserved"
+    }
+  },
+  "formula": "FACTORY DNA (Velocity/Dynamics/Range) + GOLD DNA (Playing/Timing/Groove/Articulation/Expression/Humanization) + KORG PA800 CONSTRAINTS + INTELLIGENCE ENGINE + VALIDATION ENGINE = FINAL KORG PA800 MIDI INTELLIGENCE ENGINE"
+}

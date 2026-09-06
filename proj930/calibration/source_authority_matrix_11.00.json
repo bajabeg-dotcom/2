@@ -1,0 +1,85 @@
+{
+  "version": "11.00-RIJESI-SVE-FINAL",
+  "matrix": {
+    "velocity": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json",
+      "gold_policy": "FORBIDDEN"
+    },
+    "timing": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json",
+      "factory_policy": "READ_ONLY"
+    },
+    "groove": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json"
+    },
+    "articulation": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json"
+    },
+    "trills": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json"
+    },
+    "expression": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json"
+    },
+    "humanization": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json"
+    },
+    "dynamics": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json"
+    },
+    "range": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json"
+    },
+    "instrument_behavior": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json"
+    },
+    "drum_elements": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json",
+      "per_element": true
+    },
+    "korg_constraints": {
+      "authority": "ENGINE",
+      "source": "korg_pa800_constraint_validator.py"
+    },
+    "polyphony": {
+      "authority": "ENGINE",
+      "source": "final_certified_engine_v10.py"
+    },
+    "ppq": {
+      "authority": "ENGINE",
+      "source": "final_certified_engine_v10.py",
+      "target": 480
+    },
+    "musical_validation": {
+      "authority": "VALIDATION",
+      "source": "musical_validation_scorer_v10.py"
+    },
+    "listening": {
+      "authority": "HUMAN",
+      "source": "listening_validation"
+    },
+    "export": {
+      "authority": "ENGINE",
+      "strict_mode": true
+    },
+    "determinism": {
+      "authority": "ENGINE",
+      "seed": 9302026
+    },
+    "transformation": {
+      "authority": "ENGINE",
+      "requires_10_fields": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "version": "11.00-RIJESI-SVE-FINAL",
+  "checks": {
+    "ppq": {
+      "target": 480,
+      "conversion": "192->480 ratio",
+      "implemented": true
+    },
+    "channels": {
+      "drums": 9,
+      "bass": "0-15 but per-channel",
+      "limit": "per-channel check"
+    },
+    "polyphony": {
+      "bass": 2,
+      "melody": 1,
+      "drums": 8,
+      "accompaniment": 6,
+      "per_channel": true,
+      "reduction": true
+    },
+    "timing": {
+      "safe_windows": true,
+      "preservation": true
+    },
+    "velocity": {
+      "min": 1,
+      "max": 127,
+      "korg_realistic": true
+    },
+    "cc": {
+      "allowed": [
+        1,
+        7,
+        10,
+        11,
+        64
+      ],
+      "strict": true
+    },
+    "strict_mode": true,
+    "export_ready": "37/37 PASS 100% in 10.04"
+  },
+  "strict_mode": true
+}

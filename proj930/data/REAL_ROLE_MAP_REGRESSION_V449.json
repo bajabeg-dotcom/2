@@ -1,0 +1,171 @@
+{
+  "version": "4.49.0",
+  "files": [
+    {
+      "file": "005_Tiho noci_OPT.mid",
+      "summary": {
+        "targetCount": 7,
+        "stageCount": 0,
+        "conflictTargetCount": 0,
+        "allowedStageCount": 0,
+        "blockedStageCount": 0,
+        "confirmedSoloCount": 2,
+        "confirmedEchoCount": 0,
+        "confirmedTercaCount": 0
+      },
+      "roles": [
+        {
+          "trackNumber": 1,
+          "channelNumber": 1,
+          "family": "unknown",
+          "role": "unknown",
+          "confidence": 0.45,
+          "reasons": [
+            "INSUFFICIENT_ROLE_DISAMBIGUATION_EVIDENCE"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 2,
+          "family": "bass",
+          "role": "bass",
+          "confidence": 0.92,
+          "reasons": [
+            "HARD_RHYTHM_SECTION_ROLE_ANCHOR"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 4,
+          "family": "strings",
+          "role": "solo",
+          "confidence": 0.9313,
+          "reasons": [
+            "MONOPHONIC_MELODIC_CONTOUR",
+            "SOLO_BEHAVIOR"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 6,
+          "family": "strings",
+          "role": "solo",
+          "confidence": 0.9328,
+          "reasons": [
+            "MONOPHONIC_MELODIC_CONTOUR",
+            "SOLO_BEHAVIOR"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 7,
+          "family": "guitar",
+          "role": "rhythm-guitar",
+          "confidence": 0.68,
+          "reasons": [
+            "CHORDAL_STRUM_TEXTURE",
+            "RHYTHM_GUITAR_BEHAVIOR",
+            "GUITAR_FAMILY_HINT"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 10,
+          "family": "unknown",
+          "role": "drums",
+          "confidence": 0.92,
+          "reasons": [
+            "HARD_RHYTHM_SECTION_ROLE_ANCHOR"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 11,
+          "family": "strings",
+          "role": "strings",
+          "confidence": 0.7,
+          "reasons": [
+            "BASE_ROLE_PRESERVED"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "033_Poznao bih temedju hiljaduzena_OPT.mid",
+      "summary": {
+        "targetCount": 6,
+        "stageCount": 0,
+        "conflictTargetCount": 0,
+        "allowedStageCount": 0,
+        "blockedStageCount": 0,
+        "confirmedSoloCount": 0,
+        "confirmedEchoCount": 0,
+        "confirmedTercaCount": 0
+      },
+      "roles": [
+        {
+          "trackNumber": 1,
+          "channelNumber": 1,
+          "family": "bass",
+          "role": "bass",
+          "confidence": 0.92,
+          "reasons": [
+            "HARD_RHYTHM_SECTION_ROLE_ANCHOR"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 2,
+          "family": "unknown",
+          "role": "unknown",
+          "confidence": 0.45,
+          "reasons": [
+            "INSUFFICIENT_ROLE_DISAMBIGUATION_EVIDENCE"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 3,
+          "family": "woodwind",
+          "role": "woodwind",
+          "confidence": 0.7,
+          "reasons": [
+            "BASE_ROLE_PRESERVED"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 4,
+          "family": "guitar",
+          "role": "rhythm-guitar",
+          "confidence": 0.7,
+          "reasons": [
+            "ARPEGGIATED_STRUM_TEXTURE",
+            "DENSE_STAGGERED_GUITAR_ACCOMPANIMENT",
+            "GUITAR_FAMILY_HINT"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 5,
+          "family": "strings",
+          "role": "strings",
+          "confidence": 0.7,
+          "reasons": [
+            "BASE_ROLE_PRESERVED"
+          ]
+        },
+        {
+          "trackNumber": 1,
+          "channelNumber": 10,
+          "family": "unknown",
+          "role": "drums",
+          "confidence": 0.92,
+          "reasons": [
+            "HARD_RHYTHM_SECTION_ROLE_ANCHOR"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": "16.00-MUSICAL-FIX-90-PERCENT",
+  "before_avg": 84.74916172512447,
+  "after_avg": 84.43051560416923,
+  "delta": -0.31864612095523626,
+  "improved_metrics": {
+    "harmony": "tolerance 30 ticks for chord detection (humanized timing)",
+    "groove": "reward small humanization 2-10 ticks = 20 points, penalize large >20"
+  },
+  "optimal_sigma": "0.2-0.3 for new groove metric (dev 3-5 ticks = perfect humanized)",
+  "method": "REAL improved metrics"
+}

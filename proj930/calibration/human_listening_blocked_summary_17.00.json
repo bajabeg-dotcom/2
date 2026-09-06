@@ -1,0 +1,29 @@
+{
+  "version": "17.00-HUMAN-LISTENING-BLOCKED",
+  "status": "BLOCKED - treba ljude",
+  "what_is_needed": {
+    "C1_Human_Listening": {
+      "need": "2 evaluatora za blind listening test",
+      "package": "artifacts/human_listening_blind_package_17.00",
+      "pairs": 10,
+      "criteria": "Calibrated treba pobijediti u >=6/10 (60%)",
+      "time_needed": "30-60 min po evaluatoru",
+      "current_status": "Paket spreman, čeka evaluatore"
+    },
+    "C2_Gold_3_Proxy": {
+      "need": "Novi Gold izvor za choir, echo, percussion (0 instances u 182 fajla)",
+      "current": "18/21 REAL (85%), 3 PROXY (choir, echo, percussion) - 0 instances čak i sa detaljnom klasifikacijom",
+      "options": [
+        "Pronađi novi Gold MIDI korpus sa choir/echo/percussion",
+        "Ili prihvati 18 REAL + 3 PROXY kao realan limit (85% Gold REAL je odlično)",
+        "Ili redefiniraj cilj na 18 REAL kao 100% za Gold (jer 3 role ne postoje u stvarnom svijetu Pa800?)"
+      ],
+      "recommendation": "Prihvati 18 REAL + 3 PROXY kao iskren limit - 85% Gold REAL je ogroman napredak od 20% prije"
+    }
+  },
+  "what_is_done_without_people": "22/25 REAL (88%) - max moguće bez ljudi",
+  "what_remains_for_100_percent": [
+    "C1: 2 evaluatora blind test (30-60 min)",
+    "C2: Odluka o 3 Gold proxy - novi izvor ili prihvati 18 REAL kao limit"
+  ]
+}

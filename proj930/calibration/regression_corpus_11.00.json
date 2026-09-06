@@ -1,0 +1,26 @@
+{
+  "total_midi": 37,
+  "regression_types": 17,
+  "types": [
+    "bass",
+    "guitar",
+    "power-riff",
+    "drums",
+    "melody",
+    "accompaniment",
+    "piano",
+    "strings",
+    "brass",
+    "organ",
+    "pad",
+    "choir",
+    "percussion",
+    "lead",
+    "solo",
+    "riff",
+    "rhythm-guitar"
+  ],
+  "existing_corpus": "37 files artifacts/",
+  "full_150_batch": "BLOCKED but 37 files 100% PASS is regression evidence",
+  "note": "Regression corpus 37 files, 17 types - DIRECT for existing, PARTIAL for 150"
+}

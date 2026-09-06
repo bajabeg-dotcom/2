@@ -1,0 +1,44 @@
+{
+  "version": "11.00-RIJESI-SVE-FINAL",
+  "transformations": [
+    {
+      "id": "drum_velocity_session2_before",
+      "source_evidence": "Factory drums 1421 profiles, drum_elements_v10_calibrated.json kick 60-120 normal 90, session2-before.mid 7 notes vel 20-35",
+      "musical_purpose": "Fix drum velocity 20-35 too low, make audible and Korg realistic",
+      "target_profile": "Drums per-element: kick 60-120, snare 20-118, HH 20-95, min audible kick 60",
+      "constraints": "Korg Pa800: drums channel 10, poly max 8, PPQ 480, velocity 1-127",
+      "transformation_rule": "get_drum_velocity(pitch, orig_vel, context, tick, is_downbeat) with context from musical position not orig_vel, deterministic variation from tick",
+      "before_metric": "vel 20-35 unique 5, musical 80, Korg valid True but too low",
+      "after_metric": "vel 72-124 unique 6, musical 88 +8, Korg valid True, audible",
+      "pass_fail": "PASS",
+      "explanation": "Original 20-35 too low, ghost logic bug caused 1-22, fixed to musical position context + min audible 60, now 72-124 realistic",
+      "evidence": "session2-before.mid drums 7 notes 20-35 -> 72-124, PASS"
+    },
+    {
+      "id": "polyphony_reduction_session4_after",
+      "source_evidence": "Per-channel analysis: session4-after.mid 81 notes 6 channels, channel 11 bass 36 notes poly 4 > limit 2 on tick 3120 and 5040",
+      "musical_purpose": "Reduce polyphony to Korg Pa800 limits while preserving musical intent: bass root",
+      "target_profile": "Bass channel limit 2, keeps lowest pitch (root)",
+      "constraints": "Korg Pa800: bass max 2, melody 1, drums 8, accomp 6, PPQ 480, timing safe 15",
+      "transformation_rule": "reduce_polyphony(notes_at_tick, role, limit, tick): bass keeps lowest pitch + highest velocity, max 2",
+      "before_metric": "81 notes, channel 11 poly 4 >2, global poly 7, Korg FAIL",
+      "after_metric": "77 notes, channel 11 poly 1 <=2, reduced 4, Korg PASS, vel 43-126",
+      "pass_fail": "PASS after reduction",
+      "explanation": "Polyphony reduction transforms overlapping notes to fit Korg limits, preserving musical priority (root)",
+      "evidence": "Reductions: ch11 tick3120 4->2 removed 2, tick5040 4->2 removed 2, total 4, now PASS"
+    },
+    {
+      "id": "factory_velocity_bass",
+      "source_evidence": "Factory bass 51 profiles, 50 in instrument-catalog, p05 75 p50 102 p95 119, 2989 samples profile 006.791.681",
+      "musical_purpose": "Natural bass velocity with strong foundation, Factory gives 1-127 but Korg realistic 65-110",
+      "target_profile": "Bass floor 65 optimal 85 ceiling 110, 7-point curve 0/17/33/50/67/83/100",
+      "constraints": "Korg Pa800: bass channel, poly 2, velocity 1-127, Factory authority",
+      "transformation_rule": "get_factory_velocity(role, orig_vel): map orig 1-127 to intensity 0-100, interpolate 7-point Factory curve, clamp floor/ceiling",
+      "before_metric": "Bass 50.88% changed in old audit, too much pathological",
+      "after_metric": "Bass 5.29% only pathological, 94.71% healthy preserved, musical 67.1->88.0 +20.9",
+      "pass_fail": "PASS - healthy preserved, pathological repaired",
+      "explanation": "Factory bass p50 102 strong, but floor 65 ensures audible, optimal 85 musical, ceiling 110 Korg realistic, 7-point curve preserves dynamics",
+      "evidence": "Bass improvement 50.88%->5.29%, 7 files musical 67.1->88.0, Korg realistic 0.96-0.99"
+    }
+  ]
+}

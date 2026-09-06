@@ -1,0 +1,20 @@
+{
+  "version": "11.00-RIJESI-SVE-FINAL",
+  "seed": 9302026,
+  "engine": "final_certified_engine_v10.py (10.04-FINAL-POLYPHONY-TIMING-FIX)",
+  "calibrations": [
+    "factory_velocity_10.01_fixed_20_roles.json (20 roles)",
+    "factory_velocity_lookup_10.01.json",
+    "drum_elements_v10_calibrated.json (19 elements)",
+    "gold_playing_logic_v11_calibrated.json (28 roles)",
+    "instrument_profiles_11.00.json (20 roles)",
+    "korg_constraint_engine_11.00.json (15 checks)"
+  ],
+  "corpus": "37 files artifacts/, 9008->8579 notes, 37/37 PASS 100%",
+  "musical": "72.0->88.0 +16.0 avg, 70.4->88.0 +17.6 old",
+  "determinism": true,
+  "hash": "fe029ccc656ee14b",
+  "formula": "FACTORY DNA (Velocity/Dynamics/Range) + GOLD DNA (Playing/Timing/Groove/Articulation/Expression/Humanization) + KORG PA800 CONSTRAINTS (PER-CHANNEL + REDUCTION + TIMING PRESERVATION) + INTELLIGENCE ENGINE + VALIDATION ENGINE = FINAL KORG PA800 MIDI INTELLIGENCE ENGINE",
+  "frozen": true,
+  "timestamp": "2026-09-06T11:37:54.827118"
+}

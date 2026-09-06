@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-09-06T17:28:26.924652",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "failure_types": {
+    "TYPE A": "Structural - invalid MIDI header, format, PPQ, tracks",
+    "TYPE B": "Korg compatibility - invalid mapping, range, polyphony",
+    "TYPE C": "Velocity - uncontrolled, clipping, out of range",
+    "TYPE D": "Timing - invalid timing, microtiming beyond safe window",
+    "TYPE E": "Expression - CC11 jumps, clipping, redundant events",
+    "TYPE F": "Articulation - invalid articulation, machine-gun",
+    "TYPE G": "Groove - broken groove, no pocket",
+    "TYPE H": "Arrangement - role conflict, frequency competition",
+    "TYPE I": "Regression - previously PASS now FAIL",
+    "TYPE J": "Musical degradation - technical PASS but musical FAIL"
+  },
+  "process": {
+    "reproduce": "Reproduce FAIL with same input + config + seed",
+    "isolate": "Isolate cause: which transform, which parameter",
+    "identify": "Identify root cause",
+    "patch": "Patch with Factory/Gold authority",
+    "rerun": "Rerun failed file",
+    "regression_test": "Full corpus regression"
+  },
+  "hard_gates": [
+    "corrupted MIDI",
+    "invalid mapping",
+    "broken note pairing",
+    "broken Korg metadata",
+    "unexpected channel changes",
+    "uncontrolled velocity",
+    "clipping",
+    "invalid CC",
+    "regression",
+    "non-deterministic output",
+    "unexplained transformation",
+    "musical degradation iznad thresholda"
+  ],
+  "current_failures": []
+}

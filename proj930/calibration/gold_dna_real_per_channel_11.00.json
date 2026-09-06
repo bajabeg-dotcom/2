@@ -1,0 +1,1163 @@
+{
+  "schema": "gold-performance-patterns",
+  "version": "11.00-REAL-GOLD-DNA-PER-CHANNEL",
+  "generatedFrom": "prism-uploads/Gold DNA/ 182 live MIDI files per-channel analysis",
+  "timestamp": "2026-09-06T11:36:48.738930",
+  "total_files": 182,
+  "total_channel_instances": 1893,
+  "total_notes": 2272811,
+  "by_role": {
+    "accompaniment": {
+      "channel_instances": 1414,
+      "notes": 1629982,
+      "avg_sigma": 34.30308314124024
+    },
+    "drums": {
+      "channel_instances": 182,
+      "notes": 402401,
+      "avg_sigma": 33.77489816794861
+    },
+    "bass": {
+      "channel_instances": 248,
+      "notes": 212192,
+      "avg_sigma": 33.813924013072906
+    },
+    "melody": {
+      "channel_instances": 49,
+      "notes": 28236,
+      "avg_sigma": 34.41327243806149
+    }
+  },
+  "authority": "GOLD=PLAYING LOGIC, FACTORY=VELOCITY, GOLD has zero velocity authority",
+  "patterns": [],
+  "roles": {
+    "accompaniment": {
+      "channel_instances": 1414,
+      "notes": 1629982,
+      "timing_sigma": 34.30308314124024,
+      "vel_range": 15.777934936350778,
+      "trills": 199917,
+      "evidence": "DIRECT from Gold DNA per-channel, 1414 instances, 1629982 notes"
+    },
+    "drums": {
+      "channel_instances": 182,
+      "notes": 402401,
+      "timing_sigma": 33.77489816794861,
+      "vel_range": 59.81868131868132,
+      "trills": 17731,
+      "evidence": "DIRECT from Gold DNA per-channel, 182 instances, 402401 notes"
+    },
+    "bass": {
+      "channel_instances": 248,
+      "notes": 212192,
+      "timing_sigma": 33.813924013072906,
+      "vel_range": 13.455645161290322,
+      "trills": 11521,
+      "evidence": "DIRECT from Gold DNA per-channel, 248 instances, 212192 notes"
+    },
+    "melody": {
+      "channel_instances": 49,
+      "notes": 28236,
+      "timing_sigma": 34.41327243806149,
+      "vel_range": 24.26530612244898,
+      "trills": 4133,
+      "evidence": "DIRECT from Gold DNA per-channel, 49 instances, 28236 notes"
+    },
+    "accordion": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "brass": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "choir": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "echo": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "organ": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "pad": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "percussion": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "piano": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "power-riff": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "rhythm-guitar": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "riff": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "sax": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "solo": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "strings": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "terca": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    },
+    "woodwind": {
+      "channel_instances": 0,
+      "notes": 0,
+      "timing_sigma": 5,
+      "vel_range": 30,
+      "trills": 0,
+      "evidence": "PROXY from instrument-catalog, no direct Gold DNA per-channel for this role, but catalog has behavior"
+    }
+  },
+  "playing_logic": {
+    "accompaniment": {
+      "timing": {
+        "humanization_sigma": 34.30308314124024,
+        "safe_window": 10,
+        "pocket": 34.30308314124024,
+        "source": "Gold DNA per-channel 1414 instances, sigma 34.3 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true,
+        "files": 1414,
+        "notes": 1629982
+      },
+      "groove": {
+        "foundation": "support",
+        "pocket": 34.30308314124024,
+        "source": "Gold DNA per-channel 1414 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "staccato",
+          "ghost",
+          "trill"
+        ],
+        "trills": 199917,
+        "vel_range": 15.777934936350778,
+        "source": "Gold DNA per-channel 1414 instances, trills 199917 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "trills": {
+        "count": 199917,
+        "techniques": [
+          "trill",
+          "grace",
+          "turn",
+          "mordent"
+        ],
+        "source": "Gold DNA per-channel 1414 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "expression": {
+        "dynamics": 15.777934936350778,
+        "source": "Gold DNA per-channel 1414 instances, vel_range 15.8 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "humanization": {
+        "timing_sigma": 34.30308314124024,
+        "velocity_variation": 15.777934936350778,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "Gold DNA per-channel 1414 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      }
+    },
+    "drums": {
+      "timing": {
+        "humanization_sigma": 33.77489816794861,
+        "safe_window": 8,
+        "pocket": 33.77489816794861,
+        "source": "Gold DNA per-channel 182 instances, sigma 33.8 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true,
+        "files": 182,
+        "notes": 402401
+      },
+      "groove": {
+        "foundation": "kick-snare",
+        "pocket": 33.77489816794861,
+        "source": "Gold DNA per-channel 182 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "staccato",
+          "ghost",
+          "trill"
+        ],
+        "trills": 17731,
+        "vel_range": 59.81868131868132,
+        "source": "Gold DNA per-channel 182 instances, trills 17731 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "trills": {
+        "count": 17731,
+        "techniques": [
+          "trill",
+          "grace",
+          "turn",
+          "mordent"
+        ],
+        "source": "Gold DNA per-channel 182 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "expression": {
+        "dynamics": 59.81868131868132,
+        "source": "Gold DNA per-channel 182 instances, vel_range 59.8 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "humanization": {
+        "timing_sigma": 33.77489816794861,
+        "velocity_variation": 59.81868131868132,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "Gold DNA per-channel 182 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      }
+    },
+    "bass": {
+      "timing": {
+        "humanization_sigma": 33.813924013072906,
+        "safe_window": 15,
+        "pocket": 33.813924013072906,
+        "source": "Gold DNA per-channel 248 instances, sigma 33.8 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true,
+        "files": 248,
+        "notes": 212192
+      },
+      "groove": {
+        "foundation": "support",
+        "pocket": 33.813924013072906,
+        "source": "Gold DNA per-channel 248 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "staccato",
+          "ghost",
+          "trill"
+        ],
+        "trills": 11521,
+        "vel_range": 13.455645161290322,
+        "source": "Gold DNA per-channel 248 instances, trills 11521 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "trills": {
+        "count": 11521,
+        "techniques": [
+          "trill",
+          "grace",
+          "turn",
+          "mordent"
+        ],
+        "source": "Gold DNA per-channel 248 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "expression": {
+        "dynamics": 13.455645161290322,
+        "source": "Gold DNA per-channel 248 instances, vel_range 13.5 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "humanization": {
+        "timing_sigma": 33.813924013072906,
+        "velocity_variation": 13.455645161290322,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "Gold DNA per-channel 248 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      }
+    },
+    "melody": {
+      "timing": {
+        "humanization_sigma": 34.41327243806149,
+        "safe_window": 10,
+        "pocket": 34.41327243806149,
+        "source": "Gold DNA per-channel 49 instances, sigma 34.4 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true,
+        "files": 49,
+        "notes": 28236
+      },
+      "groove": {
+        "foundation": "support",
+        "pocket": 34.41327243806149,
+        "source": "Gold DNA per-channel 49 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "staccato",
+          "ghost",
+          "trill"
+        ],
+        "trills": 4133,
+        "vel_range": 24.26530612244898,
+        "source": "Gold DNA per-channel 49 instances, trills 4133 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "trills": {
+        "count": 4133,
+        "techniques": [
+          "trill",
+          "grace",
+          "turn",
+          "mordent"
+        ],
+        "source": "Gold DNA per-channel 49 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "expression": {
+        "dynamics": 24.26530612244898,
+        "source": "Gold DNA per-channel 49 instances, vel_range 24.3 REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      },
+      "humanization": {
+        "timing_sigma": 34.41327243806149,
+        "velocity_variation": 24.26530612244898,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "Gold DNA per-channel 49 instances REAL",
+        "evidence": "DIRECT",
+        "real_gold": true
+      }
+    },
+    "accordion": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "grace",
+          "turn",
+          "trill",
+          "repeat-note",
+          "bellows-expression-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "brass": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "stab",
+          "unison-hit",
+          "octave-hit",
+          "answer",
+          "sustain",
+          "fall-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "choir": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "sustain",
+          "common-tone",
+          "swell-candidate",
+          "release-fade-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "echo": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "nonrecursive-delay",
+          "answer",
+          "tail"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "organ": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "sustain",
+          "manual-change-candidate",
+          "staccato-accent",
+          "gliss-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "pad": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "sustain",
+          "common-tone",
+          "inversion",
+          "slow-move",
+          "swell-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "percussion": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "interlock",
+          "offbeat-color",
+          "pickup",
+          "sparse-fill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "piano": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "staccato",
+          "pedal",
+          "arpeggio",
+          "grace"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "power-riff": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "root-fifth",
+          "root-fifth-octave",
+          "octave",
+          "mute-hit",
+          "sustain-hit",
+          "pickup",
+          "register-lift"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "rhythm-guitar": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "down",
+          "up",
+          "block",
+          "mute-candidate",
+          "palm-mute-candidate",
+          "stop",
+          "pickup",
+          "open-strum",
+          "single-string-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "riff": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "motif",
+          "repeat",
+          "variation",
+          "pickup",
+          "answer"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "sax": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "tongue-candidate",
+          "bend",
+          "fall-candidate",
+          "growl-candidate",
+          "breath-noise-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "solo": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "chord-tone",
+          "passing",
+          "neighbor",
+          "approach",
+          "grace",
+          "trill",
+          "slide-candidate",
+          "turnaround",
+          "repeat-variation",
+          "cadence"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "strings": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "sustain",
+          "common-tone",
+          "bow-change-candidate",
+          "pizzicato-candidate",
+          "swell-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "terca": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "diatonic-third",
+          "contextual-third",
+          "unison-avoidance",
+          "phrase-follow"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    },
+    "woodwind": {
+      "timing": {
+        "humanization_sigma": 5,
+        "safe_window": 10,
+        "source": "instrument-catalog proxy",
+        "evidence": "PROXY"
+      },
+      "groove": {
+        "foundation": "support",
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "articulation": {
+        "techniques": [
+          "legato",
+          "tongue-candidate",
+          "grace",
+          "slide-candidate",
+          "breath-noise-candidate"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "trills": {
+        "count": 0,
+        "techniques": [
+          "trill"
+        ],
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "expression": {
+        "dynamics": 30,
+        "source": "proxy",
+        "evidence": "PROXY"
+      },
+      "humanization": {
+        "timing_sigma": 5,
+        "velocity_variation": 30,
+        "deterministic": true,
+        "seed": 9302026,
+        "source": "proxy",
+        "evidence": "PROXY"
+      }
+    }
+  },
+  "evidence": "DIRECT from 182 live MIDI performances per-channel analysis, 2.2M notes"
+}

@@ -1,0 +1,251 @@
+{
+  "version": "9.10",
+  "available": true,
+  "velocityUsed": false,
+  "authority": {
+    "tempoBehavior": "GOLD+FACTORY_EVIDENCE",
+    "velocity": "FACTORY_ONLY"
+  },
+  "profiles": {
+    "brisk:accompaniment": {
+      "bucket": "brisk",
+      "role": "accompaniment",
+      "patterns": 1640,
+      "density_median": 14.0,
+      "gate96_median": 15.5,
+      "syncopation_median": 0.8333,
+      "bpm_median": 135.0,
+      "confidence": 1.0
+    },
+    "brisk:bass": {
+      "bucket": "brisk",
+      "role": "bass",
+      "patterns": 3287,
+      "density_median": 4.0,
+      "gate96_median": 36.0,
+      "syncopation_median": 0.0,
+      "bpm_median": 130.0,
+      "confidence": 1.0
+    },
+    "brisk:drums": {
+      "bucket": "brisk",
+      "role": "drums",
+      "patterns": 4102,
+      "density_median": 13.5,
+      "gate96_median": 24.0,
+      "syncopation_median": 0.0667,
+      "bpm_median": 130.0,
+      "confidence": 1.0
+    },
+    "brisk:percussion": {
+      "bucket": "brisk",
+      "role": "percussion",
+      "patterns": 583,
+      "density_median": 26.0,
+      "gate96_median": 12.0,
+      "syncopation_median": 0.7633,
+      "bpm_median": 130.0,
+      "confidence": 1.0
+    },
+    "brisk:power-riff": {
+      "bucket": "brisk",
+      "role": "power-riff",
+      "patterns": 4824,
+      "density_median": 12.0,
+      "gate96_median": 8.0,
+      "syncopation_median": 0.0,
+      "bpm_median": 132.0,
+      "confidence": 1.0
+    },
+    "brisk:riff": {
+      "bucket": "brisk",
+      "role": "riff",
+      "patterns": 953,
+      "density_median": 8.0,
+      "gate96_median": 12.0,
+      "syncopation_median": 0.5,
+      "bpm_median": 130.0,
+      "confidence": 1.0
+    },
+    "fast:accompaniment": {
+      "bucket": "fast",
+      "role": "accompaniment",
+      "patterns": 4985,
+      "density_median": 13.0,
+      "gate96_median": 18.5,
+      "syncopation_median": 0.8462,
+      "bpm_median": 150.0,
+      "confidence": 1.0
+    },
+    "fast:bass": {
+      "bucket": "fast",
+      "role": "bass",
+      "patterns": 4748,
+      "density_median": 4.0,
+      "gate96_median": 32.0,
+      "syncopation_median": 0.0,
+      "bpm_median": 154.0,
+      "confidence": 1.0
+    },
+    "fast:drums": {
+      "bucket": "fast",
+      "role": "drums",
+      "patterns": 6249,
+      "density_median": 16.0,
+      "gate96_median": 16.0,
+      "syncopation_median": 0.0,
+      "bpm_median": 160.0,
+      "confidence": 1.0
+    },
+    "fast:percussion": {
+      "bucket": "fast",
+      "role": "percussion",
+      "patterns": 203,
+      "density_median": 25.0,
+      "gate96_median": 12.0,
+      "syncopation_median": 0.42,
+      "bpm_median": 149.0,
+      "confidence": 0.406
+    },
+    "fast:power-riff": {
+      "bucket": "fast",
+      "role": "power-riff",
+      "patterns": 6917,
+      "density_median": 12.0,
+      "gate96_median": 14.0,
+      "syncopation_median": 0.0,
+      "bpm_median": 154.0,
+      "confidence": 1.0
+    },
+    "fast:riff": {
+      "bucket": "fast",
+      "role": "riff",
+      "patterns": 1251,
+      "density_median": 10.0,
+      "gate96_median": 12.75,
+      "syncopation_median": 0.2,
+      "bpm_median": 155.0,
+      "confidence": 1.0
+    },
+    "medium:accompaniment": {
+      "bucket": "medium",
+      "role": "accompaniment",
+      "patterns": 2404,
+      "density_median": 15.0,
+      "gate96_median": 15.0,
+      "syncopation_median": 0.9091,
+      "bpm_median": 98.5,
+      "confidence": 1.0
+    },
+    "medium:bass": {
+      "bucket": "medium",
+      "role": "bass",
+      "patterns": 5744,
+      "density_median": 4.0,
+      "gate96_median": 32.5,
+      "syncopation_median": 0.25,
+      "bpm_median": 101.0,
+      "confidence": 1.0
+    },
+    "medium:drums": {
+      "bucket": "medium",
+      "role": "drums",
+      "patterns": 21005,
+      "density_median": 12.0,
+      "gate96_median": 23.0,
+      "syncopation_median": 0.1111,
+      "bpm_median": 100.0,
+      "confidence": 1.0
+    },
+    "medium:percussion": {
+      "bucket": "medium",
+      "role": "percussion",
+      "patterns": 135,
+      "density_median": 39.5,
+      "gate96_median": 12.0,
+      "syncopation_median": 0.4474,
+      "bpm_median": 96.0,
+      "confidence": 0.27
+    },
+    "medium:power-riff": {
+      "bucket": "medium",
+      "role": "power-riff",
+      "patterns": 16199,
+      "density_median": 10.0,
+      "gate96_median": 11.5,
+      "syncopation_median": 0.2,
+      "bpm_median": 99.0,
+      "confidence": 1.0
+    },
+    "medium:riff": {
+      "bucket": "medium",
+      "role": "riff",
+      "patterns": 5614,
+      "density_median": 6.0,
+      "gate96_median": 16.0,
+      "syncopation_median": 0.6,
+      "bpm_median": 96.0,
+      "confidence": 1.0
+    },
+    "slow:accompaniment": {
+      "bucket": "slow",
+      "role": "accompaniment",
+      "patterns": 3403,
+      "density_median": 12.0,
+      "gate96_median": 23.0,
+      "syncopation_median": 0.875,
+      "bpm_median": 87.0,
+      "confidence": 1.0
+    },
+    "slow:bass": {
+      "bucket": "slow",
+      "role": "bass",
+      "patterns": 1476,
+      "density_median": 4.0,
+      "gate96_median": 32.5,
+      "syncopation_median": 0.3333,
+      "bpm_median": 87.0,
+      "confidence": 1.0
+    },
+    "slow:drums": {
+      "bucket": "slow",
+      "role": "drums",
+      "patterns": 1365,
+      "density_median": 15.0,
+      "gate96_median": 21.0,
+      "syncopation_median": 0.4286,
+      "bpm_median": 86.0,
+      "confidence": 1.0
+    },
+    "slow:percussion": {
+      "bucket": "slow",
+      "role": "percussion",
+      "patterns": 227,
+      "density_median": 10.0,
+      "gate96_median": 6.0,
+      "syncopation_median": 0.5,
+      "bpm_median": 80.0,
+      "confidence": 0.454
+    },
+    "slow:power-riff": {
+      "bucket": "slow",
+      "role": "power-riff",
+      "patterns": 2896,
+      "density_median": 12.0,
+      "gate96_median": 11.0,
+      "syncopation_median": 0.4,
+      "bpm_median": 87.0,
+      "confidence": 1.0
+    },
+    "slow:riff": {
+      "bucket": "slow",
+      "role": "riff",
+      "patterns": 117,
+      "density_median": 3.5,
+      "gate96_median": 24.0,
+      "syncopation_median": 0.5,
+      "bpm_median": 77.0,
+      "confidence": 0.234
+    }
+  }
+}

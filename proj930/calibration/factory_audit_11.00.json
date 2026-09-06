@@ -1,0 +1,42 @@
+{
+  "total_profiles": 1964,
+  "roles": {
+    "melody": 157,
+    "chords": 335,
+    "bass": 51,
+    "drums": 1421
+  },
+  "role_audit": {
+    "melody": {
+      "count": 157,
+      "vel_min": 0,
+      "vel_max": 0,
+      "vel_p50": 0.0,
+      "samples": 0
+    },
+    "chords": {
+      "count": 335,
+      "vel_min": 0,
+      "vel_max": 0,
+      "vel_p50": 0.0,
+      "samples": 0
+    },
+    "bass": {
+      "count": 51,
+      "vel_min": 0,
+      "vel_max": 0,
+      "vel_p50": 0.0,
+      "samples": 0
+    },
+    "drums": {
+      "count": 1421,
+      "vel_min": 0,
+      "vel_max": 0,
+      "vel_p50": 0.0,
+      "samples": 0
+    }
+  },
+  "invalid": 0,
+  "total_samples": 0,
+  "note": "Factory has 4 roles: melody, chords, bass, drums - 20 instrument roles mapped via adjustments"
+}

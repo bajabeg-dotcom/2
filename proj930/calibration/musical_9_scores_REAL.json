@@ -1,0 +1,5057 @@
+{
+  "version": "14.00-MUSICAL-9-SCORES-REAL",
+  "timestamp": "2026-09-06T14:49:57.855151",
+  "total_files": 37,
+  "calibrated_files": 37,
+  "musical_before": 82.92162162162163,
+  "musical_after": 83.91486486486487,
+  "real_metrics": [
+    "dynamics",
+    "drum",
+    "bass",
+    "groove",
+    "articulation"
+  ],
+  "proxy_metrics": [
+    "harmony",
+    "phrase",
+    "instrument"
+  ],
+  "results_before": [
+    {
+      "path": "artifacts/session10-after_OPT.mid",
+      "file": "session10-after_OPT.mid",
+      "notes": 149,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 105,
+          "range": 85,
+          "unique": 35,
+          "unique_ratio": 0.2348993288590604,
+          "avg": 64.29530201342281,
+          "std": 17.59357351793957
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 47,
+          "kick_count": 5,
+          "kick_bass_lock": 15,
+          "kick_bass_lock_rate": 0.3191489361702128
+        },
+        "groove": {
+          "avg_deviation": 11.543624161073826,
+          "syncopated_count": 7,
+          "syncopation_rate": 0.04697986577181208
+        },
+        "articulation": {
+          "trills_detected": 18
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session10-before.mid",
+      "file": "session10-before.mid",
+      "notes": 143,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 80,
+        "musicality": 85.9
+      },
+      "musicality": 85.9,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 105,
+          "range": 85,
+          "unique": 33,
+          "unique_ratio": 0.23076923076923078,
+          "avg": 65.14685314685315,
+          "std": 17.446884399194193
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 34,
+          "kick_count": 5,
+          "kick_bass_lock": 10,
+          "kick_bass_lock_rate": 0.29411764705882354
+        },
+        "groove": {
+          "avg_deviation": 10.517482517482517,
+          "syncopated_count": 7,
+          "syncopation_rate": 0.04895104895104895
+        },
+        "articulation": {
+          "trills_detected": 18
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session17-factory-segment-after.mid",
+      "file": "session17-factory-segment-after.mid",
+      "notes": 121,
+      "channels": 1,
+      "scores": {
+        "harmony": 70,
+        "groove": 80,
+        "dynamics": 50,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 70,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 72.5
+      },
+      "musicality": 72.5,
+      "details": {
+        "dynamics": {
+          "min": 110,
+          "max": 110,
+          "range": 0,
+          "unique": 1,
+          "unique_ratio": 0.008264462809917356,
+          "avg": 110.0,
+          "std": 0.0
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 29.123966942148762,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 12
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session17-factory-segment-before.mid",
+      "file": "session17-factory-segment-before.mid",
+      "notes": 32,
+      "channels": 1,
+      "scores": {
+        "harmony": 85,
+        "groove": 80,
+        "dynamics": 65,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 70,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 77.75
+      },
+      "musicality": 77.75,
+      "details": {
+        "dynamics": {
+          "min": 108,
+          "max": 127,
+          "range": 19,
+          "unique": 9,
+          "unique_ratio": 0.28125,
+          "avg": 114.1875,
+          "std": 7.230925965779255
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 26.34375,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 49
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session18-after.mid",
+      "file": "session18-after.mid",
+      "notes": 118,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 95,
+          "range": 75,
+          "unique": 22,
+          "unique_ratio": 0.1864406779661017,
+          "avg": 68.34745762711864,
+          "std": 13.125545731361132
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 9.59322033898305,
+          "syncopated_count": 6,
+          "syncopation_rate": 0.05084745762711865
+        },
+        "articulation": {
+          "trills_detected": 13
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session18-before.mid",
+      "file": "session18-before.mid",
+      "notes": 89,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 95,
+          "range": 75,
+          "unique": 19,
+          "unique_ratio": 0.21348314606741572,
+          "avg": 69.23595505617978,
+          "std": 13.904726527916287
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 5.977528089887641,
+          "syncopated_count": 6,
+          "syncopation_rate": 0.06741573033707865
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 52
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session2-after.mid",
+      "file": "session2-after.mid",
+      "notes": 29,
+      "channels": 2,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 80,
+        "drum": 85,
+        "bass": 80,
+        "musicality": 80.75
+      },
+      "musicality": 80.75,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 80,
+          "range": 60,
+          "unique": 7,
+          "unique_ratio": 0.2413793103448276,
+          "avg": 63.48275862068966,
+          "std": 14.732424612919948
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 5,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 0.6896551724137931,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 18
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session2-before.mid",
+      "file": "session2-before.mid",
+      "notes": 7,
+      "channels": 2,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 65,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 80,
+        "drum": 70,
+        "bass": 80,
+        "musicality": 76.25
+      },
+      "musicality": 76.25,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 35,
+          "range": 15,
+          "unique": 3,
+          "unique_ratio": 0.42857142857142855,
+          "avg": 29.285714285714285,
+          "std": 4.4986770542121866
+        },
+        "drum": {
+          "kick_count": 3,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 2,
+          "snare_ghost": 2,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 3,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 2.857142857142857,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 18
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session24-reference.mid",
+      "file": "session24-reference.mid",
+      "notes": 118,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 25,
+          "max": 100,
+          "range": 75,
+          "unique": 4,
+          "unique_ratio": 0.03389830508474576,
+          "avg": 51.69491525423729,
+          "std": 23.33498473078393
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session25-reference.mid",
+      "file": "session25-reference.mid",
+      "notes": 12,
+      "channels": 3,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 50,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 75.3
+      },
+      "musicality": 75.3,
+      "details": {
+        "dynamics": {
+          "min": 72,
+          "max": 75,
+          "range": 3,
+          "unique": 4,
+          "unique_ratio": 0.3333333333333333,
+          "avg": 73.5,
+          "std": 1.1677484162422844
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session26-reference.mid",
+      "file": "session26-reference.mid",
+      "notes": 12,
+      "channels": 3,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 50,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 75.3
+      },
+      "musicality": 75.3,
+      "details": {
+        "dynamics": {
+          "min": 72,
+          "max": 75,
+          "range": 3,
+          "unique": 4,
+          "unique_ratio": 0.3333333333333333,
+          "avg": 73.5,
+          "std": 1.1677484162422844
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session27-reference.mid",
+      "file": "session27-reference.mid",
+      "notes": 12,
+      "channels": 3,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 50,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 75.3
+      },
+      "musicality": 75.3,
+      "details": {
+        "dynamics": {
+          "min": 72,
+          "max": 75,
+          "range": 3,
+          "unique": 4,
+          "unique_ratio": 0.3333333333333333,
+          "avg": 73.5,
+          "std": 1.1677484162422844
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session28-reference.mid",
+      "file": "session28-reference.mid",
+      "notes": 118,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 25,
+          "max": 100,
+          "range": 75,
+          "unique": 4,
+          "unique_ratio": 0.03389830508474576,
+          "avg": 51.69491525423729,
+          "std": 23.33498473078393
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session29-reference.mid",
+      "file": "session29-reference.mid",
+      "notes": 118,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 25,
+          "max": 100,
+          "range": 75,
+          "unique": 4,
+          "unique_ratio": 0.03389830508474576,
+          "avg": 51.69491525423729,
+          "std": 23.33498473078393
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session3-after.mid",
+      "file": "session3-after.mid",
+      "notes": 47,
+      "channels": 6,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 82.45
+      },
+      "musicality": 82.45,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 80,
+          "range": 60,
+          "unique": 12,
+          "unique_ratio": 0.2553191489361702,
+          "avg": 63.93617021276596,
+          "std": 15.965185296000017
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 0.851063829787234,
+          "syncopated_count": 4,
+          "syncopation_rate": 0.0851063829787234
+        },
+        "articulation": {
+          "trills_detected": 5
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session3-before.mid",
+      "file": "session3-before.mid",
+      "notes": 37,
+      "channels": 6,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 82.6
+      },
+      "musicality": 82.6,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 80,
+          "range": 60,
+          "unique": 11,
+          "unique_ratio": 0.2972972972972973,
+          "avg": 58.2972972972973,
+          "std": 17.353937857418966
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 5,
+          "kick_count": 5,
+          "kick_bass_lock": 4,
+          "kick_bass_lock_rate": 0.8
+        },
+        "groove": {
+          "avg_deviation": 1.0810810810810811,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 1
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session30-reference.mid",
+      "file": "session30-reference.mid",
+      "notes": 118,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 25,
+          "max": 100,
+          "range": 75,
+          "unique": 4,
+          "unique_ratio": 0.03389830508474576,
+          "avg": 51.69491525423729,
+          "std": 23.33498473078393
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session31-reference.mid",
+      "file": "session31-reference.mid",
+      "notes": 166,
+      "channels": 5,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 25,
+          "max": 100,
+          "range": 75,
+          "unique": 5,
+          "unique_ratio": 0.030120481927710843,
+          "avg": 56.98795180722892,
+          "std": 21.340241670781527
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session31b-reference.mid",
+      "file": "session31b-reference.mid",
+      "notes": 118,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 25,
+          "max": 100,
+          "range": 75,
+          "unique": 4,
+          "unique_ratio": 0.03389830508474576,
+          "avg": 51.69491525423729,
+          "std": 23.33498473078393
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session32-reference.mid",
+      "file": "session32-reference.mid",
+      "notes": 118,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 25,
+          "max": 100,
+          "range": 75,
+          "unique": 4,
+          "unique_ratio": 0.03389830508474576,
+          "avg": 51.69491525423729,
+          "std": 23.33498473078393
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session33-source.mid",
+      "file": "session33-source.mid",
+      "notes": 118,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 25,
+          "max": 100,
+          "range": 75,
+          "unique": 4,
+          "unique_ratio": 0.03389830508474576,
+          "avg": 51.69491525423729,
+          "std": 23.33498473078393
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session34-variant-a.mid",
+      "file": "session34-variant-a.mid",
+      "notes": 1400,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 80,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 84.6
+      },
+      "musicality": 84.6,
+      "details": {
+        "dynamics": {
+          "min": 53,
+          "max": 127,
+          "range": 74,
+          "unique": 44,
+          "unique_ratio": 0.03142857142857143,
+          "avg": 104.99428571428571,
+          "std": 19.177176135974474
+        },
+        "drum": {
+          "kick_count": 72,
+          "kick_unique_vel": 9,
+          "kick_not_uniform": true,
+          "snare_count": 88,
+          "snare_ghost": 0,
+          "snare_accent": 88,
+          "snare_ghost_separation": false,
+          "hh_count": 148
+        },
+        "bass": {
+          "bass_count": 122,
+          "kick_count": 72,
+          "kick_bass_lock": 73,
+          "kick_bass_lock_rate": 0.5983606557377049
+        },
+        "groove": {
+          "avg_deviation": 3.532142857142857,
+          "syncopated_count": 179,
+          "syncopation_rate": 0.12785714285714286
+        },
+        "articulation": {
+          "trills_detected": 157
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session34-variant-b.mid",
+      "file": "session34-variant-b.mid",
+      "notes": 1400,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 80,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 84.6
+      },
+      "musicality": 84.6,
+      "details": {
+        "dynamics": {
+          "min": 53,
+          "max": 127,
+          "range": 74,
+          "unique": 44,
+          "unique_ratio": 0.03142857142857143,
+          "avg": 104.99428571428571,
+          "std": 19.177176135974474
+        },
+        "drum": {
+          "kick_count": 72,
+          "kick_unique_vel": 9,
+          "kick_not_uniform": true,
+          "snare_count": 88,
+          "snare_ghost": 0,
+          "snare_accent": 88,
+          "snare_ghost_separation": false,
+          "hh_count": 148
+        },
+        "bass": {
+          "bass_count": 122,
+          "kick_count": 72,
+          "kick_bass_lock": 73,
+          "kick_bass_lock_rate": 0.5983606557377049
+        },
+        "groove": {
+          "avg_deviation": 3.532142857142857,
+          "syncopated_count": 179,
+          "syncopation_rate": 0.12785714285714286
+        },
+        "articulation": {
+          "trills_detected": 163
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session34-variant-c.mid",
+      "file": "session34-variant-c.mid",
+      "notes": 1400,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 80,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 84.6
+      },
+      "musicality": 84.6,
+      "details": {
+        "dynamics": {
+          "min": 53,
+          "max": 127,
+          "range": 74,
+          "unique": 44,
+          "unique_ratio": 0.03142857142857143,
+          "avg": 104.99428571428571,
+          "std": 19.177176135974474
+        },
+        "drum": {
+          "kick_count": 72,
+          "kick_unique_vel": 9,
+          "kick_not_uniform": true,
+          "snare_count": 88,
+          "snare_ghost": 0,
+          "snare_accent": 88,
+          "snare_ghost_separation": false,
+          "hh_count": 148
+        },
+        "bass": {
+          "bass_count": 122,
+          "kick_count": 72,
+          "kick_bass_lock": 73,
+          "kick_bass_lock_rate": 0.5983606557377049
+        },
+        "groove": {
+          "avg_deviation": 3.532142857142857,
+          "syncopated_count": 179,
+          "syncopation_rate": 0.12785714285714286
+        },
+        "articulation": {
+          "trills_detected": 164
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session35-partial-preview.mid",
+      "file": "session35-partial-preview.mid",
+      "notes": 1400,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 80,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 84.6
+      },
+      "musicality": 84.6,
+      "details": {
+        "dynamics": {
+          "min": 53,
+          "max": 127,
+          "range": 74,
+          "unique": 44,
+          "unique_ratio": 0.03142857142857143,
+          "avg": 104.99428571428571,
+          "std": 19.177176135974474
+        },
+        "drum": {
+          "kick_count": 72,
+          "kick_unique_vel": 9,
+          "kick_not_uniform": true,
+          "snare_count": 88,
+          "snare_ghost": 0,
+          "snare_accent": 88,
+          "snare_ghost_separation": false,
+          "hh_count": 148
+        },
+        "bass": {
+          "bass_count": 122,
+          "kick_count": 72,
+          "kick_bass_lock": 73,
+          "kick_bass_lock_rate": 0.5983606557377049
+        },
+        "groove": {
+          "avg_deviation": 3.532142857142857,
+          "syncopated_count": 179,
+          "syncopation_rate": 0.12785714285714286
+        },
+        "articulation": {
+          "trills_detected": 164
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session4-after.mid",
+      "file": "session4-after.mid",
+      "notes": 81,
+      "channels": 6,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 80,
+          "range": 60,
+          "unique": 11,
+          "unique_ratio": 0.13580246913580246,
+          "avg": 69.88888888888889,
+          "std": 12.722028140198402
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 5.827160493827161,
+          "syncopated_count": 6,
+          "syncopation_rate": 0.07407407407407407
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 40
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session4-before.mid",
+      "file": "session4-before.mid",
+      "notes": 47,
+      "channels": 6,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 82.45
+      },
+      "musicality": 82.45,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 80,
+          "range": 60,
+          "unique": 12,
+          "unique_ratio": 0.2553191489361702,
+          "avg": 63.93617021276596,
+          "std": 15.965185296000017
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 0.851063829787234,
+          "syncopated_count": 4,
+          "syncopation_rate": 0.0851063829787234
+        },
+        "articulation": {
+          "trills_detected": 5
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session5-after.mid",
+      "file": "session5-after.mid",
+      "notes": 118,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 95,
+          "range": 75,
+          "unique": 22,
+          "unique_ratio": 0.1864406779661017,
+          "avg": 68.34745762711864,
+          "std": 13.125545731361132
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 9.59322033898305,
+          "syncopated_count": 6,
+          "syncopation_rate": 0.05084745762711865
+        },
+        "articulation": {
+          "trills_detected": 13
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session5-before.mid",
+      "file": "session5-before.mid",
+      "notes": 89,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 95,
+          "range": 75,
+          "unique": 19,
+          "unique_ratio": 0.21348314606741572,
+          "avg": 69.23595505617978,
+          "std": 13.904726527916287
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 5.977528089887641,
+          "syncopated_count": 6,
+          "syncopation_rate": 0.06741573033707865
+        },
+        "articulation": {
+          "trills_detected": 6
+        },
+        "harmony": {
+          "pitch_range": 52
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session6-after.mid",
+      "file": "session6-after.mid",
+      "notes": 137,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 103,
+          "range": 83,
+          "unique": 28,
+          "unique_ratio": 0.20437956204379562,
+          "avg": 65.03649635036497,
+          "std": 16.751825519101285
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 35,
+          "kick_count": 5,
+          "kick_bass_lock": 11,
+          "kick_bass_lock_rate": 0.3142857142857143
+        },
+        "groove": {
+          "avg_deviation": 10.102189781021897,
+          "syncopated_count": 7,
+          "syncopation_rate": 0.051094890510948905
+        },
+        "articulation": {
+          "trills_detected": 14
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session6-before.mid",
+      "file": "session6-before.mid",
+      "notes": 124,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 103,
+          "range": 83,
+          "unique": 27,
+          "unique_ratio": 0.21774193548387097,
+          "avg": 68.2258064516129,
+          "std": 14.208573336366934
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 9.129032258064516,
+          "syncopated_count": 6,
+          "syncopation_rate": 0.04838709677419355
+        },
+        "articulation": {
+          "trills_detected": 15
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session7-after.mid",
+      "file": "session7-after.mid",
+      "notes": 149,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 105,
+          "range": 85,
+          "unique": 35,
+          "unique_ratio": 0.2348993288590604,
+          "avg": 64.29530201342281,
+          "std": 17.59357351793957
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 47,
+          "kick_count": 5,
+          "kick_bass_lock": 15,
+          "kick_bass_lock_rate": 0.3191489361702128
+        },
+        "groove": {
+          "avg_deviation": 11.543624161073826,
+          "syncopated_count": 7,
+          "syncopation_rate": 0.04697986577181208
+        },
+        "articulation": {
+          "trills_detected": 18
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session7-before.mid",
+      "file": "session7-before.mid",
+      "notes": 143,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 80,
+        "musicality": 85.9
+      },
+      "musicality": 85.9,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 105,
+          "range": 85,
+          "unique": 33,
+          "unique_ratio": 0.23076923076923078,
+          "avg": 65.14685314685315,
+          "std": 17.446884399194193
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 34,
+          "kick_count": 5,
+          "kick_bass_lock": 10,
+          "kick_bass_lock_rate": 0.29411764705882354
+        },
+        "groove": {
+          "avg_deviation": 10.517482517482517,
+          "syncopated_count": 7,
+          "syncopation_rate": 0.04895104895104895
+        },
+        "articulation": {
+          "trills_detected": 18
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session9-after.mid",
+      "file": "session9-after.mid",
+      "notes": 149,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 105,
+          "range": 85,
+          "unique": 35,
+          "unique_ratio": 0.2348993288590604,
+          "avg": 64.29530201342281,
+          "std": 17.59357351793957
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 47,
+          "kick_count": 5,
+          "kick_bass_lock": 15,
+          "kick_bass_lock_rate": 0.3191489361702128
+        },
+        "groove": {
+          "avg_deviation": 11.543624161073826,
+          "syncopated_count": 7,
+          "syncopation_rate": 0.04697986577181208
+        },
+        "articulation": {
+          "trills_detected": 18
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/session9-before.mid",
+      "file": "session9-before.mid",
+      "notes": 143,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 80,
+        "musicality": 85.9
+      },
+      "musicality": 85.9,
+      "details": {
+        "dynamics": {
+          "min": 20,
+          "max": 105,
+          "range": 85,
+          "unique": 33,
+          "unique_ratio": 0.23076923076923078,
+          "avg": 65.14685314685315,
+          "std": 17.446884399194193
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 34,
+          "kick_count": 5,
+          "kick_bass_lock": 10,
+          "kick_bass_lock_rate": 0.29411764705882354
+        },
+        "groove": {
+          "avg_deviation": 10.517482517482517,
+          "syncopated_count": 7,
+          "syncopation_rate": 0.04895104895104895
+        },
+        "articulation": {
+          "trills_detected": 18
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/v620-corrupt-drums.mid",
+      "file": "v620-corrupt-drums.mid",
+      "notes": 166,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 70,
+        "bass": 85,
+        "musicality": 82.7
+      },
+      "musicality": 82.7,
+      "details": {
+        "dynamics": {
+          "min": 28,
+          "max": 97,
+          "range": 69,
+          "unique": 4,
+          "unique_ratio": 0.024096385542168676,
+          "avg": 56.2289156626506,
+          "std": 18.537644125567237
+        },
+        "drum": {
+          "kick_count": 40,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 40,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 40,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 0.0,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 52
+        },
+        "harmony": {
+          "pitch_range": 46
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/v620-reconstructed.mid",
+      "file": "v620-reconstructed.mid",
+      "notes": 262,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 93,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 75,
+        "bass": 85,
+        "musicality": 86.55
+      },
+      "musicality": 86.55,
+      "details": {
+        "dynamics": {
+          "min": 28,
+          "max": 122,
+          "range": 94,
+          "unique": 12,
+          "unique_ratio": 0.04580152671755725,
+          "avg": 72.46564885496183,
+          "std": 32.12816711222673
+        },
+        "drum": {
+          "kick_count": 8,
+          "kick_unique_vel": 1,
+          "kick_not_uniform": false,
+          "snare_count": 20,
+          "snare_ghost": 12,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 40
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 8,
+          "kick_bass_lock": 8,
+          "kick_bass_lock_rate": 0.5
+        },
+        "groove": {
+          "avg_deviation": 10.916030534351146,
+          "syncopated_count": 48,
+          "syncopation_rate": 0.183206106870229
+        },
+        "articulation": {
+          "trills_detected": 51
+        },
+        "harmony": {
+          "pitch_range": 63
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    }
+  ],
+  "results_after": [
+    {
+      "path": "artifacts/calibrated_14.00/session10-after_OPT_calibrated_14.00.mid",
+      "file": "session10-after_OPT_calibrated_14.00.mid",
+      "notes": 149,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 41,
+          "max": 127,
+          "range": 86,
+          "unique": 40,
+          "unique_ratio": 0.2684563758389262,
+          "avg": 88.67785234899328,
+          "std": 27.308118893812374
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 47,
+          "kick_count": 5,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 0.3404255319148936
+        },
+        "groove": {
+          "avg_deviation": 13.550335570469798,
+          "syncopated_count": 2,
+          "syncopation_rate": 0.013422818791946308
+        },
+        "articulation": {
+          "trills_detected": 12
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session10-before_calibrated_14.00.mid",
+      "file": "session10-before_calibrated_14.00.mid",
+      "notes": 143,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 41,
+          "max": 127,
+          "range": 86,
+          "unique": 38,
+          "unique_ratio": 0.26573426573426573,
+          "avg": 90.2867132867133,
+          "std": 26.688506356029148
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 34,
+          "kick_count": 5,
+          "kick_bass_lock": 11,
+          "kick_bass_lock_rate": 0.3235294117647059
+        },
+        "groove": {
+          "avg_deviation": 12.55944055944056,
+          "syncopated_count": 2,
+          "syncopation_rate": 0.013986013986013986
+        },
+        "articulation": {
+          "trills_detected": 14
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session17-factory-segment-after_calibrated_14.00.mid",
+      "file": "session17-factory-segment-after_calibrated_14.00.mid",
+      "notes": 111,
+      "channels": 1,
+      "scores": {
+        "harmony": 70,
+        "groove": 80,
+        "dynamics": 50,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 70,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 73.25
+      },
+      "musicality": 73.25,
+      "details": {
+        "dynamics": {
+          "min": 127,
+          "max": 127,
+          "range": 0,
+          "unique": 1,
+          "unique_ratio": 0.009009009009009009,
+          "avg": 127.0,
+          "std": 0.0
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 28.90990990990991,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 4
+        },
+        "harmony": {
+          "pitch_range": 12
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session17-factory-segment-before_calibrated_14.00.mid",
+      "file": "session17-factory-segment-before_calibrated_14.00.mid",
+      "notes": 31,
+      "channels": 1,
+      "scores": {
+        "harmony": 85,
+        "groove": 80,
+        "dynamics": 50,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 70,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 75.5
+      },
+      "musicality": 75.5,
+      "details": {
+        "dynamics": {
+          "min": 127,
+          "max": 127,
+          "range": 0,
+          "unique": 1,
+          "unique_ratio": 0.03225806451612903,
+          "avg": 127.0,
+          "std": 0.0
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 26.322580645161292,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 49
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session18-after_calibrated_14.00.mid",
+      "file": "session18-after_calibrated_14.00.mid",
+      "notes": 118,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 42,
+          "max": 123,
+          "range": 81,
+          "unique": 31,
+          "unique_ratio": 0.2627118644067797,
+          "avg": 96.32203389830508,
+          "std": 20.309520042948073
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 11.991525423728813,
+          "syncopated_count": 1,
+          "syncopation_rate": 0.00847457627118644
+        },
+        "articulation": {
+          "trills_detected": 10
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session18-before_calibrated_14.00.mid",
+      "file": "session18-before_calibrated_14.00.mid",
+      "notes": 89,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 42,
+          "max": 125,
+          "range": 83,
+          "unique": 33,
+          "unique_ratio": 0.3707865168539326,
+          "avg": 98.96629213483146,
+          "std": 20.34444833710072
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 9.247191011235955,
+          "syncopated_count": 1,
+          "syncopation_rate": 0.011235955056179775
+        },
+        "articulation": {
+          "trills_detected": 4
+        },
+        "harmony": {
+          "pitch_range": 52
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session2-after_calibrated_14.00.mid",
+      "file": "session2-after_calibrated_14.00.mid",
+      "notes": 29,
+      "channels": 2,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 95,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 80,
+        "drum": 85,
+        "bass": 80,
+        "musicality": 81.5
+      },
+      "musicality": 81.5,
+      "details": {
+        "dynamics": {
+          "min": 61,
+          "max": 123,
+          "range": 62,
+          "unique": 22,
+          "unique_ratio": 0.7586206896551724,
+          "avg": 94.44827586206897,
+          "std": 22.856049850714037
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 5,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 3.5517241379310347,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 18
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session2-before_calibrated_14.00.mid",
+      "file": "session2-before_calibrated_14.00.mid",
+      "notes": 7,
+      "channels": 2,
+      "scores": {
+        "harmony": 80,
+        "groove": 88,
+        "dynamics": 95,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 80,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 83.85
+      },
+      "musicality": 83.85,
+      "details": {
+        "dynamics": {
+          "min": 65,
+          "max": 123,
+          "range": 58,
+          "unique": 6,
+          "unique_ratio": 0.8571428571428571,
+          "avg": 107.42857142857143,
+          "std": 20.5820078616992
+        },
+        "drum": {
+          "kick_count": 3,
+          "kick_unique_vel": 2,
+          "kick_not_uniform": true,
+          "snare_count": 2,
+          "snare_ghost": 0,
+          "snare_accent": 2,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 3,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 6.571428571428571,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 18
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session24-reference_calibrated_14.00.mid",
+      "file": "session24-reference_calibrated_14.00.mid",
+      "notes": 112,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 33,
+          "max": 127,
+          "range": 94,
+          "unique": 13,
+          "unique_ratio": 0.11607142857142858,
+          "avg": 75.69642857142857,
+          "std": 40.22567851951303
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 16,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.5089285714285716,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session25-reference_calibrated_14.00.mid",
+      "file": "session25-reference_calibrated_14.00.mid",
+      "notes": 12,
+      "channels": 3,
+      "scores": {
+        "harmony": 80,
+        "groove": 88,
+        "dynamics": 70,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 80.9
+      },
+      "musicality": 80.9,
+      "details": {
+        "dynamics": {
+          "min": 105,
+          "max": 116,
+          "range": 11,
+          "unique": 8,
+          "unique_ratio": 0.6666666666666666,
+          "avg": 109.5,
+          "std": 3.9886201760873283
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 5.833333333333333,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session26-reference_calibrated_14.00.mid",
+      "file": "session26-reference_calibrated_14.00.mid",
+      "notes": 12,
+      "channels": 3,
+      "scores": {
+        "harmony": 80,
+        "groove": 88,
+        "dynamics": 70,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 80.9
+      },
+      "musicality": 80.9,
+      "details": {
+        "dynamics": {
+          "min": 105,
+          "max": 116,
+          "range": 11,
+          "unique": 8,
+          "unique_ratio": 0.6666666666666666,
+          "avg": 109.5,
+          "std": 3.9886201760873283
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 5.833333333333333,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session27-reference_calibrated_14.00.mid",
+      "file": "session27-reference_calibrated_14.00.mid",
+      "notes": 12,
+      "channels": 3,
+      "scores": {
+        "harmony": 80,
+        "groove": 88,
+        "dynamics": 70,
+        "articulation": 80,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 80,
+        "musicality": 80.9
+      },
+      "musicality": 80.9,
+      "details": {
+        "dynamics": {
+          "min": 105,
+          "max": 116,
+          "range": 11,
+          "unique": 8,
+          "unique_ratio": 0.6666666666666666,
+          "avg": 109.5,
+          "std": 3.9886201760873283
+        },
+        "drum": {
+          "kick_count": 0,
+          "kick_unique_vel": 0,
+          "kick_not_uniform": false,
+          "snare_count": 0,
+          "snare_ghost": 0,
+          "snare_accent": 0,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 0,
+          "kick_count": 0,
+          "kick_bass_lock": 0,
+          "kick_bass_lock_rate": 0.0
+        },
+        "groove": {
+          "avg_deviation": 5.833333333333333,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 0
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session28-reference_calibrated_14.00.mid",
+      "file": "session28-reference_calibrated_14.00.mid",
+      "notes": 112,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 33,
+          "max": 127,
+          "range": 94,
+          "unique": 13,
+          "unique_ratio": 0.11607142857142858,
+          "avg": 75.69642857142857,
+          "std": 40.22567851951303
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 16,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.5089285714285716,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session29-reference_calibrated_14.00.mid",
+      "file": "session29-reference_calibrated_14.00.mid",
+      "notes": 112,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 33,
+          "max": 127,
+          "range": 94,
+          "unique": 13,
+          "unique_ratio": 0.11607142857142858,
+          "avg": 75.69642857142857,
+          "std": 40.22567851951303
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 16,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.5089285714285716,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session3-after_calibrated_14.00.mid",
+      "file": "session3-after_calibrated_14.00.mid",
+      "notes": 47,
+      "channels": 6,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 95,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 42,
+          "max": 123,
+          "range": 81,
+          "unique": 27,
+          "unique_ratio": 0.574468085106383,
+          "avg": 93.46808510638297,
+          "std": 25.629340407660315
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 4.425531914893617,
+          "syncopated_count": 1,
+          "syncopation_rate": 0.02127659574468085
+        },
+        "articulation": {
+          "trills_detected": 4
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session3-before_calibrated_14.00.mid",
+      "file": "session3-before_calibrated_14.00.mid",
+      "notes": 37,
+      "channels": 6,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 95,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 83.35
+      },
+      "musicality": 83.35,
+      "details": {
+        "dynamics": {
+          "min": 45,
+          "max": 123,
+          "range": 78,
+          "unique": 25,
+          "unique_ratio": 0.6756756756756757,
+          "avg": 87.8108108108108,
+          "std": 25.655666298367954
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 5,
+          "kick_count": 5,
+          "kick_bass_lock": 4,
+          "kick_bass_lock_rate": 0.8
+        },
+        "groove": {
+          "avg_deviation": 3.5135135135135136,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session30-reference_calibrated_14.00.mid",
+      "file": "session30-reference_calibrated_14.00.mid",
+      "notes": 112,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 33,
+          "max": 127,
+          "range": 94,
+          "unique": 13,
+          "unique_ratio": 0.11607142857142858,
+          "avg": 75.69642857142857,
+          "std": 40.22567851951303
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 16,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.5089285714285716,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session31-reference_calibrated_14.00.mid",
+      "file": "session31-reference_calibrated_14.00.mid",
+      "notes": 160,
+      "channels": 5,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 33,
+          "max": 127,
+          "range": 94,
+          "unique": 14,
+          "unique_ratio": 0.0875,
+          "avg": 82.3875,
+          "std": 35.138895559366624
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 16,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.725,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session31b-reference_calibrated_14.00.mid",
+      "file": "session31b-reference_calibrated_14.00.mid",
+      "notes": 112,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 33,
+          "max": 127,
+          "range": 94,
+          "unique": 13,
+          "unique_ratio": 0.11607142857142858,
+          "avg": 75.69642857142857,
+          "std": 40.22567851951303
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 16,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.5089285714285716,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session32-reference_calibrated_14.00.mid",
+      "file": "session32-reference_calibrated_14.00.mid",
+      "notes": 112,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 33,
+          "max": 127,
+          "range": 94,
+          "unique": 13,
+          "unique_ratio": 0.11607142857142858,
+          "avg": 75.69642857142857,
+          "std": 40.22567851951303
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 16,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.5089285714285716,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session33-source_calibrated_14.00.mid",
+      "file": "session33-source_calibrated_14.00.mid",
+      "notes": 112,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 33,
+          "max": 127,
+          "range": 94,
+          "unique": 13,
+          "unique_ratio": 0.11607142857142858,
+          "avg": 75.69642857142857,
+          "std": 40.22567851951303
+        },
+        "drum": {
+          "kick_count": 16,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 16,
+          "snare_ghost": 0,
+          "snare_accent": 16,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 16,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.5089285714285716,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 2
+        },
+        "harmony": {
+          "pitch_range": 47
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session34-variant-a_calibrated_14.00.mid",
+      "file": "session34-variant-a_calibrated_14.00.mid",
+      "notes": 1400,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 86.2
+      },
+      "musicality": 86.2,
+      "details": {
+        "dynamics": {
+          "min": 58,
+          "max": 127,
+          "range": 69,
+          "unique": 63,
+          "unique_ratio": 0.045,
+          "avg": 111.34142857142857,
+          "std": 22.55044059616984
+        },
+        "drum": {
+          "kick_count": 72,
+          "kick_unique_vel": 21,
+          "kick_not_uniform": true,
+          "snare_count": 88,
+          "snare_ghost": 0,
+          "snare_accent": 40,
+          "snare_ghost_separation": false,
+          "hh_count": 148
+        },
+        "bass": {
+          "bass_count": 122,
+          "kick_count": 72,
+          "kick_bass_lock": 69,
+          "kick_bass_lock_rate": 0.5655737704918032
+        },
+        "groove": {
+          "avg_deviation": 5.947857142857143,
+          "syncopated_count": 36,
+          "syncopation_rate": 0.025714285714285714
+        },
+        "articulation": {
+          "trills_detected": 158
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session34-variant-b_calibrated_14.00.mid",
+      "file": "session34-variant-b_calibrated_14.00.mid",
+      "notes": 1400,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 86.2
+      },
+      "musicality": 86.2,
+      "details": {
+        "dynamics": {
+          "min": 58,
+          "max": 127,
+          "range": 69,
+          "unique": 63,
+          "unique_ratio": 0.045,
+          "avg": 111.34142857142857,
+          "std": 22.55044059616984
+        },
+        "drum": {
+          "kick_count": 72,
+          "kick_unique_vel": 21,
+          "kick_not_uniform": true,
+          "snare_count": 88,
+          "snare_ghost": 0,
+          "snare_accent": 40,
+          "snare_ghost_separation": false,
+          "hh_count": 148
+        },
+        "bass": {
+          "bass_count": 122,
+          "kick_count": 72,
+          "kick_bass_lock": 68,
+          "kick_bass_lock_rate": 0.5573770491803278
+        },
+        "groove": {
+          "avg_deviation": 5.942142857142857,
+          "syncopated_count": 36,
+          "syncopation_rate": 0.025714285714285714
+        },
+        "articulation": {
+          "trills_detected": 160
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session34-variant-c_calibrated_14.00.mid",
+      "file": "session34-variant-c_calibrated_14.00.mid",
+      "notes": 1400,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 86.2
+      },
+      "musicality": 86.2,
+      "details": {
+        "dynamics": {
+          "min": 58,
+          "max": 127,
+          "range": 69,
+          "unique": 63,
+          "unique_ratio": 0.045,
+          "avg": 111.34142857142857,
+          "std": 22.55044059616984
+        },
+        "drum": {
+          "kick_count": 72,
+          "kick_unique_vel": 21,
+          "kick_not_uniform": true,
+          "snare_count": 88,
+          "snare_ghost": 0,
+          "snare_accent": 40,
+          "snare_ghost_separation": false,
+          "hh_count": 148
+        },
+        "bass": {
+          "bass_count": 122,
+          "kick_count": 72,
+          "kick_bass_lock": 68,
+          "kick_bass_lock_rate": 0.5573770491803278
+        },
+        "groove": {
+          "avg_deviation": 5.947857142857143,
+          "syncopated_count": 35,
+          "syncopation_rate": 0.025
+        },
+        "articulation": {
+          "trills_detected": 161
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session35-partial-preview_calibrated_14.00.mid",
+      "file": "session35-partial-preview_calibrated_14.00.mid",
+      "notes": 1400,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 90,
+        "musicality": 86.2
+      },
+      "musicality": 86.2,
+      "details": {
+        "dynamics": {
+          "min": 58,
+          "max": 127,
+          "range": 69,
+          "unique": 63,
+          "unique_ratio": 0.045,
+          "avg": 111.34142857142857,
+          "std": 22.55044059616984
+        },
+        "drum": {
+          "kick_count": 72,
+          "kick_unique_vel": 21,
+          "kick_not_uniform": true,
+          "snare_count": 88,
+          "snare_ghost": 0,
+          "snare_accent": 40,
+          "snare_ghost_separation": false,
+          "hh_count": 148
+        },
+        "bass": {
+          "bass_count": 122,
+          "kick_count": 72,
+          "kick_bass_lock": 68,
+          "kick_bass_lock_rate": 0.5573770491803278
+        },
+        "groove": {
+          "avg_deviation": 5.944285714285714,
+          "syncopated_count": 36,
+          "syncopation_rate": 0.025714285714285714
+        },
+        "articulation": {
+          "trills_detected": 161
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session4-after_calibrated_14.00.mid",
+      "file": "session4-after_calibrated_14.00.mid",
+      "notes": 81,
+      "channels": 6,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 42,
+          "max": 123,
+          "range": 81,
+          "unique": 27,
+          "unique_ratio": 0.3333333333333333,
+          "avg": 100.23456790123457,
+          "std": 18.527865233843233
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 9.37037037037037,
+          "syncopated_count": 1,
+          "syncopation_rate": 0.012345679012345678
+        },
+        "articulation": {
+          "trills_detected": 4
+        },
+        "harmony": {
+          "pitch_range": 40
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session4-before_calibrated_14.00.mid",
+      "file": "session4-before_calibrated_14.00.mid",
+      "notes": 47,
+      "channels": 6,
+      "scores": {
+        "harmony": 80,
+        "groove": 75,
+        "dynamics": 95,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 42,
+          "max": 123,
+          "range": 81,
+          "unique": 27,
+          "unique_ratio": 0.574468085106383,
+          "avg": 93.46808510638297,
+          "std": 25.629340407660315
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 4.425531914893617,
+          "syncopated_count": 1,
+          "syncopation_rate": 0.02127659574468085
+        },
+        "articulation": {
+          "trills_detected": 4
+        },
+        "harmony": {
+          "pitch_range": 24
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session5-after_calibrated_14.00.mid",
+      "file": "session5-after_calibrated_14.00.mid",
+      "notes": 118,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 42,
+          "max": 123,
+          "range": 81,
+          "unique": 31,
+          "unique_ratio": 0.2627118644067797,
+          "avg": 96.32203389830508,
+          "std": 20.309520042948073
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 11.991525423728813,
+          "syncopated_count": 1,
+          "syncopation_rate": 0.00847457627118644
+        },
+        "articulation": {
+          "trills_detected": 10
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session5-before_calibrated_14.00.mid",
+      "file": "session5-before_calibrated_14.00.mid",
+      "notes": 89,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 42,
+          "max": 125,
+          "range": 83,
+          "unique": 33,
+          "unique_ratio": 0.3707865168539326,
+          "avg": 98.96629213483146,
+          "std": 20.34444833710072
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 9.247191011235955,
+          "syncopated_count": 1,
+          "syncopation_rate": 0.011235955056179775
+        },
+        "articulation": {
+          "trills_detected": 4
+        },
+        "harmony": {
+          "pitch_range": 52
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session6-after_calibrated_14.00.mid",
+      "file": "session6-after_calibrated_14.00.mid",
+      "notes": 137,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 41,
+          "max": 126,
+          "range": 85,
+          "unique": 34,
+          "unique_ratio": 0.24817518248175183,
+          "avg": 90.62043795620438,
+          "std": 26.018130383067756
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 35,
+          "kick_count": 5,
+          "kick_bass_lock": 12,
+          "kick_bass_lock_rate": 0.34285714285714286
+        },
+        "groove": {
+          "avg_deviation": 12.233576642335766,
+          "syncopated_count": 2,
+          "syncopation_rate": 0.014598540145985401
+        },
+        "articulation": {
+          "trills_detected": 11
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session6-before_calibrated_14.00.mid",
+      "file": "session6-before_calibrated_14.00.mid",
+      "notes": 124,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 41,
+          "max": 126,
+          "range": 85,
+          "unique": 34,
+          "unique_ratio": 0.27419354838709675,
+          "avg": 95.7258064516129,
+          "std": 21.713335121730516
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 15,
+          "kick_count": 5,
+          "kick_bass_lock": 6,
+          "kick_bass_lock_rate": 0.4
+        },
+        "groove": {
+          "avg_deviation": 11.516129032258064,
+          "syncopated_count": 1,
+          "syncopation_rate": 0.008064516129032258
+        },
+        "articulation": {
+          "trills_detected": 10
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session7-after_calibrated_14.00.mid",
+      "file": "session7-after_calibrated_14.00.mid",
+      "notes": 149,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 41,
+          "max": 127,
+          "range": 86,
+          "unique": 40,
+          "unique_ratio": 0.2684563758389262,
+          "avg": 88.67785234899328,
+          "std": 27.308118893812374
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 47,
+          "kick_count": 5,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 0.3404255319148936
+        },
+        "groove": {
+          "avg_deviation": 13.550335570469798,
+          "syncopated_count": 2,
+          "syncopation_rate": 0.013422818791946308
+        },
+        "articulation": {
+          "trills_detected": 12
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session7-before_calibrated_14.00.mid",
+      "file": "session7-before_calibrated_14.00.mid",
+      "notes": 143,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 41,
+          "max": 127,
+          "range": 86,
+          "unique": 38,
+          "unique_ratio": 0.26573426573426573,
+          "avg": 90.2867132867133,
+          "std": 26.688506356029148
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 34,
+          "kick_count": 5,
+          "kick_bass_lock": 11,
+          "kick_bass_lock_rate": 0.3235294117647059
+        },
+        "groove": {
+          "avg_deviation": 12.55944055944056,
+          "syncopated_count": 2,
+          "syncopation_rate": 0.013986013986013986
+        },
+        "articulation": {
+          "trills_detected": 14
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session9-after_calibrated_14.00.mid",
+      "file": "session9-after_calibrated_14.00.mid",
+      "notes": 149,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 41,
+          "max": 127,
+          "range": 86,
+          "unique": 40,
+          "unique_ratio": 0.2684563758389262,
+          "avg": 88.67785234899328,
+          "std": 27.308118893812374
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 47,
+          "kick_count": 5,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 0.3404255319148936
+        },
+        "groove": {
+          "avg_deviation": 13.550335570469798,
+          "syncopated_count": 2,
+          "syncopation_rate": 0.013422818791946308
+        },
+        "articulation": {
+          "trills_detected": 12
+        },
+        "harmony": {
+          "pitch_range": 59
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/session9-before_calibrated_14.00.mid",
+      "file": "session9-before_calibrated_14.00.mid",
+      "notes": 143,
+      "channels": 7,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 41,
+          "max": 127,
+          "range": 86,
+          "unique": 38,
+          "unique_ratio": 0.26573426573426573,
+          "avg": 90.2867132867133,
+          "std": 26.688506356029148
+        },
+        "drum": {
+          "kick_count": 5,
+          "kick_unique_vel": 3,
+          "kick_not_uniform": true,
+          "snare_count": 4,
+          "snare_ghost": 0,
+          "snare_accent": 4,
+          "snare_ghost_separation": false,
+          "hh_count": 16
+        },
+        "bass": {
+          "bass_count": 34,
+          "kick_count": 5,
+          "kick_bass_lock": 11,
+          "kick_bass_lock_rate": 0.3235294117647059
+        },
+        "groove": {
+          "avg_deviation": 12.55944055944056,
+          "syncopated_count": 2,
+          "syncopation_rate": 0.013986013986013986
+        },
+        "articulation": {
+          "trills_detected": 14
+        },
+        "harmony": {
+          "pitch_range": 55
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/v620-corrupt-drums_calibrated_14.00.mid",
+      "file": "v620-corrupt-drums_calibrated_14.00.mid",
+      "notes": 160,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 75,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 80,
+        "bass": 85,
+        "musicality": 83.2
+      },
+      "musicality": 83.2,
+      "details": {
+        "dynamics": {
+          "min": 37,
+          "max": 127,
+          "range": 90,
+          "unique": 13,
+          "unique_ratio": 0.08125,
+          "avg": 89.8375,
+          "std": 37.95775332834978
+        },
+        "drum": {
+          "kick_count": 40,
+          "kick_unique_vel": 8,
+          "kick_not_uniform": true,
+          "snare_count": 40,
+          "snare_ghost": 0,
+          "snare_accent": 40,
+          "snare_ghost_separation": false,
+          "hh_count": 0
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 40,
+          "kick_bass_lock": 16,
+          "kick_bass_lock_rate": 1.0
+        },
+        "groove": {
+          "avg_deviation": 3.325,
+          "syncopated_count": 0,
+          "syncopation_rate": 0.0
+        },
+        "articulation": {
+          "trills_detected": 40
+        },
+        "harmony": {
+          "pitch_range": 46
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    },
+    {
+      "path": "artifacts/calibrated_14.00/v620-reconstructed_calibrated_14.00.mid",
+      "file": "v620-reconstructed_calibrated_14.00.mid",
+      "notes": 236,
+      "channels": 4,
+      "scores": {
+        "harmony": 85,
+        "groove": 88,
+        "dynamics": 90,
+        "articulation": 85,
+        "phrase": 80,
+        "instrument": 88,
+        "drum": 85,
+        "bass": 85,
+        "musicality": 86.05
+      },
+      "musicality": 86.05,
+      "details": {
+        "dynamics": {
+          "min": 37,
+          "max": 127,
+          "range": 90,
+          "unique": 51,
+          "unique_ratio": 0.21610169491525424,
+          "avg": 77.88983050847457,
+          "std": 26.76828351845411
+        },
+        "drum": {
+          "kick_count": 8,
+          "kick_unique_vel": 5,
+          "kick_not_uniform": true,
+          "snare_count": 20,
+          "snare_ghost": 0,
+          "snare_accent": 15,
+          "snare_ghost_separation": false,
+          "hh_count": 40
+        },
+        "bass": {
+          "bass_count": 16,
+          "kick_count": 8,
+          "kick_bass_lock": 8,
+          "kick_bass_lock_rate": 0.5
+        },
+        "groove": {
+          "avg_deviation": 10.35593220338983,
+          "syncopated_count": 4,
+          "syncopation_rate": 0.01694915254237288
+        },
+        "articulation": {
+          "trills_detected": 34
+        },
+        "harmony": {
+          "pitch_range": 63
+        }
+      },
+      "real_metrics": [
+        "dynamics",
+        "drum",
+        "bass",
+        "groove",
+        "articulation"
+      ],
+      "proxy_metrics": [
+        "harmony",
+        "phrase",
+        "instrument"
+      ]
+    }
+  ],
+  "evidence": "DIRECT REAL metrics for dynamics (vel range/unique/std), drum (kick unique, snare ghost separation), bass (kick-bass lock rate), groove (pocket dev, syncopation), articulation (trills) - 5 REAL, 3 PROXY (harmony, phrase, instrument) + musicality weighted avg"
+}

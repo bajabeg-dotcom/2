@@ -1,0 +1,48 @@
+{
+  "timing": {
+    "humanization_sigma_real": {
+      "accompaniment": 34.30308314124024,
+      "drums": 33.77489816794861,
+      "bass": 33.813924013072906,
+      "melody": 34.41327243806149
+    },
+    "humanization_sigma_avg": 34.076294440080815,
+    "safe_windows": {
+      "bass": 15,
+      "drums": 8,
+      "rhythm_guitar": 20,
+      "piano": 10,
+      "default": 10
+    },
+    "deterministic": true,
+    "seed": 9302026,
+    "method": "deterministic_random(timing_full, role, channel, idx, tick, pitch, real_gold) * 2 * effective_sigma + groove pocket, effective_sigma = min(safe, real_sigma*0.5) with real Gold sigma 34.3 scaled to safe",
+    "pocket": "lock-with-kick for bass, backbeat for snare, interlock, pocket ±2",
+    "source": "gold-performance-patterns.json REAL 182 files sigma 34.3 + final_certified_engine_v13_full_no_bypass.py",
+    "evidence": "DIRECT REAL Gold sigma 34.3",
+    "bypass": "NONE - REAL sigma scaled to safe"
+  },
+  "groove": {
+    "foundation": "kick-snare-foundation-first",
+    "timekeeper": "hats-timekeeper",
+    "transition": "toms-crashes-transition-weighted",
+    "kick_bass_lock": true,
+    "backbeat": true,
+    "pocket": true,
+    "interlock": true,
+    "real_gold_sigma": {
+      "accompaniment": 34.30308314124024,
+      "drums": 33.77489816794861,
+      "bass": 33.813924013072906,
+      "melody": 34.41327243806149
+    },
+    "interaction": {
+      "bass": "lock-with-kick, land-chord-changes, pocket -2",
+      "drums": "kick-locks-with-bass, snare-defines-backbeat, backbeat pocket 0",
+      "accompaniment": "leave-lead-space, complement-rhythm-guitar"
+    },
+    "source": "gold-performance-patterns.json REAL + instrument-catalog behavior",
+    "evidence": "DIRECT REAL",
+    "bypass": "NONE - FULL kick-bass lock"
+  }
+}

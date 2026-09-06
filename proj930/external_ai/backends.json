@@ -1,0 +1,21 @@
+{
+  "primary": {
+    "name": "MIDI-GPT",
+    "version": "0.3.3",
+    "code_repo": "https://github.com/Metacreation-Lab/MIDI-GPT",
+    "model_repo": "Metacreation/MIDI-GPT",
+    "default_model": "yellow_medium",
+    "purpose": ["multitrack_generation", "bar_infill", "track_generation", "candidate_sampling", "replay_scoring"],
+    "code_license": "MIT",
+    "checkpoint_license": "CC-BY-NC-4.0"
+  },
+  "tokenizer": {
+    "name": "MidiTok",
+    "install": "miditok",
+    "purpose": ["REMI", "REMI+", "CPWord", "MMM", "dataset_tokenization"]
+  },
+  "research_backends": [
+    {"name":"FIGARO","repo":"https://github.com/dvruette/figaro","purpose":"fine_grained_conditioning"},
+    {"name":"SkyTNT midi-model","repo":"https://github.com/SkyTNT/midi-model","purpose":"general_symbolic_transformer"}
+  ]
+}

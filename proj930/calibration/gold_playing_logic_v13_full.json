@@ -1,0 +1,148 @@
+{
+  "version": "13.00-FULL-NO-BYPASS-RIJESI-SVE",
+  "total_roles": 20,
+  "real_roles": 4,
+  "calibrations": {
+    "accompaniment": {
+      "timing_sigma": 34.30308314124024,
+      "real_gold": true,
+      "files": 1414,
+      "notes": 1629982,
+      "trills": 199917
+    },
+    "drums": {
+      "timing_sigma": 33.77489816794861,
+      "real_gold": true,
+      "files": 182,
+      "notes": 402401,
+      "trills": 17731
+    },
+    "bass": {
+      "timing_sigma": 33.813924013072906,
+      "real_gold": true,
+      "files": 248,
+      "notes": 212192,
+      "trills": 11521
+    },
+    "melody": {
+      "timing_sigma": 34.41327243806149,
+      "real_gold": true,
+      "files": 49,
+      "notes": 28236,
+      "trills": 4133
+    },
+    "accordion": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "brass": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "choir": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "echo": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "organ": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "pad": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "percussion": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "piano": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "power-riff": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "rhythm-guitar": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "riff": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "sax": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "solo": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "strings": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "terca": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    },
+    "woodwind": {
+      "timing_sigma": 5,
+      "real_gold": false,
+      "files": null,
+      "notes": null,
+      "trills": 0
+    }
+  },
+  "gold_real": "182 files 2272811 notes"
+}

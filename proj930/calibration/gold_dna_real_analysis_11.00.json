@@ -1,0 +1,1451 @@
+{
+  "version": "11.00-REAL-GOLD-DNA",
+  "timestamp": "2026-09-06T11:34:52.900748",
+  "total_files": 182,
+  "total_notes": 2272811,
+  "by_role": {
+    "drums": {
+      "files": 182,
+      "notes": 2272811,
+      "avg_sigma": 34.16127113244906
+    }
+  },
+  "results": [
+    {
+      "path": "prism-uploads/Gold DNA/A JA VOLIM ONO T-KORIJENI UZIVO.MID",
+      "file": "A JA VOLIM ONO T-KORIJENI UZIVO.MID",
+      "notes": 14775,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 16,
+        "max": 103,
+        "avg": 54.77001692047377
+      },
+      "velocity": {
+        "min": 21,
+        "max": 127,
+        "mean": 95.43499153976312,
+        "range": 106,
+        "unique": 57
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -22,
+          -22,
+          0
+        ],
+        "sigma": 34.15633511409554,
+        "mean_dev": -1.057258883248731,
+        "downbeat_vel_mean": 95.09211398277004,
+        "offbeat_vel_mean": 100.82352941176471
+      },
+      "groove": {
+        "downbeat_accent": -5.731415428994666,
+        "pocket": 34.15633511409554
+      },
+      "articulation": {
+        "trills_detected": 1139,
+        "vel_range": 106,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 106,
+        "unique": 57,
+        "downbeat_vs_offbeat": -5.731415428994666
+      },
+      "humanization": {
+        "timing_sigma": 34.15633511409554,
+        "velocity_variation": 106
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/AKO TE DRUGI PR-SAMIR R UZIVO.MID",
+      "file": "AKO TE DRUGI PR-SAMIR R UZIVO.MID",
+      "notes": 12416,
+      "role": "drums",
+      "channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 99,
+        "avg": 59.37032860824742
+      },
+      "velocity": {
+        "min": 34,
+        "max": 127,
+        "mean": 86.8834568298969,
+        "range": 93,
+        "unique": 71
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24
+        ],
+        "sigma": 34.14787548485068,
+        "mean_dev": 0.7901900773195877,
+        "downbeat_vel_mean": 78.10202655485675,
+        "offbeat_vel_mean": 110.04761904761905
+      },
+      "groove": {
+        "downbeat_accent": -31.9455924927623,
+        "pocket": 34.14787548485068
+      },
+      "articulation": {
+        "trills_detected": 1051,
+        "vel_range": 93,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 93,
+        "unique": 71,
+        "downbeat_vs_offbeat": -31.9455924927623
+      },
+      "humanization": {
+        "timing_sigma": 34.14787548485068,
+        "velocity_variation": 93
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/AL PROLECE-SEMSA UZIVO.MID",
+      "file": "AL PROLECE-SEMSA UZIVO.MID",
+      "notes": 9683,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 35,
+        "max": 98,
+        "avg": 68.05948569658163
+      },
+      "velocity": {
+        "min": 82,
+        "max": 127,
+        "mean": 121.84911700919136,
+        "range": 45,
+        "unique": 18
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          21,
+          26,
+          26,
+          27,
+          46,
+          46,
+          46,
+          46,
+          46
+        ],
+        "sigma": 34.26729107219328,
+        "mean_dev": -0.09356604358153466,
+        "downbeat_vel_mean": 122.43245614035088,
+        "offbeat_vel_mean": 119.52941176470588
+      },
+      "groove": {
+        "downbeat_accent": 2.9030443756449955,
+        "pocket": 34.26729107219328
+      },
+      "articulation": {
+        "trills_detected": 2040,
+        "vel_range": 45,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 45,
+        "unique": 18,
+        "downbeat_vs_offbeat": 2.9030443756449955
+      },
+      "humanization": {
+        "timing_sigma": 34.26729107219328,
+        "velocity_variation": 45
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/ALA-BASKA-USNE-MIX  PJESAMA UZIVO.MID",
+      "file": "ALA-BASKA-USNE-MIX  PJESAMA UZIVO.MID",
+      "notes": 26021,
+      "role": "drums",
+      "channels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "pitch": {
+        "min": 18,
+        "max": 95,
+        "avg": 59.04300372775835
+      },
+      "velocity": {
+        "min": 25,
+        "max": 127,
+        "mean": 89.95618923177433,
+        "range": 102,
+        "unique": 25
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24
+        ],
+        "sigma": 34.49449829116592,
+        "mean_dev": -0.3282733177049306,
+        "downbeat_vel_mean": 111.48988136775995,
+        "offbeat_vel_mean": 90.0
+      },
+      "groove": {
+        "downbeat_accent": 21.48988136775995,
+        "pocket": 34.49449829116592
+      },
+      "articulation": {
+        "trills_detected": 1359,
+        "vel_range": 102,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 102,
+        "unique": 25,
+        "downbeat_vs_offbeat": 21.48988136775995
+      },
+      "humanization": {
+        "timing_sigma": 34.49449829116592,
+        "velocity_variation": 102
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/AMELA , CERKU AKO DOBIJES - AMELA UZIVO.MID",
+      "file": "AMELA , CERKU AKO DOBIJES - AMELA UZIVO.MID",
+      "notes": 11715,
+      "role": "drums",
+      "channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "pitch": {
+        "min": 17,
+        "max": 112,
+        "avg": 62.55125906956893
+      },
+      "velocity": {
+        "min": 15,
+        "max": 126,
+        "mean": 100.61775501493811,
+        "range": 111,
+        "unique": 96
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -48,
+          48,
+          48,
+          48,
+          24,
+          0,
+          0
+        ],
+        "sigma": 34.3055998111643,
+        "mean_dev": -0.08100725565514298,
+        "downbeat_vel_mean": 107.42326559215137,
+        "offbeat_vel_mean": 99.44
+      },
+      "groove": {
+        "downbeat_accent": 7.983265592151369,
+        "pocket": 34.3055998111643
+      },
+      "articulation": {
+        "trills_detected": 914,
+        "vel_range": 111,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 111,
+        "unique": 96,
+        "downbeat_vs_offbeat": 7.983265592151369
+      },
+      "humanization": {
+        "timing_sigma": 34.3055998111643,
+        "velocity_variation": 111
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BANJALUKO-PRELDZIJE UZIVO.MID",
+      "file": "BANJALUKO-PRELDZIJE UZIVO.MID",
+      "notes": 9509,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 95,
+        "avg": 63.54653486170996
+      },
+      "velocity": {
+        "min": 44,
+        "max": 127,
+        "mean": 101.80218740140918,
+        "range": 83,
+        "unique": 35
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48
+        ],
+        "sigma": 34.666140507964705,
+        "mean_dev": -0.12430329161846672,
+        "downbeat_vel_mean": 105.99433106575964,
+        "offbeat_vel_mean": 91.05
+      },
+      "groove": {
+        "downbeat_accent": 14.944331065759641,
+        "pocket": 34.666140507964705
+      },
+      "articulation": {
+        "trills_detected": 1486,
+        "vel_range": 83,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 83,
+        "unique": 35,
+        "downbeat_vs_offbeat": 14.944331065759641
+      },
+      "humanization": {
+        "timing_sigma": 34.666140507964705,
+        "velocity_variation": 83
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BARABA SA SELA-KNINDZA UZIVO (2).MID",
+      "file": "BARABA SA SELA-KNINDZA UZIVO (2).MID",
+      "notes": 10479,
+      "role": "drums",
+      "channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 35,
+        "max": 100,
+        "avg": 67.80408435919458
+      },
+      "velocity": {
+        "min": 90,
+        "max": 127,
+        "mean": 111.90199446512072,
+        "range": 37,
+        "unique": 2
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -15,
+          -10,
+          -2,
+          -2
+        ],
+        "sigma": 34.13576571577096,
+        "mean_dev": -0.1229124916499666,
+        "downbeat_vel_mean": 118.08035714285714,
+        "offbeat_vel_mean": 97.4
+      },
+      "groove": {
+        "downbeat_accent": 20.680357142857133,
+        "pocket": 34.13576571577096
+      },
+      "articulation": {
+        "trills_detected": 1084,
+        "vel_range": 37,
+        "techniques": [
+          "legato",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 37,
+        "unique": 2,
+        "downbeat_vs_offbeat": 20.680357142857133
+      },
+      "humanization": {
+        "timing_sigma": 34.13576571577096,
+        "velocity_variation": 37
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BARABA-ZARE I GOCI UZIVO (2).MID",
+      "file": "BARABA-ZARE I GOCI UZIVO (2).MID",
+      "notes": 9255,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 93,
+        "avg": 61.68006482982172
+      },
+      "velocity": {
+        "min": 44,
+        "max": 127,
+        "mean": 101.9358184764992,
+        "range": 83,
+        "unique": 35
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          -58,
+          -56,
+          -53,
+          -49,
+          -24,
+          -24,
+          -24,
+          -24
+        ],
+        "sigma": 34.354513983030884,
+        "mean_dev": -1.2839546191247975,
+        "downbeat_vel_mean": 105.70829170829171,
+        "offbeat_vel_mean": 90.0
+      },
+      "groove": {
+        "downbeat_accent": 15.70829170829171,
+        "pocket": 34.354513983030884
+      },
+      "articulation": {
+        "trills_detected": 815,
+        "vel_range": 83,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 83,
+        "unique": 35,
+        "downbeat_vs_offbeat": 15.70829170829171
+      },
+      "humanization": {
+        "timing_sigma": 34.354513983030884,
+        "velocity_variation": 83
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BECAR DAMA-NOVI MARATONCI UZIVO (2).MID",
+      "file": "BECAR DAMA-NOVI MARATONCI UZIVO (2).MID",
+      "notes": 11713,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 91,
+        "avg": 61.51831298557159
+      },
+      "velocity": {
+        "min": 44,
+        "max": 127,
+        "mean": 101.77990267224452,
+        "range": 83,
+        "unique": 35
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          -53,
+          -51,
+          -34,
+          -27
+        ],
+        "sigma": 34.27545346881081,
+        "mean_dev": -1.1178178092717492,
+        "downbeat_vel_mean": 106.24369085173501,
+        "offbeat_vel_mean": 100.57142857142857
+      },
+      "groove": {
+        "downbeat_accent": 5.672262280306441,
+        "pocket": 34.27545346881081
+      },
+      "articulation": {
+        "trills_detected": 1138,
+        "vel_range": 83,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 83,
+        "unique": 35,
+        "downbeat_vs_offbeat": 5.672262280306441
+      },
+      "humanization": {
+        "timing_sigma": 34.27545346881081,
+        "velocity_variation": 83
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BELO BELO-BADJI UZIVO.MID",
+      "file": "BELO BELO-BADJI UZIVO.MID",
+      "notes": 17060,
+      "role": "drums",
+      "channels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "pitch": {
+        "min": 17,
+        "max": 97,
+        "avg": 61.56799531066823
+      },
+      "velocity": {
+        "min": 30,
+        "max": 127,
+        "mean": 84.54507620164127,
+        "range": 97,
+        "unique": 58
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24
+        ],
+        "sigma": 34.71042071163785,
+        "mean_dev": 0.7541031652989449,
+        "downbeat_vel_mean": 76.56497524752476,
+        "offbeat_vel_mean": 95.23076923076923
+      },
+      "groove": {
+        "downbeat_accent": -18.66579398324447,
+        "pocket": 34.71042071163785
+      },
+      "articulation": {
+        "trills_detected": 1475,
+        "vel_range": 97,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 97,
+        "unique": 58,
+        "downbeat_vs_offbeat": -18.66579398324447
+      },
+      "humanization": {
+        "timing_sigma": 34.71042071163785,
+        "velocity_variation": 97
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BIJELA KUGA-DRVAR UZIVO (2).MID",
+      "file": "BIJELA KUGA-DRVAR UZIVO (2).MID",
+      "notes": 7240,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 92,
+        "avg": 61.837983425414365
+      },
+      "velocity": {
+        "min": 44,
+        "max": 127,
+        "mean": 101.63632596685083,
+        "range": 83,
+        "unique": 35
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48
+        ],
+        "sigma": 34.40022605283558,
+        "mean_dev": 0.011464088397790055,
+        "downbeat_vel_mean": 104.71010638297872,
+        "offbeat_vel_mean": 101.1
+      },
+      "groove": {
+        "downbeat_accent": 3.610106382978728,
+        "pocket": 34.40022605283558
+      },
+      "articulation": {
+        "trills_detected": 800,
+        "vel_range": 83,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 83,
+        "unique": 35,
+        "downbeat_vs_offbeat": 3.610106382978728
+      },
+      "humanization": {
+        "timing_sigma": 34.40022605283558,
+        "velocity_variation": 83
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BIJELU BLUZU-VERA MATOVIC UZIVO.MID",
+      "file": "BIJELU BLUZU-VERA MATOVIC UZIVO.MID",
+      "notes": 10686,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 95,
+        "avg": 62.92831742466779
+      },
+      "velocity": {
+        "min": 44,
+        "max": 127,
+        "mean": 105.33267827063447,
+        "range": 83,
+        "unique": 31
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          53,
+          53
+        ],
+        "sigma": 34.48970258646903,
+        "mean_dev": -0.9496537525734606,
+        "downbeat_vel_mean": 110.85482233502537,
+        "offbeat_vel_mean": 94.11111111111111
+      },
+      "groove": {
+        "downbeat_accent": 16.74371122391426,
+        "pocket": 34.48970258646903
+      },
+      "articulation": {
+        "trills_detected": 1753,
+        "vel_range": 83,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 83,
+        "unique": 31,
+        "downbeat_vs_offbeat": 16.74371122391426
+      },
+      "humanization": {
+        "timing_sigma": 34.48970258646903,
+        "velocity_variation": 83
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BIT CU TVOJA-STOJA UZIVO.MID",
+      "file": "BIT CU TVOJA-STOJA UZIVO.MID",
+      "notes": 16615,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "pitch": {
+        "min": 17,
+        "max": 96,
+        "avg": 59.488113150767376
+      },
+      "velocity": {
+        "min": 30,
+        "max": 127,
+        "mean": 84.5224195004514,
+        "range": 97,
+        "unique": 60
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -24,
+          -7,
+          -5,
+          -1,
+          0,
+          20,
+          20
+        ],
+        "sigma": 34.096295809112426,
+        "mean_dev": 1.6768582606078843,
+        "downbeat_vel_mean": 79.90075512405609,
+        "offbeat_vel_mean": 102.33333333333333
+      },
+      "groove": {
+        "downbeat_accent": -22.43257820927724,
+        "pocket": 34.096295809112426
+      },
+      "articulation": {
+        "trills_detected": 1023,
+        "vel_range": 97,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 97,
+        "unique": 60,
+        "downbeat_vs_offbeat": -22.43257820927724
+      },
+      "humanization": {
+        "timing_sigma": 34.096295809112426,
+        "velocity_variation": 97
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BMW MECKA AUDI-FAZLIJA UZIVO T.MID",
+      "file": "BMW MECKA AUDI-FAZLIJA UZIVO T.MID",
+      "notes": 8153,
+      "role": "drums",
+      "channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14
+      ],
+      "pitch": {
+        "min": 29,
+        "max": 91,
+        "avg": 59.2538942720471
+      },
+      "velocity": {
+        "min": 90,
+        "max": 127,
+        "mean": 121.69029804979762,
+        "range": 37,
+        "unique": 2
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48
+        ],
+        "sigma": 34.317862513230665,
+        "mean_dev": -0.15405372255611433,
+        "downbeat_vel_mean": 126.50207039337474,
+        "offbeat_vel_mean": 127.0
+      },
+      "groove": {
+        "downbeat_accent": -0.497929606625263,
+        "pocket": 34.317862513230665
+      },
+      "articulation": {
+        "trills_detected": 545,
+        "vel_range": 37,
+        "techniques": [
+          "legato",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 37,
+        "unique": 2,
+        "downbeat_vs_offbeat": -0.497929606625263
+      },
+      "humanization": {
+        "timing_sigma": 34.317862513230665,
+        "velocity_variation": 37
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BOG DAO BOG-ENES BEGOVIC UZIVO.MID",
+      "file": "BOG DAO BOG-ENES BEGOVIC UZIVO.MID",
+      "notes": 10166,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 99,
+        "avg": 64.55833169388157
+      },
+      "velocity": {
+        "min": 44,
+        "max": 127,
+        "mean": 103.56747983474327,
+        "range": 83,
+        "unique": 35
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          55,
+          55,
+          57,
+          57,
+          -50,
+          -50,
+          -50,
+          -50
+        ],
+        "sigma": 34.52213049054386,
+        "mean_dev": -0.06020066889632107,
+        "downbeat_vel_mean": 105.7080291970803,
+        "offbeat_vel_mean": 94.25
+      },
+      "groove": {
+        "downbeat_accent": 11.458029197080293,
+        "pocket": 34.52213049054386
+      },
+      "articulation": {
+        "trills_detected": 1406,
+        "vel_range": 83,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 83,
+        "unique": 35,
+        "downbeat_vs_offbeat": 11.458029197080293
+      },
+      "humanization": {
+        "timing_sigma": 34.52213049054386,
+        "velocity_variation": 83
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BOJANA-SIN MANJACE UZIVO (2).MID",
+      "file": "BOJANA-SIN MANJACE UZIVO (2).MID",
+      "notes": 9327,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 95,
+        "avg": 63.44601694006647
+      },
+      "velocity": {
+        "min": 44,
+        "max": 127,
+        "mean": 102.27297094456954,
+        "range": 83,
+        "unique": 35
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          55,
+          55,
+          55
+        ],
+        "sigma": 34.319833483006235,
+        "mean_dev": -1.1429184089203388,
+        "downbeat_vel_mean": 106.85011441647598,
+        "offbeat_vel_mean": 75.4375
+      },
+      "groove": {
+        "downbeat_accent": 31.412614416475975,
+        "pocket": 34.319833483006235
+      },
+      "articulation": {
+        "trills_detected": 1287,
+        "vel_range": 83,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 83,
+        "unique": 35,
+        "downbeat_vs_offbeat": 31.412614416475975
+      },
+      "humanization": {
+        "timing_sigma": 34.319833483006235,
+        "velocity_variation": 83
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BOLNA LEZI-SAMIR RADETINA UZIVO.MID",
+      "file": "BOLNA LEZI-SAMIR RADETINA UZIVO.MID",
+      "notes": 14694,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 92,
+        "avg": 60.33483054307881
+      },
+      "velocity": {
+        "min": 22,
+        "max": 127,
+        "mean": 89.27541853817885,
+        "range": 105,
+        "unique": 81
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          0,
+          -2,
+          1,
+          10,
+          32
+        ],
+        "sigma": 34.27756223287012,
+        "mean_dev": 0.9529059480059888,
+        "downbeat_vel_mean": 84.14583333333333,
+        "offbeat_vel_mean": 106.81818181818181
+      },
+      "groove": {
+        "downbeat_accent": -22.672348484848484,
+        "pocket": 34.27756223287012
+      },
+      "articulation": {
+        "trills_detected": 1283,
+        "vel_range": 105,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 105,
+        "unique": 81,
+        "downbeat_vs_offbeat": -22.672348484848484
+      },
+      "humanization": {
+        "timing_sigma": 34.27756223287012,
+        "velocity_variation": 105
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BOLUJ BOLE GARA-GOCI BEND UZIVO.MID",
+      "file": "BOLUJ BOLE GARA-GOCI BEND UZIVO.MID",
+      "notes": 16043,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 93,
+        "avg": 62.6062457146419
+      },
+      "velocity": {
+        "min": 60,
+        "max": 127,
+        "mean": 103.0522346194602,
+        "range": 67,
+        "unique": 33
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          59,
+          59,
+          59,
+          59
+        ],
+        "sigma": 34.09956144887237,
+        "mean_dev": -0.8485320700617092,
+        "downbeat_vel_mean": 104.58244514106583,
+        "offbeat_vel_mean": 95.28571428571429
+      },
+      "groove": {
+        "downbeat_accent": 9.29673085535154,
+        "pocket": 34.09956144887237
+      },
+      "articulation": {
+        "trills_detected": 1581,
+        "vel_range": 67,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 67,
+        "unique": 33,
+        "downbeat_vs_offbeat": 9.29673085535154
+      },
+      "humanization": {
+        "timing_sigma": 34.09956144887237,
+        "velocity_variation": 67
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BUDI MOJA DEVOJKA-JASMIN UZIVO.MID",
+      "file": "BUDI MOJA DEVOJKA-JASMIN UZIVO.MID",
+      "notes": 8979,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pitch": {
+        "min": 19,
+        "max": 93,
+        "avg": 62.075398151241785
+      },
+      "velocity": {
+        "min": 60,
+        "max": 127,
+        "mean": 103.37309277202361,
+        "range": 67,
+        "unique": 32
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          50,
+          50,
+          50,
+          50
+        ],
+        "sigma": 34.3811533285125,
+        "mean_dev": -0.6740171511304154,
+        "downbeat_vel_mean": 104.81194029850747,
+        "offbeat_vel_mean": 85.6875
+      },
+      "groove": {
+        "downbeat_accent": 19.124440298507466,
+        "pocket": 34.3811533285125
+      },
+      "articulation": {
+        "trills_detected": 722,
+        "vel_range": 67,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 67,
+        "unique": 32,
+        "downbeat_vs_offbeat": 19.124440298507466
+      },
+      "humanization": {
+        "timing_sigma": 34.3811533285125,
+        "velocity_variation": 67
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "prism-uploads/Gold DNA/BUZUKO-SAMIR RADETINAC UZIVO.MID",
+      "file": "BUZUKO-SAMIR RADETINAC UZIVO.MID",
+      "notes": 18642,
+      "role": "drums",
+      "channels": [
+        0,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "pitch": {
+        "min": 17,
+        "max": 96,
+        "avg": 59.71676858706147
+      },
+      "velocity": {
+        "min": 30,
+        "max": 127,
+        "mean": 87.20024675464006,
+        "range": 97,
+        "unique": 60
+      },
+      "timing": {
+        "ppq": 384,
+        "deviations": [
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -24,
+          -23,
+          -23,
+          -23,
+          -16
+        ],
+        "sigma": 34.122232273531395,
+        "mean_dev": 0.7493294710867933,
+        "downbeat_vel_mean": 79.67537313432835,
+        "offbeat_vel_mean": 97.96428571428571
+      },
+      "groove": {
+        "downbeat_accent": -18.288912579957355,
+        "pocket": 34.122232273531395
+      },
+      "articulation": {
+        "trills_detected": 1164,
+        "vel_range": 97,
+        "techniques": [
+          "dynamic",
+          "trill"
+        ]
+      },
+      "expression": {
+        "dynamics": 97,
+        "unique": 60,
+        "downbeat_vs_offbeat": -18.288912579957355
+      },
+      "humanization": {
+        "timing_sigma": 34.122232273531395,
+        "velocity_variation": 97
+      },
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,528 @@
+{
+  "timestamp": "2026-09-06T17:28:26.903978",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "authority": "GOLD_PRIMARY",
+  "note": "GOLD je PLAYING LOGIC REFERENCE, ne velocity authority",
+  "calibrations": {
+    "bass": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "POCKET_DRIVEN, slight anticipation on downbeats",
+        "phrase": "Root foundation, approach notes, passing tones 12%",
+        "articulation": "Legato for connected, staccato for ghost, slide 8%",
+        "expression": "CC11 rare, velocity-driven dynamics",
+        "groove": "Interlock with kick, anticipation 5%",
+        "humanization": "Controlled, tight"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_BASS_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za bass",
+        "explanation": "Gold daje POCKET_DRIVEN, slight anticipation on downbeats timing, Legato for connected, staccato for ghost, slide 8% articulation, Interlock with kick, anticipation 5% groove"
+      }
+    },
+    "drums": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "GROOVE_KEEPER, tight, slight push on backbeat",
+        "phrase": "Fill at transitions, density change in variations",
+        "articulation": "Staccato 90%, ghost 20%, flam 5%, roll 3%",
+        "expression": "Velocity-driven, CC7 for mix",
+        "groove": "Straight, syncopation 20%",
+        "humanization": "Tight human, timing sigma 3 ticks"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_DRUMS_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za drums",
+        "explanation": "Gold daje GROOVE_KEEPER, tight, slight push on backbeat timing, Staccato 90%, ghost 20%, flam 5%, roll 3% articulation, Straight, syncopation 20% groove"
+      }
+    },
+    "piano": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "COMPING, slight spread for chord notes",
+        "phrase": "Voice leading, common tone retention",
+        "articulation": "Legato 30%, staccato 30%, accent 40%",
+        "expression": "Velocity-driven",
+        "groove": "Syncopation 25%",
+        "humanization": "Small spread 8 ticks"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_PIANO_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za piano",
+        "explanation": "Gold daje COMPING, slight spread for chord notes timing, Legato 30%, staccato 30%, accent 40% articulation, Syncopation 25% groove"
+      }
+    },
+    "organ": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_ORGAN_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za organ",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "rhythm_guitar": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "STRUM_PATTERN, downstroke slightly early, upstroke slightly late",
+        "phrase": "Chord pulse, mute 20%, variation in pattern",
+        "articulation": "Mute 20%, hammer-on 8%, slide 5%",
+        "expression": "Velocity-driven strum dynamics",
+        "groove": "Syncopation 30%, offbeat 45%",
+        "humanization": "Strum spread 12 ticks"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_RHYTHM_GUITAR_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za rhythm_guitar",
+        "explanation": "Gold daje STRUM_PATTERN, downstroke slightly early, upstroke slightly late timing, Mute 20%, hammer-on 8%, slide 5% articulation, Syncopation 30%, offbeat 45% groove"
+      }
+    },
+    "solo_guitar": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_SOLO_GUITAR_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za solo_guitar",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "accordion": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_ACCORDION_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za accordion",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "strings": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "SUSTAIN_FLOW, minimal timing variation",
+        "phrase": "Sustain with movement, voice leading minimal",
+        "articulation": "Legato 80%, trill 4%",
+        "expression": "CC11 swell common, slow movement",
+        "groove": "Minimal syncopation",
+        "humanization": "Minimal"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_STRINGS_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za strings",
+        "explanation": "Gold daje SUSTAIN_FLOW, minimal timing variation timing, Legato 80%, trill 4% articulation, Minimal syncopation groove"
+      }
+    },
+    "brass": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_BRASS_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za brass",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "sax": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "BREATH_PHRASE, phrase-driven",
+        "phrase": "Breath in phrases, grace 10%, ornament",
+        "articulation": "Legato 50%, grace 10%, slide 8%",
+        "expression": "CC11 phrase arc, breath release",
+        "groove": "Syncopation 20%",
+        "humanization": "Phrase-driven"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_SAX_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za sax",
+        "explanation": "Gold daje BREATH_PHRASE, phrase-driven timing, Legato 50%, grace 10%, slide 8% articulation, Syncopation 20% groove"
+      }
+    },
+    "woodwind": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_WOODWIND_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za woodwind",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "clarinet": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_CLARINET_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za clarinet",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "violin": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_VIOLIN_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za violin",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "synth_lead": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_SYNTH_LEAD_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za synth_lead",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "pad": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_PAD_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za pad",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "mallet": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_MALLET_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za mallet",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "choir": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_CHOIR_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za choir",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "percussion": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_PERCUSSION_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za percussion",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "fx": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_FX_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za fx",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    },
+    "accompaniment": {
+      "pattern_dna": {
+        "notes": "Intervals, rhythm, onset spacing, duration, velocity relation (ali velocity relation samo za oblik, ne vrijednost)",
+        "articulation": "Staccato, legato, accent, slide, trill, grace, roll",
+        "phrase_position": "Start, middle, end, transition, fill",
+        "harmonic_role": "Root, third, fifth, seventh, passing, approach, chromatic",
+        "register": "Low, mid, high, transition zones",
+        "repetition_structure": "Repetition avoidance, variation, pattern"
+      },
+      "playing_logic": {
+        "timing": "PHRASE_DRIVEN",
+        "phrase": "FOLLOW_CHORD",
+        "articulation": "LEGATO_AND_STACCATO",
+        "expression": "VELOCITY_AND_CC11",
+        "groove": "STRAIGHT",
+        "humanization": "MODERATE"
+      },
+      "source": "GOLD",
+      "factory_velocity_constraint": "Velocity ostaje Factory-only",
+      "transformation": {
+        "before": "MECHANICAL_TIMING",
+        "after": "GOLD_ACCOMPANIMENT_PLAYING_LOGIC",
+        "musical_purpose": "Prirodno sviranje za accompaniment",
+        "explanation": "Gold daje PHRASE_DRIVEN timing, LEGATO_AND_STACCATO articulation, STRAIGHT groove"
+      }
+    }
+  }
+}

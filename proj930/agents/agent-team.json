@@ -1,0 +1,589 @@
+{
+  "schema": "dna-pa800-agent-team",
+  "version": "3.1",
+  "orchestration": {
+    "pattern": "manager-with-parallel-evidence-retrieval-arranger-specialists-and-blocking-validators",
+    "manager": "chatgpt-orchestrator",
+    "humanApprovalRequiredFor": [
+      "export-to-device",
+      "overwrite-style",
+      "change-factory-dynamics-policy"
+    ]
+  },
+  "invariants": {
+    "dynamicsSource": "factory-only",
+    "goldAffectsDynamics": false,
+    "midiValidatorCannotBeBypassed": true,
+    "agentCannotExportMidi": true,
+    "structuredPlanRequired": true,
+    "coreArrangerWorksWithoutAgents": true,
+    "apiKeysStoredInProject": false,
+    "arrangerLifecycleAuthority": true,
+    "instrumentEngineCannotEndRole": true,
+    "variantAIsNotAutomaticallySelected": true,
+    "patternEvidenceIndexed": true,
+    "globalSectionPathRequired": true,
+    "styleTrackAssignmentIsOptimized": true,
+    "factoryGoldAuthoritySeparated": true,
+    "corpusSourceMidiReadOnly": true,
+    "qualityGateBeforeEvidenceAuthority": true,
+    "patternProvenanceHashRequired": true
+  },
+  "agents": [
+    {
+      "id": "chatgpt-orchestrator",
+      "platform": "ChatGPT",
+      "role": "manager",
+      "responsibilities": [
+        "interpret-user-goal",
+        "route-specialists",
+        "request-approval",
+        "summarize-result"
+      ],
+      "output": "task-plan.json"
+    },
+    {
+      "id": "chatgpt-music-director",
+      "platform": "ChatGPT",
+      "role": "music-analysis",
+      "responsibilities": [
+        "genre-brief",
+        "form",
+        "density",
+        "instrument-roles",
+        "intensity-curve"
+      ],
+      "forbidden": [
+        "write-midi-bytes",
+        "set-gold-velocity"
+      ],
+      "output": "music-brief.json"
+    },
+    {
+      "id": "chatgpt-style-evaluator",
+      "platform": "ChatGPT",
+      "role": "musical-evaluation",
+      "responsibilities": [
+        "compare-variants",
+        "evaluate-transitions",
+        "explain-recommendation"
+      ],
+      "requires": [
+        "midi-compliance-pass"
+      ],
+      "output": "style-evaluation.json"
+    },
+    {
+      "id": "codex-lead-engineer",
+      "platform": "Codex",
+      "role": "implementation",
+      "responsibilities": [
+        "edit-code",
+        "run-tests",
+        "update-schemas",
+        "update-documentation"
+      ],
+      "output": "verified-code-change"
+    },
+    {
+      "id": "codex-midi-compliance",
+      "platform": "Codex",
+      "role": "pa800-validator",
+      "responsibilities": [
+        "validate-smf0",
+        "validate-markers",
+        "validate-channels-9-16",
+        "validate-cv-controllers"
+      ],
+      "blocking": true,
+      "output": "midi-compliance-report.json"
+    },
+    {
+      "id": "codex-data-regression",
+      "platform": "Codex",
+      "role": "data-quality",
+      "responsibilities": [
+        "build-dna",
+        "check-id-collisions",
+        "check-gold-velocity-zero",
+        "compare-baseline"
+      ],
+      "output": "dna-regression-report.json"
+    },
+    {
+      "id": "chatgpt-section-director",
+      "platform": "ChatGPT",
+      "role": "section-form-analysis",
+      "responsibilities": [
+        "detect-section-phrases",
+        "build-arrangement-intent",
+        "entry-exit-plan",
+        "energy-arc"
+      ],
+      "output": "section-intent.json",
+      "forbidden": [
+        "write-midi-bytes",
+        "override-validator"
+      ]
+    },
+    {
+      "id": "chatgpt-continuity-auditor",
+      "platform": "ChatGPT",
+      "role": "continuity-analysis",
+      "responsibilities": [
+        "instrument-lifecycle",
+        "mid-section-hole-detection",
+        "phrase-completion",
+        "role-persistence"
+      ],
+      "output": "continuity-audit.json",
+      "forbidden": [
+        "write-midi-bytes",
+        "override-validator"
+      ]
+    },
+    {
+      "id": "chatgpt-power-guitar-director",
+      "platform": "ChatGPT",
+      "role": "guitar-power-arrangement",
+      "responsibilities": [
+        "rhythm-guitar-strum-plan",
+        "powerchord-lifecycle",
+        "guitar-mode-separation",
+        "phrase-coverage"
+      ],
+      "output": "guitar-power-plan.json",
+      "forbidden": [
+        "write-midi-bytes",
+        "override-validator"
+      ]
+    },
+    {
+      "id": "chatgpt-rhythm-section-director",
+      "platform": "ChatGPT",
+      "role": "drums-bass-ensemble",
+      "responsibilities": [
+        "kick-bass-lock",
+        "drum-continuity",
+        "bass-lifecycle",
+        "groove-pocket"
+      ],
+      "output": "rhythm-section-plan.json",
+      "forbidden": [
+        "write-midi-bytes",
+        "override-validator"
+      ]
+    },
+    {
+      "id": "codex-arranger-core",
+      "platform": "Codex",
+      "role": "arranger-implementation",
+      "responsibilities": [
+        "section-lifecycle-engine",
+        "global-pattern-path",
+        "role-persistence",
+        "correction-scope"
+      ],
+      "output": "verified-arranger-change"
+    },
+    {
+      "id": "codex-pattern-validator",
+      "platform": "Codex",
+      "role": "pattern-validation",
+      "responsibilities": [
+        "coverage-tests",
+        "loop-tests",
+        "phrase-boundary-tests",
+        "role-drop-regressions"
+      ],
+      "output": "pattern-validation-report.json",
+      "blocking": true
+    },
+    {
+      "id": "codex-styleworks-roundtrip",
+      "platform": "Codex",
+      "role": "styleworks-roundtrip",
+      "responsibilities": [
+        "preserve-styleworks-container",
+        "source-output-manifest",
+        "roundtrip-diff",
+        "unknown-event-preservation"
+      ],
+      "output": "styleworks-roundtrip-report.json",
+      "blocking": true
+    },
+    {
+      "id": "codex-factory-dna-auditor",
+      "platform": "Codex",
+      "role": "factory-authority",
+      "responsibilities": [
+        "factory-velocity-only",
+        "layer-switch-safety",
+        "sound-identity",
+        "drum-key-profiles"
+      ],
+      "output": "factory-dna-report.json",
+      "blocking": true
+    },
+    {
+      "id": "codex-gold-evidence-auditor",
+      "platform": "Codex",
+      "role": "gold-evidence",
+      "responsibilities": [
+        "gold-pattern-quality",
+        "anti-copy",
+        "velocity-contamination-check",
+        "section-evidence-index"
+      ],
+      "output": "gold-evidence-report.json",
+      "blocking": true
+    },
+    {
+      "id": "codex-fuzz-regression",
+      "platform": "Codex",
+      "role": "adversarial-testing",
+      "responsibilities": [
+        "property-tests",
+        "mutation-tests",
+        "known-bug-fixtures",
+        "idempotency",
+        "determinism"
+      ],
+      "output": "fuzz-regression-report.json",
+      "blocking": true
+    },
+    {
+      "id": "codex-release-certifier",
+      "platform": "Codex",
+      "role": "release-certification",
+      "responsibilities": [
+        "run-all-gates",
+        "reparse-exports",
+        "verify-reports",
+        "package-single-zip"
+      ],
+      "output": "release-certification.json",
+      "blocking": true
+    },
+    {
+      "id": "chatgpt-evidence-librarian",
+      "platform": "ChatGPT",
+      "role": "evidence-architecture",
+      "responsibilities": [
+        "pattern-taxonomy",
+        "evidence-query-design",
+        "corpus-provenance",
+        "pattern-family-review"
+      ],
+      "output": "evidence-query-plan.json",
+      "forbidden": [
+        "write-midi-bytes",
+        "override-validator"
+      ]
+    },
+    {
+      "id": "codex-pattern-index-engineer",
+      "platform": "Codex",
+      "role": "evidence-index-implementation",
+      "responsibilities": [
+        "canonical-pattern-ir",
+        "sqlite-pattern-index",
+        "fingerprints",
+        "deduplication"
+      ],
+      "output": "pattern-index-report.json"
+    },
+    {
+      "id": "codex-retrieval-ranking",
+      "platform": "Codex",
+      "role": "retrieval-ranking",
+      "responsibilities": [
+        "pattern-similarity",
+        "candidate-ranking",
+        "deterministic-top-k",
+        "ranking-regression"
+      ],
+      "output": "retrieval-ranking-report.json"
+    },
+    {
+      "id": "chatgpt-arrangement-path-director",
+      "platform": "ChatGPT",
+      "role": "global-arrangement-planning",
+      "responsibilities": [
+        "section-wide-pattern-path",
+        "role-continuity",
+        "energy-arc",
+        "transition-intent"
+      ],
+      "output": "arrangement-path-brief.json",
+      "forbidden": [
+        "write-midi-bytes",
+        "override-validator"
+      ]
+    },
+    {
+      "id": "codex-global-path-planner",
+      "platform": "Codex",
+      "role": "global-path-implementation",
+      "responsibilities": [
+        "dynamic-programming-path",
+        "switch-penalties",
+        "entry-exit-penalties",
+        "section-coverage"
+      ],
+      "output": "global-path-report.json",
+      "blocking": true
+    },
+    {
+      "id": "chatgpt-chord-ntt-analyst",
+      "platform": "ChatGPT",
+      "role": "arranger-harmony-analysis",
+      "responsibilities": [
+        "reference-chord-plan",
+        "chord-function-tags",
+        "ntt-risk-review",
+        "transpose-test-plan"
+      ],
+      "output": "chord-ntt-plan.json",
+      "forbidden": [
+        "write-midi-bytes",
+        "invent-korg-behavior"
+      ]
+    },
+    {
+      "id": "codex-style-track-mapper",
+      "platform": "Codex",
+      "role": "style-track-assignment",
+      "responsibilities": [
+        "bass-drum-perc-fixed-map",
+        "acc1-acc5-selection",
+        "role-collision-score",
+        "mapping-report"
+      ],
+      "output": "style-track-map-report.json",
+      "blocking": true
+    },
+    {
+      "id": "chatgpt-styleworks-handoff-reviewer",
+      "platform": "ChatGPT",
+      "role": "styleworks-handoff-review",
+      "responsibilities": [
+        "mapping-readability",
+        "variation-cv-plan",
+        "user-import-guidance",
+        "handoff-risk-review"
+      ],
+      "output": "styleworks-handoff-review.json",
+      "forbidden": [
+        "write-midi-bytes",
+        "claim-physical-import-pass"
+      ]
+    },
+    {
+      "id": "codex-corpus-pattern-extractor",
+      "platform": "Codex",
+      "role": "corpus-segmentation",
+      "responsibilities": [
+        "read-only-midi-ingest",
+        "section-phrase-segmentation",
+        "instrument-pattern-extraction",
+        "provenance-hashing"
+      ],
+      "output": "corpus-pattern-report.json",
+      "blocking": true
+    },
+    {
+      "id": "chatgpt-corpus-quality-curator",
+      "platform": "ChatGPT",
+      "role": "evidence-quality-review",
+      "responsibilities": [
+        "quality-policy-review",
+        "degenerate-pattern-audit",
+        "role-specific-threshold-review",
+        "quarantine-recommendations"
+      ],
+      "forbidden": [
+        "write-midi-bytes",
+        "override-hard-quality-gate"
+      ],
+      "output": "corpus-quality-review.json"
+    },
+    {
+      "id": "codex-evidence-db-integrity",
+      "platform": "Codex",
+      "role": "evidence-db-integrity",
+      "responsibilities": [
+        "sqlite-integrity",
+        "deterministic-pattern-ids",
+        "deduplication",
+        "source-hash-provenance",
+        "index-consistency"
+      ],
+      "output": "evidence-db-integrity.json",
+      "blocking": true
+    },
+    {
+      "id": "chatgpt-pattern-family-analyst",
+      "platform": "ChatGPT",
+      "role": "pattern-family-analysis",
+      "responsibilities": [
+        "variation-family-relations",
+        "entry-exit-behavior",
+        "section-energy-arcs",
+        "pattern-transition-grammar"
+      ],
+      "forbidden": [
+        "write-midi-bytes",
+        "override-validator"
+      ],
+      "output": "pattern-family-analysis.json"
+    },
+    {
+      "id": "codex-corpus-release-gate",
+      "platform": "Codex",
+      "role": "corpus-release-gate",
+      "responsibilities": [
+        "run-v500-v501-regressions",
+        "verify-quality-hard-rejects",
+        "verify-build-pattern-evidence-cli",
+        "certify-release-manifest"
+      ],
+      "output": "corpus-release-gate.json",
+      "blocking": true
+    }
+  ],
+  "handoffs": [
+    [
+      "chatgpt-orchestrator",
+      "chatgpt-music-director"
+    ],
+    [
+      "chatgpt-orchestrator",
+      "codex-lead-engineer"
+    ],
+    [
+      "codex-lead-engineer",
+      "codex-midi-compliance"
+    ],
+    [
+      "codex-midi-compliance",
+      "chatgpt-style-evaluator"
+    ],
+    [
+      "chatgpt-style-evaluator",
+      "chatgpt-orchestrator"
+    ],
+    [
+      "chatgpt-orchestrator",
+      "chatgpt-section-director"
+    ],
+    [
+      "chatgpt-section-director",
+      "chatgpt-continuity-auditor"
+    ],
+    [
+      "chatgpt-orchestrator",
+      "chatgpt-power-guitar-director"
+    ],
+    [
+      "chatgpt-orchestrator",
+      "chatgpt-rhythm-section-director"
+    ],
+    [
+      "chatgpt-continuity-auditor",
+      "codex-arranger-core"
+    ],
+    [
+      "chatgpt-power-guitar-director",
+      "codex-arranger-core"
+    ],
+    [
+      "chatgpt-rhythm-section-director",
+      "codex-arranger-core"
+    ],
+    [
+      "codex-arranger-core",
+      "codex-pattern-validator"
+    ],
+    [
+      "codex-arranger-core",
+      "codex-factory-dna-auditor"
+    ],
+    [
+      "codex-arranger-core",
+      "codex-gold-evidence-auditor"
+    ],
+    [
+      "codex-pattern-validator",
+      "codex-fuzz-regression"
+    ],
+    [
+      "codex-pattern-validator",
+      "codex-styleworks-roundtrip"
+    ],
+    [
+      "codex-styleworks-roundtrip",
+      "codex-midi-compliance"
+    ],
+    [
+      "codex-fuzz-regression",
+      "codex-release-certifier"
+    ],
+    [
+      "codex-midi-compliance",
+      "codex-release-certifier"
+    ],
+    [
+      "codex-release-certifier",
+      "chatgpt-style-evaluator"
+    ],
+    [
+      "chatgpt-orchestrator",
+      "chatgpt-evidence-librarian"
+    ],
+    [
+      "chatgpt-evidence-librarian",
+      "codex-pattern-index-engineer"
+    ],
+    [
+      "codex-pattern-index-engineer",
+      "codex-retrieval-ranking"
+    ],
+    [
+      "codex-retrieval-ranking",
+      "chatgpt-arrangement-path-director"
+    ],
+    [
+      "chatgpt-arrangement-path-director",
+      "codex-global-path-planner"
+    ],
+    [
+      "chatgpt-orchestrator",
+      "chatgpt-chord-ntt-analyst"
+    ],
+    [
+      "chatgpt-chord-ntt-analyst",
+      "codex-global-path-planner"
+    ],
+    [
+      "codex-global-path-planner",
+      "codex-style-track-mapper"
+    ],
+    [
+      "codex-style-track-mapper",
+      "chatgpt-styleworks-handoff-reviewer"
+    ],
+    [
+      "chatgpt-styleworks-handoff-reviewer",
+      "codex-styleworks-roundtrip"
+    ],
+    [
+      "codex-pattern-index-engineer",
+      "codex-data-regression"
+    ],
+    [
+      "codex-retrieval-ranking",
+      "codex-fuzz-regression"
+    ]
+  ]
+}

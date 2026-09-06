@@ -1,0 +1,33 @@
+{
+  "schema": "dna-neural-training-run",
+  "version": "9.30",
+  "mode": "calibrate",
+  "promoteRequested": false,
+  "results": [],
+  "calibration": {
+    "schema": "dna-neural-calibration-gate",
+    "version": "9.30",
+    "status": "SOFTWARE_CALIBRATED_WAITING_FOR_LISTENING_DEVICE_GATE",
+    "checks": [
+      {
+        "path": "learning_data/dataset_manifest.json",
+        "exists": true
+      },
+      {
+        "path": "relationship_sequence_data_v2/relationship_sequence_manifest_v2.json",
+        "exists": true
+      },
+      {
+        "path": "models/dna-reconstructor-v2/training_report.json",
+        "exists": true
+      },
+      {
+        "path": "models/relationship-sequence-v2/relationship_sequence_training_report.json",
+        "exists": true
+      }
+    ],
+    "datasetRows": 15837,
+    "relationshipRows": 697,
+    "velocityAuthorityFactoryOnly": true
+  }
+}

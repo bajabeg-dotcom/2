@@ -1,0 +1,61 @@
+{
+  "version": "11.00-RIJESI-SVE-FINAL",
+  "scoring": {
+    "harmony": {
+      "description": "Chord tone weight, passing tone rate, voice leading",
+      "weight": 0.2,
+      "before_after": true,
+      "method": "pitch vs chord analysis"
+    },
+    "groove": {
+      "description": "Pocket, interlock, syncopation, timing",
+      "weight": 0.2,
+      "before_after": true,
+      "method": "tick vs grid, kick-bass coupling"
+    },
+    "dynamics": {
+      "description": "Velocity range, Factory curve adherence, accent",
+      "weight": 0.15,
+      "before_after": true,
+      "method": "velocity min/max/unique, Factory floor/optimal/ceiling"
+    },
+    "articulation": {
+      "description": "Staccato, legato, ghost, fill, transition",
+      "weight": 0.15,
+      "before_after": true,
+      "method": "gate, context, drum elements"
+    },
+    "phrase": {
+      "description": "Phrase quality, breaths, pickups, cadence",
+      "weight": 0.1,
+      "before_after": true,
+      "method": "phrase boundaries, section energy"
+    },
+    "instrument_realism": {
+      "description": "Instrument specific realism",
+      "weight": 0.1,
+      "before_after": true,
+      "method": "role specific checks"
+    },
+    "drum_realism": {
+      "description": "Drum kit realism, per-element",
+      "weight": 0.05,
+      "before_after": true,
+      "method": "kick NOT uniform, snare ghost separation, HH pattern"
+    },
+    "bass_realism": {
+      "description": "Bass pocket, root foundation, approaches",
+      "weight": 0.03,
+      "before_after": true,
+      "method": "kick lock, root, octave jumps musical"
+    },
+    "musicality": {
+      "description": "Overall musicality",
+      "weight": 0.02,
+      "before_after": true,
+      "method": "weighted average of all scores"
+    }
+  },
+  "real_files": 37,
+  "pass_rate": "37/37 (100.0%)"
+}

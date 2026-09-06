@@ -1,0 +1,1569 @@
+{
+  "version": "10.00-gold-playing-logic",
+  "timestamp": "2026-09-06T10:25:31.237777",
+  "authority": "GOLD_PRIMARY - PLAYING LOGIC REFERENCE",
+  "note": "GOLD is PLAYING LOGIC REFERENCE, not velocity authority. Factory remains velocity authority.",
+  "total_roles": 28,
+  "gold_patterns": 0,
+  "pattern_dna_roles": 19,
+  "calibrations": {
+    "accompaniment": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for accompaniment",
+        "musical_purpose": "Natural playing logic for accompaniment",
+        "target_profile": "accompaniment playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for accompaniment",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "accordion": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for accordion",
+        "musical_purpose": "Natural playing logic for accordion",
+        "target_profile": "accordion playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for accordion",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "bass": {
+      "timing": {
+        "attack_offset": -5,
+        "release_offset": 10,
+        "anticipation": 0.05,
+        "delay": 0.02,
+        "humanization_sigma": 5,
+        "source": "GOLD - pocket driven, slight anticipation on downbeats"
+      },
+      "phrase_behaviour": {
+        "root_weight": 0.85,
+        "passing_notes": 0.12,
+        "approach_notes": 0.1,
+        "chromatic": 0.05,
+        "description": "Root foundation, approach and passing notes contextual"
+      },
+      "articulation": {
+        "legato": 0.4,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "ghost": 0.1,
+        "slide": 0.08,
+        "hammer_on": 0.05,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "swell": "RARE",
+        "phrase_curve": "GROOVE_ALIGNED",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.8,
+        "syncopation": 0.15,
+        "displacement": 0.05,
+        "interlock": "with kick",
+        "source": "GOLD - bass relationship with kick INTERLOCK"
+      },
+      "humanization": {
+        "velocity_random": 5,
+        "timing_random": 5,
+        "duration_random": 8,
+        "repetition_avoidance": 0.6,
+        "source": "GOLD - controlled"
+      },
+      "note_length": {
+        "short": "ghost, slap candidate",
+        "long": "legato, slide candidate",
+        "continuity_aware": true
+      },
+      "phrase_endings": {
+        "behaviour": "walk or rest, descend or sustain",
+        "fill": "walk or rest"
+      },
+      "fills": {
+        "probability": 0.3,
+        "type": "walk, octave jump, chromatic approach"
+      },
+      "transitions": {
+        "behaviour": "fill or variation, anticipation of root"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for bass",
+        "musical_purpose": "Natural playing logic for bass",
+        "target_profile": "bass playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for bass",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "brass": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for brass",
+        "musical_purpose": "Natural playing logic for brass",
+        "target_profile": "brass playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for brass",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "choir": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for choir",
+        "musical_purpose": "Natural playing logic for choir",
+        "target_profile": "choir playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for choir",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "chords": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for chords",
+        "musical_purpose": "Natural playing logic for chords",
+        "target_profile": "chords playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for chords",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "clarinet": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for clarinet",
+        "musical_purpose": "Natural playing logic for clarinet",
+        "target_profile": "clarinet playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for clarinet",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "drums": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 0,
+        "anticipation": 0.02,
+        "delay": 0.01,
+        "humanization_sigma": 3,
+        "source": "GOLD - tight, groove keeper"
+      },
+      "phrase_behaviour": {
+        "density_change": "variation to variation",
+        "fill_at_transitions": true
+      },
+      "articulation": {
+        "staccato": 0.9,
+        "accent": 0.5,
+        "ghost": 0.2,
+        "flam": 0.05,
+        "roll": 0.03,
+        "choke": 0.04
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.9,
+        "syncopation": 0.2,
+        "displacement": 0.02
+      },
+      "humanization": {
+        "velocity_random": 8,
+        "timing_random": 3,
+        "method": "TIGHT_HUMAN"
+      },
+      "fills": {
+        "at": "transitions, endings",
+        "type": "tom fill, snare fill, crash"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for drums",
+        "musical_purpose": "Natural playing logic for drums",
+        "target_profile": "drums playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for drums",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "echo": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for echo",
+        "musical_purpose": "Natural playing logic for echo",
+        "target_profile": "echo playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for echo",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "fx": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for fx",
+        "musical_purpose": "Natural playing logic for fx",
+        "target_profile": "fx playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for fx",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "mallet": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for mallet",
+        "musical_purpose": "Natural playing logic for mallet",
+        "target_profile": "mallet playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for mallet",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "melody": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for melody",
+        "musical_purpose": "Natural playing logic for melody",
+        "target_profile": "melody playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for melody",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "organ": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for organ",
+        "musical_purpose": "Natural playing logic for organ",
+        "target_profile": "organ playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for organ",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "pad": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for pad",
+        "musical_purpose": "Natural playing logic for pad",
+        "target_profile": "pad playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for pad",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "percussion": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for percussion",
+        "musical_purpose": "Natural playing logic for percussion",
+        "target_profile": "percussion playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for percussion",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "piano": {
+      "timing": {
+        "method": "COMPING, slight spread for chord notes",
+        "chord_spread": 5,
+        "humanization_sigma": 8
+      },
+      "phrase_behaviour": {
+        "voice_leading": "COMMON_TONE_RETENTION",
+        "chord_voicing": "Gold provides voicing logic"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.3,
+        "accent": 0.4
+      },
+      "groove": {
+        "syncopation": 0.25,
+        "offbeat": 0.25
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for piano",
+        "musical_purpose": "Natural playing logic for piano",
+        "target_profile": "piano playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for piano",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "power-riff": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for power-riff",
+        "musical_purpose": "Natural playing logic for power-riff",
+        "target_profile": "power-riff playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for power-riff",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "rhythm-guitar": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for rhythm-guitar",
+        "musical_purpose": "Natural playing logic for rhythm-guitar",
+        "target_profile": "rhythm-guitar playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for rhythm-guitar",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "rhythm_guitar": {
+      "timing": {
+        "attack_offset": -8,
+        "release_offset": 15,
+        "anticipation": 0.08,
+        "delay": 0.05,
+        "humanization_sigma": 12,
+        "source": "GOLD - strum pattern, downstroke early, upstroke late, inter-string spread"
+      },
+      "phrase_behaviour": {
+        "chord_pulse": true,
+        "mute": 0.2,
+        "variation": "pattern change"
+      },
+      "articulation": {
+        "staccato": 0.3,
+        "legato": 0.2,
+        "accent": 0.5,
+        "ghost": 0.15,
+        "mute": 0.2,
+        "slide": 0.05,
+        "hammer_on": 0.08
+      },
+      "groove": {
+        "swing": 0.05,
+        "straightness": 0.6,
+        "syncopation": 0.3,
+        "offbeat": 0.45
+      },
+      "humanization": {
+        "method": "STRUM_SPREAD",
+        "inter_string_spread": "Gold provides strum timing, Factory provides velocity"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for rhythm_guitar",
+        "musical_purpose": "Natural playing logic for rhythm_guitar",
+        "target_profile": "rhythm_guitar playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for rhythm_guitar",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "riff": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for riff",
+        "musical_purpose": "Natural playing logic for riff",
+        "target_profile": "riff playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for riff",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "sax": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for sax",
+        "musical_purpose": "Natural playing logic for sax",
+        "target_profile": "sax playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for sax",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "solo": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for solo",
+        "musical_purpose": "Natural playing logic for solo",
+        "target_profile": "solo playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for solo",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "solo_guitar": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for solo_guitar",
+        "musical_purpose": "Natural playing logic for solo_guitar",
+        "target_profile": "solo_guitar playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for solo_guitar",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "strings": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for strings",
+        "musical_purpose": "Natural playing logic for strings",
+        "target_profile": "strings playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for strings",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "synth_lead": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for synth_lead",
+        "musical_purpose": "Natural playing logic for synth_lead",
+        "target_profile": "synth_lead playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for synth_lead",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "terca": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for terca",
+        "musical_purpose": "Natural playing logic for terca",
+        "target_profile": "terca playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for terca",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "violin": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for violin",
+        "musical_purpose": "Natural playing logic for violin",
+        "target_profile": "violin playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for violin",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    },
+    "woodwind": {
+      "timing": {
+        "attack_offset": 0,
+        "release_offset": 5,
+        "humanization_sigma": 7,
+        "source": "GOLD - phrase driven"
+      },
+      "phrase_behaviour": {
+        "follow_chord": true,
+        "source": "GOLD"
+      },
+      "articulation": {
+        "legato": 0.3,
+        "staccato": 0.2,
+        "accent": 0.3,
+        "source": "GOLD"
+      },
+      "expression": {
+        "cc11_rate": "LOW",
+        "source": "GOLD"
+      },
+      "groove": {
+        "swing": 0.0,
+        "straightness": 0.7,
+        "syncopation": 0.15,
+        "source": "GOLD"
+      },
+      "humanization": {
+        "method": "MODERATE",
+        "source": "GOLD"
+      },
+      "pattern_dna": {
+        "proxy": true,
+        "source": "instrument-catalog"
+      },
+      "authority": {
+        "timing": "GOLD PRIMARY",
+        "phrase": "GOLD PRIMARY",
+        "articulation": "GOLD PRIMARY",
+        "expression": "GOLD PRIMARY",
+        "groove": "GOLD PRIMARY",
+        "humanization": "GOLD PRIMARY",
+        "velocity": "FACTORY ONLY - Gold has zero velocity authority"
+      },
+      "transformation": {
+        "source_evidence": "Instrument catalog proxy for woodwind",
+        "musical_purpose": "Natural playing logic for woodwind",
+        "target_profile": "woodwind playing profile",
+        "constraints": "Korg Pa800 constraints, Factory velocity range",
+        "transformation_rule": "Gold shape + Factory range + Engine constraint",
+        "before_metric": "Mechanical timing, no phrase logic",
+        "after_metric": "Gold playing logic for woodwind",
+        "pass_fail": "PASS if musical and Korg realistic",
+        "explanation": "Gold daje playing logic (kako se svira), Factory daje velocity (koliko jako)"
+      }
+    }
+  }
+}

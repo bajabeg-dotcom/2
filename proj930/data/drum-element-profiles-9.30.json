@@ -1,0 +1,1435 @@
+{
+  "schema": "dna-drum-element-profiles",
+  "version": "9.30.1",
+  "totalElements": 15,
+  "authority": {
+    "velocity": "FACTORY_DRUM_KIT",
+    "timing": "GOLD_PATTERN",
+    "interaction": "RULE_BASED",
+    "chordFoundation": "KICK_BASS_COUPLING"
+  },
+  "elements": {
+    "kick": {
+      "identity": {
+        "element": "kick",
+        "gmPitch": 36,
+        "family": "bass_drum",
+        "category": "kick",
+        "grooveRole": "ANCHOR"
+      },
+      "velocity": {
+        "pp": 40,
+        "p": 65,
+        "mp": 80,
+        "mf": 95,
+        "f": 110,
+        "ff": 120,
+        "floor": 30,
+        "optimal": 95,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 1,
+        "gateTypical": 8,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 3,
+        "syncopationRate": 0.4291845493562232,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.466
+      },
+      "density": {
+        "average": 1.0104592274678112,
+        "beatDistribution": {
+          "beat_0": 0.30042918454935624,
+          "beat_1": 0.2918454935622318,
+          "beat_2": 0.2317596566523605,
+          "beat_3": 0.1759656652360515
+        },
+        "dominantBeat": "beat_0",
+        "offBeatRatio": 0.4291845493562232
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.721030042918455,
+          "7/8": 0.15450643776824036,
+          "2/4": 0.09012875536480687,
+          "8/8": 0.034334763948497854
+        },
+        "balkanMeters": {
+          "7/8": 0.15450643776824036,
+          "2/4": 0.09012875536480687,
+          "8/8": 0.034334763948497854
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 0.9785407725321889,
+          "transition": 0.02145922746781116
+        }
+      },
+      "interaction": {
+        "bassCoupling": {
+          "description": "Kick i Bass moraju sinhrono — kick je temporal anchor za bass",
+          "rule": "BLOCK_KICK_WITHOUT_BASS_ON_BEAT_1",
+          "tolerance": 5
+        }
+      },
+      "confidence": {
+        "overall": 0.466,
+        "goldNoteCount": 233,
+        "factoryReference": true
+      }
+    },
+    "snare": {
+      "identity": {
+        "element": "snare",
+        "gmPitch": 38,
+        "family": "snare",
+        "category": "snare",
+        "grooveRole": "BACKBEAT"
+      },
+      "velocity": {
+        "pp": 35,
+        "p": 60,
+        "mp": 78,
+        "mf": 98,
+        "f": 115,
+        "ff": 127,
+        "floor": 25,
+        "optimal": 98,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 2,
+        "gateTypical": 6,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 2,
+        "syncopationRate": 0.6788990825688074,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.654
+      },
+      "density": {
+        "average": 1.0699785932721713,
+        "beatDistribution": {
+          "beat_0": 0.20795107033639143,
+          "beat_1": 0.2782874617737003,
+          "beat_2": 0.2691131498470948,
+          "beat_3": 0.24464831804281345
+        },
+        "dominantBeat": "beat_1",
+        "offBeatRatio": 0.6788990825688074
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.6819571865443425,
+          "7/8": 0.2691131498470948,
+          "2/4": 0.03669724770642202,
+          "8/8": 0.012232415902140673
+        },
+        "balkanMeters": {
+          "7/8": 0.2691131498470948,
+          "2/4": 0.03669724770642202,
+          "8/8": 0.012232415902140673
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 0.7767584097859327,
+          "transition": 0.22324159021406728
+        }
+      },
+      "interaction": {
+        "backbeat": {
+          "description": "Snare na 2 i 4 — standardni backbeat",
+          "rule": "SNARE_ON_BEATS_2_4",
+          "accentLevel": 0.85
+        }
+      },
+      "confidence": {
+        "overall": 0.654,
+        "goldNoteCount": 327,
+        "factoryReference": true
+      }
+    },
+    "snare_ghost": {
+      "identity": {
+        "element": "snare_ghost",
+        "gmPitch": 40,
+        "family": "snare",
+        "category": "snare_ghost",
+        "grooveRole": "GHOST_FILL"
+      },
+      "velocity": {
+        "pp": 20,
+        "p": 40,
+        "mp": 55,
+        "mf": 68,
+        "f": 82,
+        "ff": 95,
+        "floor": 15,
+        "optimal": 65,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 0,
+        "gateTypical": 4,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 1,
+        "syncopationRate": 0.6521739130434783,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.092
+      },
+      "density": {
+        "average": 1.4037391304347826,
+        "beatDistribution": {
+          "beat_0": 0.15217391304347827,
+          "beat_1": 0.17391304347826086,
+          "beat_2": 0.2608695652173913,
+          "beat_3": 0.41304347826086957
+        },
+        "dominantBeat": "beat_3",
+        "offBeatRatio": 0.6521739130434783
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.9565217391304348,
+          "7/8": 0.043478260869565216
+        },
+        "balkanMeters": {
+          "7/8": 0.043478260869565216
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 0.5652173913043478,
+          "transition": 0.43478260869565216
+        }
+      },
+      "interaction": {},
+      "confidence": {
+        "overall": 0.092,
+        "goldNoteCount": 46,
+        "factoryReference": true
+      }
+    },
+    "closed_hat": {
+      "identity": {
+        "element": "closed_hat",
+        "gmPitch": 42,
+        "family": "hihat",
+        "category": "hihat_closed",
+        "grooveRole": "PULSE"
+      },
+      "velocity": {
+        "pp": 30,
+        "p": 55,
+        "mp": 72,
+        "mf": 85,
+        "f": 100,
+        "ff": 115,
+        "floor": 25,
+        "optimal": 85,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": -1,
+        "gateTypical": 3,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 1,
+        "syncopationRate": 0.6457739791073125,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 1.0
+      },
+      "density": {
+        "average": 1.9337302943969612,
+        "beatDistribution": {
+          "beat_0": 0.32193732193732194,
+          "beat_1": 0.28110161443494774,
+          "beat_2": 0.245014245014245,
+          "beat_3": 0.15194681861348527
+        },
+        "dominantBeat": "beat_0",
+        "offBeatRatio": 0.6457739791073125
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.6410256410256411,
+          "7/8": 0.2754036087369421,
+          "2/4": 0.057929724596391265,
+          "8/8": 0.011396011396011397,
+          "9/8": 0.007597340930674264
+        },
+        "balkanMeters": {
+          "7/8": 0.2754036087369421,
+          "2/4": 0.057929724596391265,
+          "8/8": 0.011396011396011397,
+          "9/8": 0.007597340930674264
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 0.9335232668566001,
+          "transition": 0.05128205128205128,
+          "ending": 0.015194681861348529
+        }
+      },
+      "interaction": {
+        "groovePulse": {
+          "description": "Closed hat je osnova groova — 8th ili 16th pulse",
+          "rule": "HIHAT_STEADY_PULSE",
+          "swingAffects": true
+        }
+      },
+      "confidence": {
+        "overall": 1.0,
+        "goldNoteCount": 1053,
+        "factoryReference": true
+      }
+    },
+    "pedal_hat": {
+      "identity": {
+        "element": "pedal_hat",
+        "gmPitch": 44,
+        "family": "hihat",
+        "category": "hihat_pedal",
+        "grooveRole": "PULSE_ALT"
+      },
+      "velocity": {
+        "pp": 25,
+        "p": 48,
+        "mp": 65,
+        "mf": 78,
+        "f": 92,
+        "ff": 105,
+        "floor": 20,
+        "optimal": 75,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 0,
+        "gateTypical": 5,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 2,
+        "syncopationRate": 0.44715447154471544,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.246
+      },
+      "density": {
+        "average": 1.0235934959349593,
+        "beatDistribution": {
+          "beat_0": 0.2926829268292683,
+          "beat_1": 0.2682926829268293,
+          "beat_2": 0.2845528455284553,
+          "beat_3": 0.15447154471544716
+        },
+        "dominantBeat": "beat_0",
+        "offBeatRatio": 0.44715447154471544
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.6178861788617886,
+          "7/8": 0.3252032520325203,
+          "8/8": 0.056910569105691054
+        },
+        "balkanMeters": {
+          "7/8": 0.3252032520325203,
+          "8/8": 0.056910569105691054
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 0.9349593495934959,
+          "transition": 0.06504065040650407
+        }
+      },
+      "interaction": {
+        "groovePulse": {
+          "description": "Closed hat je osnova groova — 8th ili 16th pulse",
+          "rule": "HIHAT_STEADY_PULSE",
+          "swingAffects": true
+        }
+      },
+      "confidence": {
+        "overall": 0.246,
+        "goldNoteCount": 123,
+        "factoryReference": true
+      }
+    },
+    "open_hat": {
+      "identity": {
+        "element": "open_hat",
+        "gmPitch": 46,
+        "family": "hihat",
+        "category": "hihat_open",
+        "grooveRole": "ACCENT"
+      },
+      "velocity": {
+        "pp": 35,
+        "p": 58,
+        "mp": 75,
+        "mf": 88,
+        "f": 105,
+        "ff": 118,
+        "floor": 28,
+        "optimal": 88,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 0,
+        "gateTypical": 8,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 2,
+        "syncopationRate": 0.8709677419354839,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.062
+      },
+      "density": {
+        "average": 1.1048387096774193,
+        "beatDistribution": {
+          "beat_0": 0.25806451612903225,
+          "beat_1": 0.2903225806451613,
+          "beat_2": 0.22580645161290322,
+          "beat_3": 0.22580645161290322
+        },
+        "dominantBeat": "beat_1",
+        "offBeatRatio": 0.8709677419354839
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.8709677419354839,
+          "2/4": 0.12903225806451613
+        },
+        "balkanMeters": {
+          "2/4": 0.12903225806451613
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 1.0
+        }
+      },
+      "interaction": {},
+      "confidence": {
+        "overall": 0.062,
+        "goldNoteCount": 31,
+        "factoryReference": true
+      }
+    },
+    "crash": {
+      "identity": {
+        "element": "crash",
+        "gmPitch": 49,
+        "family": "cymbal",
+        "category": "crash",
+        "grooveRole": "SECTION_MARK"
+      },
+      "velocity": {
+        "pp": 50,
+        "p": 72,
+        "mp": 88,
+        "mf": 105,
+        "f": 118,
+        "ff": 127,
+        "floor": 40,
+        "optimal": 108,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": -1,
+        "earlyBias": -2,
+        "gateTypical": 15,
+        "gateMedian": 3,
+        "gateP5": 3,
+        "gateP95": 15,
+        "syncopationRate": 0.0,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.012
+      },
+      "density": {
+        "average": 0.75,
+        "beatDistribution": {
+          "beat_0": 0.3333333333333333,
+          "beat_1": 0.16666666666666666,
+          "beat_2": 0.3333333333333333,
+          "beat_3": 0.16666666666666666
+        },
+        "dominantBeat": "beat_0",
+        "offBeatRatio": 0.0
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 1.0
+        },
+        "balkanMeters": {}
+      },
+      "section": {
+        "distribution": {
+          "body": 1.0
+        }
+      },
+      "interaction": {
+        "sectionMark": {
+          "description": "Crash označava početak sekcije — intro/chorus/bridge",
+          "rule": "CRASH_ON_SECTION_CHANGE",
+          "allowMultiple": false
+        }
+      },
+      "confidence": {
+        "overall": 0.012,
+        "goldNoteCount": 6,
+        "factoryReference": true
+      }
+    },
+    "ride": {
+      "identity": {
+        "element": "ride",
+        "gmPitch": 51,
+        "family": "cymbal",
+        "category": "ride",
+        "grooveRole": "SWING_PULSE"
+      },
+      "velocity": {
+        "pp": 35,
+        "p": 58,
+        "mp": 74,
+        "mf": 88,
+        "f": 102,
+        "ff": 115,
+        "floor": 28,
+        "optimal": 88,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": -1,
+        "gateTypical": 10,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 1,
+        "syncopationRate": 0.48,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.05
+      },
+      "density": {
+        "average": 1.00012,
+        "beatDistribution": {
+          "beat_0": 0.32,
+          "beat_1": 0.32,
+          "beat_2": 0.24,
+          "beat_3": 0.12
+        },
+        "dominantBeat": "beat_0",
+        "offBeatRatio": 0.48
+      },
+      "meter": {
+        "distribution": {
+          "7/8": 1.0
+        },
+        "balkanMeters": {
+          "7/8": 1.0
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 1.0
+        }
+      },
+      "interaction": {
+        "hatExclusion": {
+          "description": "Ride zamjenjuje closed hat u swing/latin patternima",
+          "rule": "MUTUAL_EXCLUSION",
+          "priority": "ride"
+        }
+      },
+      "confidence": {
+        "overall": 0.05,
+        "goldNoteCount": 25,
+        "factoryReference": true
+      }
+    },
+    "ride_bell": {
+      "identity": {
+        "element": "ride_bell",
+        "gmPitch": 59,
+        "family": "cymbal",
+        "category": "ride_bell",
+        "grooveRole": "ACCENT_PULSE"
+      },
+      "velocity": {
+        "pp": 40,
+        "p": 62,
+        "mp": 78,
+        "mf": 92,
+        "f": 108,
+        "ff": 120,
+        "floor": 32,
+        "optimal": 92,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": -1,
+        "gateTypical": 8,
+        "gateMedian": 8,
+        "gateP5": 1,
+        "gateP95": 16,
+        "syncopationRate": 0,
+        "source": "REFERENCE_ESTIMATE",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0
+      },
+      "density": {
+        "average": 8,
+        "beatDistribution": {
+          "beat_0": 0.5,
+          "beat_1": 0.1,
+          "beat_2": 0.3,
+          "beat_3": 0.1
+        },
+        "dominantBeat": "beat_0",
+        "offBeatRatio": 0
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 1.0
+        },
+        "balkanMeters": {}
+      },
+      "section": {
+        "distribution": {
+          "body": 0.8,
+          "intro": 0.1,
+          "ending": 0.1
+        }
+      },
+      "interaction": {},
+      "confidence": {
+        "overall": 0,
+        "goldNoteCount": 0,
+        "factoryReference": true
+      }
+    },
+    "tom_low": {
+      "identity": {
+        "element": "tom_low",
+        "gmPitch": 47,
+        "family": "tom",
+        "category": "tom_low",
+        "grooveRole": "FILL_VOICE"
+      },
+      "velocity": {
+        "pp": 40,
+        "p": 62,
+        "mp": 78,
+        "mf": 95,
+        "f": 110,
+        "ff": 122,
+        "floor": 30,
+        "optimal": 95,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 0,
+        "gateTypical": 8,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 1,
+        "syncopationRate": 0.7272727272727273,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.022
+      },
+      "density": {
+        "average": 0.8442727272727274,
+        "beatDistribution": {
+          "beat_0": 0.0,
+          "beat_1": 0.36363636363636365,
+          "beat_2": 0.6363636363636364,
+          "beat_3": 0.0
+        },
+        "dominantBeat": "beat_2",
+        "offBeatRatio": 0.7272727272727273
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.7272727272727273,
+          "7/8": 0.2727272727272727
+        },
+        "balkanMeters": {
+          "7/8": 0.2727272727272727
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 1.0
+        }
+      },
+      "interaction": {
+        "fillRule": {
+          "description": "Tomovi se koriste samo u fill kontekstu",
+          "rule": "TOMS_ONLY_IN_FILL",
+          "maxBars": 2
+        }
+      },
+      "confidence": {
+        "overall": 0.022,
+        "goldNoteCount": 11,
+        "factoryReference": true
+      }
+    },
+    "tom_mid": {
+      "identity": {
+        "element": "tom_mid",
+        "gmPitch": 48,
+        "family": "tom",
+        "category": "tom_mid",
+        "grooveRole": "FILL_VOICE"
+      },
+      "velocity": {
+        "pp": 42,
+        "p": 65,
+        "mp": 80,
+        "mf": 98,
+        "f": 112,
+        "ff": 124,
+        "floor": 32,
+        "optimal": 98,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 0,
+        "gateTypical": 6,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 1,
+        "syncopationRate": 0.6744186046511628,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.086
+      },
+      "density": {
+        "average": 0.9310930232558139,
+        "beatDistribution": {
+          "beat_0": 0.2558139534883721,
+          "beat_1": 0.23255813953488372,
+          "beat_2": 0.3488372093023256,
+          "beat_3": 0.16279069767441862
+        },
+        "dominantBeat": "beat_2",
+        "offBeatRatio": 0.6744186046511628
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.813953488372093,
+          "2/4": 0.11627906976744186,
+          "7/8": 0.06976744186046512
+        },
+        "balkanMeters": {
+          "2/4": 0.11627906976744186,
+          "7/8": 0.06976744186046512
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 0.8372093023255814,
+          "transition": 0.16279069767441862
+        }
+      },
+      "interaction": {
+        "fillRule": {
+          "description": "Tomovi se koriste samo u fill kontekstu",
+          "rule": "TOMS_ONLY_IN_FILL",
+          "maxBars": 2
+        }
+      },
+      "confidence": {
+        "overall": 0.086,
+        "goldNoteCount": 43,
+        "factoryReference": true
+      }
+    },
+    "tom_high": {
+      "identity": {
+        "element": "tom_high",
+        "gmPitch": 50,
+        "family": "tom",
+        "category": "tom_high",
+        "grooveRole": "FILL_VOICE"
+      },
+      "velocity": {
+        "pp": 45,
+        "p": 68,
+        "mp": 83,
+        "mf": 100,
+        "f": 114,
+        "ff": 126,
+        "floor": 35,
+        "optimal": 100,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 0,
+        "gateTypical": 5,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 1,
+        "syncopationRate": 0.7037037037037037,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.054
+      },
+      "density": {
+        "average": 0.7804074074074074,
+        "beatDistribution": {
+          "beat_0": 0.5185185185185185,
+          "beat_1": 0.14814814814814814,
+          "beat_2": 0.25925925925925924,
+          "beat_3": 0.07407407407407407
+        },
+        "dominantBeat": "beat_0",
+        "offBeatRatio": 0.7037037037037037
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 0.7407407407407407,
+          "7/8": 0.25925925925925924
+        },
+        "balkanMeters": {
+          "7/8": 0.25925925925925924
+        }
+      },
+      "section": {
+        "distribution": {
+          "body": 0.9259259259259259,
+          "transition": 0.07407407407407407
+        }
+      },
+      "interaction": {
+        "fillRule": {
+          "description": "Tomovi se koriste samo u fill kontekstu",
+          "rule": "TOMS_ONLY_IN_FILL",
+          "maxBars": 2
+        }
+      },
+      "confidence": {
+        "overall": 0.054,
+        "goldNoteCount": 27,
+        "factoryReference": true
+      }
+    },
+    "cowbell": {
+      "identity": {
+        "element": "cowbell",
+        "gmPitch": 56,
+        "family": "percussion",
+        "category": "cowbell",
+        "grooveRole": "PATTERN_ACCENT"
+      },
+      "velocity": {
+        "pp": 40,
+        "p": 60,
+        "mp": 78,
+        "mf": 92,
+        "f": 108,
+        "ff": 120,
+        "floor": 30,
+        "optimal": 92,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 0,
+        "gateTypical": 6,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 1,
+        "syncopationRate": 0.56,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.15
+      },
+      "density": {
+        "average": 1.65,
+        "beatDistribution": {
+          "beat_0": 0.16,
+          "beat_1": 0.28,
+          "beat_2": 0.32,
+          "beat_3": 0.24
+        },
+        "dominantBeat": "beat_2",
+        "offBeatRatio": 0.56
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 1.0
+        },
+        "balkanMeters": {}
+      },
+      "section": {
+        "distribution": {
+          "body": 0.9066666666666666,
+          "transition": 0.09333333333333334
+        }
+      },
+      "interaction": {},
+      "confidence": {
+        "overall": 0.15,
+        "goldNoteCount": 75,
+        "factoryReference": true
+      }
+    },
+    "side_stick": {
+      "identity": {
+        "element": "side_stick",
+        "gmPitch": 37,
+        "family": "snare",
+        "category": "side_stick",
+        "grooveRole": "BACKBEAT_ALT"
+      },
+      "velocity": {
+        "pp": 35,
+        "p": 55,
+        "mp": 72,
+        "mf": 85,
+        "f": 100,
+        "ff": 115,
+        "floor": 28,
+        "optimal": 85,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 1,
+        "gateTypical": 3,
+        "gateMedian": 1,
+        "gateP5": 1,
+        "gateP95": 4,
+        "syncopationRate": 0.3333333333333333,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.03
+      },
+      "density": {
+        "average": 0.75,
+        "beatDistribution": {
+          "beat_0": 0.0,
+          "beat_1": 0.6,
+          "beat_2": 0.06666666666666667,
+          "beat_3": 0.3333333333333333
+        },
+        "dominantBeat": "beat_1",
+        "offBeatRatio": 0.3333333333333333
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 1.0
+        },
+        "balkanMeters": {}
+      },
+      "section": {
+        "distribution": {
+          "body": 1.0
+        }
+      },
+      "interaction": {},
+      "confidence": {
+        "overall": 0.03,
+        "goldNoteCount": 15,
+        "factoryReference": true
+      }
+    },
+    "clap": {
+      "identity": {
+        "element": "clap",
+        "gmPitch": 39,
+        "family": "percussion",
+        "category": "clap",
+        "grooveRole": "ACCENT"
+      },
+      "velocity": {
+        "pp": 40,
+        "p": 62,
+        "mp": 80,
+        "mf": 98,
+        "f": 112,
+        "ff": 127,
+        "floor": 30,
+        "optimal": 98,
+        "source": "FACTORY_DRUM_KIT",
+        "authority": "FACTORY_ONLY",
+        "confidence": 0.9
+      },
+      "timing": {
+        "baseOffset": 0,
+        "earlyBias": 0,
+        "gateTypical": 5,
+        "gateMedian": 2,
+        "gateP5": 1,
+        "gateP95": 2,
+        "syncopationRate": 0.0,
+        "source": "GOLD_PATTERN",
+        "authority": "GOLD_PRIMARY_FACTORY_REFERENCE",
+        "confidence": 0.03
+      },
+      "density": {
+        "average": 0.95,
+        "beatDistribution": {
+          "beat_0": 0.26666666666666666,
+          "beat_1": 0.26666666666666666,
+          "beat_2": 0.26666666666666666,
+          "beat_3": 0.2
+        },
+        "dominantBeat": "beat_0",
+        "offBeatRatio": 0.0
+      },
+      "meter": {
+        "distribution": {
+          "4/4": 1.0
+        },
+        "balkanMeters": {}
+      },
+      "section": {
+        "distribution": {
+          "body": 1.0
+        }
+      },
+      "interaction": {},
+      "confidence": {
+        "overall": 0.03,
+        "goldNoteCount": 15,
+        "factoryReference": true
+      }
+    }
+  },
+  "goldStatistics": {
+    "closed_hat": {
+      "totalNotes": 1053,
+      "patternCount": 117,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 1,
+      "avgDensity": 1.9337302943969612,
+      "syncopationRate": 0.6457739791073125,
+      "beatDistribution": {
+        "beat_0": 0.32193732193732194,
+        "beat_1": 0.28110161443494774,
+        "beat_2": 0.245014245014245,
+        "beat_3": 0.15194681861348527
+      },
+      "meterDistribution": {
+        "4/4": 0.6410256410256411,
+        "7/8": 0.2754036087369421,
+        "2/4": 0.057929724596391265,
+        "8/8": 0.011396011396011397,
+        "9/8": 0.007597340930674264
+      },
+      "sectionDistribution": {
+        "body": 0.9335232668566001,
+        "transition": 0.05128205128205128,
+        "ending": 0.015194681861348529
+      },
+      "dominantBeat": "beat_0",
+      "offBeatRatio": 0.6457739791073125
+    },
+    "snare": {
+      "totalNotes": 327,
+      "patternCount": 9,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 2,
+      "avgDensity": 1.0699785932721713,
+      "syncopationRate": 0.6788990825688074,
+      "beatDistribution": {
+        "beat_0": 0.20795107033639143,
+        "beat_1": 0.2782874617737003,
+        "beat_2": 0.2691131498470948,
+        "beat_3": 0.24464831804281345
+      },
+      "meterDistribution": {
+        "4/4": 0.6819571865443425,
+        "7/8": 0.2691131498470948,
+        "2/4": 0.03669724770642202,
+        "8/8": 0.012232415902140673
+      },
+      "sectionDistribution": {
+        "body": 0.7767584097859327,
+        "transition": 0.22324159021406728
+      },
+      "dominantBeat": "beat_1",
+      "offBeatRatio": 0.6788990825688074
+    },
+    "kick": {
+      "totalNotes": 233,
+      "patternCount": 55,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 3,
+      "avgDensity": 1.0104592274678112,
+      "syncopationRate": 0.4291845493562232,
+      "beatDistribution": {
+        "beat_0": 0.30042918454935624,
+        "beat_1": 0.2918454935622318,
+        "beat_2": 0.2317596566523605,
+        "beat_3": 0.1759656652360515
+      },
+      "meterDistribution": {
+        "4/4": 0.721030042918455,
+        "7/8": 0.15450643776824036,
+        "2/4": 0.09012875536480687,
+        "8/8": 0.034334763948497854
+      },
+      "sectionDistribution": {
+        "body": 0.9785407725321889,
+        "transition": 0.02145922746781116
+      },
+      "dominantBeat": "beat_0",
+      "offBeatRatio": 0.4291845493562232
+    },
+    "pedal_hat": {
+      "totalNotes": 123,
+      "patternCount": 18,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 2,
+      "avgDensity": 1.0235934959349593,
+      "syncopationRate": 0.44715447154471544,
+      "beatDistribution": {
+        "beat_0": 0.2926829268292683,
+        "beat_1": 0.2682926829268293,
+        "beat_2": 0.2845528455284553,
+        "beat_3": 0.15447154471544716
+      },
+      "meterDistribution": {
+        "4/4": 0.6178861788617886,
+        "7/8": 0.3252032520325203,
+        "8/8": 0.056910569105691054
+      },
+      "sectionDistribution": {
+        "body": 0.9349593495934959,
+        "transition": 0.06504065040650407
+      },
+      "dominantBeat": "beat_0",
+      "offBeatRatio": 0.44715447154471544
+    },
+    "open_hat": {
+      "totalNotes": 31,
+      "patternCount": 1,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 2,
+      "avgDensity": 1.1048387096774193,
+      "syncopationRate": 0.8709677419354839,
+      "beatDistribution": {
+        "beat_0": 0.25806451612903225,
+        "beat_1": 0.2903225806451613,
+        "beat_2": 0.22580645161290322,
+        "beat_3": 0.22580645161290322
+      },
+      "meterDistribution": {
+        "4/4": 0.8709677419354839,
+        "2/4": 0.12903225806451613
+      },
+      "sectionDistribution": {
+        "body": 1.0
+      },
+      "dominantBeat": "beat_1",
+      "offBeatRatio": 0.8709677419354839
+    },
+    "cowbell": {
+      "totalNotes": 75,
+      "patternCount": 8,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 1,
+      "avgDensity": 1.65,
+      "syncopationRate": 0.56,
+      "beatDistribution": {
+        "beat_0": 0.16,
+        "beat_1": 0.28,
+        "beat_2": 0.32,
+        "beat_3": 0.24
+      },
+      "meterDistribution": {
+        "4/4": 1.0
+      },
+      "sectionDistribution": {
+        "body": 0.9066666666666666,
+        "transition": 0.09333333333333334
+      },
+      "dominantBeat": "beat_2",
+      "offBeatRatio": 0.56
+    },
+    "snare_ghost": {
+      "totalNotes": 46,
+      "patternCount": 1,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 1,
+      "avgDensity": 1.4037391304347826,
+      "syncopationRate": 0.6521739130434783,
+      "beatDistribution": {
+        "beat_0": 0.15217391304347827,
+        "beat_1": 0.17391304347826086,
+        "beat_2": 0.2608695652173913,
+        "beat_3": 0.41304347826086957
+      },
+      "meterDistribution": {
+        "4/4": 0.9565217391304348,
+        "7/8": 0.043478260869565216
+      },
+      "sectionDistribution": {
+        "body": 0.5652173913043478,
+        "transition": 0.43478260869565216
+      },
+      "dominantBeat": "beat_3",
+      "offBeatRatio": 0.6521739130434783
+    },
+    "clap": {
+      "totalNotes": 15,
+      "patternCount": 4,
+      "gateMedian": 2,
+      "gateP5": 1,
+      "gateP95": 2,
+      "avgDensity": 0.95,
+      "syncopationRate": 0.0,
+      "beatDistribution": {
+        "beat_0": 0.26666666666666666,
+        "beat_1": 0.26666666666666666,
+        "beat_2": 0.26666666666666666,
+        "beat_3": 0.2
+      },
+      "meterDistribution": {
+        "4/4": 1.0
+      },
+      "sectionDistribution": {
+        "body": 1.0
+      },
+      "dominantBeat": "beat_0",
+      "offBeatRatio": 0.0
+    },
+    "tom_mid": {
+      "totalNotes": 43,
+      "patternCount": 1,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 1,
+      "avgDensity": 0.9310930232558139,
+      "syncopationRate": 0.6744186046511628,
+      "beatDistribution": {
+        "beat_0": 0.2558139534883721,
+        "beat_1": 0.23255813953488372,
+        "beat_2": 0.3488372093023256,
+        "beat_3": 0.16279069767441862
+      },
+      "meterDistribution": {
+        "4/4": 0.813953488372093,
+        "2/4": 0.11627906976744186,
+        "7/8": 0.06976744186046512
+      },
+      "sectionDistribution": {
+        "body": 0.8372093023255814,
+        "transition": 0.16279069767441862
+      },
+      "dominantBeat": "beat_2",
+      "offBeatRatio": 0.6744186046511628
+    },
+    "side_stick": {
+      "totalNotes": 15,
+      "patternCount": 0,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 4,
+      "avgDensity": 0.75,
+      "syncopationRate": 0.3333333333333333,
+      "beatDistribution": {
+        "beat_0": 0.0,
+        "beat_1": 0.6,
+        "beat_2": 0.06666666666666667,
+        "beat_3": 0.3333333333333333
+      },
+      "meterDistribution": {
+        "4/4": 1.0
+      },
+      "sectionDistribution": {
+        "body": 1.0
+      },
+      "dominantBeat": "beat_1",
+      "offBeatRatio": 0.3333333333333333
+    },
+    "ride": {
+      "totalNotes": 25,
+      "patternCount": 3,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 1,
+      "avgDensity": 1.00012,
+      "syncopationRate": 0.48,
+      "beatDistribution": {
+        "beat_0": 0.32,
+        "beat_1": 0.32,
+        "beat_2": 0.24,
+        "beat_3": 0.12
+      },
+      "meterDistribution": {
+        "7/8": 1.0
+      },
+      "sectionDistribution": {
+        "body": 1.0
+      },
+      "dominantBeat": "beat_0",
+      "offBeatRatio": 0.48
+    },
+    "tom_low": {
+      "totalNotes": 11,
+      "patternCount": 0,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 1,
+      "avgDensity": 0.8442727272727274,
+      "syncopationRate": 0.7272727272727273,
+      "beatDistribution": {
+        "beat_0": 0.0,
+        "beat_1": 0.36363636363636365,
+        "beat_2": 0.6363636363636364,
+        "beat_3": 0.0
+      },
+      "meterDistribution": {
+        "4/4": 0.7272727272727273,
+        "7/8": 0.2727272727272727
+      },
+      "sectionDistribution": {
+        "body": 1.0
+      },
+      "dominantBeat": "beat_2",
+      "offBeatRatio": 0.7272727272727273
+    },
+    "tom_high": {
+      "totalNotes": 27,
+      "patternCount": 3,
+      "gateMedian": 1,
+      "gateP5": 1,
+      "gateP95": 1,
+      "avgDensity": 0.7804074074074074,
+      "syncopationRate": 0.7037037037037037,
+      "beatDistribution": {
+        "beat_0": 0.5185185185185185,
+        "beat_1": 0.14814814814814814,
+        "beat_2": 0.25925925925925924,
+        "beat_3": 0.07407407407407407
+      },
+      "meterDistribution": {
+        "4/4": 0.7407407407407407,
+        "7/8": 0.25925925925925924
+      },
+      "sectionDistribution": {
+        "body": 0.9259259259259259,
+        "transition": 0.07407407407407407
+      },
+      "dominantBeat": "beat_0",
+      "offBeatRatio": 0.7037037037037037
+    },
+    "crash": {
+      "totalNotes": 6,
+      "patternCount": 2,
+      "gateMedian": 3,
+      "gateP5": 3,
+      "gateP95": 15,
+      "avgDensity": 0.75,
+      "syncopationRate": 0.0,
+      "beatDistribution": {
+        "beat_0": 0.3333333333333333,
+        "beat_1": 0.16666666666666666,
+        "beat_2": 0.3333333333333333,
+        "beat_3": 0.16666666666666666
+      },
+      "meterDistribution": {
+        "4/4": 1.0
+      },
+      "sectionDistribution": {
+        "body": 1.0
+      },
+      "dominantBeat": "beat_0",
+      "offBeatRatio": 0.0
+    }
+  },
+  "drumEvidence": {
+    "schema": "dna-drum-element-evidence",
+    "version": "4.46.0",
+    "gold": {
+      "patterns": 1442,
+      "elements": {
+        "closed-hat": 11789,
+        "crash": 455,
+        "percussion": 8303,
+        "snare": 6064,
+        "tom": 1235,
+        "open-hat": 1535,
+        "kick": 3083,
+        "ride": 330
+      },
+      "authority": "TIMING_GATE_GROOVE_FILL"
+    },
+    "factory": {
+      "profiles": 1421,
+      "authority": "VELOCITY_DEVICE_REFERENCE"
+    },
+    "wiring": {
+      "velocity": "FACTORY_ONLY",
+      "timingGateGroove": "GOLD_PRIMARY_FACTORY_REFERENCE",
+      "repair": "PER_ELEMENT",
+      "generation": "PER_ELEMENT"
+    },
+    "status": "SOFTWARE_COMPLETE"
+  }
+}

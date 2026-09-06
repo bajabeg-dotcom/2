@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-09-06T17:28:26.905042",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "cc11_rules": {
+    "rule": "CC11 ne smije biti generisan kao slučajna krivulja",
+    "profiles": {
+      "sustained_instruments": "CC11 for expression, Gold-driven envelope",
+      "strings": "Slow swell, phrase arc",
+      "brass": "Accent-driven, rare swell",
+      "solo": "Phrase-driven, breath or bow",
+      "pads": "Slow movement, section-driven",
+      "guitars": "Minimal CC11, velocity-driven",
+      "winds": "Breath phrase, phrase-end swell"
+    },
+    "depends_on": [
+      "phrase",
+      "note density",
+      "articulation",
+      "register",
+      "intensity",
+      "section"
+    ],
+    "checks": [
+      "max CC11",
+      "min CC11",
+      "continuity",
+      "jumps",
+      "clipping",
+      "redundant events",
+      "event density"
+    ]
+  },
+  "cc7_mix_engine": {
+    "policy": "CC7 DEFAULT = 110, osim kada profil eksplicitno zahtijeva drugačije",
+    "rule": "Ne dozvoliti slučajnu promjenu miks odnosa kroz hidden transforms",
+    "validated": [
+      "CC7",
+      "CC10",
+      "CC11",
+      "CC91",
+      "CC93"
+    ],
+    "source": "FACTORY for baseline, ENGINE for application"
+  },
+  "korg_compatibility": {
+    "cc7": "Volume, 0-127, default 110",
+    "cc10": "Pan, 0-127",
+    "cc11": "Expression, 0-127, Gold-driven",
+    "cc91": "Reverb, role-dependent",
+    "cc93": "Chorus, role-dependent"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "printf": true,
+        "/^cd proj930 && python3 -m pytest -q$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd proj930 && python3 - <<'PY'\nimport json\np=json\\.load\\(open\\('data/factory-profiles-optimizer\\.json'\\)\\)\nprint\\(type\\(p\\), list\\(p\\)\\[:3\\] if isinstance\\(p,dict\\) else len\\(p\\)\\)\nif isinstance\\(p,dict\\):\n v=next\\(iter\\(p\\.values\\(\\)\\)\\)\n print\\(v\\.keys\\(\\)\\)\nelse: print\\(p\\[0\\]\\.keys\\(\\)\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

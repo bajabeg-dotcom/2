@@ -1,0 +1,121 @@
+{
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "timestamp": "2026-09-06T17:28:26.730564",
+  "authority": {
+    "FACTORY": "VELOCITY / DYNAMICS / RANGE REFERENCE - KOLIKO JAKO",
+    "GOLD": "PLAYING LOGIC REFERENCE - KAKO SE SVIRA",
+    "ENGINE": "INTELLIGENCE / TRANSFORMATION - ŠTA, GDJE, KADA, KAKO",
+    "KORG": "FINAL CONSTRAINT - KOMPATIBILNOST",
+    "VALIDATION": "AUTHORITY - DOKAZ DA JE BOLJE",
+    "LISTENING": "FINAL MUSICAL TRUTH"
+  },
+  "matrix": {
+    "Velocity baseline": {
+      "FACTORY": "PRIMARY",
+      "GOLD": "SECONDARY",
+      "ENGINE": "APPLY"
+    },
+    "Velocity curve": {
+      "FACTORY": "PRIMARY",
+      "GOLD": "VALIDATION",
+      "ENGINE": "APPLY"
+    },
+    "Velocity range": {
+      "FACTORY": "PRIMARY",
+      "GOLD": "VALIDATION",
+      "ENGINE": "APPLY"
+    },
+    "Dynamics": {
+      "FACTORY": "PRIMARY",
+      "GOLD": "SECONDARY",
+      "ENGINE": "APPLY"
+    },
+    "Timing": {
+      "FACTORY": "SECONDARY",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Microtiming": {
+      "FACTORY": "SECONDARY",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Groove": {
+      "FACTORY": "SECONDARY",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Trills": {
+      "FACTORY": "NO",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Rolls": {
+      "FACTORY": "NO",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Ornamentation": {
+      "FACTORY": "NO",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Expression": {
+      "FACTORY": "SECONDARY",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Articulation": {
+      "FACTORY": "REFERENCE",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Phrase logic": {
+      "FACTORY": "REFERENCE",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Humanization": {
+      "FACTORY": "NO",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Arrangement behaviour": {
+      "FACTORY": "REFERENCE",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Korg constraints": {
+      "FACTORY": "PRIMARY",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    },
+    "Note range": {
+      "FACTORY": "PRIMARY",
+      "GOLD": "REFERENCE",
+      "ENGINE": "APPLY"
+    },
+    "CC7 Mix": {
+      "FACTORY": "PRIMARY",
+      "GOLD": "NO",
+      "ENGINE": "APPLY"
+    },
+    "CC11 Expression": {
+      "FACTORY": "REFERENCE",
+      "GOLD": "PRIMARY",
+      "ENGINE": "APPLY"
+    }
+  },
+  "conflict_resolution": {
+    "rule": "GOLD SHAPE + FACTORY RANGE + ENGINE CONSTRAINT",
+    "example": {
+      "factory_says": "velocity = 72-98",
+      "gold_says": "phrase behaviour = soft -> loud -> soft",
+      "final": "Gold određuje dynamics shape, Factory određuje legal velocity envelope"
+    }
+  },
+  "policy": {
+    "NEVER": "Ne dozvoliti da slučajna funkcija promijeni source authority",
+    "ALWAYS": "Provjeri authority matrix prije svake transformacije"
+  }
+}

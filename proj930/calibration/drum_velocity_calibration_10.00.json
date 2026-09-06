@@ -1,0 +1,470 @@
+{
+  "timestamp": "2026-09-06T17:28:26.903278",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "authority": "FACTORY_ONLY_PER_ELEMENT",
+  "elements": {
+    "kick": {
+      "pitches": [
+        35,
+        36
+      ],
+      "role": "foundation",
+      "velocity": {
+        "min": 60,
+        "normal": 90,
+        "accent": 120,
+        "ghost": 0,
+        "fill": 100,
+        "transition": 95
+      },
+      "protection": {
+        "rule": "Ne smije biti uniforman",
+        "check": "Velocity mora imati muzički pattern, ne konstantu",
+        "variation_required": true,
+        "ghost_allowed": false
+      },
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.8,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "KICK_CALIBRATED",
+        "musical_purpose": "kick sa prirodnom dinamikom",
+        "explanation": "kick: min 60, normal 90, accent 120"
+      }
+    },
+    "snare": {
+      "pitches": [
+        38,
+        40
+      ],
+      "role": "backbeat",
+      "velocity": {
+        "min": 20,
+        "normal": 80,
+        "accent": 118,
+        "ghost": 25,
+        "fill": 110,
+        "transition": 100
+      },
+      "protection": {
+        "rule": "Razlikovati main hit / ghost / accent / fill",
+        "main_hit": 80,
+        "ghost": 25,
+        "accent": 118,
+        "fill": 110
+      },
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.8,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "SNARE_CALIBRATED",
+        "musical_purpose": "snare sa prirodnom dinamikom",
+        "explanation": "snare: min 20, normal 80, accent 118"
+      }
+    },
+    "rim": {
+      "pitches": [
+        37
+      ],
+      "role": "ghost",
+      "velocity": {
+        "min": 15,
+        "normal": 40,
+        "accent": 80,
+        "ghost": 20,
+        "fill": 60,
+        "transition": 50
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.8,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "RIM_CALIBRATED",
+        "musical_purpose": "rim sa prirodnom dinamikom",
+        "explanation": "rim: min 15, normal 40, accent 80"
+      }
+    },
+    "clap": {
+      "pitches": [
+        39
+      ],
+      "role": "accent",
+      "velocity": {
+        "min": 40,
+        "normal": 80,
+        "accent": 110,
+        "ghost": 0,
+        "fill": 90,
+        "transition": 85
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.8,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "CLAP_CALIBRATED",
+        "musical_purpose": "clap sa prirodnom dinamikom",
+        "explanation": "clap: min 40, normal 80, accent 110"
+      }
+    },
+    "closed_hh": {
+      "pitches": [
+        42,
+        44
+      ],
+      "role": "timekeeper",
+      "velocity": {
+        "min": 20,
+        "normal": 65,
+        "accent": 95,
+        "ghost": 25,
+        "fill": 80,
+        "transition": 70
+      },
+      "protection": {
+        "rule": "Velocity mora imati muzički pattern, ne random noise",
+        "pattern": "Strong-weak-medium-weak ili slično",
+        "ghost_allowed": true
+      },
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.8,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "CLOSED_HH_CALIBRATED",
+        "musical_purpose": "closed_hh sa prirodnom dinamikom",
+        "explanation": "closed_hh: min 20, normal 65, accent 95"
+      }
+    },
+    "open_hh": {
+      "pitches": [
+        46
+      ],
+      "role": "accent",
+      "velocity": {
+        "min": 30,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 0,
+        "fill": 90,
+        "transition": 85
+      },
+      "protection": {
+        "rule": "Velocity mora imati muzički pattern, ne random noise",
+        "pattern": "Strong-weak-medium-weak ili slično",
+        "ghost_allowed": true
+      },
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.8,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "OPEN_HH_CALIBRATED",
+        "musical_purpose": "open_hh sa prirodnom dinamikom",
+        "explanation": "open_hh: min 30, normal 75, accent 110"
+      }
+    },
+    "pedal_hh": {
+      "pitches": [
+        44
+      ],
+      "role": "chick",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {
+        "rule": "Velocity mora imati muzički pattern, ne random noise",
+        "pattern": "Strong-weak-medium-weak ili slično",
+        "ghost_allowed": true
+      },
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "PEDAL_HH_CALIBRATED",
+        "musical_purpose": "pedal_hh sa prirodnom dinamikom",
+        "explanation": "pedal_hh: min 20, normal 75, accent 110"
+      }
+    },
+    "ride": {
+      "pitches": [
+        51,
+        53,
+        59
+      ],
+      "role": "timekeeper",
+      "velocity": {
+        "min": 30,
+        "normal": 70,
+        "accent": 95,
+        "ghost": 35,
+        "fill": 85,
+        "transition": 75
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.8,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "RIDE_CALIBRATED",
+        "musical_purpose": "ride sa prirodnom dinamikom",
+        "explanation": "ride: min 30, normal 70, accent 95"
+      }
+    },
+    "crash": {
+      "pitches": [
+        49,
+        57
+      ],
+      "role": "accent",
+      "velocity": {
+        "min": 60,
+        "normal": 100,
+        "accent": 127,
+        "ghost": 0,
+        "fill": 115,
+        "transition": 110
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.8,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "CRASH_CALIBRATED",
+        "musical_purpose": "crash sa prirodnom dinamikom",
+        "explanation": "crash: min 60, normal 100, accent 127"
+      }
+    },
+    "tom_low": {
+      "pitches": [
+        41,
+        43
+      ],
+      "role": "fill",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "TOM_LOW_CALIBRATED",
+        "musical_purpose": "tom_low sa prirodnom dinamikom",
+        "explanation": "tom_low: min 20, normal 75, accent 110"
+      }
+    },
+    "tom_mid": {
+      "pitches": [
+        45,
+        47
+      ],
+      "role": "fill",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "TOM_MID_CALIBRATED",
+        "musical_purpose": "tom_mid sa prirodnom dinamikom",
+        "explanation": "tom_mid: min 20, normal 75, accent 110"
+      }
+    },
+    "tom_high": {
+      "pitches": [
+        48,
+        50
+      ],
+      "role": "fill",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "TOM_HIGH_CALIBRATED",
+        "musical_purpose": "tom_high sa prirodnom dinamikom",
+        "explanation": "tom_high: min 20, normal 75, accent 110"
+      }
+    },
+    "percussion": {
+      "pitches": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        75,
+        76,
+        82,
+        84
+      ],
+      "role": "color",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "PERCUSSION_CALIBRATED",
+        "musical_purpose": "percussion sa prirodnom dinamikom",
+        "explanation": "percussion: min 20, normal 75, accent 110"
+      }
+    },
+    "shaker": {
+      "pitches": [
+        82
+      ],
+      "role": "timekeeper",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "SHAKER_CALIBRATED",
+        "musical_purpose": "shaker sa prirodnom dinamikom",
+        "explanation": "shaker: min 20, normal 75, accent 110"
+      }
+    },
+    "tambourine": {
+      "pitches": [
+        54
+      ],
+      "role": "accent",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "TAMBOURINE_CALIBRATED",
+        "musical_purpose": "tambourine sa prirodnom dinamikom",
+        "explanation": "tambourine: min 20, normal 75, accent 110"
+      }
+    },
+    "cowbell": {
+      "pitches": [
+        56
+      ],
+      "role": "accent",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "COWBELL_CALIBRATED",
+        "musical_purpose": "cowbell sa prirodnom dinamikom",
+        "explanation": "cowbell: min 20, normal 75, accent 110"
+      }
+    },
+    "conga": {
+      "pitches": [
+        62,
+        63,
+        64
+      ],
+      "role": "interlock",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "CONGA_CALIBRATED",
+        "musical_purpose": "conga sa prirodnom dinamikom",
+        "explanation": "conga: min 20, normal 75, accent 110"
+      }
+    },
+    "bongo": {
+      "pitches": [
+        60,
+        61
+      ],
+      "role": "interlock",
+      "velocity": {
+        "min": 20,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.5,
+      "transformation": {
+        "before": "UNIFORM_OR_RANDOM",
+        "after": "BONGO_CALIBRATED",
+        "musical_purpose": "bongo sa prirodnom dinamikom",
+        "explanation": "bongo: min 20, normal 75, accent 110"
+      }
+    }
+  },
+  "protection": {
+    "kick_uniform_check": "FAIL if kick velocity stddev < 5",
+    "snare_ghost_check": "Ghost notes must be < 50% of normal",
+    "hh_pattern_check": "Hi-hat must have musical pattern, not random",
+    "overall": "Svaki drum element ima svoj profil, ne jedan za sve"
+  }
+}

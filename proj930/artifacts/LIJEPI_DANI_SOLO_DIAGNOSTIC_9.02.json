@@ -1,0 +1,14 @@
+{
+  "schema": "dna-midi-solo-diagnostic",
+  "version": "9.02",
+  "source": "Lijepi dani mog djetinjstva - Saban Saulic )_RECONSTRUCTED_AI901_REAL.mid",
+  "ppq": 480,
+  "mainSolo": {"track": 2, "channelOneBased": 1, "programZeroBased": 23, "notes": 552, "pitchRange": [62, 75]},
+  "denseDelayedLayer": {"track": 10, "channelOneBased": 9, "programZeroBased": 23, "notes": 552, "matchedNotes": 550, "medianDelayTicks": 226, "medianDurationRatio": 0.9907, "pan": 64, "volume": 80},
+  "diagnosis": [
+    "ECHO_NEAR_CLONE_OF_SOLO",
+    "DELAY_LAYER_TOO_DENSE",
+    "SAME_PROGRAM_AND_CENTER_PAN_MASK_MAIN_LEAD"
+  ],
+  "requiredPolicy": "CLASSIFY_AS_ECHO_NOT_SECOND_SOLO; APPLY_GOLD_PLAY_SKIP_HOLD_AND_PHRASE_END_SPARSIFICATION; DO_NOT GENERATE TERCA"
+}

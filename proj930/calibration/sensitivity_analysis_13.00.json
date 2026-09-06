@@ -1,0 +1,37 @@
+{
+  "velocity_floor_sensitivity": {
+    "bass": "High - floor 65 vs 20 changes 50.88%->5.29% - Factory REAL 3211",
+    "brass": "Medium",
+    "piano": "Low",
+    "mapping": "instrument->factory 20 roles FULL"
+  },
+  "timing_sigma_sensitivity": {
+    "sigma 3 vs 5 vs 8 vs 34.3 REAL": "Low for musical improvement stable 70->88, but REAL 34.3 uses more variation within safe - FULL NO BYPASS",
+    "real": "34.3 REAL"
+  },
+  "polyphony_sensitivity": {
+    "bass 1 vs 2": "High - 1 too strict, 2 optimal, 3 too loose for Korg",
+    "melody 1 vs 2": "High - monophonic requires 1",
+    "full": "per-channel + reduction + preservation + emergency FULL"
+  },
+  "drum_threshold_sensitivity": {
+    "threshold 5 vs 2": "High - threshold 5 false uniform for kick with 2 vel",
+    "contexts": "7 contexts full - accent 892 normal 1120 fill 136 transition 18 syncopated 40 ghost 0 phrase_end 0 - FULL"
+  },
+  "ppq_sensitivity": {
+    "192 vs 480": "High - Pa800 Style requires 480"
+  },
+  "trill_sensitivity": {
+    "grace vs turn vs trill vs mordent": "Medium - melody needs ornament, 196 trills in corpus, 231k REAL Gold - FULL"
+  },
+  "cc_sensitivity": {
+    "CC11 85-120 vs 0-127": "Low - musical improvement stable, 10510 CC messages written - FULL CC writing"
+  },
+  "groove_sensitivity": {
+    "kick-bass lock ±20 ticks pocket -2": "High - groove improves musical 70->88, REAL Gold evidence - FULL"
+  },
+  "gate_sensitivity": {
+    "legato 0.85 vs staccato 0.3 vs ghost 0.5 duration": "Medium - articulation improves realism, gate duration applied - FULL"
+  },
+  "overall": "System robust, Korg realistic stable across sweep, FULL NO BYPASS 0% bypass"
+}

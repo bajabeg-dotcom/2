@@ -1,0 +1,973 @@
+{
+  "version": "10.00-drum-elements",
+  "timestamp": "2026-09-06T11:24:48.558906",
+  "authority": "FACTORY_ONLY_PER_ELEMENT",
+  "total_elements": 19,
+  "elements": {
+    "kick": {
+      "element": "kick",
+      "pitches": [
+        35,
+        36
+      ],
+      "gm_names": [
+        "Bass Drum 2",
+        "Bass Drum 1"
+      ],
+      "role": "foundation",
+      "description": "Low-frequency foundation, interlocks with bass",
+      "velocity": {
+        "min": 60,
+        "normal": 90,
+        "accent": 120,
+        "ghost": 0,
+        "fill": 100,
+        "transition": 95,
+        "phrase_end": 110,
+        "syncopated": 95
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 60,
+        "optimal": 90,
+        "ceiling": 120,
+        "allowedRange": [
+          60,
+          120
+        ],
+        "sampleCount": 3
+      },
+      "protection": {
+        "uniform_check": "FAIL if stddev < 5 - kick must NOT be uniform",
+        "variation_required": true,
+        "ghost_allowed": false,
+        "rule": "Ne smije biti uniforman - mora imati muzički pattern"
+      },
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element kick, pitches [35, 36]",
+        "musical_purpose": "Low-frequency foundation, interlocks with bass",
+        "target_profile": "min 60, normal 90, accent 120, ghost 0",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "kick: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 60-120, normal 90",
+        "pass_fail": "PASS",
+        "explanation": "Ne smije biti uniforman - mora imati muzički pattern"
+      }
+    },
+    "snare": {
+      "element": "snare",
+      "pitches": [
+        38,
+        40
+      ],
+      "gm_names": [
+        "Snare 1",
+        "Electric Snare"
+      ],
+      "role": "backbeat",
+      "description": "Backbeat, ghost notes, accents, fills",
+      "velocity": {
+        "min": 20,
+        "normal": 80,
+        "accent": 118,
+        "ghost": 25,
+        "fill": 110,
+        "transition": 100,
+        "phrase_end": 115,
+        "syncopated": 90
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 20,
+        "optimal": 80,
+        "ceiling": 118,
+        "allowedRange": [
+          20,
+          118
+        ],
+        "sampleCount": 4
+      },
+      "protection": {
+        "ghost_check": "Ghost < 50% of normal, main hit 80, ghost 25, accent 118",
+        "differentiation": "Must differentiate main hit / ghost / accent / fill",
+        "rule": "Razlikovati main hit, ghost, accent, fill"
+      },
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element snare, pitches [38, 40]",
+        "musical_purpose": "Backbeat, ghost notes, accents, fills",
+        "target_profile": "min 20, normal 80, accent 118, ghost 25",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "snare: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 20-118, normal 80",
+        "pass_fail": "PASS",
+        "explanation": "Razlikovati main hit, ghost, accent, fill"
+      }
+    },
+    "rim": {
+      "element": "rim",
+      "pitches": [
+        37
+      ],
+      "gm_names": [
+        "Side Stick"
+      ],
+      "role": "ghost",
+      "description": "Side stick, ghost, alternative to snare",
+      "velocity": {
+        "min": 15,
+        "normal": 40,
+        "accent": 80,
+        "ghost": 20,
+        "fill": 60,
+        "transition": 50,
+        "phrase_end": 70,
+        "syncopated": 45
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 15,
+        "optimal": 40,
+        "ceiling": 80,
+        "allowedRange": [
+          15,
+          80
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element rim, pitches [37]",
+        "musical_purpose": "Side stick, ghost, alternative to snare",
+        "target_profile": "min 15, normal 40, accent 80, ghost 20",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "rim: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 15-80, normal 40",
+        "pass_fail": "PASS",
+        "explanation": "rim sa prirodnom dinamikom"
+      }
+    },
+    "clap": {
+      "element": "clap",
+      "pitches": [
+        39
+      ],
+      "gm_names": [
+        "Hand Clap"
+      ],
+      "role": "accent",
+      "description": "",
+      "velocity": {
+        "min": 40,
+        "normal": 80,
+        "accent": 110,
+        "ghost": 0,
+        "fill": 90,
+        "transition": 85,
+        "phrase_end": 100,
+        "syncopated": 85
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 40,
+        "optimal": 80,
+        "ceiling": 110,
+        "allowedRange": [
+          40,
+          110
+        ],
+        "sampleCount": 3
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element clap, pitches [39]",
+        "musical_purpose": "clap with natural dynamics",
+        "target_profile": "min 40, normal 80, accent 110, ghost 0",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "clap: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 40-110, normal 80",
+        "pass_fail": "PASS",
+        "explanation": "clap sa prirodnom dinamikom"
+      }
+    },
+    "closed_hh": {
+      "element": "closed_hh",
+      "pitches": [
+        42,
+        44
+      ],
+      "gm_names": [
+        "Closed Hi-Hat",
+        "Pedal Hi-Hat"
+      ],
+      "role": "timekeeper",
+      "description": "Timekeeper, must have musical pattern",
+      "velocity": {
+        "min": 20,
+        "normal": 65,
+        "accent": 95,
+        "ghost": 25,
+        "fill": 80,
+        "transition": 70,
+        "phrase_end": 85,
+        "syncopated": 70
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 20,
+        "optimal": 65,
+        "ceiling": 95,
+        "allowedRange": [
+          20,
+          95
+        ],
+        "sampleCount": 4
+      },
+      "protection": {
+        "pattern_check": "Must have musical pattern, not random noise - Strong-weak-medium-weak",
+        "rule": "Velocity mora imati muzički pattern, ne random noise"
+      },
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element closed_hh, pitches [42, 44]",
+        "musical_purpose": "Timekeeper, must have musical pattern",
+        "target_profile": "min 20, normal 65, accent 95, ghost 25",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "closed_hh: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 20-95, normal 65",
+        "pass_fail": "PASS",
+        "explanation": "Velocity mora imati muzički pattern, ne random noise"
+      }
+    },
+    "open_hh": {
+      "element": "open_hh",
+      "pitches": [
+        46
+      ],
+      "gm_names": [
+        "Open Hi-Hat"
+      ],
+      "role": "accent",
+      "description": "",
+      "velocity": {
+        "min": 30,
+        "normal": 75,
+        "accent": 110,
+        "ghost": 0,
+        "fill": 90,
+        "transition": 85,
+        "phrase_end": 100,
+        "syncopated": 80
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 30,
+        "optimal": 75,
+        "ceiling": 110,
+        "allowedRange": [
+          30,
+          110
+        ],
+        "sampleCount": 3
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element open_hh, pitches [46]",
+        "musical_purpose": "open_hh with natural dynamics",
+        "target_profile": "min 30, normal 75, accent 110, ghost 0",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "open_hh: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 30-110, normal 75",
+        "pass_fail": "PASS",
+        "explanation": "open_hh sa prirodnom dinamikom"
+      }
+    },
+    "pedal_hh": {
+      "element": "pedal_hh",
+      "pitches": [
+        44
+      ],
+      "gm_names": [
+        "Pedal Hi-Hat"
+      ],
+      "role": "chick",
+      "description": "",
+      "velocity": {
+        "min": 20,
+        "normal": 50,
+        "accent": 75,
+        "ghost": 15,
+        "fill": 60,
+        "transition": 55,
+        "phrase_end": 65,
+        "syncopated": 50
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 15,
+        "optimal": 50,
+        "ceiling": 75,
+        "allowedRange": [
+          15,
+          75
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element pedal_hh, pitches [44]",
+        "musical_purpose": "pedal_hh with natural dynamics",
+        "target_profile": "min 20, normal 50, accent 75, ghost 15",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "pedal_hh: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 20-75, normal 50",
+        "pass_fail": "PASS",
+        "explanation": "pedal_hh sa prirodnom dinamikom"
+      }
+    },
+    "ride": {
+      "element": "ride",
+      "pitches": [
+        51,
+        53,
+        59
+      ],
+      "gm_names": [
+        "Ride Cymbal 1",
+        "Ride Bell",
+        "Ride Cymbal 2"
+      ],
+      "role": "timekeeper",
+      "description": "",
+      "velocity": {
+        "min": 30,
+        "normal": 70,
+        "accent": 95,
+        "ghost": 35,
+        "fill": 85,
+        "transition": 75,
+        "phrase_end": 90,
+        "syncopated": 75
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 30,
+        "optimal": 70,
+        "ceiling": 95,
+        "allowedRange": [
+          30,
+          95
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element ride, pitches [51, 53, 59]",
+        "musical_purpose": "ride with natural dynamics",
+        "target_profile": "min 30, normal 70, accent 95, ghost 35",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "ride: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 30-95, normal 70",
+        "pass_fail": "PASS",
+        "explanation": "ride sa prirodnom dinamikom"
+      }
+    },
+    "crash": {
+      "element": "crash",
+      "pitches": [
+        49,
+        57
+      ],
+      "gm_names": [
+        "Crash Cymbal 1",
+        "Crash Cymbal 2"
+      ],
+      "role": "accent",
+      "description": "",
+      "velocity": {
+        "min": 60,
+        "normal": 100,
+        "accent": 127,
+        "ghost": 0,
+        "fill": 115,
+        "transition": 110,
+        "phrase_end": 120,
+        "syncopated": 105
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 60,
+        "optimal": 100,
+        "ceiling": 127,
+        "allowedRange": [
+          60,
+          127
+        ],
+        "sampleCount": 3
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element crash, pitches [49, 57]",
+        "musical_purpose": "crash with natural dynamics",
+        "target_profile": "min 60, normal 100, accent 127, ghost 0",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "crash: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 60-127, normal 100",
+        "pass_fail": "PASS",
+        "explanation": "crash sa prirodnom dinamikom"
+      }
+    },
+    "tom_low": {
+      "element": "tom_low",
+      "pitches": [
+        41,
+        43
+      ],
+      "gm_names": [
+        "Low Tom 2",
+        "High Tom 2"
+      ],
+      "role": "fill",
+      "description": "",
+      "velocity": {
+        "min": 40,
+        "normal": 85,
+        "accent": 115,
+        "ghost": 30,
+        "fill": 105,
+        "transition": 95,
+        "phrase_end": 110,
+        "syncopated": 90
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 30,
+        "optimal": 85,
+        "ceiling": 115,
+        "allowedRange": [
+          30,
+          115
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element tom_low, pitches [41, 43]",
+        "musical_purpose": "tom_low with natural dynamics",
+        "target_profile": "min 40, normal 85, accent 115, ghost 30",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "tom_low: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 40-115, normal 85",
+        "pass_fail": "PASS",
+        "explanation": "tom_low sa prirodnom dinamikom"
+      }
+    },
+    "tom_mid": {
+      "element": "tom_mid",
+      "pitches": [
+        45,
+        47
+      ],
+      "gm_names": [
+        "Mid Tom 2",
+        "Low Tom 1"
+      ],
+      "role": "fill",
+      "description": "",
+      "velocity": {
+        "min": 40,
+        "normal": 85,
+        "accent": 115,
+        "ghost": 30,
+        "fill": 105,
+        "transition": 95,
+        "phrase_end": 110,
+        "syncopated": 90
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 30,
+        "optimal": 85,
+        "ceiling": 115,
+        "allowedRange": [
+          30,
+          115
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element tom_mid, pitches [45, 47]",
+        "musical_purpose": "tom_mid with natural dynamics",
+        "target_profile": "min 40, normal 85, accent 115, ghost 30",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "tom_mid: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 40-115, normal 85",
+        "pass_fail": "PASS",
+        "explanation": "tom_mid sa prirodnom dinamikom"
+      }
+    },
+    "tom_high": {
+      "element": "tom_high",
+      "pitches": [
+        48,
+        50
+      ],
+      "gm_names": [
+        "Mid Tom 1",
+        "High Tom 1"
+      ],
+      "role": "fill",
+      "description": "",
+      "velocity": {
+        "min": 40,
+        "normal": 85,
+        "accent": 115,
+        "ghost": 30,
+        "fill": 105,
+        "transition": 95,
+        "phrase_end": 110,
+        "syncopated": 90
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 30,
+        "optimal": 85,
+        "ceiling": 115,
+        "allowedRange": [
+          30,
+          115
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element tom_high, pitches [48, 50]",
+        "musical_purpose": "tom_high with natural dynamics",
+        "target_profile": "min 40, normal 85, accent 115, ghost 30",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "tom_high: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 40-115, normal 85",
+        "pass_fail": "PASS",
+        "explanation": "tom_high sa prirodnom dinamikom"
+      }
+    },
+    "percussion": {
+      "element": "percussion",
+      "pitches": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        75,
+        76,
+        82,
+        84
+      ],
+      "gm_names": [
+        "High Bongo",
+        "Low Bongo",
+        "Mute Hi Conga",
+        "Open Hi Conga",
+        "Low Conga",
+        "Claves",
+        "High Woodblock",
+        "Shaker",
+        "Bell Tree"
+      ],
+      "role": "color",
+      "description": "",
+      "velocity": {
+        "min": 25,
+        "normal": 70,
+        "accent": 105,
+        "ghost": 20,
+        "fill": 85,
+        "transition": 75,
+        "phrase_end": 90,
+        "syncopated": 75
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 20,
+        "optimal": 70,
+        "ceiling": 105,
+        "allowedRange": [
+          20,
+          105
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element percussion, pitches [60, 61, 62, 63, 64, 75, 76, 82, 84]",
+        "musical_purpose": "percussion with natural dynamics",
+        "target_profile": "min 25, normal 70, accent 105, ghost 20",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "percussion: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 25-105, normal 70",
+        "pass_fail": "PASS",
+        "explanation": "percussion sa prirodnom dinamikom"
+      }
+    },
+    "shaker": {
+      "element": "shaker",
+      "pitches": [
+        82
+      ],
+      "gm_names": [
+        "Shaker"
+      ],
+      "role": "timekeeper",
+      "description": "",
+      "velocity": {
+        "min": 20,
+        "normal": 55,
+        "accent": 80,
+        "ghost": 15,
+        "fill": 65,
+        "transition": 60,
+        "phrase_end": 70,
+        "syncopated": 60
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 15,
+        "optimal": 55,
+        "ceiling": 80,
+        "allowedRange": [
+          15,
+          80
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element shaker, pitches [82]",
+        "musical_purpose": "shaker with natural dynamics",
+        "target_profile": "min 20, normal 55, accent 80, ghost 15",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "shaker: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 20-80, normal 55",
+        "pass_fail": "PASS",
+        "explanation": "shaker sa prirodnom dinamikom"
+      }
+    },
+    "tambourine": {
+      "element": "tambourine",
+      "pitches": [
+        54
+      ],
+      "gm_names": [
+        "Tambourine"
+      ],
+      "role": "accent",
+      "description": "",
+      "velocity": {
+        "min": 30,
+        "normal": 70,
+        "accent": 100,
+        "ghost": 20,
+        "fill": 85,
+        "transition": 75,
+        "phrase_end": 90,
+        "syncopated": 75
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 20,
+        "optimal": 70,
+        "ceiling": 100,
+        "allowedRange": [
+          20,
+          100
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element tambourine, pitches [54]",
+        "musical_purpose": "tambourine with natural dynamics",
+        "target_profile": "min 30, normal 70, accent 100, ghost 20",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "tambourine: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 30-100, normal 70",
+        "pass_fail": "PASS",
+        "explanation": "tambourine sa prirodnom dinamikom"
+      }
+    },
+    "cowbell": {
+      "element": "cowbell",
+      "pitches": [
+        56
+      ],
+      "gm_names": [
+        "Cowbell"
+      ],
+      "role": "accent",
+      "description": "",
+      "velocity": {
+        "min": 40,
+        "normal": 80,
+        "accent": 110,
+        "ghost": 0,
+        "fill": 95,
+        "transition": 85,
+        "phrase_end": 100,
+        "syncopated": 85
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 40,
+        "optimal": 80,
+        "ceiling": 110,
+        "allowedRange": [
+          40,
+          110
+        ],
+        "sampleCount": 3
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element cowbell, pitches [56]",
+        "musical_purpose": "cowbell with natural dynamics",
+        "target_profile": "min 40, normal 80, accent 110, ghost 0",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "cowbell: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 40-110, normal 80",
+        "pass_fail": "PASS",
+        "explanation": "cowbell sa prirodnom dinamikom"
+      }
+    },
+    "conga": {
+      "element": "conga",
+      "pitches": [
+        62,
+        63,
+        64
+      ],
+      "gm_names": [
+        "Mute Hi Conga",
+        "Open Hi Conga",
+        "Low Conga"
+      ],
+      "role": "interlock",
+      "description": "",
+      "velocity": {
+        "min": 30,
+        "normal": 75,
+        "accent": 105,
+        "ghost": 25,
+        "fill": 90,
+        "transition": 80,
+        "phrase_end": 95,
+        "syncopated": 80
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 25,
+        "optimal": 75,
+        "ceiling": 105,
+        "allowedRange": [
+          25,
+          105
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element conga, pitches [62, 63, 64]",
+        "musical_purpose": "conga with natural dynamics",
+        "target_profile": "min 30, normal 75, accent 105, ghost 25",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "conga: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 30-105, normal 75",
+        "pass_fail": "PASS",
+        "explanation": "conga sa prirodnom dinamikom"
+      }
+    },
+    "bongo": {
+      "element": "bongo",
+      "pitches": [
+        60,
+        61
+      ],
+      "gm_names": [
+        "High Bongo",
+        "Low Bongo"
+      ],
+      "role": "interlock",
+      "description": "",
+      "velocity": {
+        "min": 25,
+        "normal": 65,
+        "accent": 95,
+        "ghost": 20,
+        "fill": 80,
+        "transition": 70,
+        "phrase_end": 85,
+        "syncopated": 70
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 20,
+        "optimal": 65,
+        "ceiling": 95,
+        "allowedRange": [
+          20,
+          95
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element bongo, pitches [60, 61]",
+        "musical_purpose": "bongo with natural dynamics",
+        "target_profile": "min 25, normal 65, accent 95, ghost 20",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "bongo: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 25-95, normal 65",
+        "pass_fail": "PASS",
+        "explanation": "bongo sa prirodnom dinamikom"
+      }
+    },
+    "latin": {
+      "element": "latin",
+      "pitches": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "gm_names": [
+        "Bongo",
+        "Conga",
+        "Timbale",
+        "Agogo",
+        "Cabasa",
+        "Maracas"
+      ],
+      "role": "interlock",
+      "description": "",
+      "velocity": {
+        "min": 25,
+        "normal": 70,
+        "accent": 100,
+        "ghost": 20,
+        "fill": 85,
+        "transition": 75,
+        "phrase_end": 90,
+        "syncopated": 75
+      },
+      "curve": {
+        "method": "factory-per-element-v10",
+        "floor": 20,
+        "optimal": 70,
+        "ceiling": 100,
+        "allowedRange": [
+          20,
+          100
+        ],
+        "sampleCount": 4
+      },
+      "protection": {},
+      "source": "FACTORY_PER_ELEMENT",
+      "confidence": 0.85,
+      "korg_valid": true,
+      "transformation": {
+        "source_evidence": "Factory drum element latin, pitches [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]",
+        "musical_purpose": "latin with natural dynamics",
+        "target_profile": "min 25, normal 70, accent 100, ghost 20",
+        "constraints": "Korg channel 10, valid keys 27-87, polyphony max 8",
+        "transformation_rule": "latin: intensity -> velocity via element-specific curve",
+        "before_metric": "Uniform or random velocity",
+        "after_metric": "Element-calibrated: 25-100, normal 70",
+        "pass_fail": "PASS",
+        "explanation": "latin sa prirodnom dinamikom"
+      }
+    }
+  },
+  "protection_summary": {
+    "kick": "Must NOT be uniform - musical pattern required",
+    "snare": "Must differentiate main/ghost/accent/fill",
+    "hihat": "Must have musical pattern, not random noise"
+  }
+}

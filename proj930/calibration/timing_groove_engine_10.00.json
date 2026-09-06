@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-06T17:28:26.904859",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "macro_timing": {
+    "beat": "Grid-aligned with humanization",
+    "bar": "Downbeat emphasis",
+    "phrase": "Phrase timing, breath, bow",
+    "section": "Section-specific timing (intro, verse, chorus, fill, ending)"
+  },
+  "micro_timing": {
+    "per_note_offset": "Deterministic, seed-based, instrument profile, phrase state, groove state, intensity",
+    "anticipation": "Bass, guitar can anticipate downbeat",
+    "delay": "Solo can lay back",
+    "swing": "Per-role, Gold-driven",
+    "push_drag": "Groove-dependent"
+  },
+  "rules": [
+    "Timing ne smije biti random - mora biti deterministic sa seed",
+    "Svaka promjena timing-a mora ostati unutar sigurnog musical window-a",
+    "Factory ne određuje timing, Gold određuje"
+  ],
+  "safe_windows": {
+    "bass": "±15 ticks at 480 PPQ",
+    "drums": "±8 ticks",
+    "rhythm_guitar": "±20 ticks (strum spread)",
+    "solo": "±25 ticks"
+  },
+  "determinism": {
+    "seed": 9302026,
+    "method": "seed + instrument + phrase + bar + note_index",
+    "reproducible": true
+  }
+}

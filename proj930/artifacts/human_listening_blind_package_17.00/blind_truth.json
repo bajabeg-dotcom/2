@@ -1,0 +1,102 @@
+[
+  {
+    "pair": 1,
+    "A": "session10-after_OPT_calibrated_16.00.mid",
+    "B": "session10-after_OPT.mid",
+    "A_is_before": false,
+    "before": "session10-after_OPT.mid",
+    "after": "session10-after_OPT_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_01/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_01/B.mid"
+  },
+  {
+    "pair": 2,
+    "A": "session10-before_calibrated_16.00.mid",
+    "B": "session10-before.mid",
+    "A_is_before": false,
+    "before": "session10-before.mid",
+    "after": "session10-before_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_02/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_02/B.mid"
+  },
+  {
+    "pair": 3,
+    "A": "session17-factory-segment-after_calibrated_16.00.mid",
+    "B": "session17-factory-segment-after.mid",
+    "A_is_before": false,
+    "before": "session17-factory-segment-after.mid",
+    "after": "session17-factory-segment-after_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_03/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_03/B.mid"
+  },
+  {
+    "pair": 4,
+    "A": "session17-factory-segment-before.mid",
+    "B": "session17-factory-segment-before_calibrated_16.00.mid",
+    "A_is_before": true,
+    "before": "session17-factory-segment-before.mid",
+    "after": "session17-factory-segment-before_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_04/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_04/B.mid"
+  },
+  {
+    "pair": 5,
+    "A": "session18-after_calibrated_16.00.mid",
+    "B": "session18-after.mid",
+    "A_is_before": false,
+    "before": "session18-after.mid",
+    "after": "session18-after_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_05/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_05/B.mid"
+  },
+  {
+    "pair": 6,
+    "A": "session18-before.mid",
+    "B": "session18-before_calibrated_16.00.mid",
+    "A_is_before": true,
+    "before": "session18-before.mid",
+    "after": "session18-before_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_06/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_06/B.mid"
+  },
+  {
+    "pair": 7,
+    "A": "session2-after_calibrated_16.00.mid",
+    "B": "session2-after.mid",
+    "A_is_before": false,
+    "before": "session2-after.mid",
+    "after": "session2-after_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_07/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_07/B.mid"
+  },
+  {
+    "pair": 8,
+    "A": "session2-before.mid",
+    "B": "session2-before_calibrated_16.00.mid",
+    "A_is_before": true,
+    "before": "session2-before.mid",
+    "after": "session2-before_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_08/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_08/B.mid"
+  },
+  {
+    "pair": 9,
+    "A": "session24-reference_calibrated_16.00.mid",
+    "B": "session24-reference.mid",
+    "A_is_before": false,
+    "before": "session24-reference.mid",
+    "after": "session24-reference_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_09/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_09/B.mid"
+  },
+  {
+    "pair": 10,
+    "A": "session25-reference.mid",
+    "B": "session25-reference_calibrated_16.00.mid",
+    "A_is_before": true,
+    "before": "session25-reference.mid",
+    "after": "session25-reference_calibrated_16.00.mid",
+    "A_path": "artifacts/human_listening_blind_package_17.00/pair_10/A.mid",
+    "B_path": "artifacts/human_listening_blind_package_17.00/pair_10/B.mid"
+  }
+]

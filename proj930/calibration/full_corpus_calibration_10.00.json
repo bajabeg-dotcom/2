@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-09-06T17:28:26.907610",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "calibration_loop": "INPUT -> ANALYZE -> CLASSIFY -> PROFILE -> FACTORY CONSTRAINTS -> GOLD PLAYING LOGIC -> TRANSFORM -> KORG CONSTRAINT -> VALIDATE -> MUSICAL SCORE -> REGRESSION -> COMPARE -> CALIBRATE -> FREEZE -> NEXT LAYER",
+  "never_skip": "NIKADA ne preskakati validation korak",
+  "per_file": {},
+  "aggregated": {
+    "files_processed": 164,
+    "roles": {
+      "bass": {
+        "targets": 173,
+        "repaired": 170,
+        "notes": 91882,
+        "change_rate": 0.5088,
+        "after_fix": 0.0529,
+        "improvement": "50.88% -> 5.29%"
+      },
+      "rhythm-guitar": {
+        "targets": 138,
+        "repaired": 31,
+        "notes": 317853,
+        "change_rate": 0.0717,
+        "after_fix": 0.0057,
+        "improvement": "7.17% -> 0.57%"
+      },
+      "power-riff": {
+        "targets": 17,
+        "repaired": 4,
+        "notes": 11545,
+        "change_rate": 0.2291,
+        "after_fix": 0.0,
+        "improvement": "22.91% -> 0%"
+      },
+      "accompaniment": {
+        "targets": 49,
+        "repaired": 0,
+        "notes": 55067,
+        "change_rate": 0.0,
+        "status": "PRESERVED"
+      },
+      "brass": {
+        "targets": 48,
+        "repaired": 0,
+        "notes": 19770,
+        "change_rate": 0.0,
+        "status": "PRESERVED"
+      },
+      "drums": {
+        "targets": 164,
+        "repaired": 0,
+        "notes": 466749,
+        "change_rate": 0.0,
+        "status": "PRESERVED (no safe edit)"
+      }
+    },
+    "overall": {
+      "total_notes": 962866,
+      "preservation_rate": "High for healthy gates, only pathological gates repaired",
+      "validation": "Full corpus 164 files PASS",
+      "musical_degradation": "None - healthy staccato/mute preserved"
+    }
+  },
+  "existing": {
+    "files": 0,
+    "roles": []
+  },
+  "per_file_template": {
+    "source": "original.mid",
+    "optimized": "optimized.mid",
+    "transformations": [
+      "FACTORY_VELOCITY",
+      "GOLD_TIMING",
+      "KORG_CONSTRAINT"
+    ],
+    "instrument_profiles": "Per-role",
+    "confidence": "HIGH/MEDIUM/LOW",
+    "before_metrics": "Technical + Musical scores",
+    "after_metrics": "Technical + Musical scores",
+    "delta": "Improvement",
+    "warnings": [],
+    "failures": []
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": "14.00-REAL-OUTPUT-CC-GATE",
+  "total_files": 37,
+  "total_notes_before": 9008,
+  "total_notes_after": 8917,
+  "total_reduced": 91,
+  "total_trills": 196,
+  "total_cc": 10510,
+  "total_drum_contexts": {
+    "accent": 892,
+    "normal": 1120,
+    "fill": 136,
+    "transition": 18,
+    "syncopated": 40
+  },
+  "passed": 37,
+  "failed": 0,
+  "pass_rate": "37/37 (100.0%)",
+  "musical_before": 70.65945945945946,
+  "musical_after": 87.1072972972973,
+  "musical_delta": 16.447837837837838,
+  "output_dir": "artifacts/calibrated_14.00",
+  "output_files": 37,
+  "real_output": true,
+  "cc_writing_verified": true,
+  "gate_duration_verified": true
+}

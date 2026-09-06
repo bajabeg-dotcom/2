@@ -1,0 +1,36 @@
+{
+  "version": "11.00-RIJESI-SVE-FINAL",
+  "artifacts": {
+    "data/factory-velocity-profiles.json": {
+      "exists": true,
+      "sha256": "7a21fc2fefc88de5",
+      "size": 15145620
+    },
+    "data/instrument-catalog-9.30.json": {
+      "exists": true,
+      "sha256": "60c263b4d7129cde",
+      "size": 3358807
+    },
+    "data/general-rules-9.30.json": {
+      "exists": true,
+      "sha256": "9042f79f7d2be0b2",
+      "size": 31928
+    },
+    "data/instrument-playing-profiles-9.30.json": {
+      "exists": true,
+      "sha256": "eb9e7af07ee8f128",
+      "size": 193090
+    },
+    "factory_velocity.py": {
+      "exists": true,
+      "sha256": "b225a01859bc181c",
+      "size": 6491
+    },
+    "final_certified_engine_v10.py": {
+      "exists": true,
+      "sha256": "fe029ccc656ee14b",
+      "size": 28452
+    }
+  },
+  "deterministic": true
+}

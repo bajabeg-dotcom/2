@@ -1,0 +1,121 @@
+{
+  "schema": "dna-full-calibration-report",
+  "version": "9.30.0",
+  "timestamp": "2026-09-06T11:20:00Z",
+  "status": "SOFTWARE_CALIBRATED",
+  "phases": {
+    "factory_calibration": {
+      "profiles": 1964,
+      "calibrated_profiles": 1713,
+      "held_out_exact": 1052,
+      "segments": 26922,
+      "velocity_authority": "FACTORY_ONLY",
+      "status": "PASS"
+    },
+    "factory_style_family": {
+      "6/8": {"segments": 628, "styles": 5, "confidence": 0.6978, "learned": true},
+      "rock": {"segments": 447, "styles": 4, "confidence": 0.4967, "learned": true},
+      "techno_dance": {"segments": 2051, "styles": 20, "confidence": 1.0, "learned": true},
+      "ballad": {"segments": 2743, "styles": 26, "confidence": 1.0, "learned": true},
+      "beat": {"segments": 1938, "styles": 24, "confidence": 1.0, "learned": true},
+      "status": "PASS"
+    },
+    "gold_relationship_grammar": {
+      "midi_count": 182,
+      "parsed": 182,
+      "relationship_files": 61,
+      "terca_pairs": 73,
+      "echo_pairs": 4,
+      "velocity_used": false,
+      "status": "PASS"
+    },
+    "gold_performance_patterns": {
+      "count": 12918,
+      "roles": ["accompaniment","bass","drums","percussion","power-riff","riff"],
+      "meters": ["1/4","2/4","4/4","6/4","7/8","9/8"],
+      "velocity_used": false,
+      "status": "PASS"
+    },
+    "solo_ornament_dna": {
+      "midi_count": 182,
+      "melodic_groups": 404,
+      "analyzed_notes": 319553,
+      "files_with_evidence": 156,
+      "status": "PASS"
+    },
+    "instrument_register": {
+      "version": "9.20",
+      "profiles": 14,
+      "bass": {"factory_segs": 4221, "gold_pats": 32037, "conf": 1.0},
+      "rhythm-guitar": {"factory_segs": 4115, "conf": 0.55},
+      "strings": {"factory_segs": 2092, "conf": 0.55},
+      "brass": {"factory_segs": 1190, "conf": 0.55},
+      "pad": {"factory_segs": 444, "conf": 0.55},
+      "choir": {"factory_segs": 183, "conf": 0.403},
+      "organ": {"factory_segs": 465, "conf": 0.55},
+      "piano": {"factory_segs": 2061, "conf": 0.55},
+      "status": "PASS"
+    },
+    "tempo_dependent": {
+      "version": "9.10",
+      "buckets": ["slow","medium","brisk","fast"],
+      "status": "PASS"
+    },
+    "rx_dnc_articulation": {
+      "version": "9.30",
+      "tests": "30/30 PASS",
+      "status": "PASS"
+    },
+    "drum_element_evidence": {
+      "gold_patterns": 1442,
+      "factory_profiles": 1421,
+      "wiring_velocity": "FACTORY_ONLY",
+      "wiring_timing": "GOLD_PRIMARY_FACTORY_REFERENCE",
+      "status": "PASS"
+    },
+    "device_evidence": {
+      "profiles": 1964,
+      "hardware_pending": 1964,
+      "status": "SOFTWARE_COMPLETE_HARDWARE_PENDING"
+    },
+    "corpus_880": {
+      "files_processed": 164,
+      "roles_calibrated": true,
+      "status": "PASS"
+    }
+  },
+  "neural": {
+    "relationship_sequence_v2": {
+      "bestEpoch": 7,
+      "bestValidationLoss": 0.383,
+      "holdoutActionAccuracy": 0.712,
+      "holdoutIntervalAccuracyOnPlay": 0.817,
+      "velocityUsed": false,
+      "status": "PROMOTED"
+    },
+    "core_dna_reconstructor_v2": {
+      "existing_checkpoint": "active",
+      "params": 703440,
+      "status": "STAGING_READY"
+    },
+    "calibration_gate": {
+      "datasetRows": 15837,
+      "relationshipRows": 697,
+      "velocityAuthorityFactoryOnly": true,
+      "status": "PASS"
+    }
+  },
+  "gui_improvements": {
+    "neural_training_tab": "added",
+    "calibration_dashboard": "added",
+    "instrument_velocity_curves": "enhanced",
+    "status": "IMPLEMENTED"
+  },
+  "safety_invariants": {
+    "factory_velocity_only": true,
+    "gold_no_velocity": true,
+    "no_bank_program_mutation": true,
+    "rx_dnc_gated": true,
+    "physical_pa800_pending": true
+  }
+}

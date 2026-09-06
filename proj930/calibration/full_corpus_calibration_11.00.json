@@ -1,0 +1,21 @@
+{
+  "total_files": 37,
+  "total_notes_before": 9008,
+  "total_notes_after": 8579,
+  "total_reduced": 429,
+  "passed": 37,
+  "pass_rate": "37/37 (100.0%)",
+  "by_role": {
+    "melody": 15,
+    "bass": 7,
+    "drums": 7,
+    "accompaniment": 8
+  },
+  "comparison": {
+    "10.01_global": "29/30 PASS 96.7% - hiding poly",
+    "10.02_per_channel": "17/37 PASS 45.9% - revealing true",
+    "10.03_reduction": "32/37 PASS 86.5% - timing created new poly",
+    "10.04_final": "37/37 PASS 100.0% - final fix"
+  },
+  "note": "Full corpus 37 files 100% PASS after 10.04 transform - DIRECT, 150 batch BLOCKED but 37 is existing corpus"
+}

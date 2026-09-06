@@ -1,0 +1,370 @@
+{
+  "schema": "dna-max-evidence-catalog",
+  "version": "6.0.0",
+  "authority": {
+    "FACTORY": "device/sound/velocity authority; exact Sound profile wins",
+    "GOLD": "performance/pattern/groove/gate/timing/ornament/relationship evidence; no velocity authority",
+    "REFERENCE": "low-authority diversity/retrieval corpus; must pass Quality Gate; never overrides Factory/GOLD facts",
+    "EXTERNAL_RESEARCH": "architecture/dataset benchmark only until explicitly imported and licensed/validated"
+  },
+  "reference": {
+    "unique_sources": 1549,
+    "patterns": 24472,
+    "families": [
+      {
+        "instrument_family": "guitar",
+        "role": "rhythm-guitar",
+        "patterns": 4868,
+        "notes": 145459
+      },
+      {
+        "instrument_family": "drums",
+        "role": "drums",
+        "patterns": 3617,
+        "notes": 143755
+      },
+      {
+        "instrument_family": "ensemble",
+        "role": "strings",
+        "patterns": 2990,
+        "notes": 44603
+      },
+      {
+        "instrument_family": "bass",
+        "role": "bass",
+        "patterns": 2709,
+        "notes": 28839
+      },
+      {
+        "instrument_family": "accordion",
+        "role": "keys",
+        "patterns": 1824,
+        "notes": 52285
+      },
+      {
+        "instrument_family": "brass",
+        "role": "brass",
+        "patterns": 890,
+        "notes": 19574
+      },
+      {
+        "instrument_family": "organ",
+        "role": "keys",
+        "patterns": 839,
+        "notes": 20831
+      },
+      {
+        "instrument_family": "strings",
+        "role": "strings",
+        "patterns": 763,
+        "notes": 13725
+      },
+      {
+        "instrument_family": "piano",
+        "role": "keys",
+        "patterns": 721,
+        "notes": 16445
+      },
+      {
+        "instrument_family": "guitar",
+        "role": "solo",
+        "patterns": 667,
+        "notes": 15477
+      },
+      {
+        "instrument_family": "synth-pad",
+        "role": "strings",
+        "patterns": 498,
+        "notes": 6282
+      },
+      {
+        "instrument_family": "synth-lead",
+        "role": "keys",
+        "patterns": 445,
+        "notes": 11557
+      },
+      {
+        "instrument_family": "choir",
+        "role": "strings",
+        "patterns": 439,
+        "notes": 5482
+      },
+      {
+        "instrument_family": "pipe",
+        "role": "woodwind",
+        "patterns": 413,
+        "notes": 10779
+      },
+      {
+        "instrument_family": "pipe",
+        "role": "solo",
+        "patterns": 390,
+        "notes": 4709
+      },
+      {
+        "instrument_family": "ethnic-pluck",
+        "role": "keys",
+        "patterns": 382,
+        "notes": 11363
+      },
+      {
+        "instrument_family": "synth-lead",
+        "role": "solo",
+        "patterns": 296,
+        "notes": 5606
+      },
+      {
+        "instrument_family": "sax",
+        "role": "woodwind",
+        "patterns": 197,
+        "notes": 4618
+      },
+      {
+        "instrument_family": "clarinet",
+        "role": "woodwind",
+        "patterns": 186,
+        "notes": 4986
+      },
+      {
+        "instrument_family": "synth-fx",
+        "role": "perc",
+        "patterns": 155,
+        "notes": 3004
+      },
+      {
+        "instrument_family": "percussive",
+        "role": "perc",
+        "patterns": 153,
+        "notes": 1877
+      },
+      {
+        "instrument_family": "ethnic-pluck",
+        "role": "solo",
+        "patterns": 153,
+        "notes": 3037
+      },
+      {
+        "instrument_family": "chromatic-percussion",
+        "role": "keys",
+        "patterns": 131,
+        "notes": 2738
+      },
+      {
+        "instrument_family": "sax",
+        "role": "solo",
+        "patterns": 116,
+        "notes": 1765
+      },
+      {
+        "instrument_family": "accordion",
+        "role": "solo",
+        "patterns": 112,
+        "notes": 1558
+      },
+      {
+        "instrument_family": "clarinet",
+        "role": "solo",
+        "patterns": 101,
+        "notes": 1634
+      },
+      {
+        "instrument_family": "brass",
+        "role": "solo",
+        "patterns": 80,
+        "notes": 916
+      },
+      {
+        "instrument_family": "organ",
+        "role": "solo",
+        "patterns": 59,
+        "notes": 961
+      },
+      {
+        "instrument_family": "piano",
+        "role": "solo",
+        "patterns": 58,
+        "notes": 811
+      },
+      {
+        "instrument_family": "orchestra-hit",
+        "role": "perc",
+        "patterns": 48,
+        "notes": 889
+      },
+      {
+        "instrument_family": "harmonica",
+        "role": "woodwind",
+        "patterns": 44,
+        "notes": 1060
+      },
+      {
+        "instrument_family": "chromatic-percussion",
+        "role": "solo",
+        "patterns": 33,
+        "notes": 367
+      },
+      {
+        "instrument_family": "sfx",
+        "role": "perc",
+        "patterns": 31,
+        "notes": 436
+      },
+      {
+        "instrument_family": "double-reed",
+        "role": "woodwind",
+        "patterns": 24,
+        "notes": 553
+      },
+      {
+        "instrument_family": "harmonica",
+        "role": "solo",
+        "patterns": 16,
+        "notes": 218
+      },
+      {
+        "instrument_family": "double-reed",
+        "role": "solo",
+        "patterns": 13,
+        "notes": 268
+      },
+      {
+        "instrument_family": "unknown",
+        "role": "solo",
+        "patterns": 11,
+        "notes": 153
+      }
+    ]
+  },
+  "gold": {
+    "performance_patterns_summary": {
+      "inputFiles": 182,
+      "patterns": 12918,
+      "events": 197053,
+      "roles": {
+        "power-riff": 4927,
+        "drums": 1442,
+        "accompaniment": 3039,
+        "percussion": 78,
+        "bass": 2866,
+        "riff": 566
+      },
+      "relationships": 4373,
+      "rejected": {
+        "note-count": 20741,
+        "micro-note": 40825,
+        "protected-or-unsupported-role": 217,
+        "single-position": 4146,
+        "non-recurring-pattern": 152052
+      },
+      "errors": 0
+    },
+    "pattern_registry_file": "data/gold-performance-patterns.json",
+    "melodic_roles": {
+      "solo": {
+        "authority": "GOLD_SOURCE_SOLO_SEQUENCE",
+        "songs": 97,
+        "sequenceRows": 697,
+        "noteTokens": 61669,
+        "pitchMin": 44,
+        "pitchMax": 93,
+        "medianAbsoluteInterval": 2.0,
+        "velocityIncluded": false,
+        "replacementAuthority": "PRESERVE_MAIN_MELODY_REPAIR_VARIATION_ONLY",
+        "status": "SOFTWARE_COMPLETE"
+      },
+      "terca": {
+        "authority": "GOLD_RELATIONSHIP_DNA",
+        "samples": 31,
+        "train": 22,
+        "validation": 5,
+        "holdout": 4,
+        "medianInterval": 3.0,
+        "medianDelayQN": 0.0,
+        "medianDurationRatio": 1.0158730745315552,
+        "velocityIncluded": false,
+        "factoryVelocityAuthorityPreserved": true,
+        "status": "SOFTWARE_COMPLETE"
+      },
+      "echo": {
+        "authority": "GOLD_RELATIONSHIP_DNA",
+        "samples": 91,
+        "train": 62,
+        "validation": 14,
+        "holdout": 15,
+        "medianInterval": 0.0,
+        "medianDelayQN": 0.75,
+        "medianDurationRatio": 1.0158730745315552,
+        "velocityIncluded": false,
+        "factoryVelocityAuthorityPreserved": true,
+        "status": "SOFTWARE_COMPLETE"
+      }
+    },
+    "relationship_samples": {
+      "echo": 91,
+      "third": 31
+    },
+    "melodic_registry_file": "data/gold-melodic-performance-dna-4.46.json"
+  },
+  "factory": {
+    "velocity_summary": {
+      "inputFiles": 3211,
+      "failedFiles": 0,
+      "profileCount": 1964,
+      "velocitySamples": 1432867,
+      "profilesWithVolume": 1892,
+      "profilesWithExpression": 1894
+    },
+    "registry_file": "data/factory-velocity-profiles.json",
+    "complete_instrument_profiles_file": "data/complete-instrument-profiles-4.44.json"
+  },
+  "coverage_gaps": [
+    {
+      "family": "orchestra-hit",
+      "role": "perc",
+      "patterns": 48,
+      "severity": "WEAK_REFERENCE_SUPPORT"
+    },
+    {
+      "family": "harmonica",
+      "role": "woodwind",
+      "patterns": 44,
+      "severity": "WEAK_REFERENCE_SUPPORT"
+    },
+    {
+      "family": "chromatic-percussion",
+      "role": "solo",
+      "patterns": 33,
+      "severity": "WEAK_REFERENCE_SUPPORT"
+    },
+    {
+      "family": "sfx",
+      "role": "perc",
+      "patterns": 31,
+      "severity": "WEAK_REFERENCE_SUPPORT"
+    },
+    {
+      "family": "double-reed",
+      "role": "woodwind",
+      "patterns": 24,
+      "severity": "WEAK_REFERENCE_SUPPORT"
+    },
+    {
+      "family": "harmonica",
+      "role": "solo",
+      "patterns": 16,
+      "severity": "WEAK_REFERENCE_SUPPORT"
+    },
+    {
+      "family": "double-reed",
+      "role": "solo",
+      "patterns": 13,
+      "severity": "WEAK_REFERENCE_SUPPORT"
+    },
+    {
+      "family": "unknown",
+      "role": "solo",
+      "patterns": 11,
+      "severity": "WEAK_REFERENCE_SUPPORT"
+    }
+  ]
+}

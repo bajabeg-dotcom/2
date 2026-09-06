@@ -1,0 +1,60 @@
+{
+  "trill": {
+    "techniques": [
+      "trill",
+      "mordent",
+      "turn",
+      "grace"
+    ],
+    "roles": [
+      "melody",
+      "lead",
+      "solo",
+      "woodwind",
+      "strings",
+      "accordion"
+    ],
+    "implementation": "Gold playing logic, phrase-aware, not every note",
+    "gate": "legato with ornament",
+    "source": "instrument-catalog-9.30.json policies articulationNoise"
+  },
+  "articulation": {
+    "techniques": [
+      "legato",
+      "staccato",
+      "stab",
+      "sustain",
+      "ghost",
+      "slide",
+      "slap",
+      "pop"
+    ],
+    "roles": {
+      "bass": [
+        "root",
+        "ghost-candidate",
+        "slide-candidate",
+        "slap-candidate"
+      ],
+      "drums": [
+        "ghost",
+        "open-closed-hat",
+        "crash-entry",
+        "tom-fill"
+      ],
+      "melody": [
+        "legato",
+        "grace",
+        "turn",
+        "trill"
+      ],
+      "accompaniment": [
+        "stab",
+        "sustain",
+        "voice-lead"
+      ]
+    },
+    "gate": "pocket-dependent, continuity-aware",
+    "source": "instrument-catalog-9.30.json + gold patterns"
+  }
+}

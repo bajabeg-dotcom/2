@@ -1,0 +1,509 @@
+{
+  "schema": "pattern-evidence-coverage",
+  "version": "6.0",
+  "total_patterns": 24472,
+  "by_role_family_source": [
+    {
+      "role": "rhythm-guitar",
+      "instrument_family": "guitar",
+      "source_kind": "REFERENCE",
+      "n": 4868,
+      "notes": 145459,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "drums",
+      "instrument_family": "drums",
+      "source_kind": "REFERENCE",
+      "n": 3617,
+      "notes": 143755,
+      "q": 0.6800000000000002,
+      "conf": 0.99
+    },
+    {
+      "role": "strings",
+      "instrument_family": "ensemble",
+      "source_kind": "REFERENCE",
+      "n": 2990,
+      "notes": 44603,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "bass",
+      "instrument_family": "bass",
+      "source_kind": "REFERENCE",
+      "n": 2709,
+      "notes": 28839,
+      "q": 0.68,
+      "conf": 0.9499999999999998
+    },
+    {
+      "role": "keys",
+      "instrument_family": "accordion",
+      "source_kind": "REFERENCE",
+      "n": 1824,
+      "notes": 52285,
+      "q": 0.68,
+      "conf": 0.8
+    },
+    {
+      "role": "brass",
+      "instrument_family": "brass",
+      "source_kind": "REFERENCE",
+      "n": 890,
+      "notes": 19574,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "keys",
+      "instrument_family": "organ",
+      "source_kind": "REFERENCE",
+      "n": 839,
+      "notes": 20831,
+      "q": 0.6800000000000002,
+      "conf": 0.8
+    },
+    {
+      "role": "strings",
+      "instrument_family": "strings",
+      "source_kind": "REFERENCE",
+      "n": 763,
+      "notes": 13725,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "keys",
+      "instrument_family": "piano",
+      "source_kind": "REFERENCE",
+      "n": 721,
+      "notes": 16445,
+      "q": 0.68,
+      "conf": 0.8
+    },
+    {
+      "role": "solo",
+      "instrument_family": "guitar",
+      "source_kind": "REFERENCE",
+      "n": 667,
+      "notes": 15477,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "strings",
+      "instrument_family": "synth-pad",
+      "source_kind": "REFERENCE",
+      "n": 498,
+      "notes": 6282,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "keys",
+      "instrument_family": "synth-lead",
+      "source_kind": "REFERENCE",
+      "n": 445,
+      "notes": 11557,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "strings",
+      "instrument_family": "choir",
+      "source_kind": "REFERENCE",
+      "n": 439,
+      "notes": 5482,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "woodwind",
+      "instrument_family": "pipe",
+      "source_kind": "REFERENCE",
+      "n": 413,
+      "notes": 10779,
+      "q": 0.68,
+      "conf": 0.8399999999999999
+    },
+    {
+      "role": "solo",
+      "instrument_family": "pipe",
+      "source_kind": "REFERENCE",
+      "n": 390,
+      "notes": 4709,
+      "q": 0.6800000000000002,
+      "conf": 0.8399999999999999
+    },
+    {
+      "role": "keys",
+      "instrument_family": "ethnic-pluck",
+      "source_kind": "REFERENCE",
+      "n": 382,
+      "notes": 11363,
+      "q": 0.6799999999999999,
+      "conf": 0.76
+    },
+    {
+      "role": "solo",
+      "instrument_family": "synth-lead",
+      "source_kind": "REFERENCE",
+      "n": 296,
+      "notes": 5606,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "woodwind",
+      "instrument_family": "sax",
+      "source_kind": "REFERENCE",
+      "n": 197,
+      "notes": 4618,
+      "q": 0.68,
+      "conf": 0.84
+    },
+    {
+      "role": "woodwind",
+      "instrument_family": "clarinet",
+      "source_kind": "REFERENCE",
+      "n": 186,
+      "notes": 4986,
+      "q": 0.68,
+      "conf": 0.8399999999999999
+    },
+    {
+      "role": "perc",
+      "instrument_family": "synth-fx",
+      "source_kind": "REFERENCE",
+      "n": 155,
+      "notes": 3004,
+      "q": 0.68,
+      "conf": 0.6
+    },
+    {
+      "role": "perc",
+      "instrument_family": "percussive",
+      "source_kind": "REFERENCE",
+      "n": 153,
+      "notes": 1877,
+      "q": 0.68,
+      "conf": 0.6
+    },
+    {
+      "role": "solo",
+      "instrument_family": "ethnic-pluck",
+      "source_kind": "REFERENCE",
+      "n": 153,
+      "notes": 3037,
+      "q": 0.68,
+      "conf": 0.76
+    },
+    {
+      "role": "keys",
+      "instrument_family": "chromatic-percussion",
+      "source_kind": "REFERENCE",
+      "n": 131,
+      "notes": 2738,
+      "q": 0.68,
+      "conf": 0.8
+    },
+    {
+      "role": "solo",
+      "instrument_family": "sax",
+      "source_kind": "REFERENCE",
+      "n": 116,
+      "notes": 1765,
+      "q": 0.68,
+      "conf": 0.84
+    },
+    {
+      "role": "solo",
+      "instrument_family": "accordion",
+      "source_kind": "REFERENCE",
+      "n": 112,
+      "notes": 1558,
+      "q": 0.68,
+      "conf": 0.8
+    },
+    {
+      "role": "solo",
+      "instrument_family": "clarinet",
+      "source_kind": "REFERENCE",
+      "n": 101,
+      "notes": 1634,
+      "q": 0.68,
+      "conf": 0.8400000000000001
+    },
+    {
+      "role": "solo",
+      "instrument_family": "brass",
+      "source_kind": "REFERENCE",
+      "n": 80,
+      "notes": 916,
+      "q": 0.68,
+      "conf": 0.82
+    },
+    {
+      "role": "solo",
+      "instrument_family": "organ",
+      "source_kind": "REFERENCE",
+      "n": 59,
+      "notes": 961,
+      "q": 0.68,
+      "conf": 0.8
+    },
+    {
+      "role": "solo",
+      "instrument_family": "piano",
+      "source_kind": "REFERENCE",
+      "n": 58,
+      "notes": 811,
+      "q": 0.68,
+      "conf": 0.8
+    },
+    {
+      "role": "perc",
+      "instrument_family": "orchestra-hit",
+      "source_kind": "REFERENCE",
+      "n": 48,
+      "notes": 889,
+      "q": 0.68,
+      "conf": 0.6
+    },
+    {
+      "role": "woodwind",
+      "instrument_family": "harmonica",
+      "source_kind": "REFERENCE",
+      "n": 44,
+      "notes": 1060,
+      "q": 0.68,
+      "conf": 0.84
+    },
+    {
+      "role": "solo",
+      "instrument_family": "chromatic-percussion",
+      "source_kind": "REFERENCE",
+      "n": 33,
+      "notes": 367,
+      "q": 0.68,
+      "conf": 0.8
+    },
+    {
+      "role": "perc",
+      "instrument_family": "sfx",
+      "source_kind": "REFERENCE",
+      "n": 31,
+      "notes": 436,
+      "q": 0.68,
+      "conf": 0.6
+    },
+    {
+      "role": "woodwind",
+      "instrument_family": "double-reed",
+      "source_kind": "REFERENCE",
+      "n": 24,
+      "notes": 553,
+      "q": 0.68,
+      "conf": 0.84
+    },
+    {
+      "role": "solo",
+      "instrument_family": "harmonica",
+      "source_kind": "REFERENCE",
+      "n": 16,
+      "notes": 218,
+      "q": 0.68,
+      "conf": 0.84
+    },
+    {
+      "role": "solo",
+      "instrument_family": "double-reed",
+      "source_kind": "REFERENCE",
+      "n": 13,
+      "notes": 268,
+      "q": 0.6799999999999999,
+      "conf": 0.84
+    },
+    {
+      "role": "solo",
+      "instrument_family": "unknown",
+      "source_kind": "REFERENCE",
+      "n": 11,
+      "notes": 153,
+      "q": 0.68,
+      "conf": 0.4799999999999999
+    }
+  ],
+  "by_family": [
+    {
+      "instrument_family": "guitar",
+      "n": 5535,
+      "notes": 160936
+    },
+    {
+      "instrument_family": "drums",
+      "n": 3617,
+      "notes": 143755
+    },
+    {
+      "instrument_family": "ensemble",
+      "n": 2990,
+      "notes": 44603
+    },
+    {
+      "instrument_family": "bass",
+      "n": 2709,
+      "notes": 28839
+    },
+    {
+      "instrument_family": "accordion",
+      "n": 1936,
+      "notes": 53843
+    },
+    {
+      "instrument_family": "brass",
+      "n": 970,
+      "notes": 20490
+    },
+    {
+      "instrument_family": "organ",
+      "n": 898,
+      "notes": 21792
+    },
+    {
+      "instrument_family": "pipe",
+      "n": 803,
+      "notes": 15488
+    },
+    {
+      "instrument_family": "piano",
+      "n": 779,
+      "notes": 17256
+    },
+    {
+      "instrument_family": "strings",
+      "n": 763,
+      "notes": 13725
+    },
+    {
+      "instrument_family": "synth-lead",
+      "n": 741,
+      "notes": 17163
+    },
+    {
+      "instrument_family": "ethnic-pluck",
+      "n": 535,
+      "notes": 14400
+    },
+    {
+      "instrument_family": "synth-pad",
+      "n": 498,
+      "notes": 6282
+    },
+    {
+      "instrument_family": "choir",
+      "n": 439,
+      "notes": 5482
+    },
+    {
+      "instrument_family": "sax",
+      "n": 313,
+      "notes": 6383
+    },
+    {
+      "instrument_family": "clarinet",
+      "n": 287,
+      "notes": 6620
+    },
+    {
+      "instrument_family": "chromatic-percussion",
+      "n": 164,
+      "notes": 3105
+    },
+    {
+      "instrument_family": "synth-fx",
+      "n": 155,
+      "notes": 3004
+    },
+    {
+      "instrument_family": "percussive",
+      "n": 153,
+      "notes": 1877
+    },
+    {
+      "instrument_family": "harmonica",
+      "n": 60,
+      "notes": 1278
+    },
+    {
+      "instrument_family": "orchestra-hit",
+      "n": 48,
+      "notes": 889
+    },
+    {
+      "instrument_family": "double-reed",
+      "n": 37,
+      "notes": 821
+    },
+    {
+      "instrument_family": "sfx",
+      "n": 31,
+      "notes": 436
+    },
+    {
+      "instrument_family": "unknown",
+      "n": 11,
+      "notes": 153
+    }
+  ],
+  "by_role": [
+    {
+      "role": "rhythm-guitar",
+      "n": 4868,
+      "notes": 145459
+    },
+    {
+      "role": "strings",
+      "n": 4690,
+      "notes": 70092
+    },
+    {
+      "role": "keys",
+      "n": 4342,
+      "notes": 115219
+    },
+    {
+      "role": "drums",
+      "n": 3617,
+      "notes": 143755
+    },
+    {
+      "role": "bass",
+      "n": 2709,
+      "notes": 28839
+    },
+    {
+      "role": "solo",
+      "n": 2105,
+      "notes": 37480
+    },
+    {
+      "role": "brass",
+      "n": 890,
+      "notes": 19574
+    },
+    {
+      "role": "woodwind",
+      "n": 864,
+      "notes": 21996
+    },
+    {
+      "role": "perc",
+      "n": 387,
+      "notes": 6206
+    }
+  ]
+}

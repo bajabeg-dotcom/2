@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-09-06T17:28:26.905578",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "checks": {
+    "cc0": "Bank Select MSB, must be valid for Pa800 sound engine",
+    "cc32": "Bank Select LSB, must be valid",
+    "program_change": "0-127, GM compatible",
+    "channels": "9-16 for Style, 10 for drums (9 in 0-indexed)",
+    "drum_channel": "Channel 10 only valid drum keys 27-87",
+    "gm_compatibility": "GM programs 0-127",
+    "korg_sound_mapping": "CC0/CC32/PC must map to valid Pa800 sound",
+    "rx_dnc_mapping": "RX/DNC requires exact sound profile",
+    "velocity_limits": "1-127, role-specific minimums",
+    "note_range": "Instrument-specific, from general-rules-9.30.json",
+    "controller_legality": "Only valid CC numbers",
+    "sysex": "Korg-specific SysEx validation",
+    "markers": "Style markers i1cv1, v1cv1, etc.",
+    "smf0": "Format 0, one track, PPQ 480",
+    "track_ordering": "Bass, Drums, Perc, ACC1-5"
+  },
+  "exporter": {
+    "strict_mode": true,
+    "rule": "Ako je bilo koja Korg-specific komponenta invalidna: EXPORT FAIL",
+    "validation": "Pre-export check mora biti 100% PASS"
+  },
+  "general_rules": {
+    "source": "data/general-rules-9.30.json",
+    "velocity_rules": "Per-category ppp to ff",
+    "polyphony_rules": {
+      "guitar_strum": "max 6 voices (6 strings)",
+      "bass": "max 2 voices (double stops exception)",
+      "drums_kit": "max 8 voices per track",
+      "melody": "max 1 voice (monophonic, fiddle double stops exception)",
+      "pa800_total": "max 54 voices"
+    },
+    "balkan_rules": "Balkan folk specific ranges"
+  },
+  "test": {
+    "method": "Every output MIDI must pass Pa800 validator",
+    "validator": "pa800_validator.py",
+    "hard_gates": [
+      "corrupted MIDI",
+      "invalid mapping",
+      "broken note pairing",
+      "broken Korg metadata",
+      "unexpected channel changes",
+      "uncontrolled velocity",
+      "clipping",
+      "invalid CC"
+    ]
+  }
+}

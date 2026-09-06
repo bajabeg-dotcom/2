@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-06T17:28:26.945350",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "freeze": {
+    "factory_db": "data/factory-velocity-profiles.json + factory-velocity-catalog-9.30.json",
+    "gold_db": "Gold playing logic calibration",
+    "profile_db": "instrument_profiles_10.00.json + .db",
+    "mappings": "Korg Pa800 mappings from general-rules",
+    "calibration_constants": "Parameter sweep safe min/optimal/max",
+    "scoring_thresholds": "Musical validation thresholds",
+    "exporter_rules": "Korg constraint engine strict mode",
+    "transformer_rules": "Factory velocity + Gold playing logic",
+    "seeds": "Deterministic seed 9302026",
+    "regression_corpus": "17 types, 85 files"
+  },
+  "hashes": {
+    "factory-velocity-profiles.json": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60",
+    "general-rules-9.30.json": "9042f79f7d2be0b25ed053ff830d7a5f87f0ce9ac6bb739e48da65ab85d18079",
+    "instrument-catalog-9.30.json": "60c263b4d7129cdef605c6940af50237cef8d9ba44937eb55c9d13b985a85d06",
+    "source_authority_matrix_10.00.json": "eaca72d2100af40415d5849dd4b5314b66798b06bd33850fe9f53cacf6ebcc60",
+    "instrument_profiles_10.00.json": "0de360ddf31e6dedbfeed3d3eb747302819d0121d854b85fda89b724e7faa5d7"
+  },
+  "manifest": {
+    "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+    "timestamp": "2026-09-06T17:28:26.945357",
+    "seed": 9302026,
+    "total_profiles": 20,
+    "factory_profiles": 0,
+    "gold_roles": 0,
+    "calibration_phases": 25,
+    "status": "GOLDEN_FREEZE_READY"
+  }
+}

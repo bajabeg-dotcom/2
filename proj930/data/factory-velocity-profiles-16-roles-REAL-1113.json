@@ -1,0 +1,283 @@
+{
+  "version": "16.00-FACTORY-16-ROLES-REAL",
+  "total_files": 1076,
+  "total_channel_instances": 5210,
+  "total_notes": 242744,
+  "roles": {
+    "drums": {
+      "channel_instances": 3153,
+      "notes": 332902,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 88.69778192981718,
+        "p05": 38,
+        "p10": 49,
+        "p25": 69,
+        "p50": 93,
+        "p75": 110,
+        "p90": 122,
+        "p95": 127
+      },
+      "pitch_avg": 40.90076358808298,
+      "evidence": "DIRECT REAL from 3153 instances 332902 notes"
+    },
+    "terca": {
+      "channel_instances": 363,
+      "notes": 6413,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 77.47029471386247,
+        "p05": 29,
+        "p10": 40,
+        "p25": 57,
+        "p50": 80,
+        "p75": 100,
+        "p90": 114,
+        "p95": 120
+      },
+      "pitch_avg": 71.57336659909559,
+      "evidence": "DIRECT REAL from 363 instances 6413 notes"
+    },
+    "bass": {
+      "channel_instances": 3102,
+      "notes": 99390,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 92.94228795653487,
+        "p05": 50,
+        "p10": 62,
+        "p25": 80,
+        "p50": 96,
+        "p75": 110,
+        "p90": 120,
+        "p95": 125
+      },
+      "pitch_avg": 35.42545527719086,
+      "evidence": "DIRECT REAL from 3102 instances 99390 notes"
+    },
+    "rhythm-guitar": {
+      "channel_instances": 3211,
+      "notes": 320474,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 83.36852287549068,
+        "p05": 41,
+        "p10": 53,
+        "p25": 69,
+        "p50": 85,
+        "p75": 100,
+        "p90": 112,
+        "p95": 120
+      },
+      "pitch_avg": 62.785901508390694,
+      "evidence": "DIRECT REAL from 3211 instances 320474 notes"
+    },
+    "melody": {
+      "channel_instances": 624,
+      "notes": 6034,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 80.04507789194564,
+        "p05": 34,
+        "p10": 46,
+        "p25": 62,
+        "p50": 80,
+        "p75": 100,
+        "p90": 115,
+        "p95": 124
+      },
+      "pitch_avg": 62.83410672853828,
+      "evidence": "DIRECT REAL from 624 instances 6034 notes"
+    },
+    "accompaniment": {
+      "channel_instances": 3081,
+      "notes": 279010,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 82.5256764990502,
+        "p05": 40,
+        "p10": 50,
+        "p25": 66,
+        "p50": 84,
+        "p75": 100,
+        "p90": 114,
+        "p95": 121
+      },
+      "pitch_avg": 65.55665746747428,
+      "evidence": "DIRECT REAL from 3081 instances 279010 notes"
+    },
+    "guitar": {
+      "channel_instances": 1566,
+      "notes": 103027,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 85.46159744532987,
+        "p05": 43,
+        "p10": 53,
+        "p25": 68,
+        "p50": 87,
+        "p75": 105,
+        "p90": 116,
+        "p95": 126
+      },
+      "pitch_avg": 65.11806613800266,
+      "evidence": "DIRECT REAL from 1566 instances 103027 notes"
+    },
+    "power-riff": {
+      "channel_instances": 976,
+      "notes": 178890,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 89.50168259824473,
+        "p05": 45,
+        "p10": 57,
+        "p25": 74,
+        "p50": 92,
+        "p75": 108,
+        "p90": 119,
+        "p95": 124
+      },
+      "pitch_avg": 52.593308737212816,
+      "evidence": "DIRECT REAL from 976 instances 178890 notes"
+    },
+    "riff": {
+      "channel_instances": 1254,
+      "notes": 55401,
+      "velocity": {
+        "min": 1,
+        "max": 127,
+        "avg": 83.08649663363477,
+        "p05": 39,
+        "p10": 48,
+        "p25": 66,
+        "p50": 85,
+        "p75": 102,
+        "p90": 114,
+        "p95": 121
+      },
+      "pitch_avg": 61.5348639916247,
+      "evidence": "DIRECT REAL from 1254 instances 55401 notes"
+    },
+    "lead": {
+      "channel_instances": 203,
+      "notes": 5157,
+      "velocity": {
+        "min": 1,
+        "max": 110,
+        "avg": 69.50126042272639,
+        "p05": 32,
+        "p10": 39,
+        "p25": 53,
+        "p50": 72,
+        "p75": 89,
+        "p90": 100,
+        "p95": 104
+      },
+      "pitch_avg": 60.937366686057786,
+      "evidence": "DIRECT REAL from 203 instances 5157 notes"
+    },
+    "piano": {
+      "channel_instances": 851,
+      "notes": 42947,
+      "velocity": {
+        "min": 3,
+        "max": 127,
+        "avg": 83.57240319463524,
+        "p05": 40,
+        "p10": 51,
+        "p25": 67,
+        "p50": 85,
+        "p75": 102,
+        "p90": 114,
+        "p95": 122
+      },
+      "pitch_avg": 79.10810999604163,
+      "evidence": "DIRECT REAL from 851 instances 42947 notes"
+    },
+    "solo": {
+      "channel_instances": 180,
+      "notes": 3172,
+      "velocity": {
+        "min": 17,
+        "max": 127,
+        "avg": 95.37610340479193,
+        "p05": 47,
+        "p10": 59,
+        "p25": 78,
+        "p50": 100,
+        "p75": 114,
+        "p90": 126,
+        "p95": 127
+      },
+      "pitch_avg": 57.35088272383354,
+      "evidence": "DIRECT REAL from 180 instances 3172 notes"
+    },
+    "strings": {
+      "channel_instances": 24,
+      "notes": 50,
+      "velocity": {
+        "min": 32,
+        "max": 127,
+        "avg": 74.26,
+        "p05": 41,
+        "p10": 48,
+        "p25": 50,
+        "p50": 70,
+        "p75": 95,
+        "p90": 114,
+        "p95": 127
+      },
+      "pitch_avg": 89.1,
+      "evidence": "DIRECT REAL from 24 instances 50 notes"
+    },
+    "organ": {
+      "channel_instances": 926,
+      "notes": 54886,
+      "velocity": {
+        "avg": 79.63864254422097,
+        "instances": 926
+      },
+      "real": true,
+      "new": true
+    },
+    "woodwind": {
+      "channel_instances": 128,
+      "notes": 3492,
+      "velocity": {
+        "avg": 74.87378252547575,
+        "instances": 128
+      },
+      "real": true,
+      "new": true
+    },
+    "choir": {
+      "channel_instances": 102,
+      "notes": 5521,
+      "velocity": {
+        "avg": 54.980555349410366,
+        "instances": 102
+      },
+      "real": true,
+      "new": true
+    },
+    "accordion": {
+      "channel_instances": 41,
+      "notes": 1416,
+      "velocity": {
+        "avg": 75.78926789046679,
+        "instances": 41
+      },
+      "real": true,
+      "new": true
+    }
+  },
+  "authority": "FACTORY REAL 16 roles detailed classification"
+}

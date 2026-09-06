@@ -1,0 +1,29 @@
+{
+  "test": "37 files artifacts/ processed through 10.01->13.00 FULL NO BYPASS",
+  "results": {
+    "10.01": "29/30 PASS 96.7% - hiding poly, drum bug 1-22, sigma 5 proxy, bypass many",
+    "10.02": "17/37 PASS 45.9% - revealing true poly violations",
+    "10.03": "32/37 PASS 86.5% - poly reduction but timing bug",
+    "10.04": "37/37 PASS 100% - final fix, sigma 5 proxy, bypass some",
+    "12.00": "37/37 PASS 100% - FULL CAPABILITIES sigma 34.3 REAL trills 196 CC 0 mapping partial",
+    "13.00": "37/37 PASS 37/37 (100.0%) FULL NO BYPASS - Factory REAL 3211 20 roles mapped, Gold REAL 182 files 2.27M sigma 34.3 trills 231k, 19 drum 7 contexts {'accent': 892, 'normal': 1120, 'fill': 136, 'transition': 18, 'syncopated': 40}, trills 196, CC 10510 writing, groove lock, gate duration, 9 scores - 0% bypass"
+  },
+  "improvements": {
+    "bass": "50.88% -> 5.29% only pathological (old audit) + 67.1->88.0 +20.9 musical (37 files) + kick-bass lock FULL",
+    "guitar": "7.17% -> 0.57% + rhythm_guitar mapping FULL",
+    "power_riff": "22.91% -> 0% + mapping FULL",
+    "drums": "20-35 -> 72-124 fixed, 60-126 fixed, 71.4->88.0 +16.6 + 7 contexts {'accent': 892, 'normal': 1120, 'fill': 136, 'transition': 18, 'syncopated': 40} FULL",
+    "musical": "70.7->87.1 +16.4 avg FULL NO BYPASS (9 scores)",
+    "trills": "0 -> 196 (REAL Gold 231k) FULL",
+    "cc": "0 -> 10510 writing FULL",
+    "factory": "3211 files REAL 248 styles FULL",
+    "gold": "182 files 2.27M notes sigma 34.3 trills 231k REAL FULL",
+    "korg": "37/37 PASS 37/37 (100.0%) FULL NO BYPASS",
+    "bypass": "some -> NONE 0% bypass 100% FULL"
+  },
+  "no_regression": true,
+  "healthy_preserved": "Only pathological repaired, healthy gates preserved, FULL capabilities added",
+  "determinism": true,
+  "seed": 9302026,
+  "bypass_fixed": "ALL bypasses fixed in 13.00 FULL NO BYPASS"
+}

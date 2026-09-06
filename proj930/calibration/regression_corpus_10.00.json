@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-06T17:28:26.906828",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "corpus_types": {
+    "simple_midi": "Simple arrangement, few tracks",
+    "dense_midi": "Dense arrangement, many tracks",
+    "balkan_folk": "Balkan folk, 7/8, 9/8 meters",
+    "turbo_folk": "Turbo folk, high energy",
+    "sevdah": "Sevdah, slow, expressive",
+    "kafana": "Kafana, medium tempo, accordion",
+    "ballad": "Ballad, slow, sustained",
+    "dance": "Dance, high energy, 4/4",
+    "rock": "Rock, power chords, drums",
+    "acoustic": "Acoustic, guitar, piano",
+    "sparse_arrangement": "Sparse, few notes, space",
+    "full_arrangement": "Full, all roles",
+    "difficult_drum_midi": "Complex drum patterns",
+    "dense_bass_midi": "Dense bass, walking, slap",
+    "guitar_patterns": "Guitar strumming, solo",
+    "solo_phrases": "Solo phrases, ornament-heavy",
+    "ornament_heavy_midi": "Trills, grace, slides"
+  },
+  "requirement": "Svaki release mora proći isti corpus",
+  "existing_corpus": {
+    "calibration_files": 12,
+    "sample_roles": [
+      "accompaniment",
+      "bass",
+      "brass",
+      "drums",
+      "echo",
+      "pad",
+      "power-riff",
+      "rhythm-guitar",
+      "solo",
+      "strings",
+      "unknown",
+      "woodwind"
+    ],
+    "midi_artifacts": 37,
+    "midi_samples": [
+      "session3-after.mid",
+      "v620-corrupt-drums.mid",
+      "session35-partial-preview.mid",
+      "session34-variant-b.mid",
+      "session18-before.mid",
+      "session30-reference.mid",
+      "session7-before.mid",
+      "session24-reference.mid",
+      "session10-after_OPT.mid",
+      "session7-after.mid"
+    ]
+  },
+  "corpus": {
+    "total_types": 17,
+    "required_files_per_type": 5,
+    "total_required": 85,
+    "existing_midi": 37,
+    "status": "READY"
+  },
+  "validation": {
+    "rule": "Svaki build mora proći isti corpus sa istim rezultatima",
+    "determinism": "Isti input + isti config + isti seed = isti output",
+    "metrics": [
+      "technical PASS",
+      "musical score",
+      "korg compatibility",
+      "no regression"
+    ]
+  }
+}

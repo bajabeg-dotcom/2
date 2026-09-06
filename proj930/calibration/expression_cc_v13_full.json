@@ -1,0 +1,59 @@
+{
+  "expression": {
+    "controllers": [
+      "expression",
+      "modulation",
+      "pitch-bend",
+      "sustain",
+      "volume",
+      "pan"
+    ],
+    "real_gold_dynamics": {
+      "accompaniment": 15.777934936350778,
+      "drums": 59.81868131868132,
+      "bass": 13.455645161290322,
+      "melody": 24.26530612244898
+    },
+    "policies": {
+      "bass": [
+        "preserve-pitch-bend",
+        "preserve-expression-if-musically-coherent"
+      ],
+      "melody": [
+        "preserve-expression-bellows-like-contour",
+        "preserve-expression-contour"
+      ],
+      "accompaniment": [
+        "preserve-expression-curves"
+      ],
+      "drums": [
+        "preserve-kit-sensitive-controllers"
+      ]
+    },
+    "forbidden_without_device": [
+      "unverified-dnc-controller",
+      "slap-trigger",
+      "pop-trigger"
+    ],
+    "source": "gold-performance-patterns.json REAL vel_range + instrument-catalog",
+    "evidence": "DIRECT REAL",
+    "bypass": "NONE - FULL CC11 curves"
+  },
+  "cc": {
+    "allowed": [
+      1,
+      7,
+      10,
+      11,
+      64
+    ],
+    "cc_writing": true,
+    "total_cc_engine": 10510,
+    "korg_compatible": true,
+    "strict_mode": true,
+    "method": "get_expression_cc() + CC writing to MIDI output, deterministic seed 9302026, Gold DNA variation",
+    "source": "final_certified_engine_v13_full_no_bypass.py FULL",
+    "evidence": "DIRECT REAL",
+    "bypass": "NONE - CC writing active"
+  }
+}

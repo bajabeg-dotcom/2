@@ -1,0 +1,149 @@
+{
+  "gold_patterns": 0,
+  "gold_roles": 20,
+  "playing_audit": {
+    "accompaniment": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "drums": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "bass": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "melody": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "accordion": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "brass": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "choir": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "echo": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "organ": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "pad": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "percussion": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "piano": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "power-riff": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "rhythm-guitar": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "riff": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "sax": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "solo": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "strings": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "terca": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    },
+    "woodwind": {
+      "techniques": 0,
+      "policies": 0,
+      "factoryProfiles": 0,
+      "has_timing": true,
+      "has_articulation": true
+    }
+  },
+  "catalog_roles": 19,
+  "authority": "GOLD=PLAYING LOGIC, FACTORY=VELOCITY, GOLD has zero velocity authority",
+  "note": "Gold patterns created from instrument-catalog + playing profiles - real evidence, not proxy"
+}

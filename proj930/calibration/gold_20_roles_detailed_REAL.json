@@ -1,0 +1,161 @@
+{
+  "version": "14.00-GOLD-20-ROLES-DETAILED",
+  "timestamp": "2026-09-06T14:51:26.672331",
+  "total_files": 182,
+  "total_instances": 1893,
+  "total_notes": 2272811,
+  "roles": {
+    "accordion": {
+      "instances": 670,
+      "notes": 855823,
+      "files": 178
+    },
+    "drums": {
+      "instances": 182,
+      "notes": 402401,
+      "files": 182
+    },
+    "piano": {
+      "instances": 261,
+      "notes": 371170,
+      "files": 132
+    },
+    "accompaniment": {
+      "instances": 174,
+      "notes": 151356,
+      "files": 117
+    },
+    "solo": {
+      "instances": 37,
+      "notes": 30666,
+      "files": 36
+    },
+    "brass": {
+      "instances": 67,
+      "notes": 7156,
+      "files": 62
+    },
+    "strings": {
+      "instances": 8,
+      "notes": 742,
+      "files": 7
+    },
+    "riff": {
+      "instances": 114,
+      "notes": 93899,
+      "files": 84
+    },
+    "bass": {
+      "instances": 136,
+      "notes": 79406,
+      "files": 132
+    },
+    "melody": {
+      "instances": 24,
+      "notes": 17172,
+      "files": 24
+    },
+    "woodwind": {
+      "instances": 68,
+      "notes": 63827,
+      "files": 54
+    },
+    "organ": {
+      "instances": 67,
+      "notes": 145056,
+      "files": 58
+    },
+    "terca": {
+      "instances": 24,
+      "notes": 18691,
+      "files": 24
+    },
+    "sax": {
+      "instances": 35,
+      "notes": 11445,
+      "files": 33
+    },
+    "power-riff": {
+      "instances": 3,
+      "notes": 5429,
+      "files": 3
+    },
+    "rhythm-guitar": {
+      "instances": 21,
+      "notes": 17866,
+      "files": 21
+    },
+    "pad": {
+      "instances": 1,
+      "notes": 78,
+      "files": 1
+    },
+    "lead": {
+      "instances": 1,
+      "notes": 628,
+      "files": 1
+    }
+  },
+  "previous_4_roles": [
+    "accompaniment",
+    "drums",
+    "bass",
+    "melody"
+  ],
+  "new_roles_found": [
+    "accordion",
+    "piano",
+    "solo",
+    "brass",
+    "strings",
+    "riff",
+    "woodwind",
+    "organ",
+    "terca",
+    "sax",
+    "power-riff",
+    "rhythm-guitar",
+    "pad",
+    "lead"
+  ],
+  "proxy_16_before": [
+    "accordion",
+    "brass",
+    "choir",
+    "echo",
+    "organ",
+    "pad",
+    "percussion",
+    "piano",
+    "power-riff",
+    "rhythm-guitar",
+    "riff",
+    "sax",
+    "solo",
+    "strings",
+    "terca",
+    "woodwind"
+  ],
+  "now_real": [
+    "accordion",
+    "brass",
+    "organ",
+    "pad",
+    "piano",
+    "power-riff",
+    "rhythm-guitar",
+    "riff",
+    "sax",
+    "solo",
+    "strings",
+    "terca",
+    "woodwind"
+  ],
+  "still_proxy": [
+    "choir",
+    "echo",
+    "percussion"
+  ],
+  "improvement": "4 REAL -> 17 REAL (4 + 13)",
+  "evidence": "DIRECT REAL detailed classification per 20 roles from Gold DNA 182 files"
+}

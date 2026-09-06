@@ -1,0 +1,3781 @@
+{
+  "version": "10.01-fixed-20-roles",
+  "timestamp": "2026-09-06T10:43:22.521301",
+  "authority": "FACTORY_ONLY_MAPPED_TO_20_ROLES",
+  "factory_roles": {
+    "melody": 157,
+    "chords": 335,
+    "bass": 51,
+    "drums": 1421
+  },
+  "instrument_roles": 20,
+  "mapping": {
+    "bass": [
+      "bass"
+    ],
+    "drums": [
+      "drums",
+      "percussion"
+    ],
+    "melody": [
+      "violin",
+      "sax",
+      "clarinet",
+      "woodwind",
+      "solo_guitar",
+      "synth_lead",
+      "mallet",
+      "choir",
+      "fx"
+    ],
+    "chords": [
+      "rhythm_guitar",
+      "piano",
+      "organ",
+      "accordion",
+      "strings",
+      "brass",
+      "pad",
+      "accompaniment"
+    ]
+  },
+  "adjustments": {
+    "bass": {
+      "floor": 65,
+      "optimal": 105,
+      "ceiling": 127,
+      "reason": "Bass mora biti čujan, ispod 65 gubi definiciju"
+    },
+    "drums": {
+      "floor": 30,
+      "optimal": 97,
+      "ceiling": 127,
+      "reason": "Drums full range"
+    },
+    "percussion": {
+      "floor": 25,
+      "optimal": 75,
+      "ceiling": 110,
+      "reason": "Percussion color"
+    },
+    "rhythm_guitar": {
+      "floor": 35,
+      "optimal": 85,
+      "ceiling": 120,
+      "reason": "Rhythm guitar needs attack"
+    },
+    "solo_guitar": {
+      "floor": 40,
+      "optimal": 90,
+      "ceiling": 127,
+      "reason": "Solo must cut through"
+    },
+    "piano": {
+      "floor": 20,
+      "optimal": 80,
+      "ceiling": 127,
+      "reason": "Piano widest dynamics"
+    },
+    "organ": {
+      "floor": 50,
+      "optimal": 85,
+      "ceiling": 127,
+      "reason": "Organ no dynamics per se, volume is expression"
+    },
+    "accordion": {
+      "floor": 40,
+      "optimal": 85,
+      "ceiling": 120,
+      "reason": "Accordion bellows"
+    },
+    "strings": {
+      "floor": 25,
+      "optimal": 80,
+      "ceiling": 120,
+      "reason": "Strings sul pont to fortissimo"
+    },
+    "brass": {
+      "floor": 50,
+      "optimal": 95,
+      "ceiling": 127,
+      "reason": "Brass needs air, below 50 no tone"
+    },
+    "sax": {
+      "floor": 40,
+      "optimal": 85,
+      "ceiling": 120,
+      "reason": "Sax needs breath"
+    },
+    "woodwind": {
+      "floor": 35,
+      "optimal": 80,
+      "ceiling": 115,
+      "reason": "Woodwind breathy"
+    },
+    "clarinet": {
+      "floor": 35,
+      "optimal": 80,
+      "ceiling": 115,
+      "reason": "Clarinet folk ornament"
+    },
+    "violin": {
+      "floor": 30,
+      "optimal": 85,
+      "ceiling": 120,
+      "reason": "Violin fiddle"
+    },
+    "synth_lead": {
+      "floor": 30,
+      "optimal": 90,
+      "ceiling": 127,
+      "reason": "Synth lead must cut"
+    },
+    "pad": {
+      "floor": 20,
+      "optimal": 70,
+      "ceiling": 100,
+      "reason": "Pad sustained bed"
+    },
+    "mallet": {
+      "floor": 30,
+      "optimal": 85,
+      "ceiling": 120,
+      "reason": "Mallet clear attack"
+    },
+    "choir": {
+      "floor": 30,
+      "optimal": 75,
+      "ceiling": 110,
+      "reason": "Choir vocal texture"
+    },
+    "fx": {
+      "floor": 1,
+      "optimal": 80,
+      "ceiling": 127,
+      "reason": "FX no real dynamics"
+    },
+    "accompaniment": {
+      "floor": 30,
+      "optimal": 75,
+      "ceiling": 110,
+      "reason": "Accomp support not dominate"
+    }
+  },
+  "calibrations": {
+    "violin": {
+      "role": "violin",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 30
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 30
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 30,
+          "soft": 30,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          30,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 30,
+          "optimal": 85,
+          "ceiling": 120,
+          "reason": "Violin fiddle"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 30,
+        "optimal": 85,
+        "ceiling": 120,
+        "reason": "Violin fiddle"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to violin",
+        "musical_purpose": "Violin fiddle",
+        "target_profile": "violin range 30-127 optimal 94",
+        "constraints": "Korg 1-127, violin floor 30",
+        "transformation_rule": "Factory melody intensity -> violin velocity via 7-point curve with violin adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 30-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, violin adjustment daje final range"
+      }
+    },
+    "sax": {
+      "role": "sax",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 40
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 40,
+          "soft": 40,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          40,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 40,
+          "optimal": 85,
+          "ceiling": 120,
+          "reason": "Sax needs breath"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 40,
+        "optimal": 85,
+        "ceiling": 120,
+        "reason": "Sax needs breath"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to sax",
+        "musical_purpose": "Sax needs breath",
+        "target_profile": "sax range 40-127 optimal 94",
+        "constraints": "Korg 1-127, sax floor 40",
+        "transformation_rule": "Factory melody intensity -> sax velocity via 7-point curve with sax adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 40-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, sax adjustment daje final range"
+      }
+    },
+    "clarinet": {
+      "role": "clarinet",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 35
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 35
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 35,
+          "soft": 35,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          35,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 35,
+          "optimal": 80,
+          "ceiling": 115,
+          "reason": "Clarinet folk ornament"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 35,
+        "optimal": 80,
+        "ceiling": 115,
+        "reason": "Clarinet folk ornament"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to clarinet",
+        "musical_purpose": "Clarinet folk ornament",
+        "target_profile": "clarinet range 35-127 optimal 94",
+        "constraints": "Korg 1-127, clarinet floor 35",
+        "transformation_rule": "Factory melody intensity -> clarinet velocity via 7-point curve with clarinet adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 35-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, clarinet adjustment daje final range"
+      }
+    },
+    "woodwind": {
+      "role": "woodwind",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 35
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 35
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 35,
+          "soft": 35,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          35,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 35,
+          "optimal": 80,
+          "ceiling": 115,
+          "reason": "Woodwind breathy"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 35,
+        "optimal": 80,
+        "ceiling": 115,
+        "reason": "Woodwind breathy"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to woodwind",
+        "musical_purpose": "Woodwind breathy",
+        "target_profile": "woodwind range 35-127 optimal 94",
+        "constraints": "Korg 1-127, woodwind floor 35",
+        "transformation_rule": "Factory melody intensity -> woodwind velocity via 7-point curve with woodwind adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 35-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, woodwind adjustment daje final range"
+      }
+    },
+    "solo_guitar": {
+      "role": "solo_guitar",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 40
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 40,
+          "soft": 40,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          40,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 40,
+          "optimal": 90,
+          "ceiling": 127,
+          "reason": "Solo must cut through"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 40,
+        "optimal": 90,
+        "ceiling": 127,
+        "reason": "Solo must cut through"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to solo_guitar",
+        "musical_purpose": "Solo must cut through",
+        "target_profile": "solo_guitar range 40-127 optimal 94",
+        "constraints": "Korg 1-127, solo_guitar floor 40",
+        "transformation_rule": "Factory melody intensity -> solo_guitar velocity via 7-point curve with solo_guitar adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 40-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, solo_guitar adjustment daje final range"
+      }
+    },
+    "synth_lead": {
+      "role": "synth_lead",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 30
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 30
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 30,
+          "soft": 30,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          30,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 30,
+          "optimal": 90,
+          "ceiling": 127,
+          "reason": "Synth lead must cut"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 30,
+        "optimal": 90,
+        "ceiling": 127,
+        "reason": "Synth lead must cut"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to synth_lead",
+        "musical_purpose": "Synth lead must cut",
+        "target_profile": "synth_lead range 30-127 optimal 94",
+        "constraints": "Korg 1-127, synth_lead floor 30",
+        "transformation_rule": "Factory melody intensity -> synth_lead velocity via 7-point curve with synth_lead adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 30-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, synth_lead adjustment daje final range"
+      }
+    },
+    "mallet": {
+      "role": "mallet",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 30
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 30
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 30,
+          "soft": 30,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          30,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 30,
+          "optimal": 85,
+          "ceiling": 120,
+          "reason": "Mallet clear attack"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 30,
+        "optimal": 85,
+        "ceiling": 120,
+        "reason": "Mallet clear attack"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to mallet",
+        "musical_purpose": "Mallet clear attack",
+        "target_profile": "mallet range 30-127 optimal 94",
+        "constraints": "Korg 1-127, mallet floor 30",
+        "transformation_rule": "Factory melody intensity -> mallet velocity via 7-point curve with mallet adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 30-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, mallet adjustment daje final range"
+      }
+    },
+    "choir": {
+      "role": "choir",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 30
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 30
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 30,
+          "soft": 30,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          30,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 30,
+          "optimal": 75,
+          "ceiling": 110,
+          "reason": "Choir vocal texture"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 30,
+        "optimal": 75,
+        "ceiling": 110,
+        "reason": "Choir vocal texture"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to choir",
+        "musical_purpose": "Choir vocal texture",
+        "target_profile": "choir range 30-127 optimal 94",
+        "constraints": "Korg 1-127, choir floor 30",
+        "transformation_rule": "Factory melody intensity -> choir velocity via 7-point curve with choir adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 30-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, choir adjustment daje final range"
+      }
+    },
+    "fx": {
+      "role": "fx",
+      "factory_source_role": "melody",
+      "factory_profiles": 157,
+      "sample_count": 471,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 1,
+          "optimal": 80,
+          "ceiling": 127,
+          "reason": "FX no real dynamics"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 27
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 55
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 94
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 123
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 27,
+          "lowMid": 55,
+          "optimal": 94,
+          "highMid": 123,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 14,
+          "p10": 27,
+          "p25": 55,
+          "p50": 94,
+          "p75": 123,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 471,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 1,
+        "optimal": 80,
+        "ceiling": 127,
+        "reason": "FX no real dynamics"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory melody 157 profiles, 471 samples -> mapped to fx",
+        "musical_purpose": "FX no real dynamics",
+        "target_profile": "fx range 1-127 optimal 94",
+        "constraints": "Korg 1-127, fx floor 1",
+        "transformation_rule": "Factory melody intensity -> fx velocity via 7-point curve with fx adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 1-127 optimal 94",
+        "pass_fail": "PASS",
+        "explanation": "Factory melody daje base, fx adjustment daje final range"
+      }
+    },
+    "rhythm_guitar": {
+      "role": "rhythm_guitar",
+      "factory_source_role": "chords",
+      "factory_profiles": 335,
+      "sample_count": 1005,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 35
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 35
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 35,
+          "soft": 35,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          35,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 35,
+          "optimal": 85,
+          "ceiling": 120,
+          "reason": "Rhythm guitar needs attack"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 17
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 17,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 35,
+        "optimal": 85,
+        "ceiling": 120,
+        "reason": "Rhythm guitar needs attack"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory chords 335 profiles, 1005 samples -> mapped to rhythm_guitar",
+        "musical_purpose": "Rhythm guitar needs attack",
+        "target_profile": "rhythm_guitar range 35-127 optimal 89",
+        "constraints": "Korg 1-127, rhythm_guitar floor 35",
+        "transformation_rule": "Factory chords intensity -> rhythm_guitar velocity via 7-point curve with rhythm_guitar adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 35-127 optimal 89",
+        "pass_fail": "PASS",
+        "explanation": "Factory chords daje base, rhythm_guitar adjustment daje final range"
+      }
+    },
+    "piano": {
+      "role": "piano",
+      "factory_source_role": "chords",
+      "factory_profiles": 335,
+      "sample_count": 1005,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 20
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 20,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 20,
+          "optimal": 80,
+          "ceiling": 127,
+          "reason": "Piano widest dynamics"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 17
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 17,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 20,
+        "optimal": 80,
+        "ceiling": 127,
+        "reason": "Piano widest dynamics"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory chords 335 profiles, 1005 samples -> mapped to piano",
+        "musical_purpose": "Piano widest dynamics",
+        "target_profile": "piano range 20-127 optimal 89",
+        "constraints": "Korg 1-127, piano floor 20",
+        "transformation_rule": "Factory chords intensity -> piano velocity via 7-point curve with piano adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 20-127 optimal 89",
+        "pass_fail": "PASS",
+        "explanation": "Factory chords daje base, piano adjustment daje final range"
+      }
+    },
+    "organ": {
+      "role": "organ",
+      "factory_source_role": "chords",
+      "factory_profiles": 335,
+      "sample_count": 1005,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 50
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 50
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 50
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 50,
+          "soft": 50,
+          "lowMid": 50,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          50,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 50,
+          "optimal": 85,
+          "ceiling": 127,
+          "reason": "Organ no dynamics per se, volume is expression"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 17
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 17,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 50,
+        "optimal": 85,
+        "ceiling": 127,
+        "reason": "Organ no dynamics per se, volume is expression"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory chords 335 profiles, 1005 samples -> mapped to organ",
+        "musical_purpose": "Organ no dynamics per se, volume is expression",
+        "target_profile": "organ range 50-127 optimal 89",
+        "constraints": "Korg 1-127, organ floor 50",
+        "transformation_rule": "Factory chords intensity -> organ velocity via 7-point curve with organ adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 50-127 optimal 89",
+        "pass_fail": "PASS",
+        "explanation": "Factory chords daje base, organ adjustment daje final range"
+      }
+    },
+    "accordion": {
+      "role": "accordion",
+      "factory_source_role": "chords",
+      "factory_profiles": 335,
+      "sample_count": 1005,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 40
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 40
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 40,
+          "soft": 40,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          40,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 40,
+          "optimal": 85,
+          "ceiling": 120,
+          "reason": "Accordion bellows"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 17
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 17,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 40,
+        "optimal": 85,
+        "ceiling": 120,
+        "reason": "Accordion bellows"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory chords 335 profiles, 1005 samples -> mapped to accordion",
+        "musical_purpose": "Accordion bellows",
+        "target_profile": "accordion range 40-127 optimal 89",
+        "constraints": "Korg 1-127, accordion floor 40",
+        "transformation_rule": "Factory chords intensity -> accordion velocity via 7-point curve with accordion adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 40-127 optimal 89",
+        "pass_fail": "PASS",
+        "explanation": "Factory chords daje base, accordion adjustment daje final range"
+      }
+    },
+    "strings": {
+      "role": "strings",
+      "factory_source_role": "chords",
+      "factory_profiles": 335,
+      "sample_count": 1005,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 25
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 25
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 25,
+          "soft": 25,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          25,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 25,
+          "optimal": 80,
+          "ceiling": 120,
+          "reason": "Strings sul pont to fortissimo"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 17
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 17,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 25,
+        "optimal": 80,
+        "ceiling": 120,
+        "reason": "Strings sul pont to fortissimo"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory chords 335 profiles, 1005 samples -> mapped to strings",
+        "musical_purpose": "Strings sul pont to fortissimo",
+        "target_profile": "strings range 25-127 optimal 89",
+        "constraints": "Korg 1-127, strings floor 25",
+        "transformation_rule": "Factory chords intensity -> strings velocity via 7-point curve with strings adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 25-127 optimal 89",
+        "pass_fail": "PASS",
+        "explanation": "Factory chords daje base, strings adjustment daje final range"
+      }
+    },
+    "brass": {
+      "role": "brass",
+      "factory_source_role": "chords",
+      "factory_profiles": 335,
+      "sample_count": 1005,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 50
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 50
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 50
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 50,
+          "soft": 50,
+          "lowMid": 50,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          50,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 50,
+          "optimal": 95,
+          "ceiling": 127,
+          "reason": "Brass needs air, below 50 no tone"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 17
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 17,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 50,
+        "optimal": 95,
+        "ceiling": 127,
+        "reason": "Brass needs air, below 50 no tone"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory chords 335 profiles, 1005 samples -> mapped to brass",
+        "musical_purpose": "Brass needs air, below 50 no tone",
+        "target_profile": "brass range 50-127 optimal 89",
+        "constraints": "Korg 1-127, brass floor 50",
+        "transformation_rule": "Factory chords intensity -> brass velocity via 7-point curve with brass adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 50-127 optimal 89",
+        "pass_fail": "PASS",
+        "explanation": "Factory chords daje base, brass adjustment daje final range"
+      }
+    },
+    "pad": {
+      "role": "pad",
+      "factory_source_role": "chords",
+      "factory_profiles": 335,
+      "sample_count": 1005,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 20
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 20
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 20,
+          "soft": 20,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          20,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 20,
+          "optimal": 70,
+          "ceiling": 100,
+          "reason": "Pad sustained bed"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 17
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 17,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 20,
+        "optimal": 70,
+        "ceiling": 100,
+        "reason": "Pad sustained bed"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory chords 335 profiles, 1005 samples -> mapped to pad",
+        "musical_purpose": "Pad sustained bed",
+        "target_profile": "pad range 20-127 optimal 89",
+        "constraints": "Korg 1-127, pad floor 20",
+        "transformation_rule": "Factory chords intensity -> pad velocity via 7-point curve with pad adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 20-127 optimal 89",
+        "pass_fail": "PASS",
+        "explanation": "Factory chords daje base, pad adjustment daje final range"
+      }
+    },
+    "accompaniment": {
+      "role": "accompaniment",
+      "factory_source_role": "chords",
+      "factory_profiles": 335,
+      "sample_count": 1005,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 30
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 30
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 30,
+          "soft": 30,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          30,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 30,
+          "optimal": 75,
+          "ceiling": 110,
+          "reason": "Accomp support not dominate"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 1
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 17
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 47
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 89
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 120
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 1,
+          "soft": 17,
+          "lowMid": 47,
+          "optimal": 89,
+          "highMid": 120,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 5,
+          "p10": 17,
+          "p25": 47,
+          "p50": 89,
+          "p75": 120,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          1,
+          127
+        ],
+        "sampleCount": 1005,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {}
+      },
+      "velocity_rule": {
+        "floor": 30,
+        "optimal": 75,
+        "ceiling": 110,
+        "reason": "Accomp support not dominate"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory chords 335 profiles, 1005 samples -> mapped to accompaniment",
+        "musical_purpose": "Accomp support not dominate",
+        "target_profile": "accompaniment range 30-127 optimal 89",
+        "constraints": "Korg 1-127, accompaniment floor 30",
+        "transformation_rule": "Factory chords intensity -> accompaniment velocity via 7-point curve with accompaniment adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 30-127 optimal 89",
+        "pass_fail": "PASS",
+        "explanation": "Factory chords daje base, accompaniment adjustment daje final range"
+      }
+    },
+    "bass": {
+      "role": "bass",
+      "factory_source_role": "bass",
+      "factory_profiles": 51,
+      "sample_count": 153,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 65
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 65
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 65
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 105
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 127
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 65,
+          "soft": 65,
+          "lowMid": 65,
+          "optimal": 105,
+          "highMid": 127,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 16,
+          "p10": 22,
+          "p25": 59,
+          "p50": 105,
+          "p75": 127,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          65,
+          127
+        ],
+        "sampleCount": 153,
+        "confidence": 0.9578,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 65,
+          "optimal": 105,
+          "ceiling": 127,
+          "reason": "Bass mora biti čujan, ispod 65 gubi definiciju"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 65
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 65
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 65
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 105
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 127
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 65,
+          "soft": 65,
+          "lowMid": 65,
+          "optimal": 105,
+          "highMid": 127,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 16,
+          "p10": 22,
+          "p25": 59,
+          "p50": 105,
+          "p75": 127,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          65,
+          127
+        ],
+        "sampleCount": 153,
+        "confidence": 0.9578,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 65,
+          "optimal": 105,
+          "ceiling": 127,
+          "reason": "Bass mora biti čujan, ispod 65 gubi definiciju"
+        }
+      },
+      "velocity_rule": {
+        "floor": 65,
+        "optimal": 105,
+        "ceiling": 127,
+        "reason": "Bass mora biti čujan, ispod 65 gubi definiciju"
+      },
+      "korg_realistic": true,
+      "confidence": 0.9578,
+      "transformation": {
+        "source_evidence": "Factory bass 51 profiles, 153 samples -> mapped to bass",
+        "musical_purpose": "Bass mora biti čujan, ispod 65 gubi definiciju",
+        "target_profile": "bass range 65-127 optimal 105",
+        "constraints": "Korg 1-127, bass floor 65",
+        "transformation_rule": "Factory bass intensity -> bass velocity via 7-point curve with bass adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 65-127 optimal 105",
+        "pass_fail": "PASS",
+        "explanation": "Factory bass daje base, bass adjustment daje final range"
+      }
+    },
+    "drums": {
+      "role": "drums",
+      "factory_source_role": "drums",
+      "factory_profiles": 1421,
+      "sample_count": 4263,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 30
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 36
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 68
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 97
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 116
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 30,
+          "soft": 36,
+          "lowMid": 68,
+          "optimal": 97,
+          "highMid": 116,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 31,
+          "p10": 36,
+          "p25": 68,
+          "p50": 97,
+          "p75": 116,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          30,
+          127
+        ],
+        "sampleCount": 4263,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 30,
+          "optimal": 97,
+          "ceiling": 127,
+          "reason": "Drums full range"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 30
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 36
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 68
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 97
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 116
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 30,
+          "soft": 36,
+          "lowMid": 68,
+          "optimal": 97,
+          "highMid": 116,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 31,
+          "p10": 36,
+          "p25": 68,
+          "p50": 97,
+          "p75": 116,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          30,
+          127
+        ],
+        "sampleCount": 4263,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 30,
+          "optimal": 97,
+          "ceiling": 127,
+          "reason": "Drums full range"
+        }
+      },
+      "velocity_rule": {
+        "floor": 30,
+        "optimal": 97,
+        "ceiling": 127,
+        "reason": "Drums full range"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory drums 1421 profiles, 4263 samples -> mapped to drums",
+        "musical_purpose": "Drums full range",
+        "target_profile": "drums range 30-127 optimal 97",
+        "constraints": "Korg 1-127, drums floor 30",
+        "transformation_rule": "Factory drums intensity -> drums velocity via 7-point curve with drums adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 30-127 optimal 97",
+        "pass_fail": "PASS",
+        "explanation": "Factory drums daje base, drums adjustment daje final range"
+      }
+    },
+    "percussion": {
+      "role": "percussion",
+      "factory_source_role": "drums",
+      "factory_profiles": 1421,
+      "sample_count": 4263,
+      "curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 25
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 36
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 68
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 97
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 116
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 25,
+          "soft": 36,
+          "lowMid": 68,
+          "optimal": 97,
+          "highMid": 116,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 31,
+          "p10": 36,
+          "p25": 68,
+          "p50": 97,
+          "p75": 116,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          25,
+          127
+        ],
+        "sampleCount": 4263,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 25,
+          "optimal": 75,
+          "ceiling": 110,
+          "reason": "Percussion color"
+        }
+      },
+      "base_factory_curve": {
+        "method": "factory-7point-v10.01-mapped",
+        "points": [
+          {
+            "intensity": 0,
+            "label": "floor",
+            "velocity": 30
+          },
+          {
+            "intensity": 17,
+            "label": "soft",
+            "velocity": 36
+          },
+          {
+            "intensity": 33,
+            "label": "lowMid",
+            "velocity": 68
+          },
+          {
+            "intensity": 50,
+            "label": "optimal",
+            "velocity": 97
+          },
+          {
+            "intensity": 67,
+            "label": "highMid",
+            "velocity": 116
+          },
+          {
+            "intensity": 83,
+            "label": "strong",
+            "velocity": 127
+          },
+          {
+            "intensity": 100,
+            "label": "ceiling",
+            "velocity": 127
+          }
+        ],
+        "values": {
+          "floor": 30,
+          "soft": 36,
+          "lowMid": 68,
+          "optimal": 97,
+          "highMid": 116,
+          "strong": 127,
+          "ceiling": 127
+        },
+        "quantiles": {
+          "p05": 31,
+          "p10": 36,
+          "p25": 68,
+          "p50": 97,
+          "p75": 116,
+          "p90": 127,
+          "p95": 127,
+          "p99": 127
+        },
+        "allowedRange": [
+          30,
+          127
+        ],
+        "sampleCount": 4263,
+        "confidence": 0.99,
+        "korgRealistic": true,
+        "korgChecks": {
+          "min_ge_1": true,
+          "max_le_127": true,
+          "monotone": true,
+          "range_not_zero": true,
+          "optimal_in_range": true
+        },
+        "source": "FACTORY_MAPPED",
+        "adjustment": {
+          "floor": 30,
+          "optimal": 97,
+          "ceiling": 127,
+          "reason": "Drums full range"
+        }
+      },
+      "velocity_rule": {
+        "floor": 25,
+        "optimal": 75,
+        "ceiling": 110,
+        "reason": "Percussion color"
+      },
+      "korg_realistic": true,
+      "confidence": 0.99,
+      "transformation": {
+        "source_evidence": "Factory drums 1421 profiles, 4263 samples -> mapped to percussion",
+        "musical_purpose": "Percussion color",
+        "target_profile": "percussion range 25-127 optimal 97",
+        "constraints": "Korg 1-127, percussion floor 25",
+        "transformation_rule": "Factory drums intensity -> percussion velocity via 7-point curve with percussion adjustment",
+        "before_metric": "Original uncontrolled velocity",
+        "after_metric": "Factory calibrated 25-127 optimal 97",
+        "pass_fail": "PASS",
+        "explanation": "Factory drums daje base, percussion adjustment daje final range"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "method": "deterministic_random with seed 9302026, sigma 5, safe windows",
+  "timing": "humanization_sigma 5, safe window bass 15, drums 8, etc.",
+  "velocity": "deterministic variation ±5 for drums, Factory curve for melodic",
+  "deterministic": true,
+  "seed": 9302026,
+  "reproducible": true,
+  "test": "hash test True, same input -> same output",
+  "roles": {
+    "bass": {
+      "sigma": 5,
+      "safe": 15,
+      "pocket": "kick"
+    },
+    "drums": {
+      "sigma": 3,
+      "safe": 8,
+      "pocket": "foundation"
+    },
+    "melody": {
+      "sigma": 5,
+      "safe": 10,
+      "phrase": "breaths"
+    },
+    "accompaniment": {
+      "sigma": 5,
+      "safe": 10,
+      "support": "not dominate"
+    }
+  },
+  "source": "final_certified_engine_v10_04_final.py deterministic_random"
+}

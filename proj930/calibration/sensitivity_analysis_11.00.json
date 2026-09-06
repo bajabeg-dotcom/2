@@ -1,0 +1,21 @@
+{
+  "velocity_floor_sensitivity": {
+    "bass": "High - floor 65 vs 20 changes 50.88%->5.29%",
+    "brass": "Medium",
+    "piano": "Low"
+  },
+  "timing_sigma_sensitivity": {
+    "sigma 3 vs 5 vs 8": "Low - musical improvement stable 70->88"
+  },
+  "polyphony_sensitivity": {
+    "bass 1 vs 2": "High - 1 too strict, 2 optimal, 3 too loose for Korg",
+    "melody 1 vs 2": "High - monophonic requires 1"
+  },
+  "drum_threshold_sensitivity": {
+    "threshold 5 vs 2": "High - threshold 5 false uniform for kick with 2 vel"
+  },
+  "ppq_sensitivity": {
+    "192 vs 480": "High - Pa800 Style requires 480"
+  },
+  "overall": "System robust, Korg realistic stable across sweep"
+}

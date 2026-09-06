@@ -1,0 +1,47 @@
+{
+  "expression": {
+    "controllers": [
+      "expression",
+      "modulation",
+      "pitch-bend",
+      "sustain"
+    ],
+    "policies": {
+      "bass": [
+        "preserve-pitch-bend",
+        "preserve-expression-if-musically-coherent"
+      ],
+      "melody": [
+        "preserve-expression-bellows-like-contour",
+        "preserve-expression-contour"
+      ],
+      "accompaniment": [
+        "preserve-expression-curves"
+      ],
+      "drums": [
+        "preserve-kit-sensitive-controllers"
+      ]
+    },
+    "forbidden_without_device": [
+      "unverified-dnc-controller",
+      "slap-trigger",
+      "pop-trigger"
+    ],
+    "source": "instrument-catalog-9.30.json"
+  },
+  "cc": {
+    "allowed": [
+      1,
+      7,
+      10,
+      11,
+      64
+    ],
+    "forbidden_without_device": [
+      "DNC",
+      "RX noise"
+    ],
+    "korg_compatible": true,
+    "strict_mode": true
+  }
+}

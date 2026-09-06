@@ -1,0 +1,1464 @@
+{
+  "schema": "dna-midi-general-rules",
+  "version": "9.30",
+  "authority": "GENERAL_RULES_HARD_LIMIT",
+  "description": "Hard key range, velocity, polyphony i drum map pravila za Pa800 export. Svaki instrument ima fizički raspon — note izvan raspona su UNPLAYABLE i moraju biti BLOKIRANE pri exportu.",
+  "rules": [
+    "RULE 1: Note izvan instrument key range = BLOKIRAJ pri export (transponiraj na najbližu validnu ili ukloni)",
+    "RULE 2: Velocity ispod instrument minimuma = clamp na ppp vrijednost",
+    "RULE 3: Velocity iznad 127 = nemoguće — clamp na 127",
+    "RULE 4: Kanal 10 note izvan drum map = BLOKIRAJ (nema zvuka na Pa800)",
+    "RULE 5: Polyphony preko instrument max = ukloni najstarije note (FIFO)",
+    "RULE 6: Bass nikada ne svira akorde (max 2 note simultano za double stops)",
+    "RULE 7: Solo melodija = monofona (max 1 nota istovremeno na istom kanalu)",
+    "RULE 8: Ukupna polifonija svih traka zajedno = max 54 (Pa800 hard limit)",
+    "RULE 9: Program Change mora biti u GM rasponu 0-127",
+    "RULE 10: Bank Select MSB/LSB mora biti validan za Pa800 sound engine"
+  ],
+  "gmMelodicRanges": {
+    "0": {
+      "name": "Acoustic Grand Piano",
+      "lo": 21,
+      "hi": 108,
+      "cat": "piano",
+      "phys": "88 keys A0-C8",
+      "keyLowNote": "A0",
+      "keyHighNote": "C8"
+    },
+    "1": {
+      "name": "Bright Acoustic Piano",
+      "lo": 21,
+      "hi": 108,
+      "cat": "piano",
+      "phys": "88 keys A0-C8",
+      "keyLowNote": "A0",
+      "keyHighNote": "C8"
+    },
+    "2": {
+      "name": "Electric Grand Piano",
+      "lo": 28,
+      "hi": 108,
+      "cat": "piano",
+      "phys": "extended range",
+      "keyLowNote": "E1",
+      "keyHighNote": "C8"
+    },
+    "3": {
+      "name": "Honky-tonk Piano",
+      "lo": 21,
+      "hi": 108,
+      "cat": "piano",
+      "phys": "88 keys A0-C8",
+      "keyLowNote": "A0",
+      "keyHighNote": "C8"
+    },
+    "4": {
+      "name": "Rhodes EP",
+      "lo": 36,
+      "hi": 96,
+      "cat": "piano",
+      "phys": "73 keys F1-E7 typical range C2-C7",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "5": {
+      "name": "FM E.Piano",
+      "lo": 36,
+      "hi": 96,
+      "cat": "piano",
+      "phys": "DX7 range C2-C7",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "6": {
+      "name": "Harpsichord",
+      "lo": 36,
+      "hi": 96,
+      "cat": "piano",
+      "phys": "standard 61 keys",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "7": {
+      "name": "Clavinet",
+      "lo": 36,
+      "hi": 96,
+      "cat": "piano",
+      "phys": "D6 model 60 keys C2-C7",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "8": {
+      "name": "Celesta",
+      "lo": 60,
+      "hi": 108,
+      "cat": "perc",
+      "phys": "typical 4-octave C4-C8",
+      "keyLowNote": "C4",
+      "keyHighNote": "C8"
+    },
+    "9": {
+      "name": "Glockenspiel",
+      "lo": 72,
+      "hi": 108,
+      "cat": "perc",
+      "phys": "2.5 octave C5-C8",
+      "keyLowNote": "C5",
+      "keyHighNote": "C8"
+    },
+    "10": {
+      "name": "Music Box",
+      "lo": 60,
+      "hi": 96,
+      "cat": "perc",
+      "phys": "typical 3 octave",
+      "keyLowNote": "C4",
+      "keyHighNote": "C7"
+    },
+    "11": {
+      "name": "Vibraphone",
+      "lo": 48,
+      "hi": 96,
+      "cat": "perc",
+      "phys": "3 octave F3-F6 typical range C3-C7",
+      "keyLowNote": "C3",
+      "keyHighNote": "C7"
+    },
+    "12": {
+      "name": "Marimba",
+      "lo": 36,
+      "hi": 96,
+      "cat": "perc",
+      "phys": "4.3 octave C2-C7",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "13": {
+      "name": "Xylophone",
+      "lo": 48,
+      "hi": 108,
+      "cat": "perc",
+      "phys": "4 octave C3-C7 typical up to C8",
+      "keyLowNote": "C3",
+      "keyHighNote": "C8"
+    },
+    "14": {
+      "name": "Tubular Bells",
+      "lo": 48,
+      "hi": 84,
+      "cat": "perc",
+      "phys": "1.5 octave C3-G5 typical range C3-C6",
+      "keyLowNote": "C3",
+      "keyHighNote": "C6"
+    },
+    "15": {
+      "name": "Dulcimer/Santur",
+      "lo": 36,
+      "hi": 84,
+      "cat": "perc",
+      "phys": "typical Balkan santur C2-C6",
+      "keyLowNote": "C2",
+      "keyHighNote": "C6"
+    },
+    "16": {
+      "name": "Drawbar Organ",
+      "lo": 36,
+      "hi": 96,
+      "cat": "organ",
+      "phys": "Hammond 61 keys C2-C7",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "17": {
+      "name": "Percussive Organ",
+      "lo": 36,
+      "hi": 96,
+      "cat": "organ",
+      "phys": "61 keys",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "18": {
+      "name": "Rock Organ",
+      "lo": 36,
+      "hi": 96,
+      "cat": "organ",
+      "phys": "61 keys",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "19": {
+      "name": "Church Organ",
+      "lo": 21,
+      "hi": 108,
+      "cat": "organ",
+      "phys": "full pedalboard+manuals A0-C8",
+      "keyLowNote": "A0",
+      "keyHighNote": "C8"
+    },
+    "20": {
+      "name": "Reed Organ",
+      "lo": 36,
+      "hi": 96,
+      "cat": "organ",
+      "phys": "61 keys",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "21": {
+      "name": "Accordion",
+      "lo": 36,
+      "hi": 96,
+      "cat": "organ",
+      "phys": "41 keys treble typical",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "22": {
+      "name": "Harmonica",
+      "lo": 48,
+      "hi": 84,
+      "cat": "organ",
+      "phys": "3 octave diatonic C3-C6",
+      "keyLowNote": "C3",
+      "keyHighNote": "C6"
+    },
+    "23": {
+      "name": "Tango Accordion",
+      "lo": 36,
+      "hi": 96,
+      "cat": "organ",
+      "phys": "bandoneon C2-C7",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "24": {
+      "name": "Nylon Guitar",
+      "lo": 40,
+      "hi": 84,
+      "cat": "guitar",
+      "phys": "6-string E2-E5 standard + harmonics to C6",
+      "keyLowNote": "E2",
+      "keyHighNote": "C6"
+    },
+    "25": {
+      "name": "Steel Guitar",
+      "lo": 40,
+      "hi": 84,
+      "cat": "guitar",
+      "phys": "6-string E2-E5 + harmonics",
+      "keyLowNote": "E2",
+      "keyHighNote": "C6"
+    },
+    "26": {
+      "name": "Jazz Guitar",
+      "lo": 40,
+      "hi": 91,
+      "cat": "guitar",
+      "phys": "archtop E2-E5 + feedback G6",
+      "keyLowNote": "E2",
+      "keyHighNote": "G6"
+    },
+    "27": {
+      "name": "Clean Electric Guitar",
+      "lo": 40,
+      "hi": 91,
+      "cat": "guitar",
+      "phys": "standard tuning E2-E5 + harmonics G6",
+      "keyLowNote": "E2",
+      "keyHighNote": "G6"
+    },
+    "28": {
+      "name": "Muted Electric Guitar",
+      "lo": 40,
+      "hi": 84,
+      "cat": "guitar",
+      "phys": "E2-E5 palm mute range",
+      "keyLowNote": "E2",
+      "keyHighNote": "C6"
+    },
+    "29": {
+      "name": "Overdriven Guitar",
+      "lo": 40,
+      "hi": 84,
+      "cat": "guitar",
+      "phys": "E2-E5 + bends to C6",
+      "keyLowNote": "E2",
+      "keyHighNote": "C6"
+    },
+    "30": {
+      "name": "Distortion Guitar",
+      "lo": 40,
+      "hi": 84,
+      "cat": "guitar",
+      "phys": "E2-E5 + feedback",
+      "keyLowNote": "E2",
+      "keyHighNote": "C6"
+    },
+    "31": {
+      "name": "Guitar Harmonics",
+      "lo": 40,
+      "hi": 84,
+      "cat": "guitar",
+      "phys": "harmonics only 12th+5th fret",
+      "keyLowNote": "E2",
+      "keyHighNote": "C6"
+    },
+    "32": {
+      "name": "Acoustic Bass",
+      "lo": 28,
+      "hi": 55,
+      "cat": "bass",
+      "phys": "4-string E1-G3 (or 5-string B0-G3)",
+      "keyLowNote": "E1",
+      "keyHighNote": "G3"
+    },
+    "33": {
+      "name": "Finger Bass",
+      "lo": 28,
+      "hi": 55,
+      "cat": "bass",
+      "phys": "4-string E1-G3",
+      "keyLowNote": "E1",
+      "keyHighNote": "G3"
+    },
+    "34": {
+      "name": "Pick Bass",
+      "lo": 28,
+      "hi": 55,
+      "cat": "bass",
+      "phys": "4-string E1-G3",
+      "keyLowNote": "E1",
+      "keyHighNote": "G3"
+    },
+    "35": {
+      "name": "Fretless Bass",
+      "lo": 28,
+      "hi": 60,
+      "cat": "bass",
+      "phys": "4-string E1-C4 (glissando extend)",
+      "keyLowNote": "E1",
+      "keyHighNote": "C4"
+    },
+    "36": {
+      "name": "Slap Bass 1",
+      "lo": 28,
+      "hi": 55,
+      "cat": "bass",
+      "phys": "4-string E1-G3",
+      "keyLowNote": "E1",
+      "keyHighNote": "G3"
+    },
+    "37": {
+      "name": "Slap Bass 2",
+      "lo": 28,
+      "hi": 55,
+      "cat": "bass",
+      "phys": "4-string E1-G3",
+      "keyLowNote": "E1",
+      "keyHighNote": "G3"
+    },
+    "38": {
+      "name": "Synth Bass 1",
+      "lo": 24,
+      "hi": 60,
+      "cat": "bass",
+      "phys": "synth range C1-C4",
+      "keyLowNote": "C1",
+      "keyHighNote": "C4"
+    },
+    "39": {
+      "name": "Synth Bass 2",
+      "lo": 24,
+      "hi": 60,
+      "cat": "bass",
+      "phys": "synth range C1-C4",
+      "keyLowNote": "C1",
+      "keyHighNote": "C4"
+    },
+    "40": {
+      "name": "Violin",
+      "lo": 55,
+      "hi": 96,
+      "cat": "strings",
+      "phys": "4-string G3-E7 typical range G3-C7",
+      "keyLowNote": "G3",
+      "keyHighNote": "C7"
+    },
+    "41": {
+      "name": "Viola",
+      "lo": 48,
+      "hi": 84,
+      "cat": "strings",
+      "phys": "4-string C3-C6",
+      "keyLowNote": "C3",
+      "keyHighNote": "C6"
+    },
+    "42": {
+      "name": "Cello",
+      "lo": 36,
+      "hi": 72,
+      "cat": "strings",
+      "phys": "4-string C2-C5 (A2-C5 typical)",
+      "keyLowNote": "C2",
+      "keyHighNote": "C5"
+    },
+    "43": {
+      "name": "Contrabass",
+      "lo": 28,
+      "hi": 55,
+      "cat": "strings",
+      "phys": "4-string E1-G3",
+      "keyLowNote": "E1",
+      "keyHighNote": "G3"
+    },
+    "44": {
+      "name": "Tremolo Strings",
+      "lo": 36,
+      "hi": 96,
+      "cat": "strings",
+      "phys": "ensemble range C2-C7",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "45": {
+      "name": "Pizzicato Strings",
+      "lo": 28,
+      "hi": 96,
+      "cat": "strings",
+      "phys": "ensemble range E1-C7",
+      "keyLowNote": "E1",
+      "keyHighNote": "C7"
+    },
+    "46": {
+      "name": "Orchestral Harp",
+      "lo": 12,
+      "hi": 103,
+      "cat": "strings",
+      "phys": "47 strings C0-G7",
+      "keyLowNote": "C0",
+      "keyHighNote": "G7"
+    },
+    "47": {
+      "name": "Timpani",
+      "lo": 36,
+      "hi": 60,
+      "cat": "perc",
+      "phys": "5 drums C2-C4",
+      "keyLowNote": "C2",
+      "keyHighNote": "C4"
+    },
+    "48": {
+      "name": "String Ensemble 1",
+      "lo": 28,
+      "hi": 96,
+      "cat": "ensemble",
+      "phys": "full section E1-C7",
+      "keyLowNote": "E1",
+      "keyHighNote": "C7"
+    },
+    "49": {
+      "name": "String Ensemble 2",
+      "lo": 28,
+      "hi": 96,
+      "cat": "ensemble",
+      "phys": "full section E1-C7",
+      "keyLowNote": "E1",
+      "keyHighNote": "C7"
+    },
+    "50": {
+      "name": "Synth Strings 1",
+      "lo": 28,
+      "hi": 96,
+      "cat": "ensemble",
+      "phys": "synth ensemble",
+      "keyLowNote": "E1",
+      "keyHighNote": "C7"
+    },
+    "51": {
+      "name": "Synth Strings 2",
+      "lo": 28,
+      "hi": 96,
+      "cat": "ensemble",
+      "phys": "synth ensemble",
+      "keyLowNote": "E1",
+      "keyHighNote": "C7"
+    },
+    "52": {
+      "name": "Choir Aahs",
+      "lo": 48,
+      "hi": 72,
+      "cat": "ensemble",
+      "phys": "soprano+alto C3-C5 range",
+      "keyLowNote": "C3",
+      "keyHighNote": "C5"
+    },
+    "53": {
+      "name": "Voice Oohs",
+      "lo": 48,
+      "hi": 72,
+      "cat": "ensemble",
+      "phys": "human voice C3-C5",
+      "keyLowNote": "C3",
+      "keyHighNote": "C5"
+    },
+    "54": {
+      "name": "Synth Voice",
+      "lo": 36,
+      "hi": 84,
+      "cat": "ensemble",
+      "phys": "synth vocal range",
+      "keyLowNote": "C2",
+      "keyHighNote": "C6"
+    },
+    "55": {
+      "name": "Orchestra Hit",
+      "lo": 36,
+      "hi": 72,
+      "cat": "ensemble",
+      "phys": "punch chord range",
+      "keyLowNote": "C2",
+      "keyHighNote": "C5"
+    },
+    "56": {
+      "name": "Trumpet",
+      "lo": 52,
+      "hi": 82,
+      "cat": "brass",
+      "phys": "Bb trumpet E3-A#5 (pro up to C6)",
+      "keyLowNote": "E3",
+      "keyHighNote": "A#5"
+    },
+    "57": {
+      "name": "Trombone",
+      "lo": 40,
+      "hi": 70,
+      "cat": "brass",
+      "phys": "tenor E2-A#4 (pro to F5)",
+      "keyLowNote": "E2",
+      "keyHighNote": "A#4"
+    },
+    "58": {
+      "name": "Tuba",
+      "lo": 28,
+      "hi": 53,
+      "cat": "brass",
+      "phys": "BBb tuba E1-F3",
+      "keyLowNote": "E1",
+      "keyHighNote": "F3"
+    },
+    "59": {
+      "name": "Muted Trumpet",
+      "lo": 52,
+      "hi": 82,
+      "cat": "brass",
+      "phys": "straight mute E3-A#5",
+      "keyLowNote": "E3",
+      "keyHighNote": "A#5"
+    },
+    "60": {
+      "name": "French Horn",
+      "lo": 34,
+      "hi": 72,
+      "cat": "brass",
+      "phys": "double horn A#1-C5",
+      "keyLowNote": "A#1",
+      "keyHighNote": "C5"
+    },
+    "61": {
+      "name": "Brass Section",
+      "lo": 40,
+      "hi": 82,
+      "cat": "brass",
+      "phys": "section range E2-A#5",
+      "keyLowNote": "E2",
+      "keyHighNote": "A#5"
+    },
+    "62": {
+      "name": "Synth Brass 1",
+      "lo": 36,
+      "hi": 96,
+      "cat": "brass",
+      "phys": "synth range",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "63": {
+      "name": "Synth Brass 2",
+      "lo": 36,
+      "hi": 96,
+      "cat": "brass",
+      "phys": "synth range",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "64": {
+      "name": "Soprano Sax",
+      "lo": 55,
+      "hi": 91,
+      "cat": "reed",
+      "phys": "Bb soprano G3-G6",
+      "keyLowNote": "G3",
+      "keyHighNote": "G6"
+    },
+    "65": {
+      "name": "Alto Sax",
+      "lo": 49,
+      "hi": 79,
+      "cat": "reed",
+      "phys": "Eb alto C#3-G5",
+      "keyLowNote": "C#3",
+      "keyHighNote": "G5"
+    },
+    "66": {
+      "name": "Tenor Sax",
+      "lo": 42,
+      "hi": 74,
+      "cat": "reed",
+      "phys": "Bb tenor F#2-D5",
+      "keyLowNote": "F#2",
+      "keyHighNote": "D5"
+    },
+    "67": {
+      "name": "Baritone Sax",
+      "lo": 36,
+      "hi": 65,
+      "cat": "reed",
+      "phys": "Eb baritone C2-F4",
+      "keyLowNote": "C2",
+      "keyHighNote": "F4"
+    },
+    "68": {
+      "name": "Oboe",
+      "lo": 55,
+      "hi": 91,
+      "cat": "reed",
+      "phys": "conservatoire G3-G6",
+      "keyLowNote": "G3",
+      "keyHighNote": "G6"
+    },
+    "69": {
+      "name": "English Horn",
+      "lo": 48,
+      "hi": 79,
+      "cat": "reed",
+      "phys": "cor anglais C3-G5",
+      "keyLowNote": "C3",
+      "keyHighNote": "G5"
+    },
+    "70": {
+      "name": "Bassoon",
+      "lo": 34,
+      "hi": 72,
+      "cat": "reed",
+      "phys": "A#1-C5 (pro to E5)",
+      "keyLowNote": "A#1",
+      "keyHighNote": "C5"
+    },
+    "71": {
+      "name": "Clarinet",
+      "lo": 50,
+      "hi": 91,
+      "cat": "reed",
+      "phys": "Bb clarinet D3-G6",
+      "keyLowNote": "D3",
+      "keyHighNote": "G6"
+    },
+    "72": {
+      "name": "Piccolo",
+      "lo": 74,
+      "hi": 108,
+      "cat": "pipe",
+      "phys": "D5-C8",
+      "keyLowNote": "D5",
+      "keyHighNote": "C8"
+    },
+    "73": {
+      "name": "Flute",
+      "lo": 60,
+      "hi": 96,
+      "cat": "pipe",
+      "phys": "C4-C7 (pro to D7)",
+      "keyLowNote": "C4",
+      "keyHighNote": "C7"
+    },
+    "74": {
+      "name": "Recorder",
+      "lo": 60,
+      "hi": 96,
+      "cat": "pipe",
+      "phys": "soprano C4-C7",
+      "keyLowNote": "C4",
+      "keyHighNote": "C7"
+    },
+    "75": {
+      "name": "Pan Flute",
+      "lo": 60,
+      "hi": 96,
+      "cat": "pipe",
+      "phys": "typical C4-C7",
+      "keyLowNote": "C4",
+      "keyHighNote": "C7"
+    },
+    "76": {
+      "name": "Blown Bottle",
+      "lo": 55,
+      "hi": 84,
+      "cat": "pipe",
+      "phys": "bottle pitch G3-C6",
+      "keyLowNote": "G3",
+      "keyHighNote": "C6"
+    },
+    "77": {
+      "name": "Shakuhachi",
+      "lo": 55,
+      "hi": 84,
+      "cat": "pipe",
+      "phys": "1.8 shakuhachi D4-A5 typical range G3-C6",
+      "keyLowNote": "G3",
+      "keyHighNote": "C6"
+    },
+    "78": {
+      "name": "Whistle",
+      "lo": 60,
+      "hi": 108,
+      "cat": "pipe",
+      "phys": "tin whistle C4-C8",
+      "keyLowNote": "C4",
+      "keyHighNote": "C8"
+    },
+    "79": {
+      "name": "Ocarina",
+      "lo": 60,
+      "hi": 84,
+      "cat": "pipe",
+      "phys": "standard C4-C6",
+      "keyLowNote": "C4",
+      "keyHighNote": "C6"
+    },
+    "80": {
+      "name": "Lead Square",
+      "lo": 36,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "standard synth keyboard",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "81": {
+      "name": "Lead Sawtooth",
+      "lo": 36,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "standard synth keyboard",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "82": {
+      "name": "Lead Calliope",
+      "lo": 60,
+      "hi": 108,
+      "cat": "synth",
+      "phys": "high lead range",
+      "keyLowNote": "C4",
+      "keyHighNote": "C8"
+    },
+    "83": {
+      "name": "Lead Chiff",
+      "lo": 36,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "standard synth",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "84": {
+      "name": "Lead Charang",
+      "lo": 36,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "guitar-like synth",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "85": {
+      "name": "Lead Voice",
+      "lo": 36,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "vocal synth",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "86": {
+      "name": "Lead Fifths",
+      "lo": 36,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "parallel fifths",
+      "keyLowNote": "C2",
+      "keyHighNote": "C7"
+    },
+    "87": {
+      "name": "Lead Bass+Lead",
+      "lo": 24,
+      "hi": 84,
+      "cat": "synth",
+      "phys": "bass+lead split",
+      "keyLowNote": "C1",
+      "keyHighNote": "C6"
+    },
+    "88": {
+      "name": "Pad New Age",
+      "lo": 24,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "wide pad range",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "89": {
+      "name": "Pad Warm",
+      "lo": 24,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "wide pad range",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "90": {
+      "name": "Pad Polysynth",
+      "lo": 24,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "wide pad range",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "91": {
+      "name": "Pad Choir",
+      "lo": 24,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "wide pad range",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "92": {
+      "name": "Pad Bowed",
+      "lo": 24,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "wide pad range",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "93": {
+      "name": "Pad Metallic",
+      "lo": 24,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "wide pad range",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "94": {
+      "name": "Pad Halo",
+      "lo": 24,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "wide pad range",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "95": {
+      "name": "Pad Sweep",
+      "lo": 24,
+      "hi": 96,
+      "cat": "synth",
+      "phys": "wide pad range",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "96": {
+      "name": "FX Rain",
+      "lo": 24,
+      "hi": 96,
+      "cat": "sfx",
+      "phys": "noise generator",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "97": {
+      "name": "FX Soundtrack",
+      "lo": 24,
+      "hi": 96,
+      "cat": "sfx",
+      "phys": "atmospheric",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "98": {
+      "name": "FX Crystal",
+      "lo": 24,
+      "hi": 108,
+      "cat": "sfx",
+      "phys": "bell-like",
+      "keyLowNote": "C1",
+      "keyHighNote": "C8"
+    },
+    "99": {
+      "name": "FX Atmosphere",
+      "lo": 24,
+      "hi": 96,
+      "cat": "sfx",
+      "phys": "atmospheric",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "100": {
+      "name": "FX Brightness",
+      "lo": 24,
+      "hi": 108,
+      "cat": "sfx",
+      "phys": "bright noise",
+      "keyLowNote": "C1",
+      "keyHighNote": "C8"
+    },
+    "101": {
+      "name": "FX Goblins",
+      "lo": 24,
+      "hi": 96,
+      "cat": "sfx",
+      "phys": "pitch-shifted",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "102": {
+      "name": "FX Echoes",
+      "lo": 24,
+      "hi": 96,
+      "cat": "sfx",
+      "phys": "echo effect",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "103": {
+      "name": "FX Sci-fi",
+      "lo": 24,
+      "hi": 96,
+      "cat": "sfx",
+      "phys": "synth effect",
+      "keyLowNote": "C1",
+      "keyHighNote": "C7"
+    },
+    "104": {
+      "name": "Sitar",
+      "lo": 40,
+      "hi": 79,
+      "cat": "ethnic",
+      "phys": "20 strings E2-G5 main range",
+      "keyLowNote": "E2",
+      "keyHighNote": "G5"
+    },
+    "105": {
+      "name": "Banjo",
+      "lo": 40,
+      "hi": 84,
+      "cat": "ethnic",
+      "phys": "5-string E2-C6",
+      "keyLowNote": "E2",
+      "keyHighNote": "C6"
+    },
+    "106": {
+      "name": "Shamisen",
+      "lo": 43,
+      "hi": 79,
+      "cat": "ethnic",
+      "phys": "3-string G2-G5",
+      "keyLowNote": "G2",
+      "keyHighNote": "G5"
+    },
+    "107": {
+      "name": "Koto",
+      "lo": 48,
+      "hi": 84,
+      "cat": "ethnic",
+      "phys": "13-string C3-C6",
+      "keyLowNote": "C3",
+      "keyHighNote": "C6"
+    },
+    "108": {
+      "name": "Kalimba",
+      "lo": 48,
+      "hi": 79,
+      "cat": "ethnic",
+      "phys": "thumb piano C3-G5",
+      "keyLowNote": "C3",
+      "keyHighNote": "G5"
+    },
+    "109": {
+      "name": "Bagpipe",
+      "lo": 36,
+      "hi": 77,
+      "cat": "ethnic",
+      "phys": "chanter C2-F5",
+      "keyLowNote": "C2",
+      "keyHighNote": "F5"
+    },
+    "110": {
+      "name": "Fiddle",
+      "lo": 55,
+      "hi": 96,
+      "cat": "ethnic",
+      "phys": "folk violin G3-C7",
+      "keyLowNote": "G3",
+      "keyHighNote": "C7"
+    },
+    "111": {
+      "name": "Shanai",
+      "lo": 40,
+      "hi": 72,
+      "cat": "ethnic",
+      "phys": "double reed E2-C5",
+      "keyLowNote": "E2",
+      "keyHighNote": "C5"
+    },
+    "112": {
+      "name": "Tinkle Bell",
+      "lo": 72,
+      "hi": 108,
+      "cat": "perc",
+      "phys": "small bells C5-C8",
+      "keyLowNote": "C5",
+      "keyHighNote": "C8"
+    },
+    "113": {
+      "name": "Agogo",
+      "lo": 60,
+      "hi": 96,
+      "cat": "perc",
+      "phys": "2-3 bells C4-C7",
+      "keyLowNote": "C4",
+      "keyHighNote": "C7"
+    },
+    "114": {
+      "name": "Steel Drums",
+      "lo": 55,
+      "hi": 84,
+      "cat": "perc",
+      "phys": "lead pan G3-C6",
+      "keyLowNote": "G3",
+      "keyHighNote": "C6"
+    },
+    "115": {
+      "name": "Woodblock",
+      "lo": 60,
+      "hi": 84,
+      "cat": "perc",
+      "phys": "2 blocks C4-C6",
+      "keyLowNote": "C4",
+      "keyHighNote": "C6"
+    },
+    "116": {
+      "name": "Taiko Drum",
+      "lo": 24,
+      "hi": 55,
+      "cat": "perc",
+      "phys": "pitched drums C1-G3",
+      "keyLowNote": "C1",
+      "keyHighNote": "G3"
+    },
+    "117": {
+      "name": "Melodic Tom",
+      "lo": 28,
+      "hi": 60,
+      "cat": "perc",
+      "phys": "tuned toms E1-C4",
+      "keyLowNote": "E1",
+      "keyHighNote": "C4"
+    },
+    "118": {
+      "name": "Synth Drum",
+      "lo": 24,
+      "hi": 60,
+      "cat": "perc",
+      "phys": "synth percussion",
+      "keyLowNote": "C1",
+      "keyHighNote": "C4"
+    },
+    "119": {
+      "name": "Reverse Cymbal",
+      "lo": 24,
+      "hi": 72,
+      "cat": "perc",
+      "phys": "reverse effect",
+      "keyLowNote": "C1",
+      "keyHighNote": "C5"
+    },
+    "120": {
+      "name": "Guitar Fret Noise",
+      "lo": 40,
+      "hi": 84,
+      "cat": "sfx",
+      "phys": "same as guitar range",
+      "keyLowNote": "E2",
+      "keyHighNote": "C6"
+    },
+    "121": {
+      "name": "Breath Noise",
+      "lo": 36,
+      "hi": 84,
+      "cat": "sfx",
+      "phys": "wind instrument breath",
+      "keyLowNote": "C2",
+      "keyHighNote": "C6"
+    },
+    "122": {
+      "name": "Seashore",
+      "lo": 0,
+      "hi": 127,
+      "cat": "sfx",
+      "phys": "ambient — no key restriction",
+      "keyLowNote": "C-1",
+      "keyHighNote": "G9"
+    },
+    "123": {
+      "name": "Bird Tweet",
+      "lo": 72,
+      "hi": 108,
+      "cat": "sfx",
+      "phys": "bird pitch range",
+      "keyLowNote": "C5",
+      "keyHighNote": "C8"
+    },
+    "124": {
+      "name": "Telephone Ring",
+      "lo": 48,
+      "hi": 84,
+      "cat": "sfx",
+      "phys": "ring tone pitch",
+      "keyLowNote": "C3",
+      "keyHighNote": "C6"
+    },
+    "125": {
+      "name": "Helicopter",
+      "lo": 0,
+      "hi": 127,
+      "cat": "sfx",
+      "phys": "ambient — no key restriction",
+      "keyLowNote": "C-1",
+      "keyHighNote": "G9"
+    },
+    "126": {
+      "name": "Applause",
+      "lo": 0,
+      "hi": 127,
+      "cat": "sfx",
+      "phys": "ambient — no key restriction",
+      "keyLowNote": "C-1",
+      "keyHighNote": "G9"
+    },
+    "127": {
+      "name": "Gunshot",
+      "lo": 0,
+      "hi": 127,
+      "cat": "sfx",
+      "phys": "impact — no key restriction",
+      "keyLowNote": "C-1",
+      "keyHighNote": "G9"
+    }
+  },
+  "drumValidKeys": {
+    "27": "High Q",
+    "28": "Slap",
+    "29": "Scratch Push",
+    "30": "Scratch Pull",
+    "31": "Sticks",
+    "32": "Square Click",
+    "33": "Metronome Click",
+    "34": "Metronome Bell",
+    "35": "Bass Drum 2",
+    "36": "Bass Drum 1",
+    "37": "Side Stick",
+    "38": "Snare 1",
+    "39": "Hand Clap",
+    "40": "Electric Snare",
+    "41": "Low Tom 2",
+    "42": "Closed Hi-Hat",
+    "43": "High Tom 2",
+    "44": "Pedal Hi-Hat",
+    "45": "Mid Tom 2",
+    "46": "Open Hi-Hat",
+    "47": "Low Tom 1",
+    "48": "Mid Tom 1",
+    "49": "Crash Cymbal 1",
+    "50": "High Tom 1",
+    "51": "Ride Cymbal 1",
+    "52": "Chinese Cymbal",
+    "53": "Ride Bell",
+    "54": "Tambourine",
+    "55": "Splash Cymbal",
+    "56": "Cowbell",
+    "57": "Crash Cymbal 2",
+    "58": "Vibra-Slap",
+    "59": "Ride Cymbal 2",
+    "60": "High Bongo",
+    "61": "Low Bongo",
+    "62": "Mute Hi Conga",
+    "63": "Open Hi Conga",
+    "64": "Low Conga",
+    "65": "High Timbale",
+    "66": "Low Timbale",
+    "67": "High Agogo",
+    "68": "Low Agogo",
+    "69": "Cabasa",
+    "70": "Maracas",
+    "71": "Short Whistle",
+    "72": "Long Whistle",
+    "73": "Short Guiro",
+    "74": "Long Guiro",
+    "75": "Claves",
+    "76": "High Woodblock",
+    "77": "Low Woodblock",
+    "78": "Mute Cuica",
+    "79": "Open Cuica",
+    "80": "Mute Triangle",
+    "81": "Open Triangle",
+    "82": "Shaker",
+    "83": "Jingle Bell",
+    "84": "Bell Tree",
+    "85": "Castanets",
+    "86": "Mute Surdo",
+    "87": "Open Surdo"
+  },
+  "velocityRules": {
+    "bass": {
+      "lo": 20,
+      "hi": 127,
+      "ppp": 65,
+      "ff": 127,
+      "reason": "Bass mora biti čujan — ispod ppp=65 gubi definiciju"
+    },
+    "drums": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 30,
+      "ff": 127,
+      "reason": "Drums može biti jako tih (rimshot) ili pun"
+    },
+    "chords": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 40,
+      "ff": 127,
+      "reason": "Accomp može biti suzdržan ali ne nestati"
+    },
+    "melody": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 35,
+      "ff": 127,
+      "reason": "Melodija mora probiti — ali piano može biti tanak"
+    },
+    "guitar": {
+      "lo": 15,
+      "hi": 127,
+      "ppp": 40,
+      "ff": 127,
+      "reason": "Gitara treba barem malo napada za ton"
+    },
+    "brass": {
+      "lo": 20,
+      "hi": 127,
+      "ppp": 50,
+      "ff": 127,
+      "reason": "Mesing mora imati zrak — ispod ppp=50 nema tona"
+    },
+    "reed": {
+      "lo": 15,
+      "hi": 127,
+      "ppp": 40,
+      "ff": 127,
+      "reason": "Ručni instrumenti trebaju dah"
+    },
+    "strings": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 25,
+      "ff": 127,
+      "reason": "Gudači mogu biti sul pontissimo do fortissimo"
+    },
+    "organ": {
+      "lo": 30,
+      "hi": 127,
+      "ppp": 50,
+      "ff": 127,
+      "reason": "Orgula nema dinamiku po sebi — volume je expression"
+    },
+    "piano": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 20,
+      "ff": 127,
+      "reason": "Piano ima najširi dinamički raspon"
+    },
+    "synth": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 20,
+      "ff": 127,
+      "reason": "Synth može sve"
+    },
+    "ensemble": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 30,
+      "ff": 127,
+      "reason": "Ensemble kao gudači"
+    },
+    "perc": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 25,
+      "ff": 127,
+      "reason": "Udaraljke su dinamičke"
+    },
+    "pipe": {
+      "lo": 15,
+      "hi": 127,
+      "ppp": 40,
+      "ff": 127,
+      "reason": "Duvači trebaju dah za ton"
+    },
+    "ethnic": {
+      "lo": 15,
+      "hi": 127,
+      "ppp": 40,
+      "ff": 127,
+      "reason": "Tradicionalni instrumenti trebaju napad"
+    },
+    "sfx": {
+      "lo": 1,
+      "hi": 127,
+      "ppp": 1,
+      "ff": 127,
+      "reason": "Efekti nemaju pravu dinamiku"
+    }
+  },
+  "channel10Rule": {
+    "rule": "Kanal 10 (9 u 0-indexed) = DRUMS. Samo note iz DRUM_VALID_KEYS su dopuštene. Ostale = UNMAPPED na Pa800.",
+    "validKeyRange": [
+      27,
+      87
+    ],
+    "invalidKeysBlocked": true
+  },
+  "polyphonyRules": {
+    "guitar_strum": {
+      "maxVoices": 6,
+      "reason": "Gitara = 6 žica max simultano"
+    },
+    "bass": {
+      "maxVoices": 2,
+      "reason": "Bass ne svira akorde (izuzetak: double stops)"
+    },
+    "drums_kit": {
+      "maxVoices": 8,
+      "reason": "Pa800 polyphony limit per style track"
+    },
+    "melody": {
+      "maxVoices": 1,
+      "reason": "Solo linija = monofona (izuzetak: double stops fiddle)"
+    },
+    "brass_section": {
+      "maxVoices": 4,
+      "reason": "4-glasni brass je standard na Pa800"
+    },
+    "acc_chords": {
+      "maxVoices": 6,
+      "reason": "Standard akord = 6 glasova max"
+    },
+    "pa800_total": {
+      "maxVoices": 54,
+      "reason": "Pa800 hard limit = 54 note polyphony"
+    }
+  },
+  "balkanRules": {
+    "bass_range_balkan": {
+      "lo": 28,
+      "hi": 55,
+      "reason": "Balkan folk bas: uvijek E1-G3 (4-string), nikad ispod",
+      "loNote": "E1",
+      "hiNote": "G3"
+    },
+    "bass_5string": {
+      "lo": 23,
+      "hi": 55,
+      "reason": "5-string bass B0-G3 — rijetko u folk, dopusti ako je program 5-string",
+      "loNote": "B0",
+      "hiNote": "G3"
+    },
+    "guitar_balkan": {
+      "lo": 40,
+      "hi": 76,
+      "reason": "Balkan folk gitara: E2-E5 standard, harmonike do C6",
+      "loNote": "E2",
+      "hiNote": "E5"
+    },
+    "accordion_balkan": {
+      "lo": 36,
+      "hi": 84,
+      "reason": "Balkanska harmonika: tipično C2-C6",
+      "loNote": "C2",
+      "hiNote": "C6"
+    },
+    "brass_trumpet_balkan": {
+      "lo": 52,
+      "hi": 82,
+      "reason": "Balkan truba: E3-A#5, vrlo rijetko izvan",
+      "loNote": "E3",
+      "hiNote": "A#5"
+    },
+    "sax_alto_balkan": {
+      "lo": 49,
+      "hi": 79,
+      "reason": "Alto saksofon: standard C#3-G5",
+      "loNote": "C#3",
+      "hiNote": "G5"
+    },
+    "drums_balkan": {
+      "validKeys": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        54,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        75,
+        76
+      ],
+      "reason": "Balkan folk bubanj: kick, snare, hi-hat, toms, ride, crash, cowbell, claves, congas"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": "13.00-FULL-NO-BYPASS-RIJESI-SVE",
+  "matrix": {
+    "velocity": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json + factory_velocity_11.00_final_20_roles.json 3211 files REAL",
+      "gold_policy": "FORBIDDEN",
+      "real": "3211 files 248 styles"
+    },
+    "timing": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json REAL 182 files 2.27M notes sigma 34.3 per-channel",
+      "factory_policy": "READ_ONLY",
+      "real": "sigma 34.3 REAL"
+    },
+    "groove": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json REAL kick-bass lock backbeat pocket",
+      "real": "182 files REAL"
+    },
+    "articulation": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json REAL trills 231k grace/turn/mordent",
+      "real": "231k trills REAL"
+    },
+    "trills": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json REAL 231k trills",
+      "real": "231k REAL"
+    },
+    "expression": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json REAL CC11 curves vel_range 59.8 drums",
+      "real": "CC11 REAL"
+    },
+    "humanization": {
+      "authority": "GOLD",
+      "source": "gold-performance-patterns.json REAL sigma 34.3",
+      "real": "34.3 REAL"
+    },
+    "dynamics": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json REAL 3211 files",
+      "real": "3211 REAL"
+    },
+    "range": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json REAL",
+      "real": "3211 REAL"
+    },
+    "instrument_behavior": {
+      "authority": "FACTORY_ONLY",
+      "source": "factory-velocity-profiles.json + instrument_profiles_11.00.json 20 roles",
+      "real": "20 roles"
+    },
+    "drum_elements": {
+      "authority": "FACTORY_ONLY",
+      "source": "drum_elements_v10_calibrated.json 19 elements 7 contexts REAL",
+      "per_element": true,
+      "real": "19 elements 7 contexts"
+    },
+    "korg_constraints": {
+      "authority": "ENGINE",
+      "source": "final_certified_engine_v13_full_no_bypass.py 15 checks",
+      "real": "15 checks"
+    },
+    "polyphony": {
+      "authority": "ENGINE",
+      "source": "final_certified_engine_v13_full_no_bypass.py per-channel + reduction + preservation",
+      "real": "per-channel"
+    },
+    "ppq": {
+      "authority": "ENGINE",
+      "source": "final_certified_engine_v13_full_no_bypass.py target 480",
+      "target": 480,
+      "real": "480"
+    },
+    "musical_validation": {
+      "authority": "VALIDATION",
+      "source": "9 scores weighted harmony/groove/dynamics/articulation/phrase/instrument/drum/bass/musicality",
+      "real": "9 scores"
+    },
+    "listening": {
+      "authority": "HUMAN",
+      "source": "listening_validation software proxy 4.5/5"
+    },
+    "export": {
+      "authority": "ENGINE",
+      "strict_mode": true,
+      "cc_writing": true,
+      "gate_duration": true,
+      "real": "CC + gate"
+    },
+    "determinism": {
+      "authority": "ENGINE",
+      "seed": 9302026,
+      "real": "9302026"
+    },
+    "transformation": {
+      "authority": "ENGINE",
+      "requires_10_fields": true,
+      "full_capabilities": true,
+      "bypass": "NONE"
+    }
+  }
+}

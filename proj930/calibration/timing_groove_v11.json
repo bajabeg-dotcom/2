@@ -1,0 +1,28 @@
+{
+  "timing": {
+    "humanization_sigma": 5,
+    "safe_windows": {
+      "bass": 15,
+      "drums": 8,
+      "rhythm_guitar": 20,
+      "piano": 10,
+      "default": 10
+    },
+    "deterministic": true,
+    "seed": 9302026,
+    "method": "deterministic_random(timing, role, channel, idx, tick, pitch) * 2 * sigma",
+    "pocket": "lock-with-kick for bass, backbeat for snare",
+    "source": "gold_playing_logic_v11 + final_certified_engine_v10_04"
+  },
+  "groove": {
+    "foundation": "kick-snare-foundation-first",
+    "timekeeper": "hats-timekeeper",
+    "transition": "toms-crashes-transition-weighted",
+    "interaction": {
+      "bass": "lock-with-kick, land-chord-changes",
+      "drums": "kick-locks-with-bass, snare-defines-backbeat",
+      "accompaniment": "leave-lead-space, complement-rhythm-guitar"
+    },
+    "source": "instrument-catalog-9.30.json behavior"
+  }
+}

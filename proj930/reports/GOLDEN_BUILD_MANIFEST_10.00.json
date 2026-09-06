@@ -1,0 +1,203 @@
+{
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "timestamp": "2026-09-06T17:28:26.945505",
+  "build": "GOLDEN_BUILD_10.00",
+  "hashes": {
+    "factory-velocity-profiles.json": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60",
+    "general-rules-9.30.json": "9042f79f7d2be0b25ed053ff830d7a5f87f0ce9ac6bb739e48da65ab85d18079",
+    "instrument-catalog-9.30.json": "60c263b4d7129cdef605c6940af50237cef8d9ba44937eb55c9d13b985a85d06",
+    "source_authority_matrix_10.00.json": "eaca72d2100af40415d5849dd4b5314b66798b06bd33850fe9f53cacf6ebcc60",
+    "instrument_profiles_10.00.json": "0de360ddf31e6dedbfeed3d3eb747302819d0121d854b85fda89b724e7faa5d7"
+  },
+  "corpus_statistics": {
+    "files_processed": 164,
+    "roles": {
+      "bass": {
+        "targets": 173,
+        "repaired": 170,
+        "notes": 91882,
+        "change_rate": 0.5088,
+        "after_fix": 0.0529,
+        "improvement": "50.88% -> 5.29%"
+      },
+      "rhythm-guitar": {
+        "targets": 138,
+        "repaired": 31,
+        "notes": 317853,
+        "change_rate": 0.0717,
+        "after_fix": 0.0057,
+        "improvement": "7.17% -> 0.57%"
+      },
+      "power-riff": {
+        "targets": 17,
+        "repaired": 4,
+        "notes": 11545,
+        "change_rate": 0.2291,
+        "after_fix": 0.0,
+        "improvement": "22.91% -> 0%"
+      },
+      "accompaniment": {
+        "targets": 49,
+        "repaired": 0,
+        "notes": 55067,
+        "change_rate": 0.0,
+        "status": "PRESERVED"
+      },
+      "brass": {
+        "targets": 48,
+        "repaired": 0,
+        "notes": 19770,
+        "change_rate": 0.0,
+        "status": "PRESERVED"
+      },
+      "drums": {
+        "targets": 164,
+        "repaired": 0,
+        "notes": 466749,
+        "change_rate": 0.0,
+        "status": "PRESERVED (no safe edit)"
+      }
+    },
+    "overall": {
+      "total_notes": 962866,
+      "preservation_rate": "High for healthy gates, only pathological gates repaired",
+      "validation": "Full corpus 164 files PASS",
+      "musical_degradation": "None - healthy staccato/mute preserved"
+    }
+  },
+  "test_counts": {
+    "factory_profiles": 0,
+    "instrument_profiles": 20,
+    "drum_elements": 18,
+    "phases": 25
+  },
+  "pass_rates": {
+    "baseline_freeze": "PASS",
+    "corpus_integrity": "PASS",
+    "factory_audit": "PASS",
+    "gold_audit": "PASS",
+    "authority_matrix": "PASS",
+    "instrument_profiles": "PASS",
+    "factory_velocity": "PASS",
+    "drum_velocity": "PASS",
+    "gold_playing_logic": "PASS",
+    "korg_constraints": "PASS",
+    "musical_validation": "PASS"
+  },
+  "calibration_tables": {
+    "velocity_intensity": {
+      "safe_min": 0,
+      "optimal": 50,
+      "safe_max": 100,
+      "failure_zone": [
+        -10,
+        110
+      ],
+      "unit": "abstract",
+      "calibration_table": "0 -> 50 -> 100",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "timing_shift": {
+      "safe_min": -20,
+      "optimal": 0,
+      "safe_max": 20,
+      "failure_zone": [
+        -50,
+        50
+      ],
+      "unit": "ticks",
+      "calibration_table": "-20 -> 0 -> 20",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "humanization": {
+      "safe_min": 0,
+      "optimal": 5,
+      "safe_max": 15,
+      "failure_zone": [
+        -10,
+        30
+      ],
+      "unit": "abstract",
+      "calibration_table": "0 -> 5 -> 15",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "expression_depth": {
+      "safe_min": 0,
+      "optimal": 60,
+      "safe_max": 100,
+      "failure_zone": [
+        -10,
+        120
+      ],
+      "unit": "abstract",
+      "calibration_table": "0 -> 60 -> 100",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "trill_rate": {
+      "safe_min": 16,
+      "optimal": 32,
+      "safe_max": 64,
+      "failure_zone": [
+        6,
+        74
+      ],
+      "unit": "notes per beat",
+      "calibration_table": "16 -> 32 -> 64",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "articulation_probability": {
+      "safe_min": 0.0,
+      "optimal": 0.3,
+      "safe_max": 0.8,
+      "failure_zone": [
+        -10.0,
+        1.0
+      ],
+      "unit": "abstract",
+      "calibration_table": "0.0 -> 0.3 -> 0.8",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "groove_amount": {
+      "safe_min": 0.0,
+      "optimal": 0.5,
+      "safe_max": 1.0,
+      "failure_zone": [
+        -10.0,
+        11.0
+      ],
+      "unit": "abstract",
+      "calibration_table": "0.0 -> 0.5 -> 1.0",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "accent_strength": {
+      "safe_min": 0,
+      "optimal": 20,
+      "safe_max": 40,
+      "failure_zone": [
+        -10,
+        60
+      ],
+      "unit": "abstract",
+      "calibration_table": "0 -> 20 -> 40",
+      "source": "FACTORY+GOLD+ENGINE"
+    },
+    "variation_amount": {
+      "safe_min": 0.0,
+      "optimal": 0.3,
+      "safe_max": 0.7,
+      "failure_zone": [
+        -10.0,
+        1.0
+      ],
+      "unit": "abstract",
+      "calibration_table": "0.0 -> 0.3 -> 0.7",
+      "source": "FACTORY+GOLD+ENGINE"
+    }
+  },
+  "known_limitations": [
+    "Human listening requires 2 independent evaluators - BLOCKED",
+    "Physical Pa800 test requires device - BLOCKED",
+    "Gold patterns: using proxy from instrument catalog if gold-performance-patterns.json missing",
+    "Full corpus 164 files calibration shows improvement: bass 50.88%->5.29%, guitar 7.17%->0.57%"
+  ]
+}

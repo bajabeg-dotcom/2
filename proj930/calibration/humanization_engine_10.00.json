@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-09-06T17:28:26.905366",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "rule": "Humanization mora biti Gold-driven, ne random noise",
+  "per_instrument": {
+    "bass": {
+      "velocity_random": 5,
+      "timing_random": 5,
+      "duration_random": 8,
+      "method": "CONTROLLED"
+    },
+    "drums": {
+      "velocity_random": 8,
+      "timing_random": 3,
+      "duration_random": 0,
+      "method": "TIGHT_HUMAN"
+    },
+    "rhythm_guitar": {
+      "velocity_random": 10,
+      "timing_random": 12,
+      "duration_random": 15,
+      "method": "STRUM_SPREAD"
+    },
+    "piano": {
+      "velocity_random": 6,
+      "timing_random": 8,
+      "duration_random": 10,
+      "method": "SMALL_SPREAD"
+    },
+    "solo_guitar": {
+      "velocity_random": 7,
+      "timing_random": 10,
+      "duration_random": 12,
+      "method": "EXPRESSIVE"
+    },
+    "sax": {
+      "velocity_random": 6,
+      "timing_random": 8,
+      "duration_random": 10,
+      "method": "PHRASE_DRIVEN"
+    },
+    "strings": {
+      "velocity_random": 3,
+      "timing_random": 2,
+      "duration_random": 5,
+      "method": "MINIMAL"
+    }
+  },
+  "deterministic": {
+    "seed": 9302026,
+    "method": "Deterministic random with seed + note + bar",
+    "reproducible": true,
+    "avoid": "True random, machine-gun, random noise"
+  },
+  "repetition_avoidance": {
+    "rule": "Avoid exact repetition, use variation",
+    "method": "Velocity variation, timing micro-shift, articulation change"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "version": "13.00-FULL-NO-BYPASS-RIJESI-SVE",
+  "scoring": {
+    "harmony": {
+      "description": "Chord tone weight, passing tone rate, voice leading",
+      "weight": 0.2,
+      "real": "REAL Gold + Factory"
+    },
+    "groove": {
+      "description": "Pocket, interlock, syncopation, timing REAL sigma 34.3 + kick-bass lock",
+      "weight": 0.2,
+      "real": "REAL sigma 34.3 + lock"
+    },
+    "dynamics": {
+      "description": "Velocity range, Factory 20 roles mapped curve adherence, accent",
+      "weight": 0.15,
+      "real": "Factory 20 mapped"
+    },
+    "articulation": {
+      "description": "Staccato, legato, ghost, fill, transition, trills 196, gate duration",
+      "weight": 0.15,
+      "real": "trills 196 + gate"
+    },
+    "phrase": {
+      "description": "Phrase quality, breaths, pickups, cadence",
+      "weight": 0.1,
+      "real": "phrase"
+    },
+    "instrument_realism": {
+      "description": "Instrument specific realism 20 roles mapped",
+      "weight": 0.1,
+      "real": "20 roles mapped"
+    },
+    "drum_realism": {
+      "description": "Drum kit realism, per-element 19 elements 7 contexts accent 892 normal 1120 fill 136",
+      "weight": 0.05,
+      "real": "19 elements 7 contexts"
+    },
+    "bass_realism": {
+      "description": "Bass pocket, root foundation, approaches, kick lock",
+      "weight": 0.03,
+      "real": "kick lock"
+    },
+    "musicality": {
+      "description": "Overall musicality weighted avg",
+      "weight": 0.02,
+      "real": "weighted"
+    }
+  },
+  "real_files": 37,
+  "pass_rate": "37/37 (100.0%)",
+  "musical_before": 70.65945945945946,
+  "musical_after": 87.1072972972973,
+  "trills": 196,
+  "cc": 10510
+}

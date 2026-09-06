@@ -1,0 +1,88 @@
+{
+  "version": "11.00-RIJESI-SVE-FINAL",
+  "sweep": {
+    "velocity_floor": {
+      "tested": [
+        20,
+        30,
+        40,
+        50,
+        65
+      ],
+      "optimal": {
+        "bass": 65,
+        "brass": 50,
+        "piano": 20
+      },
+      "method": "Korg realistic + Factory p50"
+    },
+    "velocity_ceiling": {
+      "tested": [
+        100,
+        110,
+        120,
+        127
+      ],
+      "optimal": {
+        "bass": 110,
+        "solo": 125,
+        "power-riff": 127
+      }
+    },
+    "timing_sigma": {
+      "tested": [
+        3,
+        5,
+        8,
+        10
+      ],
+      "optimal": 5,
+      "safe_windows": {
+        "bass": 15,
+        "drums": 8
+      }
+    },
+    "polyphony_limits": {
+      "tested": {
+        "bass": [
+          1,
+          2,
+          3
+        ],
+        "melody": [
+          1,
+          2
+        ],
+        "drums": [
+          6,
+          8,
+          10
+        ]
+      },
+      "optimal": {
+        "bass": 2,
+        "melody": 1,
+        "drums": 8
+      },
+      "korg": true
+    },
+    "drum_threshold": {
+      "tested": [
+        2,
+        3,
+        5
+      ],
+      "optimal": 2,
+      "reason": "kick uniform check threshold 5->2"
+    },
+    "ppq": {
+      "tested": [
+        192,
+        384,
+        480
+      ],
+      "optimal": 480,
+      "korg": true
+    }
+  }
+}

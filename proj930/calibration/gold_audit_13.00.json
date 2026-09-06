@@ -1,0 +1,38 @@
+{
+  "gold_total_files": 182,
+  "gold_total_notes": 2272811,
+  "gold_total_instances": 1893,
+  "gold_playing_logic_roles": 20,
+  "gold_real_roles": 4,
+  "gold_proxy_roles": 16,
+  "gold_real_roles_detail": {
+    "accompaniment": {
+      "sigma": 34.30308314124024,
+      "files": 1414,
+      "notes": 1629982,
+      "trills": 199917
+    },
+    "drums": {
+      "sigma": 33.77489816794861,
+      "files": 182,
+      "notes": 402401,
+      "trills": 17731
+    },
+    "bass": {
+      "sigma": 33.813924013072906,
+      "files": 248,
+      "notes": 212192,
+      "trills": 11521
+    },
+    "melody": {
+      "sigma": 34.41327243806149,
+      "files": 49,
+      "notes": 28236,
+      "trills": 4133
+    }
+  },
+  "gold_trills_total": 233302,
+  "catalog_roles": 19,
+  "authority": "GOLD=PLAYING LOGIC, FACTORY=VELOCITY, GOLD has zero velocity authority",
+  "note": "Gold REAL 182 files 1893 instances 2.27M notes sigma 34.3 per-channel, trills 233302 REAL - DIRECT"
+}

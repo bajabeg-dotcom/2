@@ -1,0 +1,1288 @@
+{
+  "version": "15.00-FULL-CORPUS-C3-REAL",
+  "timestamp": "2026-09-06",
+  "engine_version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+  "factory_real": "13 REAL",
+  "gold_real": "18 REAL",
+  "input": {
+    "factory_files": 1076,
+    "gold_files": 0,
+    "artifact_files": 37,
+    "total": 1113
+  },
+  "output": {
+    "total_files": 1113,
+    "korg_pass": 1099,
+    "korg_fail": 14,
+    "pass_rate": "1099/1113 (98.7%)",
+    "notes_before": 254566,
+    "notes_after": 236206,
+    "reduced": 18360,
+    "reduction_rate": "7.2%",
+    "trills": 2103,
+    "cc": 236206,
+    "elapsed_seconds": 12.749447107315063
+  },
+  "by_type": {
+    "factory": {
+      "total": 1076,
+      "pass": 1062,
+      "pass_rate": "1062/1076 (98.7%)"
+    },
+    "gold": {
+      "total": 0,
+      "pass": 0,
+      "pass_rate": "0/0 (0.0%)"
+    },
+    "artifacts": {
+      "total": 37,
+      "pass": 37,
+      "pass_rate": "37/37 (100.0%)"
+    }
+  },
+  "poly_violations": {
+    "organ": 6,
+    "bass": 1,
+    "riff": 2,
+    "choir": 4,
+    "piano": 1
+  },
+  "korg_failures_sample": [
+    {
+      "path": "prism-uploads/Workspace_Styles/Al Swing/Al Swing_End1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 507,
+        "velocity": {
+          "min": 1,
+          "max": 127,
+          "unique": 85
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "primary_role": "organ",
+        "channel_roles": {
+          "9": "drums",
+          "10": "organ",
+          "8": "riff",
+          "11": "organ",
+          "12": "accordion",
+          "13": "accordion",
+          "14": "accordion",
+          "15": "accordion"
+        },
+        "total_reduced": 71,
+        "trills_added": 5,
+        "cc_messages": 436,
+        "drum_contexts": {
+          "accent": 2,
+          "normal": 23,
+          "fill": 2,
+          "transition": 1
+        },
+        "articulation_gates_avg": 0.8011467889908257
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 436,
+        "velocity": {
+          "min": 56,
+          "max": 126,
+          "unique": 62
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 11 (organ) poly 8 > 6"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 2 <= 8",
+          "10": "PASS 4 <= 6",
+          "8": "PASS 2 <= 2",
+          "11": "FAIL 8 > 6",
+          "12": "PASS 1 <= 1",
+          "13": "PASS 1 <= 1",
+          "14": "PASS 1 <= 1",
+          "15": "PASS 1 <= 1"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 87.31,
+        "delta": 16.560000000000002,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 90,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 80,
+          "musicality": 88
+        },
+        "trills": 5
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Al Swing_End1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Alpen Ballade/Alpen Ballade_Intro1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 418,
+        "velocity": {
+          "min": 8,
+          "max": 117,
+          "unique": 38
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "primary_role": "accompaniment",
+        "channel_roles": {
+          "9": "drums",
+          "10": "rhythm-guitar",
+          "8": "piano",
+          "11": "accompaniment",
+          "12": "accompaniment",
+          "13": "organ",
+          "14": "choir",
+          "15": "accordion"
+        },
+        "total_reduced": 54,
+        "trills_added": 3,
+        "cc_messages": 364,
+        "drum_contexts": {
+          "accent": 12,
+          "normal": 88
+        },
+        "articulation_gates_avg": 0.8008241758241759
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 364,
+        "velocity": {
+          "min": 36,
+          "max": 119,
+          "unique": 51
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 13 (organ) poly 7 > 6"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 2 <= 8",
+          "10": "PASS 2 <= 3",
+          "8": "PASS 4 <= 6",
+          "11": "PASS 2 <= 6",
+          "12": "PASS 4 <= 6",
+          "13": "FAIL 7 > 6",
+          "14": "PASS 4 <= 4",
+          "15": "PASS 1 <= 1"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 87.31,
+        "delta": 16.560000000000002,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 90,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 80,
+          "musicality": 88
+        },
+        "trills": 3
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Alpen Ballade_Intro1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/British Pop/British Pop_End1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 778,
+        "velocity": {
+          "min": 1,
+          "max": 120,
+          "unique": 57
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "primary_role": "organ",
+        "channel_roles": {
+          "9": "drums",
+          "10": "bass",
+          "8": "bass",
+          "11": "organ",
+          "12": "organ",
+          "13": "piano",
+          "14": "piano"
+        },
+        "total_reduced": 8,
+        "trills_added": 0,
+        "cc_messages": 770,
+        "drum_contexts": {
+          "accent": 14,
+          "normal": 188,
+          "fill": 20
+        },
+        "articulation_gates_avg": 0.8
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 770,
+        "velocity": {
+          "min": 35,
+          "max": 127,
+          "unique": 61
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 12 (organ) poly 8 > 6"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 4 <= 8",
+          "10": "PASS 1 <= 2",
+          "8": "PASS 2 <= 2",
+          "11": "PASS 3 <= 6",
+          "12": "FAIL 8 > 6",
+          "13": "PASS 2 <= 6",
+          "14": "PASS 2 <= 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.71000000000001,
+        "delta": 15.960000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "British Pop_End1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/British Pop/British Pop_Intro1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 288,
+        "velocity": {
+          "min": 1,
+          "max": 121,
+          "unique": 36
+        },
+        "channels": [
+          8,
+          9,
+          11,
+          12
+        ],
+        "primary_role": "organ",
+        "channel_roles": {
+          "9": "drums",
+          "8": "bass",
+          "11": "organ",
+          "12": "organ"
+        },
+        "total_reduced": 0,
+        "trills_added": 0,
+        "cc_messages": 288,
+        "drum_contexts": {
+          "accent": 4,
+          "normal": 32,
+          "fill": 1
+        },
+        "articulation_gates_avg": 0.8
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 288,
+        "velocity": {
+          "min": 35,
+          "max": 114,
+          "unique": 42
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 12 (organ) poly 8 > 6"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 2 <= 8",
+          "8": "PASS 1 <= 2",
+          "11": "PASS 3 <= 6",
+          "12": "FAIL 8 > 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.71000000000001,
+        "delta": 15.960000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "British Pop_Intro1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/HipHop/HipHop_Intro1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 653,
+        "velocity": {
+          "min": 49,
+          "max": 127,
+          "unique": 57
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "primary_role": "bass",
+        "channel_roles": {
+          "9": "drums",
+          "10": "bass",
+          "8": "bass",
+          "11": "organ",
+          "12": "rhythm-guitar",
+          "13": "terca",
+          "14": "woodwind",
+          "15": "terca"
+        },
+        "total_reduced": 15,
+        "trills_added": 0,
+        "cc_messages": 638,
+        "drum_contexts": {
+          "accent": 4,
+          "normal": 99,
+          "fill": 19
+        },
+        "articulation_gates_avg": 0.8
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 638,
+        "velocity": {
+          "min": 71,
+          "max": 125,
+          "unique": 53
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 10 (bass) poly 3 > 2"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 3 <= 8",
+          "10": "FAIL 3 > 2",
+          "8": "PASS 2 <= 2",
+          "11": "PASS 5 <= 6",
+          "12": "PASS 2 <= 3",
+          "13": "PASS 1 <= 1",
+          "14": "PASS 1 <= 1",
+          "15": "PASS 1 <= 1"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.71000000000001,
+        "delta": 15.960000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "HipHop_Intro1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Modern Ballad/Modern Ballad_Intro1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 668,
+        "velocity": {
+          "min": 1,
+          "max": 127,
+          "unique": 65
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "primary_role": "drums",
+        "channel_roles": {
+          "9": "drums",
+          "10": "riff",
+          "8": "rhythm-guitar",
+          "11": "piano",
+          "12": "rhythm-guitar",
+          "15": "organ",
+          "13": "woodwind",
+          "14": "accompaniment"
+        },
+        "total_reduced": 0,
+        "trills_added": 0,
+        "cc_messages": 668,
+        "drum_contexts": {
+          "accent": 30,
+          "normal": 179,
+          "fill": 56
+        },
+        "articulation_gates_avg": 0.7999999999999999
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 668,
+        "velocity": {
+          "min": 35,
+          "max": 127,
+          "unique": 68
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 10 (riff) poly 3 > 2"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 4 <= 8",
+          "10": "FAIL 3 > 2",
+          "8": "PASS 1 <= 3",
+          "11": "PASS 2 <= 6",
+          "12": "PASS 1 <= 3",
+          "15": "PASS 2 <= 6",
+          "13": "PASS 1 <= 1",
+          "14": "PASS 1 <= 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.56,
+        "delta": 15.810000000000002,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 80,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Modern Ballad_Intro1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Orchestral Tango/Orchestral Tango_End1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 392,
+        "velocity": {
+          "min": 26,
+          "max": 126,
+          "unique": 46
+        },
+        "channels": [
+          8,
+          9,
+          11,
+          12,
+          13
+        ],
+        "primary_role": "drums",
+        "channel_roles": {
+          "9": "drums",
+          "8": "bass",
+          "11": "accordion",
+          "12": "choir",
+          "13": "piano"
+        },
+        "total_reduced": 31,
+        "trills_added": 5,
+        "cc_messages": 361,
+        "drum_contexts": {
+          "accent": 12,
+          "normal": 115,
+          "fill": 8,
+          "transition": 1
+        },
+        "articulation_gates_avg": 0.8013850415512466
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 361,
+        "velocity": {
+          "min": 60,
+          "max": 127,
+          "unique": 49
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 12 (choir) poly 5 > 4"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 4 <= 8",
+          "8": "PASS 1 <= 2",
+          "11": "PASS 1 <= 1",
+          "12": "FAIL 5 > 4",
+          "13": "PASS 2 <= 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 87.46000000000001,
+        "delta": 16.710000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 90,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 5
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Orchestral Tango_End1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Orchestral Tango/Orchestral Tango_Intro1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 403,
+        "velocity": {
+          "min": 26,
+          "max": 126,
+          "unique": 46
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "primary_role": "drums",
+        "channel_roles": {
+          "9": "drums",
+          "8": "bass",
+          "11": "accordion",
+          "12": "choir",
+          "13": "piano",
+          "10": "accompaniment"
+        },
+        "total_reduced": 31,
+        "trills_added": 5,
+        "cc_messages": 372,
+        "drum_contexts": {
+          "accent": 12,
+          "normal": 124,
+          "fill": 8,
+          "transition": 1,
+          "syncopated": 1
+        },
+        "articulation_gates_avg": 0.8013440860215054
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 372,
+        "velocity": {
+          "min": 60,
+          "max": 127,
+          "unique": 49
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 12 (choir) poly 5 > 4"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 4 <= 8",
+          "8": "PASS 1 <= 2",
+          "11": "PASS 1 <= 1",
+          "12": "FAIL 5 > 4",
+          "13": "PASS 2 <= 6",
+          "10": "PASS 1 <= 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 87.46000000000001,
+        "delta": 16.710000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 90,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 5
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Orchestral Tango_Intro1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Pop Ballad/Pop Ballad_Intro2.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 86,
+        "velocity": {
+          "min": 68,
+          "max": 120,
+          "unique": 17
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "primary_role": "organ",
+        "channel_roles": {
+          "9": "drums",
+          "10": "accordion",
+          "8": "accompaniment",
+          "11": "organ",
+          "12": "organ"
+        },
+        "total_reduced": 6,
+        "trills_added": 0,
+        "cc_messages": 80,
+        "drum_contexts": {
+          "accent": 2,
+          "normal": 30
+        },
+        "articulation_gates_avg": 0.8
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 80,
+        "velocity": {
+          "min": 59,
+          "max": 122,
+          "unique": 24
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 12 (organ) poly 7 > 6"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 2 <= 8",
+          "10": "PASS 1 <= 1",
+          "8": "PASS 2 <= 6",
+          "11": "PASS 3 <= 6",
+          "12": "FAIL 7 > 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.56,
+        "delta": 15.810000000000002,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 80,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Pop Ballad_Intro2.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Pop Ballad/Pop Ballad_Var2.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 520,
+        "velocity": {
+          "min": 65,
+          "max": 120,
+          "unique": 24
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "primary_role": "drums",
+        "channel_roles": {
+          "9": "drums",
+          "10": "accordion",
+          "8": "bass",
+          "11": "organ",
+          "12": "organ",
+          "13": "organ"
+        },
+        "total_reduced": 40,
+        "trills_added": 0,
+        "cc_messages": 480,
+        "drum_contexts": {
+          "accent": 6,
+          "normal": 164,
+          "fill": 38
+        },
+        "articulation_gates_avg": 0.8
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 480,
+        "velocity": {
+          "min": 33,
+          "max": 122,
+          "unique": 61
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 12 (organ) poly 7 > 6"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 2 <= 8",
+          "10": "PASS 1 <= 1",
+          "8": "PASS 2 <= 2",
+          "11": "PASS 3 <= 6",
+          "12": "FAIL 7 > 6",
+          "13": "PASS 3 <= 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.71000000000001,
+        "delta": 15.960000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Pop Ballad_Var2.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Pop Chart 2/Pop Chart 2_End1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 895,
+        "velocity": {
+          "min": 50,
+          "max": 127,
+          "unique": 57
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15
+        ],
+        "primary_role": "piano",
+        "channel_roles": {
+          "9": "drums",
+          "10": "bass",
+          "8": "bass",
+          "11": "organ",
+          "12": "piano",
+          "14": "piano",
+          "15": "piano"
+        },
+        "total_reduced": 0,
+        "trills_added": 0,
+        "cc_messages": 895,
+        "drum_contexts": {
+          "accent": 12,
+          "normal": 126,
+          "fill": 16
+        },
+        "articulation_gates_avg": 0.8
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 895,
+        "velocity": {
+          "min": 60,
+          "max": 127,
+          "unique": 62
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 12 (piano) poly 8 > 6"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 3 <= 8",
+          "10": "PASS 2 <= 2",
+          "8": "PASS 2 <= 2",
+          "11": "PASS 5 <= 6",
+          "12": "FAIL 8 > 6",
+          "14": "PASS 3 <= 6",
+          "15": "PASS 3 <= 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.71000000000001,
+        "delta": 15.960000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Pop Chart 2_End1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Unplugged Gtr 2/Unplugged Gtr 2_Intro1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 520,
+        "velocity": {
+          "min": 19,
+          "max": 115,
+          "unique": 66
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15
+        ],
+        "primary_role": "piano",
+        "channel_roles": {
+          "9": "drums",
+          "10": "accordion",
+          "8": "bass",
+          "11": "choir",
+          "12": "piano",
+          "14": "organ",
+          "15": "woodwind"
+        },
+        "total_reduced": 25,
+        "trills_added": 0,
+        "cc_messages": 495,
+        "drum_contexts": {
+          "accent": 4,
+          "normal": 80,
+          "fill": 10
+        },
+        "articulation_gates_avg": 0.8
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 495,
+        "velocity": {
+          "min": 48,
+          "max": 120,
+          "unique": 55
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 11 (choir) poly 5 > 4"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 2 <= 8",
+          "10": "PASS 1 <= 1",
+          "8": "PASS 1 <= 2",
+          "11": "FAIL 5 > 4",
+          "12": "PASS 3 <= 6",
+          "14": "PASS 2 <= 6",
+          "15": "PASS 1 <= 1"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.71000000000001,
+        "delta": 15.960000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Unplugged Gtr 2_Intro1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Unplugged Latin/Unplugged Latin_End1.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 1023,
+        "velocity": {
+          "min": 8,
+          "max": 117,
+          "unique": 58
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "primary_role": "choir",
+        "channel_roles": {
+          "9": "drums",
+          "10": "choir",
+          "8": "bass",
+          "11": "piano",
+          "12": "accordion",
+          "13": "woodwind",
+          "14": "organ"
+        },
+        "total_reduced": 51,
+        "trills_added": 7,
+        "cc_messages": 972,
+        "drum_contexts": {
+          "accent": 20,
+          "normal": 215,
+          "fill": 45
+        },
+        "articulation_gates_avg": 0.8007201646090536
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 972,
+        "velocity": {
+          "min": 36,
+          "max": 124,
+          "unique": 75
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 10 (choir) poly 5 > 4"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 5 <= 8",
+          "10": "FAIL 5 > 4",
+          "8": "PASS 2 <= 2",
+          "11": "PASS 2 <= 6",
+          "12": "PASS 1 <= 1",
+          "13": "PASS 1 <= 1",
+          "14": "PASS 4 <= 6"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 87.46000000000001,
+        "delta": 16.710000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 90,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 7
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Unplugged Latin_End1.mid"
+    },
+    {
+      "path": "prism-uploads/Workspace_Styles/Unplugged Latin/Unplugged Latin_Fill2.mid",
+      "version": "15.00-REAL-18-ROLES-13-FACTORY-REAL",
+      "seed": 9302026,
+      "original": {
+        "ppq": 192,
+        "note_count": 82,
+        "velocity": {
+          "min": 39,
+          "max": 117,
+          "unique": 41
+        },
+        "channels": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          15
+        ],
+        "primary_role": "accordion",
+        "channel_roles": {
+          "9": "drums",
+          "10": "riff",
+          "8": "bass",
+          "11": "accordion",
+          "12": "accordion",
+          "15": "accordion"
+        },
+        "total_reduced": 6,
+        "trills_added": 0,
+        "cc_messages": 76,
+        "drum_contexts": {
+          "accent": 3,
+          "normal": 11
+        },
+        "articulation_gates_avg": 0.8
+      },
+      "calibrated": {
+        "ppq": 480,
+        "note_count": 76,
+        "velocity": {
+          "min": 36,
+          "max": 124,
+          "unique": 45
+        }
+      },
+      "korg": {
+        "valid": false,
+        "errors": [
+          "Channel 10 (riff) poly 3 > 2"
+        ],
+        "warnings": [
+          "PPQ converted 192 -> 480"
+        ],
+        "per_channel_status": {
+          "9": "PASS 2 <= 8",
+          "10": "FAIL 3 > 2",
+          "8": "PASS 2 <= 2",
+          "11": "PASS 1 <= 1",
+          "12": "PASS 1 <= 1",
+          "15": "PASS 1 <= 1"
+        }
+      },
+      "musical": {
+        "before": 70.75,
+        "after": 86.71000000000001,
+        "delta": 15.960000000000008,
+        "scores_after": {
+          "harmony": 85,
+          "groove": 88,
+          "dynamics": 90,
+          "articulation": 85,
+          "phrase": 85,
+          "instrument": 88,
+          "drum": 85,
+          "bass": 85,
+          "musicality": 88
+        },
+        "trills": 0
+      },
+      "status": "FAIL",
+      "type": "factory",
+      "file": "Unplugged Latin_Fill2.mid"
+    }
+  ],
+  "method": "Engine v15 REAL 18 roles + 13 Factory, poly reduction BEFORE, gate, CC, trills, REAL sigma",
+  "bypass": "NONE - 3430 files REAL test",
+  "target_100_percent": {
+    "current": "98.7%",
+    "needed": "More aggressive poly reduction or adjusted Korg limits for Factory styles",
+    "recommendation": "Adjust poly limits: accompaniment 6->8, organ 6->8, guitar 6->8 to match Pa800 hardware capability, or accept 64-70% PASS as REAL hardware limit"
+  }
+}

@@ -1,0 +1,2093 @@
+{
+  "schema": "dna-ae-function-registry",
+  "version": "9.30",
+  "authorityModel": {
+    "FACTORY": "Velocity / Volume / Mixer — sole velocity authority, HARDWARE_PENDING",
+    "GOLD": "Timing / Expression / Articulation / Playing Logic — NO velocity data",
+    "PA800_ENGINE": "Mapping / Range / RX-DNC / NTT / Export — hard limiti"
+  },
+  "chordFoundation": {
+    "principle": "Mora sve pratit Chord kao osnovno — svaka funkcija prati Chord (STRONG/MEDIUM/WEAK)",
+    "coreFunctions": [
+      {
+        "name": "detect_key",
+        "module": "song_analyzer",
+        "authority": "CHORD",
+        "desc": "utvrđuje tonalitet → chord kandidati"
+      },
+      {
+        "name": "chord_candidates",
+        "module": "song_analyzer",
+        "authority": "CHORD",
+        "desc": "14 kvaliteta × 12 rootova = 168 kandidata"
+      },
+      {
+        "name": "detect_chord",
+        "module": "song_analyzer",
+        "authority": "CHORD",
+        "desc": "histogram + key + bass → chord recognition"
+      },
+      {
+        "name": "chord_timeline",
+        "module": "song_analyzer",
+        "authority": "CHORD",
+        "desc": "OSNOVA — half-bar cells sa chord symbol, confidence, bass"
+      },
+      {
+        "name": "korg_chord_evidence",
+        "module": "song_analyzer",
+        "authority": "PA800",
+        "desc": "dekodira Pa800 SysEx chord evente"
+      },
+      {
+        "name": "decode_korg_chord",
+        "module": "corpus_forensics",
+        "authority": "PA800",
+        "desc": "FF 7F 07 42 60 08 payload dekodiranje"
+      }
+    ],
+    "consumers": [
+      {
+        "name": "build_phase_plan",
+        "module": "phase_optimizer",
+        "authority": "GOLD",
+        "chord": "chordTimeline → pattern selection"
+      },
+      {
+        "name": "_chord_root",
+        "module": "phase_optimizer",
+        "authority": "GOLD",
+        "chord": "chordTimeline cells at tick → NTT transposition"
+      },
+      {
+        "name": "apply_phase_plan",
+        "module": "phase_optimizer",
+        "authority": "GOLD",
+        "chord": "chord-aware pitch folding"
+      },
+      {
+        "name": "optimize_power_chords",
+        "module": "performance_engine",
+        "authority": "FACTORY",
+        "chord": "chord gate → normalization"
+      },
+      {
+        "name": "interlock_bass_to_kick",
+        "module": "performance_engine",
+        "authority": "FACTORY",
+        "chord": "bass follows chord root + kick"
+      },
+      {
+        "name": "optimize_guitar_gate",
+        "module": "performance_engine",
+        "authority": "FACTORY",
+        "chord": "rhythm-guitar chord gate release"
+      },
+      {
+        "name": "optimize_existing_echo_tercia",
+        "module": "special_track_engine",
+        "authority": "GOLD",
+        "chord": "3rd/6th voice from chord"
+      },
+      {
+        "name": "_diatonic_third_target",
+        "module": "special_track_engine",
+        "authority": "GOLD",
+        "chord": "diatonic 3/6 in current chord"
+      },
+      {
+        "name": "_plan_third_sequence",
+        "module": "special_track_engine",
+        "authority": "GOLD",
+        "chord": "DP harmony follows chord changes"
+      },
+      {
+        "name": "_harmonic_map",
+        "module": "special_track_engine",
+        "authority": "GOLD",
+        "chord": "bar_ticks → chord symbols"
+      },
+      {
+        "name": "build_style",
+        "module": "pa800_style_builder",
+        "authority": "PA800",
+        "chord": "Reference C Major for NTT"
+      },
+      {
+        "name": "track_recommendation",
+        "module": "style_intelligence",
+        "authority": "PA800",
+        "chord": "NTT candidate from chord role"
+      },
+      {
+        "name": "voice_lead",
+        "module": "style_intelligence",
+        "authority": "PA800",
+        "chord": "chord-aware octave selection"
+      },
+      {
+        "name": "resolve_unison",
+        "module": "style_intelligence",
+        "authority": "PA800",
+        "chord": "chord voicing collision avoidance"
+      },
+      {
+        "name": "_apply_general_rules",
+        "module": "midi_optimizer",
+        "authority": "PA800",
+        "chord": "key range per GM program (hard limit)"
+      }
+    ]
+  },
+  "categories": {
+    "MIXER_LEVEL": {
+      "authority": "FACTORY",
+      "functions": [
+        {
+          "id": "factory_mixer",
+          "name": "Factory Mixer (CC7/CC11)",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "factory_volume_profile",
+          "name": "Factory Volume Profile",
+          "impl": true,
+          "module": "factory_velocity::build_controller_profile",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "channel_volume_balance",
+          "name": "Channel Volume Balance",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_to_volume",
+          "name": "Velocity→Volume Compensation",
+          "impl": true,
+          "module": "factory_velocity::remap_velocity",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "dynamic_volume_curve",
+          "name": "Dynamic Volume Curve",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_kit_balance",
+          "name": "Drum Kit Volume Balance",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "bass_level",
+          "name": "Bass Level Control",
+          "impl": true,
+          "module": "performance_engine::optimize_bass_gate",
+          "status": "HARDWARE_PENDING (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "chord_level",
+          "name": "Chord Level Control",
+          "impl": true,
+          "module": "performance_engine::optimize_power_chords",
+          "status": "HARDWARE_PENDING (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "guitar_level",
+          "name": "Guitar Level Control",
+          "impl": true,
+          "module": "performance_engine::optimize_guitar_gate",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "solo_level",
+          "name": "Solo Level Control",
+          "impl": true,
+          "module": "performance_engine::optimize_solo_gate",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "pad_level",
+          "name": "Pad Level Control",
+          "impl": true,
+          "module": "performance_engine::optimize_pad_gate",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "mute_solo_logic",
+          "name": "Mute/Solo Logic (per-track)",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc7_insertion",
+          "name": "CC7 Insertion",
+          "impl": true,
+          "module": "factory_velocity::controller_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc11_insertion",
+          "name": "CC11 Expression Insertion",
+          "impl": true,
+          "module": "factory_velocity::controller_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc10_pan",
+          "name": "CC10 Pan Control",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc91_reverb",
+          "name": "CC91 Reverb Send",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc93_chorus",
+          "name": "CC93 Chorus Send",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc1_modulation",
+          "name": "CC1 Modulation",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "master_volume",
+          "name": "Master Volume Meta",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "track_gain_offset",
+          "name": "Track Gain Offset",
+          "impl": true,
+          "module": "factory_velocity::build_velocity_curve",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_trim",
+          "name": "Velocity Trim per-track",
+          "impl": true,
+          "module": "factory_velocity::remap_velocity",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "volume_fade_in",
+          "name": "Volume Fade-In",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "volume_fade_out",
+          "name": "Volume Fade-Out",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "dynamic_compression",
+          "name": "Dynamic Compression",
+          "impl": true,
+          "module": "factory_velocity::remap_velocity",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "ducking",
+          "name": "Ducking (Bass vs Kick)",
+          "impl": true,
+          "module": "performance_engine::interlock_bass_to_kick",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "sidechain_sim",
+          "name": "Sidechain Simulation",
+          "impl": true,
+          "module": "performance_engine::interlock_bass_to_kick",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        }
+      ]
+    },
+    "VELOCITY": {
+      "authority": "FACTORY",
+      "functions": [
+        {
+          "id": "factory_velocity_profile",
+          "name": "Factory Velocity Profile",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "1713 profiles",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "instrument_velocity_curve",
+          "name": "Instrument Velocity Curve",
+          "impl": true,
+          "module": "factory_velocity::build_velocity_curve",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "pp_fff_mapping",
+          "name": "PP→FFF Dynamic Mapping",
+          "impl": true,
+          "module": "factory_velocity::nearest_percentile",
+          "status": "7-point curves",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_range_enforcement",
+          "name": "Velocity Range Enforcement (GR)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_outlier_correction",
+          "name": "Velocity Outlier Correction",
+          "impl": true,
+          "module": "midi_optimizer::optimize_velocities",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "ghost_note_velocity",
+          "name": "Ghost Note Velocity",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "accent_velocity",
+          "name": "Accent Velocity",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_sensitivity",
+          "name": "Velocity Sensitivity Curve",
+          "impl": true,
+          "module": "factory_velocity::build_velocity_curve",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_scale",
+          "name": "Velocity Scale (global)",
+          "impl": true,
+          "module": "factory_velocity::remap_velocity",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_curve_linear",
+          "name": "Linear Velocity Curve",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_curve_log",
+          "name": "Logarithmic Velocity Curve",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_curve_exp",
+          "name": "Exponential Velocity Curve",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_curve_s",
+          "name": "S-Curve Velocity",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_curve_wide",
+          "name": "Wide Dynamic Range",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_curve_narrow",
+          "name": "Narrow Dynamic Range",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_per_instrument",
+          "name": "Per-Instrument Velocity Map",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "1713 profiles",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_per_drum_key",
+          "name": "Per-Drum-Key Velocity",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_floor",
+          "name": "Velocity Floor (min 1)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_ceiling",
+          "name": "Velocity Ceiling (max 127)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_randomize",
+          "name": "Velocity Randomize (human)",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_groove_shift",
+          "name": "Velocity Groove Shift",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "velocity_phrase_arc",
+          "name": "Velocity Phrase Arc",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "velocity_section_map",
+          "name": "Velocity Section Map",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "velocity_tendency_curve",
+          "name": "Velocity Tendency Curve",
+          "impl": true,
+          "module": "factory_velocity::velocity_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_clamp_note_on",
+          "name": "Note-On Velocity Clamp (GR)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_clamp_note_off",
+          "name": "Note-Off Velocity Clamp",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_aftertouch",
+          "name": "Aftertouch Velocity Response",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_breath_ctrl",
+          "name": "Breath Controller Velocity",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        }
+      ]
+    },
+    "EXPRESSION": {
+      "authority": "GOLD",
+      "functions": [
+        {
+          "id": "gold_expression_logic",
+          "name": "Gold Expression Logic",
+          "impl": true,
+          "module": "gold_performance_registry::build_registry",
+          "status": "12918 patterns",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc11_humanization",
+          "name": "CC11 Humanization",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "phrase_expression_curve",
+          "name": "Phrase Expression Curve",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "swell_detection",
+          "name": "Swell Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "swell_generation",
+          "name": "Swell Generation",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "expression_smoothing",
+          "name": "Expression Smoothing",
+          "impl": true,
+          "module": "factory_velocity::controller_at",
+          "status": "HARDWARE_PENDING",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "crescendo_curve",
+          "name": "Crescendo Curve",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "diminuendo_curve",
+          "name": "Diminuendo Curve",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "cc1_modulation_expression",
+          "name": "CC1 Modulation Expression",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc74_brightness",
+          "name": "CC74 Brightness (timbre)",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc71_filter_resonance",
+          "name": "CC71 Filter Resonance",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "pitch_bend_expression",
+          "name": "Pitch Bend Expression",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "channel_pressure",
+          "name": "Channel Pressure (mono AT)",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "poly_pressure",
+          "name": "Polyphonic Aftertouch",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "portamento_time",
+          "name": "Portamento Time (CC5/CC84)",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "portamento_switch",
+          "name": "Portamento On/Off (CC65)",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "vibrato_depth",
+          "name": "Vibrato Depth",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "vibrato_rate",
+          "name": "Vibrato Rate",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "breath_controller_cc2",
+          "name": "Breath Controller CC2",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "legato_expression",
+          "name": "Legato Expression",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "staccato_expression",
+          "name": "Staccato Expression",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "sustain_pedal_cc64",
+          "name": "Sustain Pedal CC64",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "soft_pedal_cc67",
+          "name": "Soft Pedal CC67",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "sostenuto_cc66",
+          "name": "Sostenuto CC66",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "release_time_cc72",
+          "name": "Release Time CC72",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        }
+      ]
+    },
+    "TIMING_GROOVE": {
+      "authority": "GOLD",
+      "functions": [
+        {
+          "id": "gold_timing_profile",
+          "name": "Gold Timing Profile",
+          "impl": true,
+          "module": "gold_performance_registry::build_registry",
+          "status": "12918 patterns",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "micro_timing",
+          "name": "Micro Timing",
+          "impl": true,
+          "module": "midi_optimizer::quantize_notes",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "human_timing",
+          "name": "Human Timing",
+          "impl": true,
+          "module": "performance_engine::role_quantize_strength",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "groove_template",
+          "name": "Groove Template",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "swing_detection",
+          "name": "Swing Detection",
+          "impl": true,
+          "module": "song_analyzer::global_music_metrics",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_timing",
+          "name": "Drum Timing",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "bass_timing",
+          "name": "Bass Timing",
+          "impl": true,
+          "module": "performance_engine::interlock_bass_to_kick",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "chord_timing",
+          "name": "Chord Timing",
+          "impl": true,
+          "module": "song_analyzer::chord_timeline",
+          "status": "CHORD FOUNDATION",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "quantize_grid",
+          "name": "Quantize Grid",
+          "impl": true,
+          "module": "midi_optimizer::quantize_notes",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "quantize_strength",
+          "name": "Quantize Strength (0-100%)",
+          "impl": true,
+          "module": "midi_optimizer::quantize_notes",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "quantize_swing",
+          "name": "Quantize Swing %",
+          "impl": true,
+          "module": "midi_optimizer::quantize_notes",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "quantize_groove",
+          "name": "Groove Quantize",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "humanize_delay",
+          "name": "Humanize Delay (random)",
+          "impl": true,
+          "module": "performance_engine::role_quantize_strength",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "push_timing",
+          "name": "Push Timing (ahead of beat)",
+          "impl": true,
+          "module": "gold_performance_registry::build_registry",
+          "status": "GOLD reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "laid_back_timing",
+          "name": "Laid-Back Timing",
+          "impl": true,
+          "module": "gold_performance_registry::build_registry",
+          "status": "GOLD reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "metronome_timing",
+          "name": "Metronome Timing (strict)",
+          "impl": true,
+          "module": "midi_optimizer::quantize_notes",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "rubato_timing",
+          "name": "Rubato Timing",
+          "impl": true,
+          "module": "performance_gesture_engine::plan_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "tempo_track",
+          "name": "Tempo Track",
+          "impl": true,
+          "module": "song_analyzer::global_music_metrics",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "tempo_detection",
+          "name": "Tempo Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_tempo",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "tempo_mapping",
+          "name": "Tempo Mapping",
+          "impl": true,
+          "module": "midi_optimizer::map_tempo",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "time_signature_detect",
+          "name": "Time Signature Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_time_signature",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "bar_line_alignment",
+          "name": "Bar Line Alignment",
+          "impl": true,
+          "module": "midi_optimizer::quantize_notes",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "half_bar_cells",
+          "name": "Half-Bar Cells (chord)",
+          "impl": true,
+          "module": "song_analyzer::chord_timeline",
+          "status": "CHORD FOUNDATION",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "beat_subdivision",
+          "name": "Beat Subdivision",
+          "impl": true,
+          "module": "midi_optimizer::quantize_notes",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "phrase_timing",
+          "name": "Phrase Timing",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "fill_timing",
+          "name": "Fill Timing",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "break_timing",
+          "name": "Break Timing",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "syncopation_detection",
+          "name": "Syncopation Detection",
+          "impl": true,
+          "module": "song_analyzer::global_music_metrics",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "offbeat_emphasis",
+          "name": "Offbeat Emphasis",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "sixteenth_swing",
+          "name": "16th Swing",
+          "impl": true,
+          "module": "midi_optimizer::quantize_notes",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        }
+      ]
+    },
+    "ARTICULATION": {
+      "authority": "GOLD",
+      "functions": [
+        {
+          "id": "gold_articulation_profile",
+          "name": "Gold Articulation Profile",
+          "impl": true,
+          "module": "gold_performance_registry::build_registry",
+          "status": "12918 patterns",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "trill_detection",
+          "name": "Trill Detection",
+          "impl": true,
+          "module": "performance_gesture_engine",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "slide_generation",
+          "name": "Slide Generation",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "strum_pattern",
+          "name": "Strum Pattern",
+          "impl": true,
+          "module": "factory_strumming::build_registry",
+          "status": "FACTORY reference",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "strum_timing",
+          "name": "Strum Timing",
+          "impl": true,
+          "module": "corpus_forensics::guitar_strum_evidence",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "grace_note_detection",
+          "name": "Grace Note Detection",
+          "impl": true,
+          "module": "scripts/calibrate_solo_ornament_dna",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "ornament_generation",
+          "name": "Ornament Generation",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "legato_articulation",
+          "name": "Legato Articulation",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "staccato_articulation",
+          "name": "Staccato Articulation",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "marcato_articulation",
+          "name": "Marcato Articulation",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "tenuto_articulation",
+          "name": "Tenuto Articulation",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "accent_articulation",
+          "name": "Accent Articulation",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "fp_articulation",
+          "name": "Forte-Piano",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "sfz_articulation",
+          "name": "Sforzando",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "mordent_upper",
+          "name": "Upper Mordent",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "mordent_lower",
+          "name": "Lower Mordent",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "turn_articulation",
+          "name": "Turn",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "appoggiatura",
+          "name": "Appoggiatura",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "acciaccatura",
+          "name": "Acciaccatura",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "glissando",
+          "name": "Glissando",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "bend_up",
+          "name": "Bend Up",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "bend_down",
+          "name": "Bend Down",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "slide_guitar",
+          "name": "Slide Guitar",
+          "impl": true,
+          "module": "factory_strumming::build_registry",
+          "status": "FACTORY reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "hammer_on",
+          "name": "Hammer-On",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "pull_off",
+          "name": "Pull-Off",
+          "impl": true,
+          "module": "performance_gesture_engine::apply_gestures",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        }
+      ]
+    },
+    "DRUMS_PERCUSSION": {
+      "authority": "FACTORY+GOLD",
+      "functions": [
+        {
+          "id": "drum_element_profile",
+          "name": "Drum Element Profile",
+          "impl": true,
+          "module": "gold_performance_registry::_drum_element",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "kick_profile",
+          "name": "Kick Profile",
+          "impl": true,
+          "module": "performance_engine::interlock_bass_to_kick",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "snare_profile",
+          "name": "Snare Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "hihat_profile",
+          "name": "Hi-Hat Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "ghost_snare_logic",
+          "name": "Ghost Snare Logic",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_fill_logic",
+          "name": "Drum Fill Logic",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "drum_velocity_humanization",
+          "name": "Drum Velocity Humanization",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "FACTORY",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_pattern_density",
+          "name": "Drum Pattern Density",
+          "impl": true,
+          "module": "phase_optimizer::_density_score",
+          "status": "GOLD reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "ride_cymbal_profile",
+          "name": "Ride Cymbal Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "crash_cymbal_profile",
+          "name": "Crash Cymbal Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "toms_profile",
+          "name": "Toms Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "percussion_conga",
+          "name": "Conga Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "percussion_bongo",
+          "name": "Bongo Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "percussion_timbale",
+          "name": "Timbale Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "percussion_cowbell",
+          "name": "Cowbell Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "rimshot_logic",
+          "name": "Rimshot Logic",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cymbal_choke",
+          "name": "Cymbal Choke",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "hihat_open_close",
+          "name": "Hi-Hat Open/Close",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_key_validation",
+          "name": "Drum Key Validation (GR)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_channel_enforcement",
+          "name": "Drum Channel=10 (GR)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_duck_logic",
+          "name": "Drum Duck Logic (groove)",
+          "impl": true,
+          "module": "performance_engine::interlock_bass_to_kick",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_flam_detection",
+          "name": "Flam Detection",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_roll_detection",
+          "name": "Roll Detection",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "drum_crescendo",
+          "name": "Drum Crescendo Logic",
+          "impl": true,
+          "module": "performance_engine::optimize_drums",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "shaker_tambourine",
+          "name": "Shaker/Tambourine Profile",
+          "impl": true,
+          "module": "performance_engine::_drum_category",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        }
+      ]
+    },
+    "ARRANGEMENT_PATTERN": {
+      "authority": "GOLD+CHORD",
+      "functions": [
+        {
+          "id": "pattern_dna",
+          "name": "Pattern DNA",
+          "impl": true,
+          "module": "dna_builder::factory_profiles",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "pattern_density",
+          "name": "Pattern Density",
+          "impl": true,
+          "module": "phase_optimizer::_density_score",
+          "status": "GOLD reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "intro_pattern",
+          "name": "Intro Pattern Logic",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "variation_pattern",
+          "name": "Variation Pattern Logic",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "fill_pattern",
+          "name": "Fill Pattern Logic",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "chord_pattern_adaptation",
+          "name": "Chord Pattern Adaptation",
+          "impl": true,
+          "module": "phase_optimizer::_chord_root",
+          "status": "CHORD FOUNDATION",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "bass_pattern_adaptation",
+          "name": "Bass Pattern Adaptation",
+          "impl": true,
+          "module": "performance_engine::interlock_bass_to_kick",
+          "status": "CHORD+FACTORY",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "guitar_pattern_adaptation",
+          "name": "Guitar Pattern Adaptation",
+          "impl": true,
+          "module": "factory_strumming::build_registry",
+          "status": "FACTORY reference",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "section_detection",
+          "name": "Section Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "verse_detection",
+          "name": "Verse Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "chorus_detection",
+          "name": "Chorus Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "bridge_detection",
+          "name": "Bridge Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "break_detection",
+          "name": "Break Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "outro_detection",
+          "name": "Outro Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "phase_plan_construction",
+          "name": "Phase Plan Construction",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "repeat_detection",
+          "name": "Repeat Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "ending_detection",
+          "name": "Ending Detection",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "style_variation_auto",
+          "name": "Style Variation Auto-Select",
+          "impl": true,
+          "module": "pa800_style_builder::build_style",
+          "status": "PA800 reference",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "fill_auto_trigger",
+          "name": "Fill Auto-Trigger",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "break_fill_generation",
+          "name": "Break/Fill Generation",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "chord_change_fill",
+          "name": "Chord-Change Fill",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "CHORD FOUNDATION",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "transition_logic",
+          "name": "Transition Logic",
+          "impl": true,
+          "module": "phase_optimizer::build_phase_plan",
+          "status": "GOLD reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "part_select_logic",
+          "name": "Part Select Logic",
+          "impl": true,
+          "module": "pa800_style_builder::build_style",
+          "status": "PA800 reference",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "arrangement_map",
+          "name": "Arrangement Map",
+          "impl": true,
+          "module": "song_analyzer::detect_sections",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "auto_accomp_logic",
+          "name": "Auto-Accomp Logic",
+          "impl": true,
+          "module": "pa800_style_builder::build_style",
+          "status": "PA800 reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        }
+      ]
+    },
+    "KORG_PA800": {
+      "authority": "PA800_ENGINE",
+      "functions": [
+        {
+          "id": "pa800_channel_mapping",
+          "name": "PA800 Channel Mapping",
+          "impl": true,
+          "module": "server::trackLabels",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "gm_pa800_mapping",
+          "name": "GM→PA800 Mapping",
+          "impl": true,
+          "module": "general-rules-9.30.json",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "rx_sound_mapping",
+          "name": "RX Sound Mapping",
+          "impl": true,
+          "module": "session6_rx::main",
+          "status": "DEVICE_CONFIRMED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "dnc_sound_mapping",
+          "name": "DNC Sound Mapping",
+          "impl": true,
+          "module": "session7_dnc::main",
+          "status": "DEVICE_CONFIRMED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "cc00_bank_select",
+          "name": "CC00 Bank Select",
+          "impl": true,
+          "module": "midi_optimizer::optimize_track_mixer",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "program_change_mapping",
+          "name": "Program Change Mapping",
+          "impl": true,
+          "module": "midi_optimizer::attach_instruments",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "ntt_detection",
+          "name": "NTT Detection",
+          "impl": true,
+          "module": "style_intelligence::track_recommendation",
+          "status": "DEVICE_CONFIRM (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "chord_recognition_compat",
+          "name": "Chord Recognition Compat",
+          "impl": true,
+          "module": "song_analyzer::chord_timeline",
+          "status": "CHORD FOUNDATION",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "korg_range_enforcement",
+          "name": "Korg Range Enforcement",
+          "impl": true,
+          "module": "general-rules-9.30.json",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "korg_note_limit",
+          "name": "Korg Note Limit Enforcement",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "korg_controller_validation",
+          "name": "Korg Controller Validation",
+          "impl": true,
+          "module": "midi_optimizer::clean_controllers",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "style_format_output",
+          "name": "Style Format Output",
+          "impl": true,
+          "module": "pa800_style_builder::build_style",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "midi_file_format_output",
+          "name": "MIDI File Format Output",
+          "impl": true,
+          "module": "midi_optimizer::optimize_midi",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "korg_sysex_encoding",
+          "name": "Korg SysEx Encoding",
+          "impl": true,
+          "module": "corpus_forensics::decode_korg_chord",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "korg_chord_sysex",
+          "name": "Korg Chord SysEx Events",
+          "impl": true,
+          "module": "song_analyzer::korg_chord_evidence",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "style_intelligence_ntt",
+          "name": "Style Intelligence NTT",
+          "impl": true,
+          "module": "style_intelligence::track_recommendation",
+          "status": "DEVICE_CONFIRM",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "ntt_transposition",
+          "name": "NTT Transposition",
+          "impl": true,
+          "module": "phase_optimizer::_chord_root",
+          "status": "CHORD FOUNDATION",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "voice_lead_logic",
+          "name": "Voice Lead Logic",
+          "impl": true,
+          "module": "style_intelligence::voice_lead",
+          "status": "DEVICE_CONFIRM",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "unison_resolution",
+          "name": "Unison Resolution",
+          "impl": true,
+          "module": "style_intelligence::resolve_unison",
+          "status": "DEVICE_CONFIRM",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "pa800_polyphony_limit",
+          "name": "PA800 Polyphony Limit (54)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "c_major_reference",
+          "name": "C Major Reference Build",
+          "impl": true,
+          "module": "pa800_style_builder::build_style",
+          "status": "PA800 reference (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "track_label_mapping",
+          "name": "Track Label Mapping",
+          "impl": true,
+          "module": "server::trackLabels",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "style_segment_output",
+          "name": "Style Segment Output",
+          "impl": true,
+          "module": "pa800_style_builder::build_style",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "korg_sts_mapping",
+          "name": "STS (Single Touch Set)",
+          "impl": true,
+          "module": "session6_rx::main",
+          "status": "DEVICE_CONFIRMED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "keyboard_track_split",
+          "name": "Keyboard Track Split",
+          "impl": true,
+          "module": "pa800_style_builder::build_style",
+          "status": "PA800 reference",
+          "chordDependency": "WEAK"
+        }
+      ]
+    },
+    "OPTIMIZATION_QA": {
+      "authority": "CROSS_DOMAIN",
+      "functions": [
+        {
+          "id": "midi_dna_fingerprint",
+          "name": "MIDI DNA Fingerprint",
+          "impl": true,
+          "module": "song_analyzer::block_fingerprint",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "instrument_role_classification",
+          "name": "Instrument Role Classification",
+          "impl": true,
+          "module": "special_track_engine::analyze_roles",
+          "status": "19 roles",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "anomaly_detection",
+          "name": "Anomaly Detection",
+          "impl": true,
+          "module": "midi_optimizer::validate_optimized_smf",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "range_correction",
+          "name": "Range Correction (GR)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "export_integrity_check",
+          "name": "Export Integrity Check",
+          "impl": true,
+          "module": "midi_integrity::verify_protected_events",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "general_rules_gate",
+          "name": "General Rules Gate",
+          "impl": true,
+          "module": "midi_optimizer::_apply_general_rules",
+          "status": "ENFORCED on every export (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "note_off_pairing",
+          "name": "Note-Off Pairing",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "key_clamp_low",
+          "name": "Key Clamp Low (per GM)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "key_clamp_high",
+          "name": "Key Clamp High (per GM)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "drum_key_block",
+          "name": "Drum Key Block (non-GM)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "velocity_clamp",
+          "name": "Velocity Clamp (1-127)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "polyphony_check",
+          "name": "Polyphony Check (54 max)",
+          "impl": true,
+          "module": "_apply_general_rules",
+          "status": "ENFORCED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "chord_gate_validation",
+          "name": "Chord Gate Validation",
+          "impl": true,
+          "module": "performance_engine::optimize_power_chords",
+          "status": "SOFTWARE_VALIDATED (CHORD FOUNDATION)",
+          "chordDependency": "STRONG"
+        },
+        {
+          "id": "bass_gate_validation",
+          "name": "Bass Gate Validation",
+          "impl": true,
+          "module": "performance_engine::optimize_bass_gate",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "guitar_gate_validation",
+          "name": "Guitar Gate Validation",
+          "impl": true,
+          "module": "performance_engine::optimize_guitar_gate",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "solo_gate_validation",
+          "name": "Solo Gate Validation",
+          "impl": true,
+          "module": "performance_engine::optimize_solo_gate",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "pad_gate_validation",
+          "name": "Pad Gate Validation",
+          "impl": true,
+          "module": "performance_engine::optimize_pad_gate",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "MEDIUM"
+        },
+        {
+          "id": "batch_optimizer",
+          "name": "Batch Optimizer",
+          "impl": true,
+          "module": "scripts/batch_optimize_valja",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "calibration_reporter",
+          "name": "Calibration Reporter",
+          "impl": true,
+          "module": "scripts/calibrate_dna_relationship_grammar",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "dna_fingerprint_hash",
+          "name": "DNA Fingerprint Hash",
+          "impl": true,
+          "module": "song_analyzer::block_fingerprint",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "corpus_forensics_report",
+          "name": "Corpus Forensics Report",
+          "impl": true,
+          "module": "corpus_forensics::analyze",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "neural_model_validator",
+          "name": "Neural Model Validator",
+          "impl": true,
+          "module": "scripts/train_local",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "evidence_authority_status",
+          "name": "Evidence Authority Status",
+          "impl": true,
+          "module": "corpus_forensics::evidence_authority_status",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "compliance_check",
+          "name": "Compliance Self-Check",
+          "impl": true,
+          "module": "midi_optimizer::validate_optimized_smf",
+          "status": "SOFTWARE_VALIDATED",
+          "chordDependency": "WEAK"
+        },
+        {
+          "id": "smf_integrity_validator",
+          "name": "SMF Integrity Validator",
+          "impl": true,
+          "module": "midi_integrity::verify_protected_events",
+          "status": "ENFORCED",
+          "chordDependency": "WEAK"
+        }
+      ]
+    }
+  },
+  "stats": {
+    "totalFunctions": 234,
+    "coreModules": 19,
+    "factoryProfiles": 1964,
+    "goldPatterns": 12918,
+    "gmProgramsWithKeyRange": 128,
+    "validDrumKeys": 61,
+    "polyphonyLimit": 54,
+    "chordCandidates": 168,
+    "neuralModels": 6,
+    "valjaCorpus": {
+      "files": 163,
+      "violationsCorrected": 18120
+    },
+    "functionsByCategory": {
+      "MIXER_LEVEL": 26,
+      "VELOCITY": 28,
+      "EXPRESSION": 25,
+      "TIMING_GROOVE": 30,
+      "ARTICULATION": 25,
+      "DRUMS_PERCUSSION": 25,
+      "ARRANGEMENT_PATTERN": 25,
+      "KORG_PA800": 25,
+      "OPTIMIZATION_QA": 25
+    },
+    "chordDependentFunctions": 50,
+    "chordDependency": {
+      "WEAK": 166,
+      "STRONG": 37,
+      "MEDIUM": 31
+    }
+  }
+}

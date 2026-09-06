@@ -1,0 +1,15 @@
+{
+  "factory_profiles": 1432867,
+  "factory_styles_real": 248,
+  "factory_midis_real": 3211,
+  "factory_match": true,
+  "gold_exists": 182,
+  "gold_real_files": 182,
+  "gold_real_total_files": 182,
+  "gold_real_notes": 2272811,
+  "gold_real_instances": 1893,
+  "gold_per_channel_files": 182,
+  "gold_per_channel_notes": 2272811,
+  "gold_patterns": 20,
+  "corrupted_json": 0
+}

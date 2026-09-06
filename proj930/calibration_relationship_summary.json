@@ -1,0 +1,105 @@
+{
+  "out": "/mnt/data/proj800/data/dna-relationship-grammar-8.00.json",
+  "source": {
+    "archive": "prism-uploads/DNA.zip -> Gold DNA.zip",
+    "midiCount": 182,
+    "parsedMidiCount": 182,
+    "relationshipFiles": 61,
+    "ignoredInvalidNotePairs": 7332,
+    "failures": []
+  },
+  "terca": {
+    "kind": "terca",
+    "pairCount": 73,
+    "sourceNotes": 94938,
+    "targetNotes": 63995,
+    "actionCounts": {
+      "SKIP": 32677,
+      "PLAY": 41143,
+      "HOLD": 21118
+    },
+    "actionProbabilities": {
+      "PLAY": 0.4334,
+      "SKIP": 0.3442,
+      "HOLD": 0.2224
+    },
+    "phraseActionProbabilities": {
+      "body": {
+        "PLAY": 0.4336,
+        "SKIP": 0.3435,
+        "HOLD": 0.2229
+      },
+      "cadence": {
+        "PLAY": 0.405,
+        "SKIP": 0.3835,
+        "HOLD": 0.2115
+      },
+      "start": {
+        "PLAY": 0.4609,
+        "SKIP": 0.3079,
+        "HOLD": 0.2312
+      }
+    },
+    "intervalCounts": {
+      "4": 5305,
+      "3": 9191,
+      "-3": 9384,
+      "8": 3493,
+      "-8": 3716,
+      "9": 5301,
+      "-4": 2401,
+      "-9": 2352
+    },
+    "intervalProbabilities": {
+      "-3": 0.2281,
+      "3": 0.2234,
+      "4": 0.1289,
+      "9": 0.1288,
+      "-8": 0.0903,
+      "8": 0.0849,
+      "-4": 0.0584,
+      "-9": 0.0572
+    },
+    "medianDelayQn": 0.0,
+    "medianDurationRatio": 1.0,
+    "velocityUsed": false
+  },
+  "echo": {
+    "kind": "echo",
+    "pairCount": 4,
+    "sourceNotes": 2258,
+    "targetNotes": 1825,
+    "actionCounts": {
+      "SKIP": 930,
+      "HOLD": 767,
+      "PLAY": 561
+    },
+    "actionProbabilities": {
+      "PLAY": 0.2484,
+      "SKIP": 0.4119,
+      "HOLD": 0.3397
+    },
+    "phraseActionProbabilities": {
+      "body": {
+        "PLAY": 0.2624,
+        "SKIP": 0.384,
+        "HOLD": 0.3536
+      },
+      "cadence": {
+        "PLAY": 0.2794,
+        "SKIP": 0.3882,
+        "HOLD": 0.3324
+      },
+      "start": {
+        "PLAY": 0.1529,
+        "SKIP": 0.5647,
+        "HOLD": 0.2824
+      }
+    },
+    "intervalCounts": {},
+    "intervalProbabilities": {},
+    "medianDelayQn": 0.4505,
+    "medianDurationRatio": 1.0,
+    "velocityUsed": false
+  }
+}

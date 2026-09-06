@@ -1,0 +1,220 @@
+{
+  "version": "14.00-GOLD-DRUM-7-CONTEXTS-REAL",
+  "timestamp": "2026-09-06T14:36:17.887739",
+  "total_files": 182,
+  "total_drum_notes": 402401,
+  "contexts": {
+    "normal": 264169,
+    "transition": 10221,
+    "fill": 37465,
+    "accent": 74112,
+    "ghost": 15879,
+    "syncopated": 555
+  },
+  "contexts_percent": {
+    "normal": 65.64819669931238,
+    "transition": 2.5400036282215996,
+    "fill": 9.310364536867453,
+    "accent": 18.417449260811978,
+    "ghost": 3.9460637523266593,
+    "syncopated": 0.13792212245993424
+  },
+  "elements": {
+    "percussion": 99216,
+    "closed_hh": 152713,
+    "snare": 71729,
+    "crash": 3684,
+    "tom_high": 1864,
+    "tom_mid": 2681,
+    "tom_low": 1456,
+    "tambourine": 7167,
+    "open_hh": 13839,
+    "kick": 34308,
+    "clap": 2244,
+    "ride": 1740,
+    "shaker": 4178,
+    "rim": 855,
+    "cowbell": 2143,
+    "conga": 1009,
+    "bongo": 1575
+  },
+  "element_contexts": {
+    "percussion": {
+      "normal": 56937,
+      "transition": 1361,
+      "accent": 18687,
+      "fill": 9548,
+      "ghost": 12663,
+      "syncopated": 20
+    },
+    "closed_hh": {
+      "normal": 105910,
+      "fill": 14787,
+      "accent": 29026,
+      "transition": 2674,
+      "syncopated": 106,
+      "ghost": 210
+    },
+    "snare": {
+      "transition": 4923,
+      "fill": 7242,
+      "accent": 12217,
+      "normal": 45876,
+      "ghost": 1346,
+      "syncopated": 125
+    },
+    "crash": {
+      "normal": 2909,
+      "transition": 54,
+      "fill": 239,
+      "accent": 482
+    },
+    "tom_high": {
+      "normal": 1299,
+      "transition": 63,
+      "accent": 220,
+      "fill": 271,
+      "syncopated": 11
+    },
+    "tom_mid": {
+      "accent": 416,
+      "normal": 1792,
+      "transition": 39,
+      "fill": 422,
+      "syncopated": 12
+    },
+    "tom_low": {
+      "normal": 950,
+      "transition": 21,
+      "accent": 248,
+      "fill": 237
+    },
+    "tambourine": {
+      "normal": 4744,
+      "accent": 1167,
+      "fill": 792,
+      "transition": 5,
+      "ghost": 347,
+      "syncopated": 112
+    },
+    "open_hh": {
+      "normal": 9238,
+      "transition": 485,
+      "accent": 2435,
+      "fill": 1681
+    },
+    "kick": {
+      "normal": 25792,
+      "accent": 6974,
+      "transition": 559,
+      "fill": 889,
+      "ghost": 13,
+      "syncopated": 81
+    },
+    "clap": {
+      "normal": 1732,
+      "accent": 395,
+      "fill": 74,
+      "syncopated": 43
+    },
+    "ride": {
+      "normal": 1281,
+      "accent": 320,
+      "fill": 117,
+      "transition": 21,
+      "syncopated": 1
+    },
+    "shaker": {
+      "normal": 1749,
+      "fill": 627,
+      "accent": 608,
+      "ghost": 1151,
+      "syncopated": 43
+    },
+    "rim": {
+      "accent": 159,
+      "normal": 583,
+      "fill": 103,
+      "ghost": 10
+    },
+    "cowbell": {
+      "normal": 1617,
+      "fill": 111,
+      "accent": 363,
+      "ghost": 52
+    },
+    "conga": {
+      "normal": 689,
+      "accent": 157,
+      "fill": 156,
+      "transition": 7
+    },
+    "bongo": {
+      "normal": 1071,
+      "fill": 169,
+      "accent": 238,
+      "ghost": 87,
+      "syncopated": 1,
+      "transition": 9
+    }
+  },
+  "velocity_by_context": {
+    "normal": {
+      "avg": 102.64449651548819,
+      "min": 10,
+      "max": 127,
+      "count": 264169
+    },
+    "transition": {
+      "avg": 101.3338225222581,
+      "min": 1,
+      "max": 127,
+      "count": 10221
+    },
+    "fill": {
+      "avg": 83.74282663819565,
+      "min": 1,
+      "max": 127,
+      "count": 37465
+    },
+    "accent": {
+      "avg": 98.59361506908463,
+      "min": 1,
+      "max": 127,
+      "count": 74112
+    },
+    "ghost": {
+      "avg": 28.23105989042131,
+      "min": 1,
+      "max": 37,
+      "count": 15879
+    },
+    "syncopated": {
+      "avg": 61.77477477477478,
+      "min": 22,
+      "max": 127,
+      "count": 555
+    }
+  },
+  "evidence": "DIRECT REAL from Gold DNA 182 files 402401 drum notes, 19 elements, 7 contexts",
+  "seven_contexts_implemented": [
+    "normal",
+    "accent",
+    "ghost",
+    "fill",
+    "transition",
+    "phrase_end",
+    "syncopated"
+  ],
+  "seven_contexts_active": [
+    "normal",
+    "transition",
+    "fill",
+    "accent",
+    "ghost",
+    "syncopated"
+  ],
+  "seven_contexts_active_count": 6,
+  "ghost_exists": true,
+  "phrase_end_exists": false
+}

@@ -1,0 +1,332 @@
+{
+  "melody": {
+    "floor": 1,
+    "optimal": 94,
+    "ceiling": 127,
+    "curve": {
+      "method": "factory-7point-v10.01-mapped",
+      "points": [
+        {
+          "intensity": 0,
+          "label": "floor",
+          "velocity": 1
+        },
+        {
+          "intensity": 17,
+          "label": "soft",
+          "velocity": 27
+        },
+        {
+          "intensity": 33,
+          "label": "lowMid",
+          "velocity": 55
+        },
+        {
+          "intensity": 50,
+          "label": "optimal",
+          "velocity": 94
+        },
+        {
+          "intensity": 67,
+          "label": "highMid",
+          "velocity": 123
+        },
+        {
+          "intensity": 83,
+          "label": "strong",
+          "velocity": 127
+        },
+        {
+          "intensity": 100,
+          "label": "ceiling",
+          "velocity": 127
+        }
+      ],
+      "values": {
+        "floor": 1,
+        "soft": 27,
+        "lowMid": 55,
+        "optimal": 94,
+        "highMid": 123,
+        "strong": 127,
+        "ceiling": 127
+      },
+      "quantiles": {
+        "p05": 14,
+        "p10": 27,
+        "p25": 55,
+        "p50": 94,
+        "p75": 123,
+        "p90": 127,
+        "p95": 127,
+        "p99": 127
+      },
+      "allowedRange": [
+        1,
+        127
+      ],
+      "sampleCount": 471,
+      "confidence": 0.99,
+      "korgRealistic": true,
+      "korgChecks": {
+        "min_ge_1": true,
+        "max_le_127": true,
+        "monotone": true,
+        "range_not_zero": true,
+        "optimal_in_range": true
+      },
+      "source": "FACTORY_MAPPED",
+      "adjustment": {}
+    }
+  },
+  "chords": {
+    "floor": 1,
+    "optimal": 89,
+    "ceiling": 127,
+    "curve": {
+      "method": "factory-7point-v10.01-mapped",
+      "points": [
+        {
+          "intensity": 0,
+          "label": "floor",
+          "velocity": 1
+        },
+        {
+          "intensity": 17,
+          "label": "soft",
+          "velocity": 17
+        },
+        {
+          "intensity": 33,
+          "label": "lowMid",
+          "velocity": 47
+        },
+        {
+          "intensity": 50,
+          "label": "optimal",
+          "velocity": 89
+        },
+        {
+          "intensity": 67,
+          "label": "highMid",
+          "velocity": 120
+        },
+        {
+          "intensity": 83,
+          "label": "strong",
+          "velocity": 127
+        },
+        {
+          "intensity": 100,
+          "label": "ceiling",
+          "velocity": 127
+        }
+      ],
+      "values": {
+        "floor": 1,
+        "soft": 17,
+        "lowMid": 47,
+        "optimal": 89,
+        "highMid": 120,
+        "strong": 127,
+        "ceiling": 127
+      },
+      "quantiles": {
+        "p05": 5,
+        "p10": 17,
+        "p25": 47,
+        "p50": 89,
+        "p75": 120,
+        "p90": 127,
+        "p95": 127,
+        "p99": 127
+      },
+      "allowedRange": [
+        1,
+        127
+      ],
+      "sampleCount": 1005,
+      "confidence": 0.99,
+      "korgRealistic": true,
+      "korgChecks": {
+        "min_ge_1": true,
+        "max_le_127": true,
+        "monotone": true,
+        "range_not_zero": true,
+        "optimal_in_range": true
+      },
+      "source": "FACTORY_MAPPED",
+      "adjustment": {}
+    }
+  },
+  "bass": {
+    "floor": 65,
+    "optimal": 105,
+    "ceiling": 127,
+    "curve": {
+      "method": "factory-7point-v10.01-mapped",
+      "points": [
+        {
+          "intensity": 0,
+          "label": "floor",
+          "velocity": 65
+        },
+        {
+          "intensity": 17,
+          "label": "soft",
+          "velocity": 65
+        },
+        {
+          "intensity": 33,
+          "label": "lowMid",
+          "velocity": 65
+        },
+        {
+          "intensity": 50,
+          "label": "optimal",
+          "velocity": 105
+        },
+        {
+          "intensity": 67,
+          "label": "highMid",
+          "velocity": 127
+        },
+        {
+          "intensity": 83,
+          "label": "strong",
+          "velocity": 127
+        },
+        {
+          "intensity": 100,
+          "label": "ceiling",
+          "velocity": 127
+        }
+      ],
+      "values": {
+        "floor": 65,
+        "soft": 65,
+        "lowMid": 65,
+        "optimal": 105,
+        "highMid": 127,
+        "strong": 127,
+        "ceiling": 127
+      },
+      "quantiles": {
+        "p05": 16,
+        "p10": 22,
+        "p25": 59,
+        "p50": 105,
+        "p75": 127,
+        "p90": 127,
+        "p95": 127,
+        "p99": 127
+      },
+      "allowedRange": [
+        65,
+        127
+      ],
+      "sampleCount": 153,
+      "confidence": 0.9578,
+      "korgRealistic": true,
+      "korgChecks": {
+        "min_ge_1": true,
+        "max_le_127": true,
+        "monotone": true,
+        "range_not_zero": true,
+        "optimal_in_range": true
+      },
+      "source": "FACTORY_MAPPED",
+      "adjustment": {
+        "floor": 65,
+        "optimal": 105,
+        "ceiling": 127,
+        "reason": "Bass mora biti čujan, ispod 65 gubi definiciju"
+      }
+    }
+  },
+  "drums": {
+    "floor": 30,
+    "optimal": 97,
+    "ceiling": 127,
+    "curve": {
+      "method": "factory-7point-v10.01-mapped",
+      "points": [
+        {
+          "intensity": 0,
+          "label": "floor",
+          "velocity": 30
+        },
+        {
+          "intensity": 17,
+          "label": "soft",
+          "velocity": 36
+        },
+        {
+          "intensity": 33,
+          "label": "lowMid",
+          "velocity": 68
+        },
+        {
+          "intensity": 50,
+          "label": "optimal",
+          "velocity": 97
+        },
+        {
+          "intensity": 67,
+          "label": "highMid",
+          "velocity": 116
+        },
+        {
+          "intensity": 83,
+          "label": "strong",
+          "velocity": 127
+        },
+        {
+          "intensity": 100,
+          "label": "ceiling",
+          "velocity": 127
+        }
+      ],
+      "values": {
+        "floor": 30,
+        "soft": 36,
+        "lowMid": 68,
+        "optimal": 97,
+        "highMid": 116,
+        "strong": 127,
+        "ceiling": 127
+      },
+      "quantiles": {
+        "p05": 31,
+        "p10": 36,
+        "p25": 68,
+        "p50": 97,
+        "p75": 116,
+        "p90": 127,
+        "p95": 127,
+        "p99": 127
+      },
+      "allowedRange": [
+        30,
+        127
+      ],
+      "sampleCount": 4263,
+      "confidence": 0.99,
+      "korgRealistic": true,
+      "korgChecks": {
+        "min_ge_1": true,
+        "max_le_127": true,
+        "monotone": true,
+        "range_not_zero": true,
+        "optimal_in_range": true
+      },
+      "source": "FACTORY_MAPPED",
+      "adjustment": {
+        "floor": 30,
+        "optimal": 97,
+        "ceiling": 127,
+        "reason": "Drums full range"
+      }
+    }
+  }
+}

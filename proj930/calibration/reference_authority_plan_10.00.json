@@ -1,0 +1,314 @@
+{
+  "schema": "reference-authority-plan-1.0",
+  "policy": {
+    "mode": "FULL_REFERENCE_REQUIRED",
+    "fallbacks": "FORBIDDEN",
+    "proxy_sources": "FORBIDDEN",
+    "unresolved_action": "BLOCK_TRANSFORMATION_AND_MANUAL_REVIEW"
+  },
+  "domains": {
+    "velocity": {
+      "authority": "FACTORY",
+      "required_files": [
+        {
+          "path": "data/factory-velocity-profiles.json",
+          "exists": true,
+          "sha256": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60"
+        },
+        {
+          "path": "calibration/factory_velocity_13.00_final_20_roles_full.json",
+          "exists": true,
+          "sha256": "9549ccd5bd53bf5d9cd25001ba13ccd5db8005b5e6480a74e0e46d84bf2bb78d"
+        }
+      ],
+      "consumers": [
+        "factory_velocity",
+        "drum_calibration",
+        "musical_validation"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "dynamics": {
+      "authority": "FACTORY",
+      "required_files": [
+        {
+          "path": "data/factory-velocity-profiles.json",
+          "exists": true,
+          "sha256": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60"
+        },
+        {
+          "path": "calibration/factory_20_roles_REAL_3211.json",
+          "exists": true,
+          "sha256": "47169b706e1408dfca9947a8cb8017871102eff1f0404cdc04c5517a48479e30"
+        }
+      ],
+      "consumers": [
+        "factory_velocity",
+        "expression_engine",
+        "musical_validation"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "range": {
+      "authority": "FACTORY",
+      "required_files": [
+        {
+          "path": "data/factory-velocity-profiles.json",
+          "exists": true,
+          "sha256": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60"
+        },
+        {
+          "path": "data/instrument-playing-profiles-9.30.json",
+          "exists": true,
+          "sha256": "eb9e7af07ee8f12853af05983c0ccaeaca30c3c7db6e0de5b8827fcf03084a96"
+        }
+      ],
+      "consumers": [
+        "instrument_profiles",
+        "korg_engine",
+        "final_regression"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "timing": {
+      "authority": "GOLD",
+      "required_files": [
+        {
+          "path": "data/gold-performance-patterns.json",
+          "exists": true,
+          "sha256": "0052d7b8263e88ee7198b2b6e4cdde52e1eac295bd6ab3b46dee04a1b130a181"
+        },
+        {
+          "path": "calibration/gold_dna_real_per_channel_11.00.json",
+          "exists": true,
+          "sha256": "780805f05e7bc42c7b16d5d0c4528af8c00372b51b8d8b5ecf2838d8b5ddaef2"
+        }
+      ],
+      "consumers": [
+        "timing_engine",
+        "full_corpus",
+        "musical_validation"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "groove": {
+      "authority": "GOLD",
+      "required_files": [
+        {
+          "path": "data/gold-performance-patterns.json",
+          "exists": true,
+          "sha256": "0052d7b8263e88ee7198b2b6e4cdde52e1eac295bd6ab3b46dee04a1b130a181"
+        },
+        {
+          "path": "data/reference-pattern-ingest-v6-all.json",
+          "exists": true,
+          "sha256": "f1d7a6dc57c005e46974730b1daf4edd02420c4b7d362f1b2ba62c306d89ad73"
+        }
+      ],
+      "consumers": [
+        "timing_engine",
+        "full_corpus",
+        "musical_validation"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "articulation": {
+      "authority": "GOLD",
+      "required_files": [
+        {
+          "path": "data/gold-performance-patterns.json",
+          "exists": true,
+          "sha256": "0052d7b8263e88ee7198b2b6e4cdde52e1eac295bd6ab3b46dee04a1b130a181"
+        },
+        {
+          "path": "calibration/gold_playing_logic_v13_full.json",
+          "exists": true,
+          "sha256": "43b062a9b1b9c5c967008528627f59f4d53545e74a38903deaf4b6619e20cb0d"
+        }
+      ],
+      "consumers": [
+        "trill_engine",
+        "gold_logic",
+        "musical_validation"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "expression": {
+      "authority": "GOLD",
+      "required_files": [
+        {
+          "path": "data/gold-performance-patterns.json",
+          "exists": true,
+          "sha256": "0052d7b8263e88ee7198b2b6e4cdde52e1eac295bd6ab3b46dee04a1b130a181"
+        },
+        {
+          "path": "data/performance-dna-status-4.35.json",
+          "exists": true,
+          "sha256": "39fac7d4dc6bb809ae8dd1155999bdd6225804aa4a579de18bfc8b38aa283a64"
+        }
+      ],
+      "consumers": [
+        "expression_engine",
+        "humanization_engine",
+        "musical_validation"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "humanization": {
+      "authority": "GOLD",
+      "required_files": [
+        {
+          "path": "data/gold-performance-patterns.json",
+          "exists": true,
+          "sha256": "0052d7b8263e88ee7198b2b6e4cdde52e1eac295bd6ab3b46dee04a1b130a181"
+        },
+        {
+          "path": "data/deterministic-humanization-9.30.json",
+          "exists": true,
+          "sha256": "216f05977f6224936e1650efb6616de3c8f533b95eeeb55413c8a666e8e7d195"
+        }
+      ],
+      "consumers": [
+        "humanization_engine",
+        "full_corpus",
+        "final_regression"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "drum_elements": {
+      "authority": "FACTORY",
+      "required_files": [
+        {
+          "path": "data/drum-element-profiles-9.30.json",
+          "exists": true,
+          "sha256": "07350af549aa34bae3c7af9108d32d5f543af92b93b0a88cdf2d02b2d16cc746"
+        },
+        {
+          "path": "calibration/drum_elements_v13_full.json",
+          "exists": true,
+          "sha256": "a2c2803333201df22fb06485589296ae0f67d583a5884735d2cc56058760cced"
+        }
+      ],
+      "consumers": [
+        "drum_calibration",
+        "full_corpus",
+        "korg_engine"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "korg_constraints": {
+      "authority": "ENGINE",
+      "required_files": [
+        {
+          "path": "final_certified_engine_v13_full_no_bypass.py",
+          "exists": true,
+          "sha256": "b5c315791d262f29056dfe341ccfba2092782d994a1fb01a8fc956cbc64cfae9"
+        },
+        {
+          "path": "pa800_validator.py",
+          "exists": true,
+          "sha256": "a249372d981ee5b3a8c836ec47c462451cd59cc95c44e80560f8276a47992477"
+        }
+      ],
+      "consumers": [
+        "korg_engine",
+        "final_regression",
+        "export"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "musical_validation": {
+      "authority": "VALIDATION",
+      "required_files": [
+        {
+          "path": "musical_validation_9_scores_REAL.py",
+          "exists": true,
+          "sha256": "f7b3a6e730f5a9d460c319e2961d2cd9797f9c96131e4876116ce7292dc6c280"
+        },
+        {
+          "path": "musical_validation_scorer_v10.py",
+          "exists": true,
+          "sha256": "f12cb800725f69b6341545dc5ad1a83cc2025134a698208d0db9045c62feef6d"
+        }
+      ],
+      "consumers": [
+        "musical_validation",
+        "failure_analysis",
+        "final_regression"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    },
+    "determinism": {
+      "authority": "ENGINE",
+      "required_files": [
+        {
+          "path": "KOREKCIJA_BAZDARENJE_KALIBRACIJA_ENGINE.py",
+          "exists": true,
+          "sha256": "425357dc3a1c2ae6059b4e42269526f18a2288c7a4898c1250f6ea786ec2b3a1"
+        },
+        {
+          "path": "deterministic_humanizer.py",
+          "exists": true,
+          "sha256": "0aa6b9a4cace877c80e3df54b9e3eeb38b56a37a938095324946f7e194644fa2"
+        }
+      ],
+      "consumers": [
+        "baseline",
+        "full_corpus",
+        "final_regression"
+      ],
+      "coverage": 1.0,
+      "status": "PASS",
+      "proxy_allowed": false
+    }
+  },
+  "coverage": {
+    "covered_domains": 12,
+    "total_domains": 12,
+    "ratio": 1.0,
+    "missing": [],
+    "status": "PASS"
+  },
+  "referenced_files": {
+    "data/factory-velocity-profiles.json": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60",
+    "calibration/factory_velocity_13.00_final_20_roles_full.json": "9549ccd5bd53bf5d9cd25001ba13ccd5db8005b5e6480a74e0e46d84bf2bb78d",
+    "calibration/factory_20_roles_REAL_3211.json": "47169b706e1408dfca9947a8cb8017871102eff1f0404cdc04c5517a48479e30",
+    "data/instrument-playing-profiles-9.30.json": "eb9e7af07ee8f12853af05983c0ccaeaca30c3c7db6e0de5b8827fcf03084a96",
+    "data/gold-performance-patterns.json": "0052d7b8263e88ee7198b2b6e4cdde52e1eac295bd6ab3b46dee04a1b130a181",
+    "calibration/gold_dna_real_per_channel_11.00.json": "780805f05e7bc42c7b16d5d0c4528af8c00372b51b8d8b5ecf2838d8b5ddaef2",
+    "data/reference-pattern-ingest-v6-all.json": "f1d7a6dc57c005e46974730b1daf4edd02420c4b7d362f1b2ba62c306d89ad73",
+    "calibration/gold_playing_logic_v13_full.json": "43b062a9b1b9c5c967008528627f59f4d53545e74a38903deaf4b6619e20cb0d",
+    "data/performance-dna-status-4.35.json": "39fac7d4dc6bb809ae8dd1155999bdd6225804aa4a579de18bfc8b38aa283a64",
+    "data/deterministic-humanization-9.30.json": "216f05977f6224936e1650efb6616de3c8f533b95eeeb55413c8a666e8e7d195",
+    "data/drum-element-profiles-9.30.json": "07350af549aa34bae3c7af9108d32d5f543af92b93b0a88cdf2d02b2d16cc746",
+    "calibration/drum_elements_v13_full.json": "a2c2803333201df22fb06485589296ae0f67d583a5884735d2cc56058760cced",
+    "final_certified_engine_v13_full_no_bypass.py": "b5c315791d262f29056dfe341ccfba2092782d994a1fb01a8fc956cbc64cfae9",
+    "pa800_validator.py": "a249372d981ee5b3a8c836ec47c462451cd59cc95c44e80560f8276a47992477",
+    "musical_validation_9_scores_REAL.py": "f7b3a6e730f5a9d460c319e2961d2cd9797f9c96131e4876116ce7292dc6c280",
+    "musical_validation_scorer_v10.py": "f12cb800725f69b6341545dc5ad1a83cc2025134a698208d0db9045c62feef6d",
+    "KOREKCIJA_BAZDARENJE_KALIBRACIJA_ENGINE.py": "425357dc3a1c2ae6059b4e42269526f18a2288c7a4898c1250f6ea786ec2b3a1",
+    "deterministic_humanizer.py": "0aa6b9a4cace877c80e3df54b9e3eeb38b56a37a938095324946f7e194644fa2"
+  }
+}

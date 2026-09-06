@@ -1,0 +1,45 @@
+{
+  "schema": "dna-general-rules-validation",
+  "version": "9.30",
+  "filesChecked": 163,
+  "filesClean": 32,
+  "filesCorrected": 131,
+  "totalViolations": "see individual reports",
+  "violationTypes": {
+    "key_clamped_low": "Note ispod instrument range → clamp na najnižu validnu",
+    "key_clamped_high": "Note iznad instrument range → clamp na najvišu validnu",
+    "drum_key_blocked": "Nevalidne drum note (kanal 10) → uklonjene",
+    "velocity_clamped_low": "Velocity ispod instrument minimum → clamp",
+    "polyphony_exceeded": "Peak polyphony > 54 (Pa800 limit) → WARNING"
+  },
+  "topViolators": [
+    "Umrecu bez tebe nevero moja - Mitar Miric: 956 violations",
+    "Ti meni lazes sve - Dusko Kulis: 891 violations",
+    "Nije_ovo_moja_noc_-_Sasa_Matic: 714 violations",
+    "Pitaju me pitaju - Serif Konjevic: 629 violations (445 drum key blocked!)",
+    "Tri sina junaka - Saban Saulic: 628 violations"
+  ],
+  "cleanFiles": [
+    "Kockar - Mile Kitic",
+    "Lazes da si srecna - Kemal Malovcic",
+    "Mene je ucilo vrijeme - Halid Muslimovic",
+    "Ne Zaboravi Me - Sinan Sakic",
+    "Ne tuguj zeno - Kemal Malovcic",
+    "Niz reku zivota - Dzej",
+    "Nocna ptica - Enes Begovic",
+    "Oci moje kletvom bih vas kleo - Safet Isovic",
+    "Ona je moja - Dejan Matic",
+    "Plavo oko plakalo je - Keba",
+    "Svirajte nocas samo za nju - Toma Zdravkovic",
+    "Ti si tudja zena - Muharem Serbezovski",
+    "Tople noci, vreli dani - Dejan Matic",
+    "Tri ruze - Halid Beslic",
+    "U svijetu sam zivot ostavio - Mahir Burekovic",
+    "Vidjas li mi staru ljubav - Saban Saulic",
+    "Volecu_te_do_kraja_zivota_-_Miroslav_Ilic",
+    "Volim_majko_siroticu_-_Meho_Puzic",
+    "Voljela si jutrom da uranis - Saban Saulic",
+    "Zbogom Noci Zbogom Zore - Halid Beslic",
+    "Zlatna burma - Sinan Sakic"
+  ]
+}

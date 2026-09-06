@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-06T17:28:26.925418",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "requirement": "Svaki release mora proći isti corpus",
+  "checks": {
+    "determinism": "Isti input + config + seed = isti output",
+    "technical": "100% critical tests PASS",
+    "korg": "100% critical compatibility PASS",
+    "musical": "No statistically significant degradation",
+    "regression": "0 unexplained regressions"
+  },
+  "corpus": {
+    "types": 17,
+    "files_per_type": 5,
+    "total": 85,
+    "existing": 37
+  },
+  "status": "READY_FOR_FINAL_REGRESSION"
+}

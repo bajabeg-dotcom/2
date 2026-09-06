@@ -1,0 +1,2 @@
+# DNA MIDI Studio runtime has no third-party Python dependencies.
+# Supported interpreter: CPython 3.11, 3.12, 3.13 or 3.14.

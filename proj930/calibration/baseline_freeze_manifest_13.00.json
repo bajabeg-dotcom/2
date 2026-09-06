@@ -1,0 +1,36 @@
+{
+  "version": "13.00-FULL-NO-BYPASS-RIJESI-SVE",
+  "artifacts": {
+    "data/factory-velocity-profiles.json": {
+      "exists": true,
+      "sha256": "7a21fc2fefc88de5",
+      "size": 15145620
+    },
+    "data/gold-performance-patterns.json": {
+      "exists": true,
+      "sha256": "780805f05e7bc42c",
+      "size": 29387
+    },
+    "calibration/factory_velocity_11.00_final_20_roles.json": {
+      "exists": true,
+      "sha256": "9549ccd5bd53bf5d",
+      "size": 94654
+    },
+    "final_certified_engine_v13_full_no_bypass.py": {
+      "exists": true,
+      "sha256": "db99f5a2fcd9b295",
+      "size": 58580
+    },
+    "prism-uploads/Workspace_Styles": {
+      "exists": true,
+      "sha256": "DIR",
+      "size": 248
+    },
+    "prism-uploads/Gold DNA": {
+      "exists": true,
+      "sha256": "DIR",
+      "size": 182
+    }
+  },
+  "deterministic": true
+}

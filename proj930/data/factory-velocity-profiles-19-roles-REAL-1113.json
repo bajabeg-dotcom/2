@@ -1,0 +1,144 @@
+{
+  "version": "17.00-FACTORY-19-ROLES-REAL",
+  "total_files": 1076,
+  "total_channel_instances": 5846,
+  "total_notes": 245021,
+  "roles": {
+    "drums": {
+      "channel_instances": 735,
+      "notes": 46999,
+      "real": true,
+      "threshold": 2
+    },
+    "terca": {
+      "channel_instances": 178,
+      "notes": 3056,
+      "real": true,
+      "threshold": 2
+    },
+    "organ": {
+      "channel_instances": 1094,
+      "notes": 55499,
+      "real": true,
+      "threshold": 2
+    },
+    "accordion": {
+      "channel_instances": 246,
+      "notes": 8017,
+      "real": true,
+      "threshold": 2
+    },
+    "bass": {
+      "channel_instances": 1128,
+      "notes": 32266,
+      "real": true,
+      "threshold": 2
+    },
+    "guitar": {
+      "channel_instances": 548,
+      "notes": 16943,
+      "real": true,
+      "threshold": 2
+    },
+    "rhythm-guitar": {
+      "channel_instances": 83,
+      "notes": 2506,
+      "real": true,
+      "threshold": 2
+    },
+    "piano": {
+      "channel_instances": 601,
+      "notes": 39399,
+      "real": true,
+      "threshold": 2
+    },
+    "melody": {
+      "channel_instances": 165,
+      "notes": 3479,
+      "real": true,
+      "threshold": 2
+    },
+    "woodwind": {
+      "channel_instances": 154,
+      "notes": 3836,
+      "real": true,
+      "threshold": 2
+    },
+    "brass": {
+      "channel_instances": 57,
+      "notes": 192,
+      "real": true,
+      "threshold": 2
+    },
+    "riff": {
+      "channel_instances": 213,
+      "notes": 8572,
+      "real": true,
+      "threshold": 2
+    },
+    "accompaniment": {
+      "channel_instances": 467,
+      "notes": 17922,
+      "real": true,
+      "threshold": 2
+    },
+    "choir": {
+      "channel_instances": 113,
+      "notes": 5205,
+      "real": true,
+      "threshold": 2
+    },
+    "lead": {
+      "channel_instances": 22,
+      "notes": 345,
+      "real": true,
+      "threshold": 2
+    },
+    "sax": {
+      "channel_instances": 7,
+      "notes": 52,
+      "real": true,
+      "threshold": 2
+    },
+    "solo": {
+      "channel_instances": 31,
+      "notes": 403,
+      "real": true,
+      "threshold": 2
+    },
+    "power-riff": {
+      "channel_instances": 2,
+      "notes": 294,
+      "real": true,
+      "threshold": 2
+    },
+    "pad": {
+      "channel_instances": 2,
+      "notes": 36,
+      "real": true,
+      "threshold": 2
+    }
+  },
+  "role_counts": {
+    "drums": 735,
+    "terca": 178,
+    "organ": 1094,
+    "accordion": 246,
+    "bass": 1128,
+    "guitar": 548,
+    "rhythm-guitar": 83,
+    "piano": 601,
+    "melody": 165,
+    "woodwind": 154,
+    "brass": 57,
+    "riff": 213,
+    "accompaniment": 467,
+    "choir": 113,
+    "lead": 22,
+    "sax": 7,
+    "solo": 31,
+    "power-riff": 2,
+    "pad": 2
+  },
+  "threshold": 2
+}

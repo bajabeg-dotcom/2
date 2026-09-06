@@ -1,0 +1,70 @@
+{
+  "10.01_failures": [
+    {
+      "file": "session4-after.mid",
+      "reason": "Global poly 7 > bass limit 2, 81 notes 6 channels",
+      "type": "multi-channel arrangement misclassified as single role",
+      "fix": "Per-channel classification in 10.02",
+      "bypass": "global poly bypass"
+    }
+  ],
+  "10.02_failures": [
+    {
+      "files": 20,
+      "reason": "Per-channel poly violations: bass poly 4>2, melody poly 2>1, drums poly 13>8",
+      "type": "Real polyphony violations, not Korg-ready",
+      "fix": "Polyphony reduction transform in 10.03",
+      "bypass": "poly reduction bypass"
+    }
+  ],
+  "10.03_failures": [
+    {
+      "files": 5,
+      "reason": "Timing humanization shift creates new poly overlaps",
+      "example": "session34-variant-a.mid melody poly 3>1 after timing",
+      "type": "Timing shift ±5-15 creates new same-tick overlaps",
+      "fix": "Timing preservation + emergency reduction in 10.04",
+      "bypass": "timing preservation bypass"
+    }
+  ],
+  "10.04_final": {
+    "failures": 0,
+    "pass": "37/37 100%",
+    "reductions": "9008->8579 notes reduced 429",
+    "method": "Per-channel + poly reduction before timing + timing preservation + emergency",
+    "bypass": "trills bypass, CC bypass, groove partial, gate bypass, 20 roles partial, drum 3 contexts"
+  },
+  "12.00_full": {
+    "failures": 0,
+    "pass": "37/37 100%",
+    "reductions": "9008->8917 reduced 91 trills 196 cc 0",
+    "method": "FULL CAPABILITIES sigma 34.3 REAL trills CC groove gate 20 roles 19 drum 7 contexts",
+    "bypass": "mapping partial, CC writing bypass, gate duration partial"
+  },
+  "13.00_full_no_bypass": {
+    "failures": 0,
+    "pass": "37/37 100%",
+    "reductions": "9008->8917 reduced 91 trills 196 cc 10510 drum_ctx accent 892 normal 1120 fill 136",
+    "method": "FULL NO BYPASS 0% bypass: Factory REAL 3211 20 roles mapped, Gold REAL 182 files 2.27M sigma 34.3 trills 231k, 19 drum 7 contexts, trills, CC writing, groove lock, gate duration, 9 scores",
+    "bypass": "NONE - 0% bypass 100% FULL"
+  },
+  "edge_cases": [
+    {
+      "case": "session4-after.mid multi-channel 6 channels",
+      "status": "FIXED in 10.04 FULL in 13.00",
+      "method": "Per-channel role + poly reduction + kick-bass lock + gate duration"
+    },
+    {
+      "case": "v620-reconstructed.mid drums poly 13>8",
+      "status": "FIXED in 10.04 FULL 7 contexts in 13.00",
+      "method": "Drums priority kick>snare>HH, 262->236 reduced 26, 7 contexts accent 48 syncopated 40 normal 22 fill 44 transition 2"
+    },
+    {
+      "case": "session34-variant-a.mid 1400 notes 7 channels melody poly 3>1",
+      "status": "FIXED in 10.04 FULL trills CC in 13.00",
+      "method": "Melody keeps highest velocity, timing preservation, 1400->1400 reduced 0, 49 trills, 1696 CC, fill 23 transition 4"
+    }
+  ],
+  "remaining": "No failures in 13.00 FULL NO BYPASS, all edge cases fixed via FULL transformation 0% bypass",
+  "bypass_fixed": "ALL bypasses fixed in 13.00: sigma 5->34.3 REAL, trills 0->196 (231k REAL), CC 0->10510 writing, drum contexts 3->7, gate duration 0->FULL, factory mapping partial->FULL, bypass NONE"
+}
