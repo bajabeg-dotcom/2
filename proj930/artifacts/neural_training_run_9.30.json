@@ -6,28 +6,132 @@
   "results": [],
   "calibration": {
     "schema": "dna-neural-calibration-gate",
-    "version": "9.30",
-    "status": "SOFTWARE_CALIBRATED_WAITING_FOR_LISTENING_DEVICE_GATE",
+    "version": "10.01-TRUTHFUL",
+    "status": "BLOCKED",
+    "neural_calibration": {
+      "status": "BLOCKED",
+      "datasetRows": 15837,
+      "relationshipRows": 697,
+      "models": [
+        {
+          "model": "core",
+          "directory": "models/dna-reconstructor-v2",
+          "report": "models/dna-reconstructor-v2/training_report.json",
+          "reportExists": false,
+          "reportSha256": null,
+          "weightEvidence": [],
+          "weightsPresent": false,
+          "metricsFinite": false,
+          "authorityValid": false
+        },
+        {
+          "model": "relationship",
+          "directory": "models/relationship-sequence-v2",
+          "report": "models/relationship-sequence-v2/relationship_sequence_training_report.json",
+          "reportExists": false,
+          "reportSha256": null,
+          "weightEvidence": [],
+          "weightsPresent": false,
+          "metricsFinite": false,
+          "authorityValid": true
+        }
+      ],
+      "datasetChecks": [
+        {
+          "path": "learning_data/learning_dataset_v1.npz",
+          "manifest": "learning_data/dataset_manifest.json",
+          "manifestExists": true,
+          "exists": true,
+          "bytes": 1617732,
+          "expectedSha256": "084e5e2dc90bd5447a9c5a2d13940cdfa2e4b36e23b7df12423a816c7bd8af4e",
+          "actualSha256": "084e5e2dc90bd5447a9c5a2d13940cdfa2e4b36e23b7df12423a816c7bd8af4e",
+          "hashMatches": true
+        },
+        {
+          "path": "relationship_sequence_data_v2/relationship_sequence_dataset_v2.npz",
+          "manifest": "relationship_sequence_data_v2/relationship_sequence_manifest_v2.json",
+          "manifestExists": true,
+          "exists": true,
+          "bytes": 493731,
+          "expectedSha256": "21b7e6e76f3cea0783abaf292b45caeb7816c7b1f7717891004bcb2776b4432a",
+          "actualSha256": "21b7e6e76f3cea0783abaf292b45caeb7816c7b1f7717891004bcb2776b4432a",
+          "hashMatches": true
+        }
+      ],
+      "velocityAuthorityFactoryOnly": true
+    },
+    "truth_gate": {
+      "status": "BLOCKED",
+      "canTransform": false,
+      "canExport": false,
+      "gateHash": "39215c758c0c8f844fe045c65423ab3651921e7b17657d0740bb6f402ca50089",
+      "blockingReasons": [
+        "factory_velocity: direct evidence is missing for target roles: accompaniment, accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+        "gold_performance: Gold real-role declaration differs between registries",
+        "gold_performance: direct evidence is missing for target roles: accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+        "gold_performance: proxy roles cannot authorize export: choir, echo, percussion",
+        "drum_context: direct drum evidence covers 15/19 required elements",
+        "drum_context: runtime drum report has no counts for contexts: ghost, phrase_end",
+        "learning: promoted core model/training report is missing",
+        "learning: promoted relationship model/training report is missing",
+        "runtime: src/dna_midi_studio production runtime package is missing",
+        "runtime: mido dependency required by certified engine is not installed",
+        "role_matrix: direct Factory evidence missing for accompaniment, accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+        "role_matrix: direct Gold evidence missing for accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind"
+      ]
+    },
+    "transform_export_gate": {
+      "status": "BLOCKED",
+      "canTransform": false,
+      "canExport": false,
+      "gateHash": "39215c758c0c8f844fe045c65423ab3651921e7b17657d0740bb6f402ca50089",
+      "blockingReasons": [
+        "factory_velocity: direct evidence is missing for target roles: accompaniment, accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+        "gold_performance: Gold real-role declaration differs between registries",
+        "gold_performance: direct evidence is missing for target roles: accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+        "gold_performance: proxy roles cannot authorize export: choir, echo, percussion",
+        "drum_context: direct drum evidence covers 15/19 required elements",
+        "drum_context: runtime drum report has no counts for contexts: ghost, phrase_end",
+        "learning: promoted core model/training report is missing",
+        "learning: promoted relationship model/training report is missing",
+        "runtime: src/dna_midi_studio production runtime package is missing",
+        "runtime: mido dependency required by certified engine is not installed",
+        "role_matrix: direct Factory evidence missing for accompaniment, accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+        "role_matrix: direct Gold evidence missing for accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind"
+      ]
+    },
     "checks": [
       {
-        "path": "learning_data/dataset_manifest.json",
-        "exists": true
+        "path": "learning_data/learning_dataset_v1.npz",
+        "manifest": "learning_data/dataset_manifest.json",
+        "manifestExists": true,
+        "exists": true,
+        "bytes": 1617732,
+        "expectedSha256": "084e5e2dc90bd5447a9c5a2d13940cdfa2e4b36e23b7df12423a816c7bd8af4e",
+        "actualSha256": "084e5e2dc90bd5447a9c5a2d13940cdfa2e4b36e23b7df12423a816c7bd8af4e",
+        "hashMatches": true
       },
       {
-        "path": "relationship_sequence_data_v2/relationship_sequence_manifest_v2.json",
-        "exists": true
-      },
-      {
-        "path": "models/dna-reconstructor-v2/training_report.json",
-        "exists": true
-      },
-      {
-        "path": "models/relationship-sequence-v2/relationship_sequence_training_report.json",
-        "exists": true
+        "path": "relationship_sequence_data_v2/relationship_sequence_dataset_v2.npz",
+        "manifest": "relationship_sequence_data_v2/relationship_sequence_manifest_v2.json",
+        "manifestExists": true,
+        "exists": true,
+        "bytes": 493731,
+        "expectedSha256": "21b7e6e76f3cea0783abaf292b45caeb7816c7b1f7717891004bcb2776b4432a",
+        "actualSha256": "21b7e6e76f3cea0783abaf292b45caeb7816c7b1f7717891004bcb2776b4432a",
+        "hashMatches": true
       }
     ],
-    "datasetRows": 15837,
-    "relationshipRows": 697,
-    "velocityAuthorityFactoryOnly": true
-  }
+    "blockingReasons": [
+      "core training report is missing",
+      "core model weight bytes are missing",
+      "core holdout/validation evidence is invalid: missing or non-finite",
+      "core authority invariant is not proven",
+      "relationship training report is missing",
+      "relationship model weight bytes are missing",
+      "relationship holdout/validation evidence is invalid: missing or non-finite"
+    ],
+    "finalMusicalThresholds": "LISTENING_DEVICE_REQUIRED"
+  },
+  "status": "BLOCKED"
 }

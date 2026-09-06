@@ -1,34 +1,28 @@
 {
   "schema": "dna-neural-training-run",
-  "version": "9.02",
+  "version": "9.02-LEGACY-RETIRED",
   "mode": "calibrate",
-  "promoteRequested": false,
-  "results": [],
+  "status": "BLOCKED",
+  "authoritative": false,
+  "supersededBy": "artifacts/neural_training_run_9.30.json",
+  "blockingReasons": [
+    "Legacy 9.02 runner is retired; use scripts/train_local.py.",
+    "Promoted model reports and weight bytes were not verified by the canonical gate."
+  ],
   "calibration": {
     "schema": "dna-neural-calibration-gate",
-    "version": "9.02",
-    "status": "SOFTWARE_CALIBRATED_WAITING_FOR_LISTENING_DEVICE_GATE",
+    "version": "10.01-TRUTHFUL",
+    "status": "BLOCKED",
     "checks": [
       {
-        "path": "learning_data/dataset_manifest.json",
-        "exists": true
-      },
-      {
-        "path": "relationship_sequence_data_v2/relationship_sequence_manifest_v2.json",
-        "exists": true
-      },
-      {
         "path": "models/dna-reconstructor-v2/training_report.json",
-        "exists": true
+        "exists": false
       },
       {
         "path": "models/relationship-sequence-v2/relationship_sequence_training_report.json",
-        "exists": true
+        "exists": false
       }
     ],
-    "datasetRows": 15837,
-    "relationshipRows": 697,
-    "velocityAuthorityFactoryOnly": true,
-    "note": "Calibration verifies holdout/evidence/invariants. Final musical thresholds still require VALJA blind A/B and physical Pa800 listening."
+    "note": "Historical report retained only as a non-authoritative tombstone. It cannot certify neural calibration or MIDI export."
   }
 }

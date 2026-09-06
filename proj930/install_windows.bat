@@ -1,48 +1,58 @@
 @echo off
+setlocal EnableExtensions
 chcp 65001 >nul
-title DNA MIDI Studio Pa800 — Instalacija
+title DNA MIDI Studio Pa800 - Install neural dependencies
+cd /d "%~dp0"
+set "PYTHONUTF8=1"
+set "PY="
 
-echo ============================================================
-echo  DNA MIDI Studio Pa800 v9.30 — Instalacija
-echo  Za Korg Pa800 (OS 2.0+)
-echo ============================================================
-echo.
-
-:: Check Python
-python --version >nul 2>&1
-if errorlevel 1 (
-    echo  ❌ Python nije instaliran!
-    echo  Skini Python 3.10+ sa https://www.python.org/downloads/
-    echo  VAŽNO: Checkbox "Add Python to PATH" pri instalaciji
-    echo.
-    echo  Nakon instalacije Pythona, ponovo pokreni ovu skriptu.
-    pause
-    exit /b 1
+where py >nul 2>nul
+if not errorlevel 1 set "PY=py -3"
+if not defined PY (
+    where python >nul 2>nul
+    if not errorlevel 1 set "PY=python"
+)
+if not defined PY (
+    echo BLOCKED: Python 3 nije pronadjen.
+    set "RC=1"
+    goto finish
 )
 
-echo ✅ Python pronadjen:
-python --version
+%PY% --version
+if errorlevel 1 goto failed
+echo.
+echo Instalacija/verifikacija PyTorch CPU, NumPy i mido...
+%PY% -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+if errorlevel 1 goto failed
+%PY% -m pip install numpy mido
+if errorlevel 1 goto failed
+
+%PY% -c "import torch, numpy, mido; print('torch', torch.__version__); print('numpy', numpy.__version__); print('mido', getattr(mido, '__version__', 'installed'))"
+if errorlevel 1 goto failed
 
 echo.
-echo Instalacija zavisnosti...
-pip install torch --index-url https://download.pytorch.org/whl/cpu
-pip install numpy mido
+echo Zavisnosti su instalirane.
+if not exist "src\dna_midi_studio\ai_learning\trainer.py" (
+    echo BLOCKED: neural learning runtime nedostaje u src\dna_midi_studio.
+    echo Instalacija paketa sama ne stvara nedostajuci source kod.
+    set "RC=2"
+    goto finish
+)
 
-echo.
-echo ============================================================
-echo  ✅ Instalacija zavrsena!
-echo ============================================================
-echo.
-echo  Za pocetak:
-echo    1. Pokreni: train_windows.bat
-echo    2. Izaberi opciju za trening
-echo    3. Ili pokreni GUI: python server.py
-eco.
+echo Neural learning runtime je pronadjen.
+set "RC=0"
+goto finish
 
-:: Quick test
-echo.
-echo Brzi test modula...
-python -c "import torch; import numpy; import mido; print('  ✅ torch', torch.__version__); print('  ✅ numpy', numpy.__version__); print('  ✅ mido', mido.__version__)
+:failed
+echo BLOCKED: instalacija ili import dependency paketa nije uspio.
+set "RC=1"
 
+:finish
 echo.
+if "%RC%"=="0" (
+    echo Install check: OK. Kalibraciju pokreni kroz TRAIN_NEURAL_NETWORK.bat.
+) else (
+    echo Install check: BLOCKED/FAILED. Neuralni modeli nisu promovirani.
+)
 pause
+exit /b %RC%
