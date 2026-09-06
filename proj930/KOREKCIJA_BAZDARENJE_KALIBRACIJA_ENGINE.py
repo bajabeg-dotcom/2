@@ -53,6 +53,7 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from typing import Dict, List, Any, Tuple, Optional
 from reference_authority_pipeline import write_reference_plan
+from truthful_evidence_gate import TruthEvidenceGate
 
 # Konstante
 PROJECT_ROOT = Path(__file__).parent
@@ -2472,6 +2473,27 @@ class GoldenFreezeCertification:
 # ============================================================================
 
 def main():
+    truth_gate = TruthEvidenceGate(PROJECT_ROOT).build()
+    if truth_gate.get("status") != "PASS" or not truth_gate.get("can_export"):
+        blocked = {
+            "schema": "dna-roadmap-calibration-report",
+            "version": VERSION,
+            "status": "BLOCKED",
+            "classification": "SOFTWARE_ONLY",
+            "processed_phases": 0,
+            "truth_gate": truth_gate,
+            "blocking_reasons": truth_gate.get("blocking_reasons", []),
+            "legacy_pass_reports_are_non_authoritative": True,
+        }
+        output = REPORTS_DIR / "KOREKCIJA_CALIBRATION_TRUTH_GATE_BLOCKED.json"
+        output.write_text(json.dumps(blocked, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(json.dumps({
+            "status": "BLOCKED",
+            "processed_phases": 0,
+            "blocking_reasons": truth_gate.get("blocking_reasons", []),
+            "report": str(output),
+        }, ensure_ascii=False, indent=2))
+        return blocked
     print(f"""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
@@ -2654,4 +2676,5 @@ ili mjerljivo bolje rezultate bez regresije.
     return final_report
 
 if __name__ == "__main__":
-    main()
+    result = main()
+    raise SystemExit(0 if result and result.get("status") == "PASS" else 2)

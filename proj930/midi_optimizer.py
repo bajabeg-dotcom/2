@@ -960,6 +960,17 @@ def _apply_general_rules(parsed: dict, changes: Counter) -> dict:
 def optimize_midi(data: bytes, profiles: list[dict], options=None, source="song.mid", evidence=None):
     options = options or {}
     evidence = evidence or {}
+
+    # The optimizer is a mutation/export boundary.  It must never infer
+    # authority from a missing report, a proxy role, or the caller's defaults.
+    # Verify the content-addressed gate before parsing or changing any MIDI.
+    from pathlib import Path
+    from truthful_evidence_gate import TruthEvidenceGate
+    evidence_gate = TruthEvidenceGate(Path(__file__).resolve().parent)
+    verified_gate = evidence_gate.assert_transform_allowed(
+        evidence, options, operation="MIDI transform/export"
+    )
+
     source_parsed = parse_smf(data)
     if source_parsed["division"] & 0x8000 and options.get("quantizeDivision", 0):
         raise ValueError("Quantize nije podržan za SMPTE timebase")
@@ -1160,7 +1171,11 @@ def optimize_midi(data: bytes, profiles: list[dict], options=None, source="song.
         "audit": {"inputHash": hashlib.sha256(data).hexdigest(),
                   "outputHash": hashlib.sha256(optimized).hexdigest(), "seed": seed,
                   "databaseVersion": database_version, "interventionCount": intervention_count,
-                  "validationResult": "PASS"},
+                  "validationResult": "PASS",
+                  "evidenceGate": {"schema": verified_gate["schema"],
+                                   "gateHash": verified_gate["gate_hash"],
+                                   "status": verified_gate["status"],
+                                   "roleEvidencePolicy": verified_gate["direct_evidence_policy"]}},
         "transaction": {
             "plan": plan,
             "stages": [

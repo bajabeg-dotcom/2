@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import py_compile
+import sys
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
@@ -17,6 +18,7 @@ import phase_optimizer
 import project_model
 import server
 import test_master_prompt
+from truthful_evidence_gate import TruthEvidenceGate
 
 
 SOURCE_MODULES = (
@@ -28,6 +30,22 @@ SOURCE_MODULES = (
 
 
 def main():
+    truth_gate = TruthEvidenceGate(Path(__file__).resolve().parent).build()
+    if truth_gate.get("status") != "PASS" or not truth_gate.get("can_export"):
+        blocked = {
+            "schema": "dna-release-check-report",
+            "version": "TRUTHFUL-1.0",
+            "status": "BLOCKED",
+            "truth_gate": truth_gate,
+            "checks": {},
+            "blocking_reasons": truth_gate.get("blocking_reasons", []),
+        }
+        output = Path("reports") / "release_check_truth_gate_blocked.json"
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps(blocked, indent=2, ensure_ascii=False), encoding="utf-8")
+        print("DNA MIDI Studio release check: BLOCKED by truth/evidence gate")
+        return 2
+
     checks = {}
     for module in SOURCE_MODULES:
         py_compile.compile(module, doraise=True)
@@ -70,6 +88,7 @@ def main():
 
     phase_source = test_master_prompt.phase_arranger_midi()
     phase_profiles, phase_evidence = test_master_prompt.phase_fixture_evidence(phase_source)
+    phase_evidence = {**phase_evidence, "gate": TruthEvidenceGate(Path(__file__).resolve().parent).build()}
     phase_options = {
         "cleanupNotes": True, "removeRedundantControllers": False,
         "quantizeDivision": 16, "quantizeStrength": 100,
@@ -237,4 +256,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -104,15 +104,22 @@ def build_reference_plan(root: Path) -> dict[str, Any]:
             "required_files": files,
             "consumers": list(spec["consumers"]),
             "coverage": sum(item["exists"] for item in files) / len(files),
-            "status": "PASS" if all(item["exists"] for item in files) else "BLOCKED",
+            # Existence and hash are only a path-integrity result.  This
+            # function intentionally cannot certify semantic provenance,
+            # direct/proxy role status, model promotion, or runtime wiring.
+            "status": "PATH_ONLY" if all(item["exists"] for item in files) else "BLOCKED",
+            "path_coverage_only": True,
             "proxy_allowed": False,
         }
 
-    covered = sum(domain["status"] == "PASS" for domain in domains.values())
+    covered = sum(domain["status"] == "PATH_ONLY" for domain in domains.values())
     total = len(domains)
     plan = {
-        "schema": "reference-authority-plan-1.0",
+        "schema": "reference-authority-plan-1.1",
         "policy": {
+            "result_scope": "PATH_COVERAGE_ONLY_NOT_CERTIFICATION",
+            "semantic_gate": "truthful_evidence_gate.py",
+            "path_coverage_pass_is_not_export_authority": True,
             "mode": "FULL_REFERENCE_REQUIRED",
             "fallbacks": "FORBIDDEN",
             "proxy_sources": "FORBIDDEN",
@@ -124,7 +131,8 @@ def build_reference_plan(root: Path) -> dict[str, Any]:
             "total_domains": total,
             "ratio": covered / total if total else 0.0,
             "missing": missing,
-            "status": "PASS" if not missing else "BLOCKED",
+            "status": "PATH_ONLY" if not missing else "BLOCKED",
+            "path_coverage_only": True,
         },
         "referenced_files": referenced_files,
     }

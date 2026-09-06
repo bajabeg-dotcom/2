@@ -286,10 +286,12 @@ python scripts/train_local.py --mode calibrate
 
 ### Rezultati Treniranja
 
-Nakon treninga, rezultati se snimaju u:
+Nakon stvarnog treninga, rezultati se snimaju u:
 - `models/dna-reconstructor-v2/training_report.json`
 - `models/relationship-sequence-v2/relationship_sequence_training_report.json`
-- `artifacts/neural_training_run_9.02.json`
+- `artifacts/neural_training_run_9.30.json`
+
+Ako runtime, dataset, report, holdout metrike ili weight bytes nedostaju, canonical runner upisuje `BLOCKED`; sama prisutnost manifest fajla nije kalibracija.
 
 ### Važno: Velocity Invarianta
 
@@ -305,19 +307,20 @@ Tokom treniranja, sistem automatski provjerava:
 
 ### Kalibracioni Gate
 
-Gate provjerava da su svi potrebni fajlovi prisutni:
+Gate provjerava stvarne artefakte i njihove dokaze:
 
 ```bash
 python scripts/train_local.py --mode calibrate
 ```
 
 Provjerava:
-1. `learning_data/dataset_manifest.json` — postoji
-2. `relationship_sequence_data_v2/relationship_sequence_manifest_v2.json` — postoji
-3. `models/dna-reconstructor-v2/training_report.json` — postoji
-4. `models/relationship-sequence-v2/relationship_sequence_training_report.json` — postoji
+1. Dataset fajlovi postoje i odgovaraju SHA-256 vrijednostima u manifestima
+2. `models/dna-reconstructor-v2/training_report.json` postoji i ima finite holdout metrike
+3. `models/relationship-sequence-v2/relationship_sequence_training_report.json` postoji i ima finite action/interval holdout metrike
+4. Weight artefakti postoje, nisu prazni i dobijaju SHA-256 dokaz
 5. Relationship manifest `velocityFeature=False` i `velocityTarget=False`
-6. Ukupan status: `SOFTWARE_CALIBRATED_WAITING_FOR_LISTENING_DEVICE_GATE`
+6. Ako bilo koji dokaz nedostaje, status je `BLOCKED`
+7. Tek nakon software provjere neuralni status može biti `SOFTWARE_CALIBRATED_WAITING_FOR_LISTENING_DEVICE_GATE`; globalni TruthEvidenceGate i dalje odvojeno upravlja MIDI transform/export ovlašćenjem
 
 ### Tempo Bucket Kalibracija
 

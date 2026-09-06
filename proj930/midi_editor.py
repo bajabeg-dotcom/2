@@ -5,9 +5,11 @@ from __future__ import annotations
 
 import hashlib
 from collections import Counter
+from pathlib import Path
 
 import midi_optimizer
 import special_track_engine
+from truthful_evidence_gate import TruthEvidenceGate
 
 
 ALLOWED_OPERATIONS = {"move", "resize", "velocity", "transpose", "quantize", "delete", "duplicate"}
@@ -63,7 +65,10 @@ def validate_request(request):
     return operation, selection, request.get("parameters") or {}
 
 
-def apply_edits(data, profiles, request, source="song.mid", database_version="unknown"):
+def apply_edits(data, profiles, request, source="song.mid", database_version="unknown", evidence=None):
+    TruthEvidenceGate(Path(__file__).resolve().parent).assert_transform_allowed(
+        evidence, {}, operation="MIDI edit/export"
+    )
     operation, selection, parameters = validate_request(request)
     parsed = midi_optimizer.parse_smf(data)
     before_technical = midi_optimizer.technical_parameters(parsed)

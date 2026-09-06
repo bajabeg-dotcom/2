@@ -1,0 +1,609 @@
+{
+  "schema": "dna-roadmap-calibration-report",
+  "version": "10.00.0-KOREKCIJA-BAZDARENJE-KALIBRACIJA",
+  "status": "BLOCKED",
+  "classification": "SOFTWARE_ONLY",
+  "processed_phases": 0,
+  "truth_gate": {
+    "schema": "dna-truthful-evidence-gate",
+    "version": "1.0",
+    "generated_at": "2026-09-06T18:27:35.689100+00:00",
+    "root": "/home/user/2/proj930",
+    "status": "BLOCKED",
+    "can_transform": false,
+    "can_export": false,
+    "blocking_reasons": [
+      "factory_velocity: direct evidence is missing for target roles: accompaniment, accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+      "gold_performance: Gold real-role declaration differs between registries",
+      "gold_performance: direct evidence is missing for target roles: accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+      "gold_performance: proxy roles cannot authorize export: choir, echo, percussion",
+      "drum_context: direct drum evidence covers 15/19 required elements",
+      "drum_context: runtime drum report has no counts for contexts: ghost, phrase_end",
+      "learning: promoted core model/training report is missing",
+      "learning: promoted relationship model/training report is missing",
+      "learning: legacy training reports claim model paths exist although the paths are absent",
+      "runtime: src/dna_midi_studio production runtime package is missing",
+      "runtime: mido dependency required by certified engine is not installed",
+      "role_matrix: direct Factory evidence missing for accompaniment, accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+      "role_matrix: direct Gold evidence missing for accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind"
+    ],
+    "warnings": [
+      "extracted Factory tree has 1076/3211 files; zip is authoritative",
+      "extracted Gold tree has 0/182 files; zip is authoritative"
+    ],
+    "required_domains": [
+      "source_corpus",
+      "factory_velocity",
+      "gold_performance",
+      "drum_context",
+      "learning",
+      "runtime",
+      "full_corpus"
+    ],
+    "domains": {
+      "source_corpus": {
+        "status": "PASS",
+        "archive_members": {
+          "factory": 3211,
+          "gold": 182,
+          "total": 3393
+        },
+        "extracted_tree_members": {
+          "factory": 1076,
+          "gold": 0
+        },
+        "claims_checked": {
+          "factory_inputFiles": 3211,
+          "gold_total_files": 182
+        },
+        "issues": [],
+        "full_source_enumeration": true
+      },
+      "factory_velocity": {
+        "status": "PARTIAL",
+        "direct_source_roles": [
+          "bass",
+          "chords",
+          "drums",
+          "melody"
+        ],
+        "derived_role_calibrations": [
+          "accompaniment",
+          "bass",
+          "drums",
+          "guitar",
+          "lead",
+          "melody",
+          "piano",
+          "power-riff",
+          "rhythm-guitar",
+          "riff",
+          "solo",
+          "strings",
+          "terca"
+        ],
+        "mapped_target_roles": [
+          "accompaniment",
+          "accordion",
+          "bass",
+          "brass",
+          "choir",
+          "clarinet",
+          "drums",
+          "fx",
+          "mallet",
+          "organ",
+          "pad",
+          "percussion",
+          "piano",
+          "rhythm_guitar",
+          "sax",
+          "solo_guitar",
+          "strings",
+          "synth_lead",
+          "violin",
+          "woodwind"
+        ],
+        "missing_direct_target_roles": [
+          "accompaniment",
+          "accordion",
+          "brass",
+          "choir",
+          "clarinet",
+          "fx",
+          "mallet",
+          "organ",
+          "pad",
+          "percussion",
+          "piano",
+          "rhythm_guitar",
+          "sax",
+          "solo_guitar",
+          "strings",
+          "synth_lead",
+          "violin",
+          "woodwind"
+        ],
+        "profiles": 1964,
+        "issues": [],
+        "authority": "FACTORY_ONLY"
+      },
+      "gold_performance": {
+        "status": "BLOCKED",
+        "raw_direct_roles": [
+          "accompaniment",
+          "bass",
+          "drums",
+          "melody"
+        ],
+        "derived_real_roles": [
+          "accordion",
+          "brass",
+          "organ",
+          "pad",
+          "piano",
+          "power-riff",
+          "rhythm-guitar",
+          "riff",
+          "sax",
+          "solo",
+          "strings",
+          "terca",
+          "woodwind"
+        ],
+        "proxy_roles": [
+          "choir",
+          "echo",
+          "percussion"
+        ],
+        "missing_direct_target_roles": [
+          "accordion",
+          "brass",
+          "choir",
+          "clarinet",
+          "fx",
+          "mallet",
+          "organ",
+          "pad",
+          "percussion",
+          "piano",
+          "rhythm_guitar",
+          "sax",
+          "solo_guitar",
+          "strings",
+          "synth_lead",
+          "violin",
+          "woodwind"
+        ],
+        "registry_real_role_count": 18,
+        "registry_proxy_role_count": 3,
+        "issues": [
+          "Gold real-role declaration differs between registries"
+        ],
+        "authority": "GOLD_TIMING_ARTICULATION_ONLY; FACTORY_VELOCITY_REQUIRED"
+      },
+      "drum_context": {
+        "status": "BLOCKED",
+        "direct_observed_elements": [
+          "clap",
+          "closed_hat",
+          "cowbell",
+          "crash",
+          "kick",
+          "open_hat",
+          "pedal_hat",
+          "ride",
+          "ride_bell",
+          "side_stick",
+          "snare",
+          "snare_ghost",
+          "tom_high",
+          "tom_low",
+          "tom_mid"
+        ],
+        "runtime_elements": [
+          "bongo",
+          "clap",
+          "closed_hh",
+          "conga",
+          "cowbell",
+          "crash",
+          "kick",
+          "latin",
+          "open_hh",
+          "pedal_hh",
+          "percussion",
+          "ride",
+          "rim",
+          "shaker",
+          "snare",
+          "tambourine",
+          "tom_high",
+          "tom_low",
+          "tom_mid"
+        ],
+        "runtime_contexts": [
+          "accent",
+          "fill",
+          "ghost",
+          "normal",
+          "phrase_end",
+          "syncopated",
+          "transition"
+        ],
+        "counted_contexts": [
+          "accent",
+          "fill",
+          "normal",
+          "syncopated",
+          "transition"
+        ],
+        "required_elements": 19,
+        "required_contexts": [
+          "normal",
+          "accent",
+          "ghost",
+          "fill",
+          "transition",
+          "phrase_end",
+          "syncopated"
+        ],
+        "issues": [
+          "direct drum evidence covers 15/19 required elements",
+          "runtime drum report has no counts for contexts: ghost, phrase_end"
+        ]
+      },
+      "learning": {
+        "status": "BLOCKED",
+        "dataset": {
+          "path": "learning_data/learning_dataset_v1.npz",
+          "sha256": "084e5e2dc90bd5447a9c5a2d13940cdfa2e4b36e23b7df12423a816c7bd8af4e",
+          "manifest_sha256": "084e5e2dc90bd5447a9c5a2d13940cdfa2e4b36e23b7df12423a816c7bd8af4e",
+          "shape": null,
+          "manifest_samples": 15837
+        },
+        "relationship_dataset": {
+          "path": "relationship_sequence_data_v2/relationship_sequence_dataset_v2.npz",
+          "sha256": "21b7e6e76f3cea0783abaf292b45caeb7816c7b1f7717891004bcb2776b4432a",
+          "manifest_sha256": "21b7e6e76f3cea0783abaf292b45caeb7816c7b1f7717891004bcb2776b4432a",
+          "shape": null,
+          "manifest_rows": 697,
+          "velocity_safe": true
+        },
+        "model_artifacts": {
+          "core_report_exists": false,
+          "relationship_report_exists": false
+        },
+        "legacy_training_claims": [
+          {
+            "report": "artifacts/neural_training_run_9.02.json",
+            "claimed_exists_without_bytes": [
+              "models/dna-reconstructor-v2/training_report.json",
+              "models/relationship-sequence-v2/relationship_sequence_training_report.json"
+            ]
+          },
+          {
+            "report": "artifacts/neural_training_run_9.30.json",
+            "claimed_exists_without_bytes": [
+              "models/dna-reconstructor-v2/training_report.json",
+              "models/relationship-sequence-v2/relationship_sequence_training_report.json"
+            ]
+          }
+        ],
+        "issues": [
+          "promoted core model/training report is missing",
+          "promoted relationship model/training report is missing",
+          "legacy training reports claim model paths exist although the paths are absent"
+        ]
+      },
+      "runtime": {
+        "status": "BLOCKED",
+        "production_package": "src/dna_midi_studio",
+        "production_package_exists": false,
+        "mido_available": false,
+        "issues": [
+          "src/dna_midi_studio production runtime package is missing",
+          "mido dependency required by certified engine is not installed"
+        ]
+      },
+      "full_corpus": {
+        "status": "PENDING",
+        "authoritative_input_total": 3393,
+        "factory_input_total": 3211,
+        "gold_input_total": 182,
+        "previous_report_total": 1113,
+        "processed_every_input": false,
+        "issues": [
+          "previous transformation denominator is 1113, source denominator is 3393",
+          "no new transformation was authorized because this gate is BLOCKED"
+        ]
+      }
+    },
+    "role_matrix": {
+      "bass": {
+        "factory": "DIRECT",
+        "gold": "DIRECT",
+        "exportable": true,
+        "evidence_ids": [
+          "EV-FACTORY-PROFILES",
+          "EV-GOLD-PATTERNS"
+        ]
+      },
+      "drums": {
+        "factory": "DIRECT",
+        "gold": "DIRECT",
+        "exportable": true,
+        "evidence_ids": [
+          "EV-FACTORY-PROFILES",
+          "EV-GOLD-PATTERNS"
+        ]
+      },
+      "percussion": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "PROXY",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "violin": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "MISSING",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "sax": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DERIVED_ROLE_CLASSIFICATION",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "clarinet": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "MISSING",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "woodwind": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DERIVED_ROLE_CLASSIFICATION",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "solo_guitar": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "MISSING",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "synth_lead": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "MISSING",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "mallet": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "MISSING",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "choir": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "PROXY",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "fx": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "MISSING",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "rhythm_guitar": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "MISSING",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "piano": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DERIVED_ROLE_CLASSIFICATION",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "organ": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DERIVED_ROLE_CLASSIFICATION",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "accordion": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DERIVED_ROLE_CLASSIFICATION",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "strings": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DERIVED_ROLE_CLASSIFICATION",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "brass": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DERIVED_ROLE_CLASSIFICATION",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "pad": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DERIVED_ROLE_CLASSIFICATION",
+        "exportable": false,
+        "evidence_ids": []
+      },
+      "accompaniment": {
+        "factory": "DERIVED_MAPPING",
+        "gold": "DIRECT",
+        "exportable": false,
+        "evidence_ids": [
+          "EV-GOLD-PATTERNS"
+        ]
+      }
+    },
+    "evidence_ledger": [
+      {
+        "id": "EV-SOURCE-FACTORY-ZIP",
+        "source_path": "prism-uploads/Split Factory Styles.zip",
+        "bytes": 15478625,
+        "sha256": "ffb95cc191ba2bfc0c9b2b09494adaeb61c61bcda0fa4a9e4d83302e281d8f5e",
+        "source_span": "ZIP member list: *.mid/*.midi",
+        "domain": "source_corpus",
+        "role": "all_factory_files",
+        "target_transform": "corpus_enumeration",
+        "classification": "SOURCE_DIRECT",
+        "usable": true
+      },
+      {
+        "id": "EV-SOURCE-GOLD-ZIP",
+        "source_path": "prism-uploads/Gold DNA.zip",
+        "bytes": 6443687,
+        "sha256": "da7d5dd6fac74d4d6a35d5d3bdacc4cabe988873ec0472529e9c6ef2a9b77e5e",
+        "source_span": "ZIP member list: *.mid/*.midi",
+        "domain": "source_corpus",
+        "role": "all_gold_files",
+        "target_transform": "corpus_enumeration",
+        "classification": "SOURCE_DIRECT",
+        "usable": true
+      },
+      {
+        "id": "EV-FACTORY-PROFILES",
+        "source_path": "data/factory-velocity-profiles.json",
+        "bytes": 15145620,
+        "sha256": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60",
+        "source_span": "JSON profiles and summary",
+        "domain": "factory_velocity",
+        "role": "factory_family_profiles",
+        "target_transform": "velocity",
+        "classification": "SOURCE_DIRECT",
+        "usable": true
+      },
+      {
+        "id": "EV-GOLD-PATTERNS",
+        "source_path": "data/gold-performance-patterns.json",
+        "bytes": 42624,
+        "sha256": "0052d7b8263e88ee7198b2b6e4cdde52e1eac295bd6ab3b46dee04a1b130a181",
+        "source_span": "playing_logic.*.timing",
+        "domain": "gold_performance",
+        "role": "gold_source_roles",
+        "target_transform": "timing_articulation",
+        "classification": "SOURCE_DIRECT",
+        "usable": true
+      },
+      {
+        "id": "EV-GOLD-ROLE-CLASSIFICATION",
+        "source_path": "calibration/gold_20_roles_detailed_REAL.json",
+        "bytes": 2711,
+        "sha256": "fc74c7fd022eda5ba0b78a1307fe0f3c9139555fb086e6e280cca4e347d7869c",
+        "source_span": "now_real/still_proxy",
+        "domain": "gold_performance",
+        "role": "role_classification",
+        "target_transform": "role_assignment",
+        "classification": "DERIVED_ROLE_CLASSIFICATION",
+        "usable": true
+      },
+      {
+        "id": "EV-DRUM-PROFILES",
+        "source_path": "data/drum-element-profiles-9.30.json",
+        "bytes": 36243,
+        "sha256": "07350af549aa34bae3c7af9108d32d5f543af92b93b0a88cdf2d02b2d16cc746",
+        "source_span": "elements and drumEvidence",
+        "domain": "drum_context",
+        "role": "drum_elements_observed",
+        "target_transform": "drum_velocity",
+        "classification": "SOURCE_DIRECT",
+        "usable": true
+      },
+      {
+        "id": "EV-LEARNING-DATASET",
+        "source_path": "learning_data/learning_dataset_v1.npz",
+        "bytes": 1617732,
+        "sha256": "084e5e2dc90bd5447a9c5a2d13940cdfa2e4b36e23b7df12423a816c7bd8af4e",
+        "source_span": "NPZ bytes and manifest dataset_hash",
+        "domain": "learning",
+        "role": "core_dataset",
+        "target_transform": "learning_runtime",
+        "classification": "SOURCE_DIRECT",
+        "usable": true
+      },
+      {
+        "id": "EV-RELATIONSHIP-DATASET",
+        "source_path": "relationship_sequence_data_v2/relationship_sequence_dataset_v2.npz",
+        "bytes": 493731,
+        "sha256": "21b7e6e76f3cea0783abaf292b45caeb7816c7b1f7717891004bcb2776b4432a",
+        "source_span": "NPZ bytes and manifest datasetHash",
+        "domain": "learning",
+        "role": "relationship_dataset",
+        "target_transform": "learning_runtime",
+        "classification": "SOURCE_DIRECT",
+        "usable": true
+      },
+      {
+        "id": "EV-CORE-MODEL-REPORT",
+        "source_path": "models/dna-reconstructor-v2/training_report.json",
+        "bytes": 0,
+        "sha256": null,
+        "source_span": "training report bytes",
+        "domain": "learning",
+        "role": "dna_reconstructor_v2",
+        "target_transform": "learning_runtime",
+        "classification": "TRAINING_OUTPUT",
+        "usable": false
+      },
+      {
+        "id": "EV-RELATIONSHIP-MODEL-REPORT",
+        "source_path": "models/relationship-sequence-v2/relationship_sequence_training_report.json",
+        "bytes": 0,
+        "sha256": null,
+        "source_span": "training report bytes",
+        "domain": "learning",
+        "role": "relationship_sequence_v2",
+        "target_transform": "learning_runtime",
+        "classification": "TRAINING_OUTPUT",
+        "usable": false
+      }
+    ],
+    "direct_evidence_policy": {
+      "required_for_every_target_role": true,
+      "derived_mapping_satisfies_direct": false,
+      "proxy_satisfies_direct": false,
+      "self_generated_report_satisfies_direct": false,
+      "stale_report_satisfies_direct": false
+    },
+    "source_counts": {
+      "factory_archive_members": 3211,
+      "gold_archive_members": 182,
+      "expected_full_source_inputs": 3393
+    },
+    "legacy_reports_are_non_authoritative": [
+      "calibration/final_certified_full_corpus_13.00_full_no_bypass.json",
+      "artifacts/neural_training_run_9.02.json",
+      "artifacts/neural_training_run_9.30.json"
+    ],
+    "gate_hash": "dbc920a5490cafd4f098e961fae6548d093728175d20444aa441b33bc79627a5"
+  },
+  "blocking_reasons": [
+    "factory_velocity: direct evidence is missing for target roles: accompaniment, accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+    "gold_performance: Gold real-role declaration differs between registries",
+    "gold_performance: direct evidence is missing for target roles: accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+    "gold_performance: proxy roles cannot authorize export: choir, echo, percussion",
+    "drum_context: direct drum evidence covers 15/19 required elements",
+    "drum_context: runtime drum report has no counts for contexts: ghost, phrase_end",
+    "learning: promoted core model/training report is missing",
+    "learning: promoted relationship model/training report is missing",
+    "learning: legacy training reports claim model paths exist although the paths are absent",
+    "runtime: src/dna_midi_studio production runtime package is missing",
+    "runtime: mido dependency required by certified engine is not installed",
+    "role_matrix: direct Factory evidence missing for accompaniment, accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind",
+    "role_matrix: direct Gold evidence missing for accordion, brass, choir, clarinet, fx, mallet, organ, pad, percussion, piano, rhythm_guitar, sax, solo_guitar, strings, synth_lead, violin, woodwind"
+  ],
+  "legacy_pass_reports_are_non_authoritative": true
+}
