@@ -47,16 +47,16 @@ def check_dependencies():
 
 
 def finite_report(report: dict, keys: tuple) -> None:
-    """Verify training report has valid finite values for required keys."""
+    """Require every training metric to be present and finite.
+
+    A holdout metric cannot be reconstructed from validation loss: doing so
+    would turn an unmeasured result into a promotion claim.  Missing, stale,
+    or non-finite metrics therefore stop training/promotion immediately.
+    """
     for key in keys:
         value = report.get(key)
         if value is None or not isinstance(value, (int, float)) or not math.isfinite(float(value)):
-            # Patch: if holdoutLoss is None, set it to bestValidationLoss
-            if key == "holdoutLoss" and "bestValidationLoss" in report:
-                report["holdoutLoss"] = report["bestValidationLoss"]
-                print(f"  ℹ️  Patched holdoutLoss={report['holdoutLoss']:.4f} (from bestValidationLoss)")
-            else:
-                raise RuntimeError(f"Invalid training metric: {key}={value!r}")
+            raise RuntimeError(f"Invalid training metric: {key}={value!r}; no metric substitution is allowed")
 
 
 def backup_dir(path: Path) -> Path | None:
@@ -70,7 +70,20 @@ def backup_dir(path: Path) -> Path | None:
     return dst
 
 
+def require_promotion_gate() -> dict:
+    """Promotion is an export boundary and must have current truth evidence."""
+    from truthful_evidence_gate import TruthEvidenceGate
+    report = TruthEvidenceGate(ROOT).build()
+    if report.get("status") != "PASS" or not report.get("can_export"):
+        raise RuntimeError(
+            "Model promotion BLOCKED by truth/evidence gate: "
+            + "; ".join(report.get("blocking_reasons", [])[:8])
+        )
+    return report
+
+
 def promote(staging: Path, production: Path) -> None:
+    require_promotion_gate()
     backup_dir(production)
     tmp = production.with_name(production.name + ".promote-tmp")
     if tmp.exists():
@@ -203,11 +216,23 @@ def train_relationship(args) -> dict:
 
 
 def calibrate_only() -> dict:
-    """Run calibration gate — verify all models and datasets are valid."""
+    """Run calibration gate — verify datasets, promoted models and truth evidence."""
     print("\n" + "="*60)
     print("CALIBRATION GATE")
     print("="*60)
-    
+
+    from truthful_evidence_gate import TruthEvidenceGate
+    truth_gate = TruthEvidenceGate(ROOT).build()
+    if truth_gate.get("status") != "PASS" or not truth_gate.get("can_export"):
+        print("  🚫 Truth/evidence gate BLOCKED — no learning claim or export is allowed")
+        return {
+            "schema": "dna-neural-calibration-gate",
+            "version": "10.00-TRUTHFUL",
+            "status": "BLOCKED",
+            "truth_gate": truth_gate,
+            "checks": [],
+        }
+
     checks = []
     required = [
         ROOT / "learning_data" / "dataset_manifest.json",
@@ -332,7 +357,8 @@ Examples:
     print("\n" + "="*60)
     print("TRAINING COMPLETE")
     print("="*60)
-    return 0
+    calibration_status = output.get("calibration", {}).get("status")
+    return 2 if calibration_status in {"BLOCKED", "INCOMPLETE"} else 0
 
 
 if __name__ == "__main__":

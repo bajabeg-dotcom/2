@@ -40,6 +40,7 @@ import pa800_style_builder
 import project_model
 import result_cache
 import song_analyzer
+from truthful_evidence_gate import EvidenceGateBlocked, TruthEvidenceGate
 import style_intelligence
 from dna_midi_studio import (
     analyze_song_map,
@@ -116,6 +117,11 @@ OPTIMIZED_CACHE_MAX_BYTES = 128_000_000
 OPTIMIZED_CACHE_TTL_SECONDS = 3600
 RESULT_CACHE = result_cache.ResultCache(OPTIMIZED_CACHE_LIMIT, OPTIMIZED_CACHE_MAX_BYTES,
                                         OPTIMIZED_CACHE_TTL_SECONDS)
+
+
+def truth_evidence() -> dict:
+    """Return a freshly content-verified gate for every mutation request."""
+    return {"gate": TruthEvidenceGate(_BOOTSTRAP_ROOT).build()}
 
 
 def json_header(path):
@@ -273,12 +279,12 @@ def reconstruct_midi_variants(content, file_name, base_settings):
     max_brain_plan = build_max_brain_plan(content, file_name).to_dict()
     variants = []
     for variant_id, label, settings in reconstruction_variant_settings(base_settings):
-        evidence = {}
+        evidence = truth_evidence()
         if settings.get("phaseOptimization"):
             analysis = song_analyzer.analyze_midi(content, file_name)
-            evidence = {"analysis": analysis,
-                        "goldPatterns": GOLD_PERFORMANCE["patterns"],
-                        "factoryStrumPatterns": FACTORY_STRUM["patterns"]}
+            evidence.update({"analysis": analysis,
+                             "goldPatterns": GOLD_PERFORMANCE["patterns"],
+                             "factoryStrumPatterns": FACTORY_STRUM["patterns"]})
         midi, report = midi_optimizer.optimize_midi(
             content, FACTORY["profiles"], settings, file_name, evidence)
         report = dict(report)
@@ -1645,12 +1651,12 @@ class Handler(BaseHTTPRequestHandler):
                 content = self.rfile.read(length)
                 file_name = unquote(self.headers.get("X-Filename", "song.mid"))
                 settings = optimizer_settings_from_headers(self.headers)
-                evidence = {}
+                evidence = truth_evidence()
                 if settings["phaseOptimization"]:
                     analysis = song_analyzer.analyze_midi(content, file_name)
-                    evidence = {"analysis": analysis,
-                                "goldPatterns": GOLD_PERFORMANCE["patterns"],
-                                "factoryStrumPatterns": FACTORY_STRUM["patterns"]}
+                    evidence.update({"analysis": analysis,
+                                     "goldPatterns": GOLD_PERFORMANCE["patterns"],
+                                     "factoryStrumPatterns": FACTORY_STRUM["patterns"]})
                 optimized, report = midi_optimizer.optimize_midi(
                     content, FACTORY["profiles"], settings, file_name, evidence)
                 token = cache_optimized(optimized, report, file_name)
@@ -1667,7 +1673,8 @@ class Handler(BaseHTTPRequestHandler):
                 request = json.loads(self.rfile.read(length).decode("utf-8"))
                 edited, report = midi_editor.apply_edits(
                     item["midi"], FACTORY["profiles"], request, item["fileName"],
-                    FACTORY.get("databaseVersion", FACTORY.get("version", "unknown")))
+                    FACTORY.get("databaseVersion", FACTORY.get("version", "unknown")),
+                    evidence=truth_evidence())
                 new_token = cache_optimized(edited, report, item["fileName"], "EDIT", {"parentToken": token})
                 preview = midi_optimizer.midi_preview(edited, item["fileName"])
                 preview["editorToken"] = new_token
@@ -1685,6 +1692,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_bytes(midi, "audio/midi", filename=f"{name}.mid")
             else:
                 self.send_json({"error": "Nije pronađeno"}, 404)
+        except EvidenceGateBlocked as error:
+            self.send_json({"status": "BLOCKED", "error": str(error), "truth_gate": error.report}, 409)
         except Exception as error:
             self.send_json({"error": str(error)}, 400)
 

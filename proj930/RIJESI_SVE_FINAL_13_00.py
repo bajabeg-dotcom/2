@@ -12,12 +12,19 @@ Rješava sve što je na bypassu da koristi ful mogućnosti:
 Faze 0-25 po roadmapu.
 """
 
+from __future__ import annotations
+
 import json
 import hashlib
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict, Counter
-import mido
+try:
+    import mido
+except ModuleNotFoundError:
+    mido = None
+
+from truthful_evidence_gate import TruthEvidenceGate
 
 DATA_DIR = Path("data")
 CALIBRATION_DIR = Path("calibration")
@@ -51,6 +58,19 @@ def save_json(path: Path, data: dict):
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding='utf-8')
 
 def phase_report(phase: str, status: str, evidence: dict, changes: dict, metrics: dict, regression: dict, confidence: str, remaining: list, next_gate: str):
+    # Even direct phase calls cannot manufacture PASS from legacy JSON.  The
+    # semantic gate is checked at the final report boundary as a second line
+    # of defence after main()'s early gate.
+    gate = TruthEvidenceGate(Path(__file__).resolve().parent).build()
+    if status == "PASS" and gate.get("status") != "PASS":
+        status = "BLOCKED"
+        evidence = {"truth_gate": gate}
+        changes = {"legacy_phase_output_suppressed": True}
+        metrics = {"processed": False, "blocking_reasons": gate.get("blocking_reasons", [])}
+        regression = {"status": "BLOCKED"}
+        confidence = "NONE"
+        remaining = gate.get("blocking_reasons", [])
+        next_gate = "Resolve truth/evidence gate"
     report = {
         "phase": phase,
         "status": status,
@@ -1098,6 +1118,14 @@ def phase24():
     return phase_report("PHASE 24 - GOLDEN FREEZE", "PASS", evidence, changes, metrics, regression, "HIGH", [], "PHASE 25")
 
 def phase25(all_reports):
+    gate = TruthEvidenceGate(Path(__file__).resolve().parent).build()
+    if gate.get("status") != "PASS" or not gate.get("can_export"):
+        return phase_report(
+            "PHASE 25 - FINAL CERTIFICATION", "BLOCKED", {"truth_gate": gate},
+            {"legacy_certification_suppressed": True},
+            {"processed": False}, {"status": "BLOCKED"}, "NONE",
+            gate.get("blocking_reasons", []), "Resolve truth/evidence gate"
+        )
     statuses = [r["status"] for r in all_reports]
     status_count = Counter(statuses)
     
@@ -1421,6 +1449,25 @@ FACTORY REAL (3211 files 248 styles 1964 profiles 1.4M samples + 20 roles mapped
     return report
 
 def main():
+    gate = TruthEvidenceGate(Path(__file__).resolve().parent).build()
+    if gate.get("status") != "PASS" or not gate.get("can_export"):
+        blocked = {
+            "schema": "dna-final-certification-report",
+            "version": VERSION,
+            "status": "BLOCKED",
+            "classification": "SOFTWARE_ONLY",
+            "processed_phases": 0,
+            "truth_gate": gate,
+            "blocking_reasons": gate.get("blocking_reasons", []),
+            "legacy_pass_reports_are_non_authoritative": True,
+        }
+        save_json(REPORTS_DIR / "FINAL_CERTIFICATION_13.00_TRUTH_GATE_BLOCKED.json", blocked)
+        print(json.dumps({
+            "status": "BLOCKED",
+            "processed_phases": 0,
+            "blocking_reasons": gate.get("blocking_reasons", []),
+        }, ensure_ascii=False, indent=2))
+        return blocked
     print(f"""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║  RIJESI SVE - FINAL 13.00 FULL NO BYPASS - SVIH 25 FAZA - 0% BYPASS          ║
@@ -1486,4 +1533,5 @@ def main():
     """)
 
 if __name__ == "__main__":
-    main()
+    result = main()
+    raise SystemExit(0 if result and result.get("status") == "PASS" else 2)

@@ -7,6 +7,9 @@ from pathlib import Path
 PROJ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJ))
 import midi_optimizer
+from truthful_evidence_gate import TruthEvidenceGate
+
+EVIDENCE = {"gate": TruthEvidenceGate(PROJ).build()}
 
 # Load factory profiles
 OPT_PROFILES_PATH = PROJ / "data" / "factory-profiles-optimizer.json"
@@ -40,7 +43,7 @@ def process_file(fpath, idx, total):
     print(f"  [{idx+1}/{total}] {name[:55]}", end=" ", flush=True)
     try:
         data = fpath.read_bytes()
-        result_data, report = midi_optimizer.optimize_midi(data, factory_profiles, options=opts, source=name, evidence=None)
+        result_data, report = midi_optimizer.optimize_midi(data, factory_profiles, options=opts, source=name, evidence=EVIDENCE)
         out_path.write_bytes(result_data)
         vel = report.get('velocityProfilesMatched', 0)
         qnt = report.get('notesQuantized', 0)
@@ -51,6 +54,9 @@ def process_file(fpath, idx, total):
         return {"file": name, "status": "error", "error": str(e)[:200]}
 
 def main():
+    if EVIDENCE["gate"].get("status") != "PASS" or not EVIDENCE["gate"].get("can_export"):
+        print("Chunked batch optimization BLOCKED by truth/evidence gate; no files were transformed")
+        return {"status": "BLOCKED", "truth_gate": EVIDENCE["gate"]}
     all_files = sorted(INPUT_DIR.glob("*.mid"))
     already_done = {f.name for f in OUTPUT_DIR.glob("*.mid") if f.stat().st_size > 100}
     remaining = [f for f in all_files if f.name not in already_done]
@@ -102,4 +108,5 @@ def main():
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
 
 if __name__ == "__main__":
-    main()
+    result = main()
+    raise SystemExit(0 if not isinstance(result, dict) or result.get("status") != "BLOCKED" else 2)

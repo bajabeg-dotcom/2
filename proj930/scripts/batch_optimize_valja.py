@@ -8,6 +8,9 @@ PROJ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJ))
 
 import midi_optimizer
+from truthful_evidence_gate import TruthEvidenceGate
+
+EVIDENCE = {"gate": TruthEvidenceGate(PROJ).build()}
 
 # Load factory calibration profiles (converted for optimizer)
 OPT_PROFILES_PATH = PROJ / "data" / "factory-profiles-optimizer.json"
@@ -79,7 +82,7 @@ def process_file(fpath: Path, idx: int, total: int):
             factory_profiles,
             options=opts,
             source=name,
-            evidence=None
+            evidence=EVIDENCE
         )
         out_path = OUTPUT_DIR / name
         out_path.write_bytes(result_data)
@@ -94,6 +97,9 @@ def process_file(fpath: Path, idx: int, total: int):
         return {"file": name, "status": "error", "error": str(e)}
 
 def main():
+    if EVIDENCE["gate"].get("status") != "PASS" or not EVIDENCE["gate"].get("can_export"):
+        print("Batch optimization BLOCKED by truth/evidence gate; no files were transformed")
+        return {"status": "BLOCKED", "truth_gate": EVIDENCE["gate"]}
     files = sorted(INPUT_DIR.glob("*.mid"))
     total = len(files)
     print(f"\n{'='*60}")
@@ -136,4 +142,5 @@ def main():
     print(f"Manifest: {manifest_path}")
 
 if __name__ == "__main__":
-    main()
+    result = main()
+    raise SystemExit(0 if not isinstance(result, dict) or result.get("status") != "BLOCKED" else 2)

@@ -15,12 +15,19 @@ FINAL CERTIFIED ENGINE 13.00 FULL - NO BYPASS - KORISTI FUL MOGUĆNOSTI
 - CC writing to MIDI + gate duration
 """
 
+from __future__ import annotations
+
 import json
-import mido
+try:
+    import mido
+except ModuleNotFoundError:  # The fail-closed gate reports this dependency as BLOCKED.
+    mido = None
 from pathlib import Path
 from collections import defaultdict, Counter
 from datetime import datetime
 import hashlib
+
+from truthful_evidence_gate import EvidenceGateBlocked, TruthEvidenceGate
 
 DATA_DIR = Path(__file__).parent / "data"
 CALIBRATION_DIR = Path(__file__).parent / "calibration"
@@ -68,11 +75,25 @@ class FinalCertifiedEngineV13FullNoBypass:
         "synth_lead": "synth_lead",
         "mallet": "mallet",
         "fx": "fx",
-        "rhythm_guitar": "rhythm_guitar",
-        "unknown": "accompaniment"
+        "rhythm_guitar": "rhythm_guitar"
     }
     
+    def _factory_role_for(self, role: str) -> str:
+        factory_role = self.INSTRUMENT_TO_FACTORY.get(role)
+        if not factory_role:
+            raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                f"unresolved instrument role {role}; no implicit accompaniment mapping is allowed"
+            ]}, "role assignment")
+        return factory_role
+
     def __init__(self):
+        # Build the gate before loading any transform authority.  A blocked
+        # report is still useful for diagnostics, but it can never authorize
+        # the legacy engine to mutate or certify a MIDI file.
+        self.truth_gate_report = TruthEvidenceGate(DATA_DIR.parent).build()
+        if self.truth_gate_report.get("status") != "PASS" or not self.truth_gate_report.get("can_export"):
+            print(f"🚫 Engine {self.VERSION} BLOCKED by truth/evidence gate")
+            return
         self.factory_lookup = load_json(CALIBRATION_DIR / "factory_velocity_lookup_10.01.json")
         self.factory_detailed = load_json(CALIBRATION_DIR / "factory_velocity_10.01_fixed_20_roles.json")
         self.factory_20 = load_json(CALIBRATION_DIR / "factory_velocity_11.00_final_20_roles.json")
@@ -93,8 +114,12 @@ class FinalCertifiedEngineV13FullNoBypass:
             self.drum_engine = DrumElementEngineV10()
             if not self.drum_engine.calibrated:
                 self.drum_engine.calibrate_all_elements()
-        except:
+            self.drum_runtime_error = None
+        except Exception as exc:
+            # Do not silently switch to a default drum table.  The evidence
+            # gate will block export and this error remains observable.
             self.drum_engine = None
+            self.drum_runtime_error = f"drum runtime unavailable: {exc}"
         
         # REAL Gold DNA stats per role from 182 files
         self.real_gold_stats = {}
@@ -104,7 +129,7 @@ class FinalCertifiedEngineV13FullNoBypass:
                     timing = logic["timing"]
                     if isinstance(timing, dict):
                         self.real_gold_stats[role] = {
-                            "sigma": timing.get("humanization_sigma", 5),
+                            "sigma": timing.get("humanization_sigma"),
                             "real_gold": timing.get("real_gold", False),
                             "files": timing.get("files", 0),
                             "notes": timing.get("notes", 0),
@@ -112,13 +137,12 @@ class FinalCertifiedEngineV13FullNoBypass:
                             "trills": timing.get("trills", 0)
                         }
         
+        # An empty registry is an evidence failure, never a reason to invent
+        # a sigma, file count, or trills total.
         if not self.real_gold_stats:
-            self.real_gold_stats = {
-                "accompaniment": {"sigma": 34.3, "real_gold": True, "files": 1414, "notes": 1629982, "vel_range": 15.8, "trills": 199917},
-                "drums": {"sigma": 33.8, "real_gold": True, "files": 182, "notes": 402401, "vel_range": 59.8, "trills": 17731},
-                "bass": {"sigma": 33.8, "real_gold": True, "files": 248, "notes": 212192, "vel_range": 13.5, "trills": 11521},
-                "melody": {"sigma": 34.4, "real_gold": True, "files": 49, "notes": 28236, "vel_range": 24.3, "trills": 4133}
-            }
+            self.gold_runtime_error = "Gold timing registry has no usable role evidence"
+        else:
+            self.gold_runtime_error = None
         
         # Factory REAL stats
         factory_styles_count = 0
@@ -127,6 +151,9 @@ class FinalCertifiedEngineV13FullNoBypass:
             factory_styles_count = len(list(WORKSPACE_STYLES.iterdir()))
             factory_midi_count = sum(1 for _ in WORKSPACE_STYLES.rglob("*.mid"))
         
+        if self.truth_gate_report.get("status") != "PASS" or not self.truth_gate_report.get("can_export"):
+            print(f"🚫 Engine {self.VERSION} BLOCKED by truth/evidence gate")
+            return
         print(f"✅ Engine {self.VERSION} - FULL NO BYPASS")
         print(f"   Factory REAL: {factory_styles_count} styles, {factory_midi_count} MIDI files (Workspace_Styles)")
         print(f"   Factory profiles: {len(self.factory_20.get('calibrations', {})) if isinstance(self.factory_20, dict) else 0} roles")
@@ -230,25 +257,23 @@ class FinalCertifiedEngineV13FullNoBypass:
     
     def get_factory_velocity_full(self, role: str, original_velocity: int, context: dict = None) -> int:
         # Only an exact Factory role is valid evidence for velocity authority.
-        factory_role = role
-        factory_data = self.factory_20.get("calibrations", {}).get(role, {}) if isinstance(self.factory_20, dict) else {}
+        factory_role = self._factory_role_for(role)
+        factory_data = self.factory_20.get("calibrations", {}).get(factory_role, {}) if isinstance(self.factory_20, dict) else {}
         if not factory_data:
-            factory_data = self.factory_detailed.get("calibrations", {}).get(role, {}) if isinstance(self.factory_detailed, dict) else {}
+            factory_data = self.factory_detailed.get("calibrations", {}).get(factory_role, {}) if isinstance(self.factory_detailed, dict) else {}
         if not factory_data:
-            factory_data = self.factory_lookup.get(role, {})
+            factory_data = self.factory_lookup.get(factory_role, {})
         if not factory_data:
-            # Never borrow another instrument's dynamics authority. A missing
-            # role is preserved and surfaced to the caller instead.
-            self.authority_warnings = getattr(self, "authority_warnings", [])
-            self.authority_warnings.append({
-                "domain": "velocity",
-                "role": role,
-                "factory_role": factory_role,
-                "decision": "PRESERVE_OR_MANUAL_REVIEW",
-            })
-        
-        if not factory_data:
-            return max(1, min(127, original_velocity))
+            # Never preserve the input as a hidden proxy/default.  A missing
+            # role is a hard evidence failure and must stop the transaction.
+            blocked = dict(self.truth_gate_report)
+            blocked["status"] = "BLOCKED"
+            blocked["can_transform"] = False
+            blocked["can_export"] = False
+            blocked["blocking_reasons"] = list(blocked.get("blocking_reasons", [])) + [
+                f"no direct Factory velocity evidence for role {role}"
+            ]
+            raise EvidenceGateBlocked(blocked, "velocity transform")
         
         # Support both old and new format
         if "curve" in factory_data:
@@ -322,31 +347,39 @@ class FinalCertifiedEngineV13FullNoBypass:
         elif tick % 240 == 120:
             full_context = "syncopated"
         
-        if self.drum_engine:
-            base_vel = self.drum_engine.get_velocity_for_context(element, full_context)
-            real_sigma = self.real_gold_stats.get("drums", {}).get("sigma", 33.8)
-            variation = self.deterministic_random("drum", element, pitch, tick, full_context) * 10 - 5
-            gold_var = (self.deterministic_random("gold_drum", element, tick) - 0.5) * (real_sigma * 0.1)
-            variation += gold_var
-            min_audible = 30 if element != "kick" else 60
-            result = max(min_audible, min(127, int(base_vel + variation)))
-            return result, full_context, element
-        else:
-            elements = self.drum_elements.get("elements", {}) if isinstance(self.drum_elements, dict) else {}
-            elem_data = elements.get(element, {})
-            vel_data = elem_data.get("velocity", {})
-            vel = vel_data.get(full_context, vel_data.get(context, vel_data.get("normal", original_velocity)))
-            return vel, full_context, element
+        if not self.drum_engine:
+            blocked = dict(self.truth_gate_report)
+            blocked["status"] = "BLOCKED"
+            blocked["can_transform"] = False
+            blocked["can_export"] = False
+            blocked["blocking_reasons"] = list(blocked.get("blocking_reasons", [])) + [
+                self.drum_runtime_error or "direct drum context runtime is unavailable"
+            ]
+            raise EvidenceGateBlocked(blocked, "drum velocity transform")
+        base_vel = self.drum_engine.get_velocity_for_context(element, full_context)
+        drum_stats = self.real_gold_stats.get("drums", {})
+        if drum_stats.get("real_gold") is not True:
+            raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                "drum timing variation requires direct Gold drum evidence"
+            ]}, "drum velocity transform")
+        real_sigma = drum_stats.get("sigma")
+        if not isinstance(real_sigma, (int, float)):
+            raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                "drum Gold sigma is missing or non-numeric"
+            ]}, "drum velocity transform")
+        variation = self.deterministic_random("drum", element, pitch, tick, full_context) * 10 - 5
+        gold_var = (self.deterministic_random("gold_drum", element, tick) - 0.5) * (float(real_sigma) * 0.1)
+        variation += gold_var
+        min_audible = 30 if element != "kick" else 60
+        result = max(min_audible, min(127, int(base_vel + variation)))
+        return result, full_context, element
     
     def get_trill_articulation(self, notes: list, role: str, idx: int) -> dict:
-        if role not in ["melody", "lead", "solo", "woodwind", "strings", "accordion", "terca", "sax", "violin", "clarinet"]:
-            # Still need gate for other roles
-            if role in ["bass"]:
-                return {"technique": "root", "gate": 0.8, "ornament": None, "real_gold": self.real_gold_stats.get(role, {}).get("real_gold", False)}
-            elif role in ["drums", "percussion"]:
-                return {"technique": "normal", "gate": 0.5, "ornament": None, "real_gold": True}
-            else:
-                return {"technique": "normal", "gate": 0.8, "ornament": None, "real_gold": False}
+        role_stats = self.real_gold_stats.get(role, {})
+        if role_stats.get("real_gold") is not True:
+            raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                f"direct Gold articulation evidence is missing for role {role}"
+            ]}, "articulation transform")
         
         if idx > 0 and idx < len(notes)-1:
             prev_note = notes[idx-1]
@@ -357,7 +390,7 @@ class FinalCertifiedEngineV13FullNoBypass:
             pitch_diff_prev = abs(curr_note["pitch"] - prev_note["pitch"])
             pitch_diff_next = abs(next_note["pitch"] - curr_note["pitch"])
             if tick_diff_prev < 60 and tick_diff_next < 60 and pitch_diff_prev <= 2 and pitch_diff_next <= 2:
-                return {"technique": "trill", "gate": 0.9, "ornament": "trill", "notes": [curr_note["pitch"], curr_note["pitch"]+1, curr_note["pitch"]], "real_gold": self.real_gold_stats.get(role, {}).get("real_gold", False) or self.real_gold_stats.get("melody", {}).get("real_gold", False)}
+                return {"technique": "trill", "gate": 0.9, "ornament": "trill", "notes": [curr_note["pitch"], curr_note["pitch"]+1, curr_note["pitch"]], "real_gold": True}
             if tick_diff_prev < 30 and curr_note["velocity"] > 90:
                 return {"technique": "grace", "gate": 0.3, "ornament": "grace", "grace_pitch": curr_note["pitch"]-1, "real_gold": True}
             if pitch_diff_prev <= 2 and curr_note["velocity"] > 80 and tick_diff_prev < 120:
@@ -365,11 +398,16 @@ class FinalCertifiedEngineV13FullNoBypass:
         
         if role in ["melody", "lead", "solo", "violin"]:
             return {"technique": "legato", "gate": 0.85, "ornament": None, "real_gold": True}
-        else:
-            return {"technique": "normal", "gate": 0.8, "ornament": None, "real_gold": False}
+        raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+            f"no direct articulation transform rule for role {role}"
+        ]}, "articulation transform")
     
     def get_expression_cc(self, notes: list, role: str, tick: int) -> dict:
         real_stats = self.real_gold_stats.get(role, {})
+        if real_stats.get("real_gold") is not True:
+            raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                f"direct Gold expression evidence is missing for role {role}"
+            ]}, "expression transform")
         base_expression = 100
         if tick % 480 == 0:
             base_expression = 120
@@ -387,14 +425,19 @@ class FinalCertifiedEngineV13FullNoBypass:
             "cc_7_volume": 100,
             "cc_10_pan": 64,
             "cc_64_sustain": 0,
-            "source": f"Gold DNA {role} REAL {real_stats.get('sigma',0):.1f}" if real_stats.get("real_gold") else f"Gold DNA {role} proxy",
-            "evidence": "DIRECT REAL Gold DNA 182 files" if real_stats.get("real_gold") else "PROXY",
-            "real_gold": real_stats.get("real_gold", False)
+            "source": f"Gold DNA {role} REAL {real_stats['sigma']:.1f}",
+            "evidence": "DIRECT REAL Gold DNA 182 files",
+            "real_gold": True
         }
     
     def get_groove_pocket(self, notes: list, role: str, tick: int, channel: int) -> dict:
+        role_stats = self.real_gold_stats.get(role, {})
+        if role_stats.get("real_gold") is not True:
+            raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                f"direct Gold groove evidence is missing for role {role}"
+            ]}, "groove transform")
         kick_ticks = [n["tick"] for n in notes if n["channel"] == 9 and self.classify_drum_element(n["pitch"]) == "kick"]
-        groove = {"pocket": 0, "kick_bass_lock": False, "backbeat": False, "interlock": False, "real_gold": self.real_gold_stats.get(role, {}).get("real_gold", False)}
+        groove = {"pocket": 0, "kick_bass_lock": False, "backbeat": False, "interlock": False, "real_gold": True}
         if role == "bass":
             for kt in kick_ticks:
                 if abs(tick - kt) < 20:
@@ -407,7 +450,11 @@ class FinalCertifiedEngineV13FullNoBypass:
             if element == "snare" and tick % 960 == 480:
                 groove["backbeat"] = True
                 groove["pocket"] = 0
-        real_sigma = self.real_gold_stats.get(role, {}).get("sigma", 5)
+        real_sigma = role_stats.get("sigma")
+        if not isinstance(real_sigma, (int, float)):
+            raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                f"Gold groove sigma is missing for role {role}"
+            ]}, "groove transform")
         pocket_var = (self.deterministic_random("groove", role, channel, tick) - 0.5) * 4
         groove["pocket"] += pocket_var
         groove["sigma_real"] = real_sigma
@@ -427,7 +474,11 @@ class FinalCertifiedEngineV13FullNoBypass:
                 pitch = note["pitch"]
                 element = self.classify_drum_element(pitch)
                 priority_map = {"kick": 0, "snare": 1, "closed_hh": 2, "open_hh": 3, "ride": 4, "crash": 5, "tom_low": 6, "tom_mid": 7, "tom_high": 8, "percussion": 9, "shaker": 10, "tambourine": 11, "cowbell": 12, "conga": 13, "bongo": 14}
-                return (priority_map.get(element, 15), -note["velocity"])
+                if element not in priority_map:
+                    raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                        f"no direct drum priority evidence for element {element}"
+                    ]}, "drum polyphony transform")
+                return (priority_map[element], -note["velocity"])
             sorted_notes = sorted(notes_at_tick, key=drum_priority)
             return sorted_notes[:limit]
         else:
@@ -444,6 +495,27 @@ class FinalCertifiedEngineV13FullNoBypass:
                 return sorted_notes[:limit]
     
     def process_midi_file_full(self, input_path: Path, output_path: Path = None) -> dict:
+        # Fail closed before reading/mutating a MIDI.  Returning a structured
+        # BLOCKED result keeps the caller from mistaking a missing dependency
+        # or evidence record for a successful calibration.
+        try:
+            TruthEvidenceGate.verify_report(self.truth_gate_report, DATA_DIR.parent)
+        except EvidenceGateBlocked as exc:
+            return {
+                "path": str(input_path),
+                "status": "BLOCKED",
+                "export_ready": False,
+                "truth_gate": exc.report,
+                "reason": str(exc),
+            }
+        if mido is None:
+            return {
+                "path": str(input_path),
+                "status": "BLOCKED",
+                "export_ready": False,
+                "truth_gate": self.truth_gate_report,
+                "reason": "mido dependency is not installed",
+            }
         try:
             mid = mido.MidiFile(str(input_path))
         except Exception as e:
@@ -468,8 +540,8 @@ class FinalCertifiedEngineV13FullNoBypass:
                         "track": track_idx,
                         "original_velocity": msg.velocity,
                         "original_tick": tick,
-                        "duration": 480,  # default
-                        "original_duration": 480
+                        "duration": None,
+                        "original_duration": None
                     })
                 elif (msg.type == 'note_off' or (msg.type == 'note_on' and msg.velocity == 0)):
                     key = (msg.channel, msg.note, track_idx)
@@ -484,7 +556,15 @@ class FinalCertifiedEngineV13FullNoBypass:
                         del note_ons[key]
         
         if not notes:
-            return {"path": str(input_path), "note_count": 0, "status": "SKIP", "original_ppq": original_ppq}
+            # Empty/parseable inputs remain in the denominator and cannot be
+            # silently skipped by a so-called full corpus run.
+            return {"path": str(input_path), "note_count": 0, "status": "FAIL",
+                    "failure_reason": "EMPTY_INPUT", "original_ppq": original_ppq}
+        unpaired = sum(note["original_duration"] is None for note in notes)
+        if unpaired:
+            return {"path": str(input_path), "note_count": len(notes), "status": "FAIL",
+                    "failure_reason": "UNPAIRED_NOTE_EVENT", "unpaired_notes": unpaired,
+                    "original_ppq": original_ppq}
         
         channels = sorted(set(n["channel"] for n in notes))
         notes_by_channel = defaultdict(list)
@@ -616,21 +696,27 @@ class FinalCertifiedEngineV13FullNoBypass:
                 
                 # Timing with REAL Gold sigma scaled to safe
                 real_gold = self.real_gold_stats.get(ch_role, {})
-                sigma_real = real_gold.get("sigma", 5)
+                if real_gold.get("real_gold") is not True or not isinstance(real_gold.get("sigma"), (int, float)):
+                    raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                        f"direct Gold timing evidence is missing for role {ch_role}"
+                    ]}, "timing transform")
+                sigma_real = float(real_gold["sigma"])
                 safe_windows = {
                     "bass": 15, "bass_synth": 15,
                     "drums": 8, "percussion": 8, "conga": 8, "bongo": 8, "shaker": 8, "tambourine": 8, "cowbell": 8,
                     "rhythm-guitar": 20, "guitar": 12, "rhythm_guitar": 20,
                     "piano": 10, "accompaniment": 10, "strings": 10, "organ": 10, "pad": 10, "choir": 10,
                     "melody": 10, "lead": 10, "solo": 10, "terca": 10, "sax": 10, "woodwind": 10, "accordion": 10, "violin": 10, "clarinet": 10,
-                    "riff": 10, "power-riff": 10, "solo_guitar": 10,
-                    "unknown": 10
+                    "riff": 10, "power-riff": 10, "solo_guitar": 10
                 }
-                safe = safe_windows.get(ch_role, 10)
-                effective_sigma = min(safe, sigma_real * 0.5) if real_gold.get("real_gold") else 5
-                effective_sigma = max(3, effective_sigma)
+                if ch_role not in safe_windows:
+                    raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                        f"no timing window is calibrated for role {ch_role}"
+                    ]}, "timing transform")
+                safe = safe_windows[ch_role]
+                effective_sigma = max(3, min(safe, sigma_real * 0.5))
                 
-                rand_val = self.deterministic_random("timing_full", ch_role, ch, idx, tick_val, pitch, "real_gold" if real_gold.get("real_gold") else "proxy")
+                rand_val = self.deterministic_random("timing_full", ch_role, ch, idx, tick_val, pitch, "real_gold")
                 timing_shift = int((rand_val - 0.5) * 2 * effective_sigma)
                 timing_shift = max(-safe, min(safe, timing_shift))
                 timing_shift += int(groove["pocket"])
@@ -668,7 +754,7 @@ class FinalCertifiedEngineV13FullNoBypass:
                     "element": self.classify_drum_element(pitch) if note["channel"] == 9 else None,
                     "context": full_context if note["channel"] == 9 or ch_role in ["drums"] else articulation.get("technique", "normal"),
                     "channel_role": ch_role,
-                    "factory_role": self.INSTRUMENT_TO_FACTORY.get(ch_role, "accompaniment"),
+                    "factory_role": self._factory_role_for(ch_role),
                     "articulation": articulation,
                     "expression": expression,
                     "groove": groove,
@@ -688,7 +774,7 @@ class FinalCertifiedEngineV13FullNoBypass:
             for n in ch_notes:
                 by_tick[n["tick"]].append(n)
             max_poly = max(len(v) for v in by_tick.values()) if by_tick else 0
-            channel_stats_after[ch] = {"role": channel_roles[ch], "factory_role": self.INSTRUMENT_TO_FACTORY.get(channel_roles[ch], "accompaniment"), "note_count": len(ch_notes), "max_poly": max_poly}
+            channel_stats_after[ch] = {"role": channel_roles[ch], "factory_role": self._factory_role_for(channel_roles[ch]), "note_count": len(ch_notes), "max_poly": max_poly}
         
         korg_errors = []
         korg_warnings = []
@@ -708,7 +794,11 @@ class FinalCertifiedEngineV13FullNoBypass:
         for ch, stats in channel_stats_after.items():
             role = stats["role"]
             max_poly = stats["max_poly"]
-            limit = poly_limits.get(role, 6)
+            if role not in poly_limits:
+                raise EvidenceGateBlocked({**self.truth_gate_report, "blocking_reasons": [
+                    f"no direct polyphony limit for role {role}"
+                ]}, "polyphony transform")
+            limit = poly_limits[role]
             if max_poly > limit:
                 by_tick = defaultdict(list)
                 for n in notes_by_channel_final[ch]:
@@ -744,33 +834,24 @@ class FinalCertifiedEngineV13FullNoBypass:
         
         korg_valid = len(korg_errors) == 0
         
-        # 9 musical scores
+        # Musical scores require an independent, versioned listening/device
+        # evidence set.  The old engine manufactured 50/70/88/90 values from
+        # note counts; that is not a calibration result.  Keep the transaction
+        # blocked until a real score ledger is supplied.
         original_vels = [n["original_velocity"] for n in notes]
         transformed_vels = [n["velocity"] for n in transformed_notes]
         orig_min, orig_max = min(original_vels), max(original_vels)
         trans_min, trans_max = min(transformed_vels), max(transformed_vels)
         orig_unique = len(set(original_vels))
-        before_simple = 50 if orig_unique == 1 else (70 if orig_unique < len(original_vels)*0.3 else 80)
-        after_simple = 88
-        
-        harmony_before, harmony_after = 70, 85
-        groove_before, groove_after = 70, 88
-        dynamics_before = 50 if orig_unique==1 else 75
-        dynamics_after = 90
-        articulation_before = 70
-        articulation_after = 85 + (5 if trills_added>0 else 0)
-        phrase_before, phrase_after = 70, 85
-        instrument_before, instrument_after = 70, 88
-        drum_before, drum_after = 70, 90 if any(r=="drums" for r in channel_roles.values()) else 80
-        bass_before, bass_after = 70, 90 if any(r=="bass" for r in channel_roles.values()) else 80
-        
-        weights = {"harmony":0.2, "groove":0.2, "dynamics":0.15, "articulation":0.15, "phrase":0.1, "instrument":0.1, "drum":0.05, "bass":0.03, "musicality":0.02}
-        before_scores = {"harmony": harmony_before, "groove": groove_before, "dynamics": dynamics_before, "articulation": articulation_before, "phrase": phrase_before, "instrument": instrument_before, "drum": drum_before, "bass": bass_before, "musicality": before_simple}
-        after_scores = {"harmony": harmony_after, "groove": groove_after, "dynamics": dynamics_after, "articulation": articulation_after, "phrase": phrase_after, "instrument": instrument_after, "drum": drum_after, "bass": bass_after, "musicality": after_simple}
-        musical_before = sum(before_scores[k]*weights[k] for k in weights)
-        musical_after = sum(after_scores[k]*weights[k] for k in weights)
-        
-        overall_pass = korg_valid and musical_after >= musical_before
+        before_scores = None
+        after_scores = None
+        weights = None
+        musical_before = None
+        musical_after = None
+        musical_delta = None
+        musical_status = "BLOCKED"
+        musical_reason = "independent listening/device score evidence is missing"
+        overall_pass = False
         
         # Write output MIDI if requested
         if output_path:
@@ -811,8 +892,10 @@ class FinalCertifiedEngineV13FullNoBypass:
             "path": str(input_path),
             "version": self.VERSION,
             "seed": self.SEED,
-            "full_capabilities": True,
-            "bypass": "NONE - 0% bypass, 100% full capabilities",
+            "status": "BLOCKED",
+            "full_capabilities": False,
+            "bypass": "BLOCKED - evidence gate/independent score evidence",
+            "truth_gate": self.truth_gate_report,
             "original": {
                 "ppq": original_ppq,
                 "note_count": len(notes),
@@ -822,7 +905,7 @@ class FinalCertifiedEngineV13FullNoBypass:
                 "channels_count": len(channels),
                 "primary_role": primary_role,
                 "channel_roles": channel_roles,
-                "factory_roles": {ch: self.INSTRUMENT_TO_FACTORY.get(role, "accompaniment") for ch, role in channel_roles.items()},
+                "factory_roles": {ch: self._factory_role_for(role) for ch, role in channel_roles.items()},
                 "channel_stats_before": channel_stats_before,
                 "channel_stats_after": channel_stats_after,
                 "polyphony_reductions": poly_reductions,
@@ -834,7 +917,7 @@ class FinalCertifiedEngineV13FullNoBypass:
                 "drum_contexts": dict(drum_contexts),
                 "articulation_gates": {"avg": sum(articulation_gates)/len(articulation_gates) if articulation_gates else 0, "min": min(articulation_gates) if articulation_gates else 0, "max": max(articulation_gates) if articulation_gates else 0},
                 "cc_messages": len(cc_messages),
-                "real_gold_used": True
+                "real_gold_used": False
             },
             "calibrated": {
                 "ppq": 480,
@@ -851,70 +934,82 @@ class FinalCertifiedEngineV13FullNoBypass:
                 "per_channel_status": per_channel_status,
                 "polyphony_reduction": True,
                 "timing_preservation": True,
-                "full_capabilities": True,
+                "full_capabilities": overall_pass,
                 "cc_allowed": [1,7,10,11,64],
                 "gate_applied": True
             },
             "musical": {
+                "status": musical_status,
                 "before": musical_before,
                 "after": musical_after,
-                "delta": musical_after - musical_before,
-                "before_simple": before_simple,
-                "after_simple": after_simple,
+                "delta": musical_delta,
                 "scores_before": before_scores,
                 "scores_after": after_scores,
                 "weights": weights,
-                "status": "PASS" if musical_after >= musical_before else "FAIL",
+                "reason": musical_reason,
                 "trills_added": trills_added,
-                "real_gold_sigma_used": True
+                "real_gold_sigma_used": False
             },
             "full_capabilities_detail": {
-                "factory_20_roles": True,
-                "factory_real_3211_files": True,
+                "status": "BLOCKED",
+                "factory_20_roles": False,
+                "factory_real_3211_files": False,
                 "factory_mapping_instrument_to_factory": self.INSTRUMENT_TO_FACTORY,
-                "drum_19_elements": True,
-                "drum_full_contexts": ["normal", "accent", "ghost", "fill", "transition", "phrase_end", "syncopated"],
+                "drum_19_elements": False,
+                "drum_full_contexts": [],
                 "drum_contexts_counts": dict(drum_contexts),
-                "gold_real_182_files_2_27M_notes": True,
-                "gold_real_sigma_34_3_per_role": {k: v["sigma"] for k,v in self.real_gold_stats.items() if v.get("real_gold")},
-                "gold_real_trills_231k": True,
-                "trills_grace_turn_mordent": True,
-                "expression_cc_11": True,
-                "expression_cc_writing": True,
-                "groove_kick_bass_lock_backbeat_pocket": True,
-                "articulation_gate_legato_staccato_ghost": True,
-                "articulation_gate_duration": True,
-                "instrument_profiles_20_roles": True,
-                "musical_9_scores": True,
-                "poly_reduction_timing_preservation": True,
+                "gold_role_evidence": "DIRECTNESS_UNVERIFIED",
+                "gold_sigma": None,
+                "gold_trills": None,
+                "expression_cc_11": False,
+                "expression_cc_writing": False,
+                "groove_kick_bass_lock_backbeat_pocket": False,
+                "articulation_gate_duration": False,
+                "instrument_profiles_20_roles": False,
+                "musical_9_scores": False,
+                "poly_reduction_timing_preservation": False,
                 "deterministic_seed": self.SEED,
-                "bypass": "NONE - 0% bypass"
+                "bypass": "BLOCKED"
             },
             "transformation": {
-                "source_evidence": f"Factory REAL 3211 files 248 styles 1964 profiles 1.4M samples + Gold DNA REAL 182 files 1893 instances 2.27M notes sigma 34.3 per-channel + Drum 19 elements + Instrument 20 roles",
-                "musical_purpose": f"FULL capabilities NO BYPASS: velocity 20 roles mapped instrument->factory + drums 19 elements 7 contexts + timing REAL Gold sigma 34.3 scaled safe + trills grace/turn/trill/mordent 231k + expression CC11 curves + groove kick-bass lock backbeat pocket interlock + articulation gate duration",
-                "target_profile": f"Per-channel 20 roles {channel_roles} -> factory { {ch: self.INSTRUMENT_TO_FACTORY.get(role) for ch,role in channel_roles.items()} } limits, REAL Gold sigma { {k: v['sigma'] for k,v in self.real_gold_stats.items() if v.get('real_gold')} }",
-                "constraints": f"Korg Pa800: 15 checks, PPQ 480, per-channel poly, timing safe windows, CC allowed [1,7,10,11,64], strict mode, gate duration",
-                "transformation_rule": f"1) Per-channel 20 roles -> factory mapping, 2) Poly reduction before timing, 3) Velocity Factory 20 roles 7-point + drums 19 elements 7 contexts normal/accent/ghost/fill/transition/phrase_end/syncopated + REAL Gold variation, 4) Trills grace/turn/trill/mordent, 5) Expression CC11 + modulation + CC writing to MIDI, 6) Groove kick-bass lock backbeat pocket interlock, 7) Timing REAL Gold sigma 34.3 scaled safe + groove pocket + poly preservation, 8) Gate duration legato 0.85 staccato 0.3-0.8, 9) Emergency reduction, 10) Output MIDI with CC",
-                "before_metric": f"{len(notes)} notes vel {orig_min}-{orig_max} unique {orig_unique} poly {[s['max_poly'] for s in channel_stats_before.values()]} musical {musical_before:.1f}",
-                "after_metric": f"{len(transformed_notes)} notes vel {trans_min}-{trans_max} unique {len(set(transformed_vels))} poly {[s['max_poly'] for s in channel_stats_after.values()]} reduced {total_reduced} timing_adj {timing_adjustments} trills {trills_added} drum_contexts {dict(drum_contexts)} gates avg {sum(articulation_gates)/len(articulation_gates) if articulation_gates else 0:.2f} cc {len(cc_messages)} musical {musical_after:.1f} +{musical_after-musical_before:.1f} 9 scores {after_scores}",
-                "pass_fail": "PASS" if overall_pass else "FAIL",
-                "explanation": f"FULL NO BYPASS engine uses ALL: Factory REAL 3211 + 20 roles mapped, drums 19 elements 7 contexts, Gold REAL 182 files 2.27M sigma 34.3 per-channel, trills 231k, expression CC11 writing, groove kick-bass lock, articulation gate duration, 9 scores, poly reduction, timing preservation - 0% BYPASS",
-                "evidence": f"REAL Gold DNA per-channel {self.real_gold_stats}, Factory REAL {len(list(WORKSPACE_STYLES.rglob('*.mid'))) if WORKSPACE_STYLES.exists() else 3211} files, 37/37 PASS, trills {trills_added}, expression {len(expression_ccs)}, groove {len(groove_pockets)}, drum_contexts {dict(drum_contexts)}, cc {len(cc_messages)}"
+                "status": "BLOCKED",
+                "source_evidence": "not authorized by truth/evidence gate",
+                "musical_purpose": "not available without direct evidence and independent listening/device score ledger",
+                "target_profile": {"status": "BLOCKED", "channel_roles": channel_roles},
+                "constraints": "not evaluated for export",
+                "transformation_rule": "no transform/export rule may run while evidence is incomplete",
+                "before_metric": f"{len(notes)} notes vel {orig_min}-{orig_max} unique {orig_unique} musical=BLOCKED",
+                "after_metric": "not an export result",
+                "pass_fail": "BLOCKED",
+                "explanation": "Legacy engine output is suppressed by the fail-closed truth gate",
+                "evidence": self.truth_gate_report
             },
             "deterministic": True,
-            "status": "PASS" if overall_pass else "FAIL",
-            "export_ready": overall_pass,
-            "version_detail": "13.00-FULL-NO-BYPASS - 0% BYPASS 100% FULL CAPABILITIES"
+            "status": "PASS" if overall_pass else "BLOCKED",
+            "export_ready": False,
+            "version_detail": "BLOCKED until direct evidence and independent musical score ledger are present"
         }
         return result
     
     def process_full_corpus_full(self, input_dir: Path = ARTIFACTS_DIR) -> dict:
-        print(f"\n🌍 FULL CORPUS PROCESSING - {self.VERSION} - 0% BYPASS 100% FULL")
-        midi_files = list(input_dir.glob("*.mid")) if input_dir.exists() else []
-        print(f"   Found {len(midi_files)} MIDI files")
+        print(f"\n🌍 FULL CORPUS PROCESSING - {self.VERSION} - FAIL-CLOSED")
+        try:
+            TruthEvidenceGate.verify_report(self.truth_gate_report, DATA_DIR.parent)
+        except EvidenceGateBlocked as exc:
+            return {
+                "version": self.VERSION,
+                "status": "BLOCKED",
+                "full_capabilities": False,
+                "bypass": "BLOCKED - evidence gate",
+                "input_directory": str(input_dir),
+                "processed_inputs": 0,
+                "truth_gate": exc.report,
+                "blocking_reasons": exc.report.get("blocking_reasons", []),
+            }
+        midi_files = list(input_dir.rglob("*.mid")) if input_dir.exists() else []
+        print(f"   Found {len(midi_files)} MIDI files; every input will be counted")
         results = []
-        for mid_path in sorted(midi_files)[:37]:
+        for mid_path in sorted(midi_files):
             result = self.process_midi_file_full(mid_path, None)
             results.append(result)
             icon = "✅" if result.get("status") == "PASS" else "❌"
@@ -922,7 +1017,8 @@ class FinalCertifiedEngineV13FullNoBypass:
             trills = result.get("original", {}).get("trills_added", 0)
             drum_ctx = result.get("original", {}).get("drum_contexts", {})
             cc = result.get("original", {}).get("cc_messages", 0)
-            print(f"{icon} {mid_path.name:40s} {result.get('original', {}).get('primary_role', 'unknown'):15s} {result.get('original', {}).get('note_count', 0):4d}->{result.get('calibrated', {}).get('note_count', 0):4d} red {reductions:2d} trills {trills:2d} drum_ctx {drum_ctx} cc {cc} musical {result.get('musical', {}).get('before', 0):.1f}->{result.get('musical', {}).get('after', 0):.1f} +{result.get('musical', {}).get('delta', 0):.1f} KORG {result.get('korg', {}).get('valid')}")
+            musical_text = "BLOCKED" if result.get("musical", {}).get("status") != "PASS" else "available"
+            print(f"{icon} {mid_path.name:40s} {result.get('original', {}).get('primary_role', 'unknown'):15s} {result.get('original', {}).get('note_count', 0):4d}->{result.get('calibrated', {}).get('note_count', 0):4d} red {reductions:2d} trills {trills:2d} drum_ctx {drum_ctx} cc {cc} musical {musical_text} KORG {result.get('korg', {}).get('valid')}")
         
         by_role = defaultdict(list)
         for r in results:
@@ -939,28 +1035,35 @@ class FinalCertifiedEngineV13FullNoBypass:
             total_drum_ctx.update(r.get("original", {}).get("drum_contexts", {}))
         passed = sum(1 for r in results if r.get("status") == "PASS")
         failed = sum(1 for r in results if r.get("status") == "FAIL")
-        avg_before = sum(r["musical"]["before"] for r in results if "musical" in r) / max(1, len(results))
-        avg_after = sum(r["musical"]["after"] for r in results if "musical" in r) / max(1, len(results))
+        scored = [r for r in results if isinstance(r.get("musical", {}).get("before"), (int, float))
+                   and isinstance(r.get("musical", {}).get("after"), (int, float))]
+        avg_before = (sum(r["musical"]["before"] for r in scored) / len(scored)) if scored else None
+        avg_after = (sum(r["musical"]["after"] for r in scored) / len(scored)) if scored else None
         
-        print(f"\n📊 Aggregated FULL NO BYPASS:")
+        print(f"\n📊 Aggregated corpus (musical score ledger: {'available' if scored else 'BLOCKED'}):")
         for role, role_results in by_role.items():
-            avg_b = sum(r["musical"]["before"] for r in role_results if "musical" in r) / max(1, len(role_results))
-            avg_a = sum(r["musical"]["after"] for r in role_results if "musical" in r) / max(1, len(role_results))
+            role_scored = [r for r in role_results
+                           if isinstance(r.get("musical", {}).get("before"), (int, float))
+                           and isinstance(r.get("musical", {}).get("after"), (int, float))]
             red = sum(r["original"]["total_reduced"] for r in role_results if "original" in r)
             tr = sum(r["original"]["trills_added"] for r in role_results if "original" in r)
             cc = sum(r["original"]["cc_messages"] for r in role_results if "original" in r)
-            print(f"   {role:15s}: {len(role_results):3d} files, musical {avg_b:.1f}->{avg_a:.1f} +{avg_a-avg_b:.1f} reduced {red} trills {tr} cc {cc}")
+            score_text = "BLOCKED (no independent score ledger)" if not role_scored else "available"
+            print(f"   {role:15s}: {len(role_results):3d} files, musical {score_text}, reduced {red} trills {tr} cc {cc}")
         
         print(f"\n   Total: {len(results)} files, {total_before}->{total_after} notes (reduced {total_reduced}), trills {total_trills}, cc {total_cc}, drum_ctx {dict(total_drum_ctx)}, PASS {passed}/{len(results)} FAIL {failed}")
-        print(f"   Musical: {avg_before:.1f}->{avg_after:.1f} +{avg_after-avg_before:.1f} (9 scores FULL)")
-        print(f"   FULL NO BYPASS: Factory REAL 3211, 20 roles mapped, drums 19 elements 7 contexts {dict(total_drum_ctx)}, Gold REAL 182 files 2.27M sigma 34.3, trills {total_trills}, CC {total_cc}, groove, gate - 0% BYPASS")
+        print("   Musical: BLOCKED — independent listening/device score evidence is missing")
+        print(f"   Corpus metrics are descriptive only; no FULL/PASS certification is emitted")
         
+        overall_pass = bool(results) and failed == 0 and passed == len(results) and len(scored) == len(results) and len(results) == len(midi_files)
         report = {
             "version": self.VERSION,
             "timestamp": datetime.now().isoformat(),
             "seed": self.SEED,
-            "full_capabilities": True,
-            "bypass": "NONE - 0% bypass",
+            "status": "PASS" if overall_pass else "PARTIAL",
+            "full_capabilities": overall_pass,
+            "bypass": "NONE" if overall_pass else "BLOCKED - incomplete or failed inputs",
+            "processed_inputs": len(results),
             "total_files": len(results),
             "total_notes_before": total_before,
             "total_notes_after": total_after,
@@ -973,7 +1076,7 @@ class FinalCertifiedEngineV13FullNoBypass:
             "pass_rate": f"{passed}/{len(results)} ({100*passed/max(1,len(results)):.1f}%)",
             "musical_before": avg_before,
             "musical_after": avg_after,
-            "musical_delta": avg_after - avg_before,
+            "musical_delta": (avg_after - avg_before) if avg_before is not None and avg_after is not None else None,
             "by_role": {role: len(v) for role, v in by_role.items()},
             "results": results,
             "capabilities": {
@@ -1005,6 +1108,14 @@ class FinalCertifiedEngineV13FullNoBypass:
         return report
 
 if __name__ == "__main__":
+    _gate = TruthEvidenceGate(DATA_DIR.parent).build()
+    if _gate.get("status") != "PASS" or not _gate.get("can_export"):
+        print(json.dumps({
+            "status": "BLOCKED",
+            "reason": "truth/evidence gate",
+            "blocking_reasons": _gate.get("blocking_reasons", []),
+        }, ensure_ascii=False, indent=2))
+        raise SystemExit(2)
     engine = FinalCertifiedEngineV13FullNoBypass()
     test_file = ARTIFACTS_DIR / "session4-after.mid"
     if test_file.exists():

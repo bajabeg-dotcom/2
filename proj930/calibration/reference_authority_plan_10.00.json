@@ -1,6 +1,9 @@
 {
-  "schema": "reference-authority-plan-1.0",
+  "schema": "reference-authority-plan-1.1",
   "policy": {
+    "result_scope": "PATH_COVERAGE_ONLY_NOT_CERTIFICATION",
+    "semantic_gate": "truthful_evidence_gate.py",
+    "path_coverage_pass_is_not_export_authority": true,
     "mode": "FULL_REFERENCE_REQUIRED",
     "fallbacks": "FORBIDDEN",
     "proxy_sources": "FORBIDDEN",
@@ -27,7 +30,8 @@
         "musical_validation"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "dynamics": {
@@ -50,7 +54,8 @@
         "musical_validation"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "range": {
@@ -73,7 +78,8 @@
         "final_regression"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "timing": {
@@ -96,7 +102,8 @@
         "musical_validation"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "groove": {
@@ -119,7 +126,8 @@
         "musical_validation"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "articulation": {
@@ -142,7 +150,8 @@
         "musical_validation"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "expression": {
@@ -165,7 +174,8 @@
         "musical_validation"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "humanization": {
@@ -188,7 +198,8 @@
         "final_regression"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "drum_elements": {
@@ -211,7 +222,8 @@
         "korg_engine"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "korg_constraints": {
@@ -220,7 +232,7 @@
         {
           "path": "final_certified_engine_v13_full_no_bypass.py",
           "exists": true,
-          "sha256": "b5c315791d262f29056dfe341ccfba2092782d994a1fb01a8fc956cbc64cfae9"
+          "sha256": "2501b36dd4673fa34537ea4e35cae18fdb429b3e1db7054440d79640b47b5570"
         },
         {
           "path": "pa800_validator.py",
@@ -234,7 +246,8 @@
         "export"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "musical_validation": {
@@ -257,7 +270,8 @@
         "final_regression"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     },
     "determinism": {
@@ -266,7 +280,7 @@
         {
           "path": "KOREKCIJA_BAZDARENJE_KALIBRACIJA_ENGINE.py",
           "exists": true,
-          "sha256": "425357dc3a1c2ae6059b4e42269526f18a2288c7a4898c1250f6ea786ec2b3a1"
+          "sha256": "2f2c70adf1512908bcd1294dd02c512e28f7b19ac56248631e73dd8afe8da66c"
         },
         {
           "path": "deterministic_humanizer.py",
@@ -280,7 +294,8 @@
         "final_regression"
       ],
       "coverage": 1.0,
-      "status": "PASS",
+      "status": "PATH_ONLY",
+      "path_coverage_only": true,
       "proxy_allowed": false
     }
   },
@@ -289,7 +304,8 @@
     "total_domains": 12,
     "ratio": 1.0,
     "missing": [],
-    "status": "PASS"
+    "status": "PATH_ONLY",
+    "path_coverage_only": true
   },
   "referenced_files": {
     "data/factory-velocity-profiles.json": "7a21fc2fefc88de5c9ed34f4d99d9750f40705dc627a7290d562077d54c8cd60",
@@ -304,11 +320,11 @@
     "data/deterministic-humanization-9.30.json": "216f05977f6224936e1650efb6616de3c8f533b95eeeb55413c8a666e8e7d195",
     "data/drum-element-profiles-9.30.json": "07350af549aa34bae3c7af9108d32d5f543af92b93b0a88cdf2d02b2d16cc746",
     "calibration/drum_elements_v13_full.json": "a2c2803333201df22fb06485589296ae0f67d583a5884735d2cc56058760cced",
-    "final_certified_engine_v13_full_no_bypass.py": "b5c315791d262f29056dfe341ccfba2092782d994a1fb01a8fc956cbc64cfae9",
+    "final_certified_engine_v13_full_no_bypass.py": "2501b36dd4673fa34537ea4e35cae18fdb429b3e1db7054440d79640b47b5570",
     "pa800_validator.py": "a249372d981ee5b3a8c836ec47c462451cd59cc95c44e80560f8276a47992477",
     "musical_validation_9_scores_REAL.py": "f7b3a6e730f5a9d460c319e2961d2cd9797f9c96131e4876116ce7292dc6c280",
     "musical_validation_scorer_v10.py": "f12cb800725f69b6341545dc5ad1a83cc2025134a698208d0db9045c62feef6d",
-    "KOREKCIJA_BAZDARENJE_KALIBRACIJA_ENGINE.py": "425357dc3a1c2ae6059b4e42269526f18a2288c7a4898c1250f6ea786ec2b3a1",
+    "KOREKCIJA_BAZDARENJE_KALIBRACIJA_ENGINE.py": "2f2c70adf1512908bcd1294dd02c512e28f7b19ac56248631e73dd8afe8da66c",
     "deterministic_humanizer.py": "0aa6b9a4cace877c80e3df54b9e3eeb38b56a37a938095324946f7e194644fa2"
   }
 }
